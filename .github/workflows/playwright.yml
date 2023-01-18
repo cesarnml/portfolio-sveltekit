@@ -18,7 +18,7 @@ jobs:
       - name: Get installed Playwright version
         id: playwright-version
         run: echo "::set-output name=version::$(npx yarn why --json @playwright/test | grep -h 'workspace:.' | jq --raw-output '.children[].locator' | sed -e 's/@playwright\/test@.*://')"
-      - uses: actions/cache@v2
+      - uses: actions/cache@v3
         id: playwright-cache
         with:
           path: |
