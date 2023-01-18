@@ -1,7 +1,8 @@
 <script lang="ts">
 	export const onClick = (e: Event) => {
-		alert('we did it.')
+		name = 'You changed me!'
 	}
+	let name = 'Hello world!'
 </script>
 
-<button class="btn btn-primary" on:click={onClick}>Hello world!</button>
+<button class="btn btn-primary" on:click={onClick}>{name}</button>

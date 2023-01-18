@@ -17,6 +17,6 @@ test('changes button text on click', async () => {
 	// we have to wait for the next `tick` so that Svelte flushes all pending state changes.
 	await fireEvent.click(button)
 
-	const alert = screen.getByText('we did it.')
+	const alert = screen.getByText('You changed me!')
 	expect(alert).toBeInTheDocument()
 })
