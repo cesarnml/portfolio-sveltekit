@@ -6,7 +6,8 @@ const config: PlaywrightTestConfig = {
 		port: 4173,
 		timeout: 120 * 1000,
 	},
-	testDir: 'e2e'
+	testDir: 'e2e',
+	reporter: [['html', { open: 'never' }]],
 }
 
 export default config
