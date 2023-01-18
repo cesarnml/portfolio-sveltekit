@@ -9,9 +9,9 @@
 		"test:e2e": "playwright test",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"test:unit": "vitest",
-		"test": "vitest run src",
-		"test:watch": "vitest src",
+		"test:unit": "vitest -- --watch",
+		"test": "vitest run src -- --watch",
+		"test:watch": "vitest src -- --watch",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write ."
 	},
@@ -40,7 +40,8 @@
 		"tslib": "^2.4.1",
 		"typescript": "^4.9.3",
 		"vite": "^4.0.4",
-		"vitest": "^0.25.8"
+		"vitest": "^0.25.8",
+		"mdsvex": "^0.10.6"
 	},
 	"type": "module"
 }
