@@ -4,4 +4,4 @@
 	}
 </script>
 
-<button class="btn btn-primary">Hello world!</button>
+<button class="btn btn-primary" on:click={onClick}>Hello world!</button>
