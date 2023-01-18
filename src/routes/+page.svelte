@@ -1,4 +1,5 @@
 <script lang="ts">
+	import ReusableButton from '../components/ReusableButton.svelte'
 	import type { PageData } from './$types'
 
 	export let data: PageData
@@ -6,7 +7,9 @@
 </script>
 
 <div class="flex justify-center items-center min-h-screen">
-	<button class="btn btn-primary">Hello world!</button>
+	<ReusableButton />
+</div>
+<div>
 	<ul>
 		{#each posts as post (post.slug)}
 			<li><a href="/posts/{post.slug}">{post.title}</a></li>
