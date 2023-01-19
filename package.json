@@ -43,6 +43,5 @@
 		"vitest": "^0.25.8",
 		"mdsvex": "^0.10.6"
 	},
-	"type": "module",
-	"prepare": "svelte-kit sync"
+	"type": "module"
 }
