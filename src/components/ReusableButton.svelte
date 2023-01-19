@@ -1,5 +1,5 @@
 <script lang="ts">
-	export const onClick = (e: Event) => {
+	export const onClick = () => {
 		name = 'You changed me!'
 	}
 	let name = 'Hello world!'

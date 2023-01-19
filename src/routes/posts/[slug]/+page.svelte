@@ -4,9 +4,10 @@
 	import PageHead from '../../../components/PageHead.svelte'
 	import ArticleTitle from '../../../components/ArticleTitle.svelte'
 	import ArticleMeta from '../../../components/ArticleMeta.svelte'
+	
 	export let data: PageData
 
-	type C = $$Generic<typeof SvelteComponentTyped<any, any, any>>
+	type C = $$Generic<typeof SvelteComponentTyped<any, any, any>
 	const component = data.component as unknown as C
 </script>
 
