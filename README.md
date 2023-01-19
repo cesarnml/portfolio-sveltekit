@@ -22,3 +22,5 @@
 - run: npx playwright install-deps
   if: steps.playwright-cache.outputs.cache-hit == 'true'
 ```
+
+- Unclear how to CI/CD integrate vercel pipeline
