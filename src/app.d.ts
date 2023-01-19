@@ -21,5 +21,6 @@ declare namespace App {
 		description: string
 		date: string
 		published: boolean
+		tags: string[]
 	}
 }
