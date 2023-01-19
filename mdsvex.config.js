@@ -6,7 +6,6 @@ const config = defineConfig({
 	smartypants: {
 		dashes: 'oldschool'
 	},
-
 	remarkPlugins: [],
 	rehypePlugins: []
 })

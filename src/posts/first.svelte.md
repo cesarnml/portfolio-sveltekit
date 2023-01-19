@@ -17,3 +17,7 @@ date: 2023-01-17
 
 1. Make a list
 2. Yup
+
+```jsx
+const code = 'yay!'
+```
