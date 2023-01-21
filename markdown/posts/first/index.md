@@ -41,5 +41,6 @@ const code = 'yay!'
 ```
 
 <ReusableImage image="revue-subscribers-list-search.png" alt="cool"/>
+
 - [ ] Do checkboxes worK?
 - [x] Maybe?
