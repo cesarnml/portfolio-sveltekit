@@ -43,14 +43,3 @@ const code = 'yay!'
 
 - [ ] Do checkboxes worK?
 - [x] Maybe?
-
-[external link](http://google.com)
-~~strikethrough~~
-
-x^2^
-
-http://google.com
-
-www.google.com
-
-<## Autolink literals
