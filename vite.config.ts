@@ -7,7 +7,8 @@ const config: UserConfig = {
 	resolve: {
 		alias: {
 			'@components': resolve('./src/components'),
-			'@lib': resolve('./src/lib')
+			'@lib': resolve('./src/lib'),
+			'@markdown': resolve('./markdown')
 		}
 	}
 }

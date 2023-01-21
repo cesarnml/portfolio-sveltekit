@@ -1,5 +1,5 @@
 <script lang="ts">
-	import ReusableButton from '@components/ReusableButton.svelte'
+	import ReusableButton from '../components/ReusableButton.svelte'
 	import type { PageData } from './$types'
 
 	export let data: PageData

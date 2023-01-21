@@ -1,4 +1,5 @@
 {
+	"include": ["./vitesSetup.ts"],
 	"extends": "./.svelte-kit/tsconfig.json",
 	"compilerOptions": {
 		"baseUrl": ".",
@@ -6,7 +7,8 @@
 			"@components/*": ["src/components/*"],
 			"@lib/*": ["src/lib/*"],
 			"$lib": ["src/lib"],
-			"$lib/*": ["src/lib/*"]
+			"$lib/*": ["src/lib/*"],
+			"@markdown/*": ["markdown/*"]
 		},
 		"allowJs": true,
 		"checkJs": true,
