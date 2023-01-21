@@ -9,6 +9,7 @@ date: 2023-01-17
 
 <script>
   import ReusableButton from '@components/ReusableButton.svelte'
+  import ReusableImage from '@components/ReusableImage.svelte'
 </script>
 
 ## Table of Contents
@@ -39,7 +40,6 @@ const code = 'yay!'
 const code = 'yay!'
 ```
 
-![test](./revue-subscribers-list-search.png)
-
+<ReusableImage image="revue-subscribers-list-search.png" alt="cool"/>
 - [ ] Do checkboxes worK?
 - [x] Maybe?
