@@ -7,20 +7,23 @@ declare namespace App {
 	// interface PageData {}
 	// interface Platform {}
 
-	interface MdsvexFile {
-		default: import('svelte/internal').SvelteComponent
-		metadata: Record<string, string>
+	interface MdsvexModule {
+		default: import('svelte/internal').SvelteComponent & { render: () => { html: string } }
+		metadata: Metadata
 	}
 
-	type MdsvexResolver = () => Promise<MdsvexFile>
-
-	interface BlogPost {
-		slug: string
+	interface Metadata {
 		title: string
 		author: string
 		description: string
 		date: string
 		published: boolean
 		tags: string[]
+	}
+
+	interface BlogPost extends Metadata {
+		html: string
+		slug: string
+		readingTime: string
 	}
 }

@@ -4,6 +4,12 @@ import { resolve } from 'path'
 
 const config: UserConfig = {
 	plugins: [sveltekit()],
+	server: {
+		fs: {
+			// Allow serving files from one level up to the project root
+			allow: ['..']
+		}
+	},
 	resolve: {
 		alias: {
 			'@components': resolve('./src/components'),

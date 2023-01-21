@@ -1,24 +1,23 @@
 import type { PageServerLoad } from './$types'
-import { slugFromPath } from '@lib/slugFromPath'
+import { basename, dirname } from 'path'
+import * as readingTime from 'reading-time'
 
 const MAX_POSTS = 10
 
 export const load: PageServerLoad = async () => {
-	const modules = import.meta.glob(`/src/posts/*.{md,svx,svelte.md}`)
+	const modules = import.meta.glob(`@markdown/posts/**/*.md`, { eager: true })
 
-	const postPromises = Object.entries(modules).map(([path, resolver]) =>
-		resolver().then((post) => {
-			return {
-				slug: slugFromPath(path),
-				...(post as App.MdsvexFile).metadata
-			} as App.BlogPost
-		})
-	)
+	const posts = Object.entries(modules).map(([path, svxModule]) => {
+		const slug = basename(dirname(path))
+		const html = (svxModule as App.MdsvexModule).default.render().html
+		const metadata = (svxModule as App.MdsvexModule).metadata
+		return { slug, html, ...metadata, readingTime: readingTime.default(html).text }
+	})
 
-	const posts = await Promise.all(postPromises)
 	const publishedPosts = posts.filter((post) => post.published).slice(0, MAX_POSTS)
 
 	publishedPosts.sort((a, b) => (new Date(a.date) > new Date(b.date) ? -1 : 1))
+	console.log('publishedPosts:', publishedPosts)
 
 	return { posts: publishedPosts }
 }
