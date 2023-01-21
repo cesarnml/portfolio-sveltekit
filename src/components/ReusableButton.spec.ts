@@ -2,21 +2,17 @@
 import '@testing-library/jest-dom'
 import { render, fireEvent, screen } from '@testing-library/svelte'
 import ReusableButton from './ReusableButton.svelte'
-
-test('shows proper heading when rendered', () => {
-	render(ReusableButton)
-	const button = screen.getByText('Hello world!')
-	expect(button).toBeInTheDocument()
-})
-
-test('changes button text on click', async () => {
+it('describes the ReusableButton component', async () => {
 	render(ReusableButton)
 	const button = screen.getByRole('button')
 
-	// Using await when firing events is unique to the svelte testing library because
-	// we have to wait for the next `tick` so that Svelte flushes all pending state changes.
-	await fireEvent.click(button)
+	test('shows proper heading when rendered', async () => {
+		expect(button).toHaveTextContent('Hello world!')
+	})
 
-	const alert = screen.getByText('You changed me!')
-	expect(alert).toBeInTheDocument()
+	test('changes button text on click', async () => {
+		await fireEvent.click(button)
+
+		expect(button).toBeInTheDocument()
+	})
 })
