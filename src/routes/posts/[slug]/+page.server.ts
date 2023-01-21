@@ -14,8 +14,7 @@ export const load: PageLoad = async ({ params }: Props) => {
 	try {
 		const postModule = (await import(`../../../../markdown/posts/${params.slug}/index.md`)) as App.MdsvexModule
 		const html = postModule.default.render().html
-		console.log('html:', html)
-		console.log('postModule metadata:', postModule?.metadata)
+
 		if (!postModule || !postModule.metadata.published) {
 			throw error(404, 'Post not found') // Couldn't resolve the post
 		}
