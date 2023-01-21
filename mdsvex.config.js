@@ -3,6 +3,8 @@ import relativeImages from 'mdsvex-relative-images'
 import autolinkHeadings from 'rehype-autolink-headings'
 import slugPlugin from 'rehype-slug'
 import remarkExternalLinks from 'remark-external-links'
+import remarkToc from 'remark-toc'
+
 // import readingTime from 'remark-reading-time'
 
 const config = defineConfig({
@@ -14,6 +16,7 @@ const config = defineConfig({
 	remarkPlugins: [
 		// adds a `readingTime` frontmatter attribute
 		// readingTime,
+		remarkToc,
 		relativeImages,
 		// external links open in a new tab
 		[remarkExternalLinks, { target: '_blank', rel: 'noopener noreferrer' }]

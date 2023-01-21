@@ -11,13 +11,17 @@ date: 2023-01-17
   import ReusableButton from '@components/ReusableButton.svelte'
 </script>
 
-# Heading 1
+## Table of Contents
 
-## This is more markdown **base content**
+## Heading 1
+
+## Heading 2
+
+### Heading 3
 
 <ReusableButton />
 
-### Heading 3
+## Heading 4
 
 1. Make a list
 2. Yup
@@ -45,4 +49,8 @@ const code = 'yay!'
 
 x^2^
 
-<!-- <video src="./sample.mp4" type="video/mp4"> -->
+http://google.com
+
+www.google.com
+
+<## Autolink literals
