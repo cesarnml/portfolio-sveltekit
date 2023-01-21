@@ -7,8 +7,8 @@
 
 <svelte:head>
 	<title>{formattedTitle}</title>
-	<meta name="description" content="Tech blog post by Cesar Napoleon Mejia Leiva" />
-	<meta httpequiv="Content-Security-Policy" content="script-src 'none'" />
+	<meta name="description" content={description} />
+	<meta httpequiv="Content-Security-Policy" content="script-src 'self'" />
 
 	<meta property="og:site_name" content={siteTitle} />
 	<meta property="og:title" content={title} />

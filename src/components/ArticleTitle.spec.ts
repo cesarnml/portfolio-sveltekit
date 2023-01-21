@@ -4,29 +4,23 @@ import { render, screen } from '@testing-library/svelte'
 
 import ArticleTitle from './ArticleTitle.svelte'
 
-it('describes the ArticleTitle component', async () => {
+test('href contains slug', () => {
 	const title = 'Test title'
+	const slug = 'test-slug'
+	render(ArticleTitle, { title, slug })
+	const titleLink = screen.getByRole('link', { name: title })
+	expect(titleLink).toHaveAttribute('href', expect.stringContaining(slug))
+})
 
-	it('with a slug passed', async () => {
-		const slug = 'test-slug'
-		render(ArticleTitle, { title, slug })
+test('href contains id', () => {
+	const title = 'Test title'
+	const id = title
+		.toLowerCase()
+		.replace(/[^a-zA-Z ]/g, '')
+		.replace(/\s/g, '-')
 
-		const titleLink = screen.getByRole('link')
-		test('href contains slug', async () => {
-			expect(titleLink).toHaveAttribute('href', expect.stringContaining(slug))
-		})
-	})
+	render(ArticleTitle, { title })
 
-	it('without a slug passed', async () => {
-		render(ArticleTitle, { title })
-
-		const titleLink = screen.getByRole('link')
-		test('href contains id', async () => {
-			const id = title
-				.toLowerCase()
-				.replace(/[^a-zA-Z ]/g, '')
-				.replace(/\s/g, '-')
-			expect(titleLink).toHaveAttribute('href', expect.stringContaining(id))
-		})
-	})
+	const titleLink = screen.getByRole('link', { name: title })
+	expect(titleLink).toHaveAttribute('href', expect.stringContaining(`#${id}`))
 })
