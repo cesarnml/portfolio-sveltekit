@@ -10,6 +10,7 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"test:unit": "vitest -- --watch",
+		"coverage": "vitest run --coverage",
 		"test": "vitest run src -- --watch",
 		"test:watch": "vitest src -- --watch",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
@@ -25,6 +26,7 @@
 		"@types/testing-library__jest-dom": "^5.14.5",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
+		"@vitest/coverage-c8": "^0.27.2",
 		"autoprefixer": "^10.4.13",
 		"daisyui": "^2.47.0",
 		"eslint": "^8.28.0",
@@ -41,7 +43,7 @@
 		"tslib": "^2.4.1",
 		"typescript": "^4.9.3",
 		"vite": "^4.0.4",
-		"vitest": "^0.25.8"
+		"vitest": "^0.27.2"
 	},
 	"type": "module"
 }

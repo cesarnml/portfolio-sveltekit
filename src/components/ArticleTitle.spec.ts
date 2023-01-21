@@ -4,23 +4,26 @@ import { render, screen } from '@testing-library/svelte'
 
 import ArticleTitle from './ArticleTitle.svelte'
 
-test('href contains slug', () => {
+describe('ArticleTitle', () => {
 	const title = 'Test title'
 	const slug = 'test-slug'
-	render(ArticleTitle, { title, slug })
-	const titleLink = screen.getByRole('link', { name: title })
-	expect(titleLink).toHaveAttribute('href', expect.stringContaining(slug))
-})
 
-test('href contains id', () => {
-	const title = 'Test title'
-	const id = title
-		.toLowerCase()
-		.replace(/[^a-zA-Z ]/g, '')
-		.replace(/\s/g, '-')
+	test('if slug passed href contains slug', () => {
+		render(ArticleTitle, { title, slug })
+		const titleLink = screen.getByRole('link', { name: title })
+		expect(titleLink).toHaveAttribute('href', expect.stringContaining(slug))
+	})
 
-	render(ArticleTitle, { title })
+	test('if slug not passed href contains id', () => {
+		const title = 'Test title'
+		const id = title
+			.toLowerCase()
+			.replace(/[^a-zA-Z ]/g, '')
+			.replace(/\s/g, '-')
 
-	const titleLink = screen.getByRole('link', { name: title })
-	expect(titleLink).toHaveAttribute('href', expect.stringContaining(`#${id}`))
+		render(ArticleTitle, { title })
+
+		const titleLink = screen.getByRole('link', { name: title })
+		expect(titleLink).toHaveAttribute('href', expect.stringContaining(`#${id}`))
+	})
 })

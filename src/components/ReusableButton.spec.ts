@@ -3,16 +3,23 @@ import '@testing-library/jest-dom'
 import { render, fireEvent, screen } from '@testing-library/svelte'
 import ReusableButton from './ReusableButton.svelte'
 
-test('shows proper heading when rendered', () => {
-	render(ReusableButton)
-	const button = screen.getByRole('button')
-	expect(button).toHaveTextContent('Hello world!')
-})
+describe('ReusableButton', () => {
+	const textBeforeClick = 'Hello world!'
+	const textAfterClick = 'You changed me!'
 
-test('changes button text on click', async () => {
-	render(ReusableButton)
-	const button = screen.getByRole('button')
-	await fireEvent.click(button)
+	beforeEach(() => {
+		render(ReusableButton)
+	})
 
-	expect(button).toBeInTheDocument()
+	test('shows proper heading when rendered', () => {
+		const button = screen.getByRole('button')
+		expect(button).toHaveTextContent(textBeforeClick)
+	})
+
+	test('changes button text on click', async () => {
+		const button = screen.getByRole('button')
+
+		await fireEvent.click(button)
+		expect(button).toHaveTextContent(textAfterClick)
+	})
 })

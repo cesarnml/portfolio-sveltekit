@@ -4,22 +4,24 @@ import { render, screen } from '@testing-library/svelte'
 
 import ArticleMeta from './ArticleMeta.svelte'
 
-const author = 'Test Author'
-const date = '2001/12/03'
-const formattedDate = new Date(date).toDateString()
+describe('ArticleMeta', () => {
+	const author = 'Test Author'
+	const date = '2001/12/03'
+	const formattedDate = new Date(date).toDateString()
 
-test('shows an author span', async () => {
-	render(ArticleMeta, { author, date })
+	beforeEach(() => {
+		render(ArticleMeta, { author, date })
+	})
 
-	const authorSpan = screen.getByText(author)
+	test('has an author span', async () => {
+		const authorSpan = screen.getByText(author)
 
-	expect(authorSpan).toBeInTheDocument()
-})
+		expect(authorSpan).toBeInTheDocument()
+	})
 
-test('shows a formatted date span', async () => {
-	render(ArticleMeta, { author, date })
+	test('has a formatted date span', async () => {
+		const dateSpan = screen.getByText(formattedDate)
 
-	const dateSpan = screen.getByText(formattedDate)
-
-	expect(dateSpan).toBeInTheDocument()
+		expect(dateSpan).toBeInTheDocument()
+	})
 })
