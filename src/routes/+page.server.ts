@@ -1,5 +1,5 @@
 import type { PageServerLoad } from './$types'
-import { slugFromPath } from '$lib/slugFromPath'
+import { slugFromPath } from '@lib/slugFromPath'
 
 const MAX_POSTS = 10
 
