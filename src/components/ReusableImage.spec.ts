@@ -1,4 +1,4 @@
-import { render, fireEvent, screen } from '@testing-library/svelte'
+import { render, screen } from '@testing-library/svelte'
 import ReusableImage from './ReusableImage.svelte'
 
 describe('ReusableImage', () => {
