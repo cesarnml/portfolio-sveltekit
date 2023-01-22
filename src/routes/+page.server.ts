@@ -1,6 +1,6 @@
 import type { PageServerLoad } from './$types'
 import { basename, dirname } from 'path'
-import * as readingTime from 'reading-time'
+// import * as readingTime from 'reading-time'
 
 const MAX_POSTS = 10
 
@@ -11,7 +11,8 @@ export const load: PageServerLoad = async () => {
 		const slug = basename(dirname(path))
 		const html = (svxModule as App.MdsvexModule).default.render().html
 		const metadata = (svxModule as App.MdsvexModule).metadata
-		return { slug, html, ...metadata, readingTime: readingTime.default(html).text }
+		// return { slug, html, ...metadata, readingTime: readingTime.default(html).text }
+		return { slug, html, ...metadata }
 	})
 
 	const publishedPosts = posts.filter((post) => post.published).slice(0, MAX_POSTS)

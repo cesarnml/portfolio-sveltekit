@@ -19,11 +19,18 @@ declare namespace App {
 		date: string
 		published: boolean
 		tags: string[]
+		readingTime: ReadingTime
+	}
+
+	interface ReadingTime {
+		text: string
+		minutes: number
+		time: number
+		words: number
 	}
 
 	interface BlogPost extends Metadata {
 		html: string
 		slug: string
-		readingTime: string
 	}
 }

@@ -5,8 +5,8 @@ import slugPlugin from 'rehype-slug'
 import remarkExternalLinks from 'remark-external-links'
 import remarkToc from 'remark-toc'
 import remarkCodeTitles from 'remark-code-titles'
-
-// import readingTime from 'remark-reading-time'
+// FIXME: Try to get this to work.
+import readingTime from 'remark-reading-time'
 
 const config = defineConfig({
 	extensions: ['.svelte.md', '.md', '.svx'],
@@ -16,7 +16,7 @@ const config = defineConfig({
 	},
 	remarkPlugins: [
 		// adds a `readingTime` frontmatter attribute
-		// readingTime,
+		readingTime(),
 		remarkCodeTitles,
 		remarkToc,
 		relativeImages,

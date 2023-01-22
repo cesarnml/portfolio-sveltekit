@@ -1,5 +1,6 @@
 <script lang="ts">
 	import ReusableButton from '@components/ReusableButton.svelte'
+	import { Url } from '@lib/url'
 	import type { PageData } from './$types'
 
 	export let data: PageData
@@ -12,7 +13,7 @@
 <div>
 	<ul>
 		{#each posts as post (post.slug)}
-			<li><a href="/blog/{post.slug}">{post.title}</a></li>
+			<li><a href={Url.BlogDetail(post.slug)}>{post.title}</a></li>
 		{/each}
 	</ul>
 </div>

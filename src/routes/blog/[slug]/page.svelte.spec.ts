@@ -11,7 +11,10 @@ const data = {
 		date: '2023-12-01',
 		published: true,
 		tags: ['tag1', 'tag2'],
-		readingTime: '2 min read'
+		readingTime: {
+			text: '2 min read',
+			words: 42
+		}
 	}
 }
 
@@ -21,7 +24,7 @@ describe('BlogPostPage', () => {
 	})
 
 	test('should contain reading time', () => {
-		const readingTimeDiv = screen.getByText(data.frontmatter.readingTime)
+		const readingTimeDiv = screen.getByText(data.frontmatter.readingTime.text)
 		expect(readingTimeDiv).toBeInTheDocument()
 	})
 

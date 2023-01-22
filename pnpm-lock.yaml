@@ -29,7 +29,9 @@ specifiers:
   rehype-slug: ^5.1.0
   remark-code-titles: ^0.1.2
   remark-external-links: ^9.0.1
+  remark-reading-time: 1.0.1
   remark-toc: ^8.0.1
+  shiki: ^0.12.1
   svelte: ^3.54.0
   svelte-check: ^3.0.1
   tailwindcss: ^3.2.4
@@ -67,7 +69,9 @@ devDependencies:
   rehype-slug: 5.1.0
   remark-code-titles: 0.1.2
   remark-external-links: 9.0.1
+  remark-reading-time: 1.0.1
   remark-toc: 8.0.1
+  shiki: 0.12.1
   svelte: 3.55.1
   svelte-check: 3.0.2_pehl75e5jsy22vp33udjja4soi
   tailwindcss: 3.2.4_postcss@8.4.21
@@ -2917,6 +2921,13 @@ packages:
       unist-util-visit: 4.1.1
     dev: true
 
+  /remark-reading-time/1.0.1:
+    resolution: {integrity: sha512-Z3yW1JSNgQcjpPavsKmWgY7wmqRQMXIKoh8r5RtvJdpDIWWf7O7MkhuFDZh+Ge/1Olv0tvD1pN4T7LEhwBQnUA==}
+    dependencies:
+      reading-time: 1.5.0
+      unist-util-visit: 3.1.0
+    dev: true
+
   /remark-toc/8.0.1:
     resolution: {integrity: sha512-7he2VOm/cy13zilnOTZcyAoyoolV26ULlon6XyCFU+vG54Z/LWJnwphj/xKIDLOt66QmJUgTyUvLVHi2aAElyg==}
     dependencies:
@@ -3035,6 +3046,14 @@ packages:
   /shebang-regex/3.0.0:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
+    dev: true
+
+  /shiki/0.12.1:
+    resolution: {integrity: sha512-aieaV1m349rZINEBkjxh2QbBvFFQOlgqYTNtCal82hHj4dDZ76oMlQIX+C7ryerBTDiga3e5NfH6smjdJ02BbQ==}
+    dependencies:
+      jsonc-parser: 3.2.0
+      vscode-oniguruma: 1.7.0
+      vscode-textmate: 8.0.0
     dev: true
 
   /side-channel/1.0.4:
@@ -3727,6 +3746,14 @@ packages:
       - sugarss
       - supports-color
       - terser
+    dev: true
+
+  /vscode-oniguruma/1.7.0:
+    resolution: {integrity: sha512-L9WMGRfrjOhgHSdOYgCt/yRMsXzLDJSL7BPrOZt73gU0iWO4mpqzqQzOz5srxqTvMBaR0XZTSrVWo4j55Rc6cA==}
+    dev: true
+
+  /vscode-textmate/8.0.0:
+    resolution: {integrity: sha512-AFbieoL7a5LMqcnOF04ji+rpXadgOXnZsxQr//r83kLPr7biP7am3g9zbaZIaBGwBRWeSvoMD4mgPdX3e4NWBg==}
     dev: true
 
   /w3c-xmlserializer/4.0.0:

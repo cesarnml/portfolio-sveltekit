@@ -28,7 +28,8 @@
 <PageHead title={data.frontmatter.title} description={data.frontmatter.description} />
 <ArticleTitle title={data.frontmatter.title} />
 <ArticleMeta author={data.frontmatter.author} date={data.frontmatter.date} />
-<div>{data.frontmatter.readingTime}</div>
+<div>{data.frontmatter.readingTime.text}</div>
+<div>Word Count: {data.frontmatter.readingTime.words}</div>
 <div data-testid="raw-html-wrapper">
 	{@html data.html}
 </div>

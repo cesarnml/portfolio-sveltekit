@@ -1,6 +1,6 @@
 import type { PageServerLoad } from './$types'
 import { error } from '@sveltejs/kit'
-import * as readingTime from 'reading-time'
+// import * as readingTime from 'reading-time'
 
 export const load = (async ({ params }) => {
 	try {
@@ -11,11 +11,12 @@ export const load = (async ({ params }) => {
 		}
 
 		const html = postModule.default.render().html
-		const readingTimeText = readingTime.default(html).text
+		// const readingTimeText = readingTime.default(html).text
 
 		return {
 			html,
-			frontmatter: { ...postModule.metadata, readingTime: readingTimeText }
+			// frontmatter: { ...postModule.metadata, readingTime: readingTimeText }
+			frontmatter: postModule.metadata
 		}
 	} catch (err) {
 		throw error(428, 'I am a teacup')
