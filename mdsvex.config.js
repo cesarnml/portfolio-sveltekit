@@ -5,7 +5,6 @@ import slugPlugin from 'rehype-slug'
 import remarkExternalLinks from 'remark-external-links'
 import remarkToc from 'remark-toc'
 import remarkCodeTitles from 'remark-code-titles'
-// FIXME: Try to get this to work.
 import readingTime from 'remark-reading-time'
 
 const config = defineConfig({
@@ -15,7 +14,6 @@ const config = defineConfig({
 		dashes: 'oldschool'
 	},
 	remarkPlugins: [
-		// adds a `readingTime` frontmatter attribute
 		readingTime(),
 		remarkCodeTitles,
 		remarkToc,
