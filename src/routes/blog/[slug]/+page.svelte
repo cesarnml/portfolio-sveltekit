@@ -1,9 +1,28 @@
 <script lang="ts">
+	import { onMount } from 'svelte'
 	import type { PageServerData } from './$types'
 	import PageHead from '@components/PageHead.svelte'
 	import ArticleTitle from '@components/ArticleTitle.svelte'
 	import ArticleMeta from '@components/ArticleMeta.svelte'
+	import { handleCopyClick } from '@lib/handleCopyClick'
 	export let data: PageServerData
+
+	onMount(async () => {
+		/**
+		 * .remark-code-title is a hidden element that contains the code language (e.g. JavaScript)
+		 *  It's used to add the code language to the copy button
+		 */
+		const remarkCodeTitles = document.querySelectorAll('.remark-code-title')
+		const preElements = document.querySelectorAll('pre')
+		// Add a copy button to each markdown code block
+		preElements.forEach((ele, index) => {
+			const remarkCodeTitle = remarkCodeTitles[index] as HTMLElement
+			const button = document.createElement('button')
+			button.textContent = remarkCodeTitle.textContent
+			button.addEventListener('click', handleCopyClick)
+			ele.appendChild(button)
+		})
+	})
 </script>
 
 <PageHead title={data.frontmatter.title} description={data.frontmatter.description} />

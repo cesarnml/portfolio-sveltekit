@@ -27,7 +27,20 @@ date: 2023-01-17
 1. Make a list
 2. Yup
 
-```js
+```js:JavaScript
+export async function load({ fetch }) {
+	const res = await fetch(`/posts.json`)
+	if (res.ok) {
+		const { posts } = await res.json()
+		return { posts }
+	}
+}
+const code = 'yay!'
+
+const code = 'yay!'
+```
+
+```js:Svelte
 export async function load({ fetch }) {
 	const res = await fetch(`/posts.json`)
 	if (res.ok) {

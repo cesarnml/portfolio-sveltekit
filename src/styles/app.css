@@ -12,3 +12,31 @@ ul {
 a:hover {
 	text-decoration: underline;
 }
+
+pre {
+	position: relative;
+}
+
+pre > button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	min-width: 100px;
+	user-select: none;
+	background-color: #262335;
+	border: none;
+	border-bottom-left-radius: 10px;
+	color: #adb5bd;
+	cursor: pointer;
+	padding: 6px 14px;
+	transition: background-color 0.4s ease-out;
+}
+
+pre > button:hover {
+	background-color: hsla(0, 0%, 100%, 0.072);
+	color: #fcb32c;
+}
+
+.remark-code-title {
+	display: none;
+}

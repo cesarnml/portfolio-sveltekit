@@ -4,6 +4,7 @@ import autolinkHeadings from 'rehype-autolink-headings'
 import slugPlugin from 'rehype-slug'
 import remarkExternalLinks from 'remark-external-links'
 import remarkToc from 'remark-toc'
+import remarkCodeTitles from 'remark-code-titles'
 
 // import readingTime from 'remark-reading-time'
 
@@ -16,6 +17,7 @@ const config = defineConfig({
 	remarkPlugins: [
 		// adds a `readingTime` frontmatter attribute
 		// readingTime,
+		remarkCodeTitles,
 		remarkToc,
 		relativeImages,
 		// external links open in a new tab
