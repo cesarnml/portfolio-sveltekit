@@ -8,6 +8,6 @@ describe('Root Layout', () => {
 		const blogLink = screen.getByRole('link', { name: 'Blog' })
 
 		expect(homeLink).toHaveAttribute('href', '/')
-		expect(blogLink).toHaveAttribute('href', '/posts')
+		expect(blogLink).toHaveAttribute('href', '/blog')
 	})
 })

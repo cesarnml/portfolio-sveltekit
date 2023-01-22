@@ -4,6 +4,6 @@
 
 <nav>
 	<a href="/">Home</a>
-	<a href="/posts">Blog</a>
+	<a href="/blog">Blog</a>
 </nav>
 <slot />

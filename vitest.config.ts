@@ -1,4 +1,4 @@
-import { defineConfig } from 'vitest/config'
+import { defineConfig, configDefaults } from 'vitest/config'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
 import { resolve } from 'path'
 
@@ -12,7 +12,8 @@ export default defineConfig({
 		coverage: {
 			all: true,
 			reporter: ['text', 'html'],
-			src: ['./src']
+			src: ['./src'],
+			exclude: configDefaults.coverage.exclude?.concat(['src/**/+page.server.ts', 'src/**/+page.ts'])
 		}
 	},
 	resolve: {
