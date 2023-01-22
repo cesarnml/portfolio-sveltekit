@@ -6,6 +6,7 @@ import remarkExternalLinks from 'remark-external-links'
 import remarkToc from 'remark-toc'
 import remarkCodeTitles from 'remark-code-titles'
 import readingTime from 'remark-reading-time'
+import highlighter from './src/lib/codeHighlighter.mjs'
 
 const config = defineConfig({
 	extensions: ['.svelte.md', '.md', '.svx'],
@@ -13,6 +14,9 @@ const config = defineConfig({
 	smartypants: {
 		dashes: 'oldschool'
 	},
+
+	highlight: { highlighter },
+
 	remarkPlugins: [
 		readingTime(),
 		remarkCodeTitles,

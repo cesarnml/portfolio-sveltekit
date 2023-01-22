@@ -14,7 +14,8 @@ const config: UserConfig = {
 		alias: {
 			'@components': resolve('./src/components'),
 			'@lib': resolve('./src/lib'),
-			'@markdown': resolve('./markdown')
+			'@markdown': resolve('./markdown'),
+			'@styles': resolve('./src/styles')
 		}
 	}
 }

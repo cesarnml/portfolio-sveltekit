@@ -27,7 +27,7 @@ date: 2023-01-17
 1. Make a list
 2. Yup
 
-```js:JavaScript
+```js:JavaScript {5-7}
 export async function load({ fetch }) {
 	const res = await fetch(`/posts.json`)
 	if (res.ok) {

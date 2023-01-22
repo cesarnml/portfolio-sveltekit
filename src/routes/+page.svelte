@@ -7,7 +7,7 @@
 	const { posts } = data
 </script>
 
-<div class="flex justify-center items-center min-h-screen">
+<div class="flex items-center justify-center min-h-screen">
 	<ReusableButton />
 </div>
 <div>

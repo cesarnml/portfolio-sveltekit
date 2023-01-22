@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Url } from '@lib/url'
 	import '../styles/app.css'
+	import '@styles/shiki.css'
 </script>
 
 <nav>
