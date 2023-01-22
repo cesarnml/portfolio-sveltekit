@@ -13,5 +13,5 @@ test('page have a link that navigates to a blog post', async ({ page }) => {
 	await page.getByRole('link', { name: 'First Svelte MDX post' }).click()
 
 	// Expects the URL to contain intro.
-	await expect(page).toHaveURL(/.*posts/)
+	await expect(page).toHaveURL(/.*blog/)
 })
