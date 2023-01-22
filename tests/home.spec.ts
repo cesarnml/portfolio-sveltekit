@@ -1,7 +1,8 @@
+import { Url } from '@lib/url'
 import { test, expect } from '@playwright/test'
 
 test('page should have "Hello world" button', async ({ page }) => {
-	await page.goto('http://localhost:4173/')
+	await page.goto(Url.Home)
 
 	const target = page.getByText('Hello world')
 
@@ -9,7 +10,7 @@ test('page should have "Hello world" button', async ({ page }) => {
 })
 
 test('page have a link that navigates to a blog post', async ({ page }) => {
-	await page.goto('http://localhost:4173/')
+	await page.goto(Url.Home)
 
 	// Click the get started link.
 	await page.getByRole('link', { name: 'First Svelte MDX post' }).click()
@@ -21,7 +22,7 @@ test('page have a link that navigates to a blog post', async ({ page }) => {
 test('page code can be copied', async ({ page }) => {
 	const feedbackText = 'Copied 🎉'
 
-	await page.goto('http://localhost:4173/blog/first')
+	await page.goto(Url.BlogDetail('first'))
 
 	await page.getByRole('button', { name: 'Svelte' }).click()
 

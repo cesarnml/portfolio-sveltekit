@@ -17,7 +17,6 @@ export const load: PageServerLoad = async () => {
 	const publishedPosts = posts.filter((post) => post.published).slice(0, MAX_POSTS)
 
 	publishedPosts.sort((a, b) => (new Date(a.date) > new Date(b.date) ? -1 : 1))
-	console.log('publishedPosts:', publishedPosts)
 
 	return { posts: publishedPosts }
 }
