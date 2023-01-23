@@ -1,9 +1,6 @@
 <script lang="ts">
-	import { Url } from '@lib/url'
 	import NavLeft from './NavLeft.svelte'
 	import NavRight from './NavRight.svelte'
-
-	const navLinks = Object.keys(Url) as (keyof typeof Url)[]
 </script>
 
 <nav

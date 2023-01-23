@@ -2,7 +2,8 @@
 	import { Url } from '@lib/url'
 	import ReusableLink from './ReusableLink.svelte'
 
-	const navLinks = Object.keys(Url) as (keyof typeof Url)[]
+	const excludedUrls = ['BlogDetail']
+	const navLinks = Object.keys(Url).filter((url) => !excludedUrls.includes(url)) as (keyof typeof Url)[]
 </script>
 
 <ul class="flex items-center gap-8 list-none">
