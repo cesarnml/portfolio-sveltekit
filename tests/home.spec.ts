@@ -24,7 +24,7 @@ test('page code can be copied', async ({ page }) => {
 
 	await page.goto(Url.BlogDetail('first'))
 
-	await page.getByRole('button', { name: 'Svelte' }).click()
+	await page.getByRole('button', { name: 'Svelte' }).first().click()
 
 	const copiedButton = page.getByRole('button', { name: feedbackText })
 	await expect(copiedButton).toHaveText(feedbackText)
