@@ -4,5 +4,7 @@
 	import Navbar from '@components/Navbar.svelte'
 </script>
 
-<Navbar />
-<slot />
+<div class="dark:bg-slate-800 text-slate-300 ">
+	<Navbar />
+	<slot />
+</div>
