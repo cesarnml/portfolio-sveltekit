@@ -22,7 +22,10 @@ test('page have a link that navigates to a blog post', async ({ page }) => {
 test('page code can be copied', async ({ page }) => {
 	const feedbackText = 'Copied 🎉'
 
-	await page.goto(Url.BlogDetail('first'))
+	await page.goto(Url.Home)
+
+	// Click the get started link.
+	await page.getByRole('link', { name: 'First Svelte MDX post' }).click()
 
 	await page.getByRole('button', { name: 'Svelte' }).first().click()
 

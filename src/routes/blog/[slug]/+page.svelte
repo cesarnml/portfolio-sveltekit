@@ -25,6 +25,7 @@
 			const clipboardCopy = document.createElement('clipboard-copy')
 			clipboardCopy.textContent = remarkCodeTitle.textContent
 			clipboardCopy.setAttribute('for', `code-${index}`)
+			clipboardCopy.role = 'button'
 			clipboardCopy.addEventListener('click', handleCopyClick)
 			ele.appendChild(clipboardCopy)
 		})
