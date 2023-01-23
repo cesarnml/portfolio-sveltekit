@@ -1,4 +1,5 @@
 <script lang="ts">
+	import '@github/clipboard-copy-element'
 	import { onMount } from 'svelte'
 	import type { PageServerData } from './$types'
 	import PageHead from '@components/PageHead.svelte'
@@ -16,11 +17,16 @@
 		const preElements = document.querySelectorAll('pre')
 		// Add a copy button to each markdown code block
 		preElements.forEach((ele, index) => {
+			const codeEle = ele.querySelector('code')
+			if (codeEle) {
+				codeEle.id = `code-${index}`
+			}
 			const remarkCodeTitle = remarkCodeTitles[index] as HTMLElement
-			const button = document.createElement('button')
-			button.textContent = remarkCodeTitle.textContent
-			button.addEventListener('click', handleCopyClick)
-			ele.appendChild(button)
+			const clipboardCopy = document.createElement('clipboard-copy')
+			clipboardCopy.textContent = remarkCodeTitle.textContent
+			clipboardCopy.setAttribute('for', `code-${index}`)
+			clipboardCopy.addEventListener('click', handleCopyClick)
+			ele.appendChild(clipboardCopy)
 		})
 	})
 </script>
