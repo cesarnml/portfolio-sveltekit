@@ -1,6 +1,7 @@
 import { parse } from 'node-html-parser'
 import { getHighlighter } from 'shiki'
-import synthwave from './synthwave.json' assert { type: 'json' }
+import { readFile } from 'fs/promises'
+const synthwaveJson = JSON.parse(await readFile(new URL('./synthwave.json', import.meta.url)))
 // const THEME = 'material-palelight'
 
 /**
@@ -57,7 +58,7 @@ function makeFocussable(html) {
  */
 async function highlighter(code, lang, meta) {
 	const shikiHighlighter = await getHighlighter({
-		theme: synthwave
+		theme: synthwaveJson
 	})
 
 	let html
