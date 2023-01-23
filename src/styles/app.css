@@ -2,20 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-ul {
-	list-style: square;
-	margin-left: 30px;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-pre {
+.shiki {
 	position: relative;
+	font-family: 'Fira Code', monospace;
 }
 
-pre > clipboard-copy {
+.shiki clipboard-copy {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -24,7 +16,9 @@ pre > clipboard-copy {
 	background-color: #262335;
 	border: none;
 	border-bottom-left-radius: 10px;
-	color: #adb5bd;
+	color: #317ac3;
+	font-weight: bold;
+	letter-spacing: 0.05rem;
 	cursor: pointer;
 	padding: 6px 14px;
 	transition: background-color 0.4s ease-out;

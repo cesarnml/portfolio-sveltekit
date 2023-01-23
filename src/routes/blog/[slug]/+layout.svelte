@@ -1,3 +1,3 @@
-<div class="lg:w-[900px] w-full mx-auto" data-testid="blog-layout-div">
+<div class="lg:max-w-5xl w-full mx-auto" data-testid="blog-layout-div">
 	<slot />
 </div>
