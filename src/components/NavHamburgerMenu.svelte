@@ -1,4 +1,5 @@
 <script lang="ts">
+	import 'iconify-icon'
 	import { sidebar } from '@stores/sidebar'
 </script>
 
