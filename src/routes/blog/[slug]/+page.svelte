@@ -1,7 +1,5 @@
 <script lang="ts">
 	import '@styles/shiki.css'
-
-	import '@github/clipboard-copy-element'
 	import { onMount } from 'svelte'
 	import type { PageServerData } from './$types'
 	import PageHead from '@components/PageHead.svelte'

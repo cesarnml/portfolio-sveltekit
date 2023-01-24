@@ -1,4 +1,6 @@
 <script lang="ts">
+	import 'iconify-icon'
+	import '@github/clipboard-copy-element'
 	import Footer from '@components/Footer.svelte'
 	import Navbar from '@components/Navbar.svelte'
 	import Sidebar from '@components/Sidebar.svelte'

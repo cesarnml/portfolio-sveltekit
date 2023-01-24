@@ -8,7 +8,7 @@
 </script>
 
 {#each navLinks as navLink (navLink)}
-	<button on:click={sidebar.close}>
+	<div on:click={sidebar.close} on:keypress={sidebar.close}>
 		<ReusableLink href={String(Url[navLink])} label={navLink} />
-	</button>
+	</div>
 {/each}

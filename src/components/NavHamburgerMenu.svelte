@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { sidebar } from '@stores/sidebar'
-	import 'iconify-icon'
 </script>
 
 <button class=" hover:text-yellow-500" on:click={sidebar.toggle}>
