@@ -7,19 +7,15 @@
 	const { posts } = data
 </script>
 
-<div class="flex items-center justify-center min-h-screen">
-	<ReusableButton />
+<div class=" min-h-full">
+	<div class="flex items-center justify-center">
+		<ReusableButton />
+	</div>
+	<div>
+		<ul>
+			{#each posts as post (post.slug)}
+				<li><a href={Url.BlogDetail(post.slug)}>{post.title}</a></li>
+			{/each}
+		</ul>
+	</div>
 </div>
-<div>
-	<ul>
-		{#each posts as post (post.slug)}
-			<li><a href={Url.BlogDetail(post.slug)}>{post.title}</a></li>
-		{/each}
-	</ul>
-</div>
-
-<style lang="postcss">
-	:global(html) {
-		background-color: theme(colors.gray.100);
-	}
-</style>

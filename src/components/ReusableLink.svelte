@@ -1,6 +1,11 @@
 <script lang="ts">
-	export let href = '#'
-	export let label = 'No label'
+		import { page } from '$app/stores'
+		import clsx from 'clsx'
+
+		export let href = '/'
+		export let label = 'No label'
+
+		$: isActive = $page.url.pathname === href 
 </script>
 
-<a {href} class="hover:no-underline hover:text-yellow-300 transition-colors">{label}</a>
+<a {href} class={clsx(`hover:text-yellow-500 transition-colors`, isActive && 'text-yellow-300')  }>{label}</a>

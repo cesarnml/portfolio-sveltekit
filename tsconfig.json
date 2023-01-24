@@ -8,7 +8,8 @@
 			"$lib": ["src/lib"],
 			"$lib/*": ["src/lib/*"],
 			"@markdown/*": ["markdown/*"],
-			"@styles/*": ["src/styles/*"]
+			"@styles/*": ["src/styles/*"],
+			"@stores/*": ["src/stores/*"]
 		},
 		"allowJs": true,
 		"checkJs": true,

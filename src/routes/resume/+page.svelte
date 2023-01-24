@@ -1,1 +1,1 @@
-<div>Resume Page</div>
+<div class="min-h-full">Resume Page</div>

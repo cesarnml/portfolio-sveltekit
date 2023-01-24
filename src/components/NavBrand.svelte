@@ -1,12 +1,14 @@
 <script lang="ts">
 	import { Url } from '@lib/url'
+	import { sidebar } from '@stores/sidebar'
 	import SiteAuthorDetails from './SiteAuthorDetails.svelte'
 	import SiteLogo from './SiteLogo.svelte'
 </script>
 
 <a
 	href={Url.Home}
-	class="hover:no-underline hover:text-yellow-300 flex items-center justify-center gap-4 transition-colors"
+	class="hover:text-yellow-300 text-slate-50 flex items-center justify-center gap-4 transition-colors"
+	on:click={sidebar.close}
 >
 	<SiteLogo src="/avatar.png" alt="avatar" />
 	<SiteAuthorDetails />

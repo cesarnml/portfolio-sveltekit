@@ -15,7 +15,8 @@ const config: UserConfig = {
 			'@components': resolve('./src/components'),
 			'@lib': resolve('./src/lib'),
 			'@markdown': resolve('./markdown'),
-			'@styles': resolve('./src/styles')
+			'@styles': resolve('./src/styles'),
+			'@stores': resolve('./src/stores')
 		}
 	}
 }

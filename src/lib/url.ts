@@ -1,8 +1,8 @@
 export const Url = {
-	Home: '/#home',
-	About: '/#about',
-	Projects: '/#projects',
-	Contact: '/#contact',
+	Home: '/',
+	About: '/about',
+	Projects: '/projects',
+	Contact: '/contact',
 	Blog: '/blog',
 	BlogDetail: (slug: string) => `${Url.Blog}/${slug}`,
 	Resume: '/resume'
