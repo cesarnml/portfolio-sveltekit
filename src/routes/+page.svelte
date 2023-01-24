@@ -7,15 +7,13 @@
 	const { posts } = data
 </script>
 
-<div class=" min-h-full">
-	<div class="flex items-center justify-center">
-		<ReusableButton />
-	</div>
-	<div>
-		<ul>
-			{#each posts as post (post.slug)}
-				<li><a href={Url.BlogDetail(post.slug)}>{post.title}</a></li>
-			{/each}
-		</ul>
-	</div>
+<div class="flex items-center justify-center">
+	<ReusableButton />
+</div>
+<div>
+	<ul>
+		{#each posts as post (post.slug)}
+			<li><a href={Url.BlogDetail(post.slug)}>{post.title}</a></li>
+		{/each}
+	</ul>
 </div>

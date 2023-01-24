@@ -1,1 +1,1 @@
-<div class="min-h-full">Projects Page</div>
+<div>Projects Page</div>

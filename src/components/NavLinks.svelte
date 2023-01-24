@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { sidebar } from '@stores/sidebar'
-
 	import ReusableLink from '@components/ReusableLink.svelte'
 	import { Url } from '@lib/url'
 

@@ -4,6 +4,7 @@ const animationDuration = 1000 // ms
 const feedbackText = 'Copied 🎉'
 
 export const showCopyFeedbackAnimation = (copyButton: HTMLButtonElement) => {
+	if (copyButton.disabled) return
 	// store code language
 	const codeLanguage = copyButton.innerText
 	// disable copy button while feedback animation is running

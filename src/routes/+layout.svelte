@@ -3,7 +3,6 @@
 	import { media } from '@stores/media'
 	import { sidebar } from '@stores/sidebar'
 	import '@styles/app.css'
-	import { fade } from 'svelte/transition'
 	import Sidebar from '@components/Sidebar.svelte'
 	// Reactively close sidebar if screen > media.sm and sidebar is open
 	$: if ($media.sm && $sidebar) {
@@ -16,5 +15,7 @@
 	{#if $sidebar}
 		<Sidebar />
 	{/if}
-	<slot />
+	<div class="min-h-full py-4">
+		<slot />
+	</div>
 </div>
