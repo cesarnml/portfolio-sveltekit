@@ -2,7 +2,6 @@ import { parse } from 'node-html-parser'
 import { getHighlighter } from 'shiki'
 import { readFile } from 'fs/promises'
 const synthwaveJson = JSON.parse(await readFile(new URL('./synthwave.json', import.meta.url)))
-// const THEME = 'material-palelight'
 
 /**
  * Returns code with curly braces and backticks replaced by HTML entity equivalents
@@ -10,17 +9,13 @@ const synthwaveJson = JSON.parse(await readFile(new URL('./synthwave.json', impo
  * @returns {string} - escaped HTML
  */
 function escapeHtml(code) {
-	return code.replace(
-		/[{}`]/g,
-		// (character) => ({ '{': '&#123;', '}': '&#125;', '`': '&#96;' }[character]),
-		(character) => ({ '{': '&lbrace;', '}': '&rbrace;', '`': '&grave;' }[character])
-	)
+	return code.replace(/[{}`]/g, (character) => ({ '{': '&lbrace;', '}': '&rbrace;', '`': '&grave;' }[character]))
 }
 
 /**
  * Returns array of line numbers to be highlighted
- * @param {string} rangeString - range string to be parsed (e.g. {1,3-5,8})
- * @returns {number[]}
+ * @param {string} rangeString range string to be parsed (e.g. {1,3-5,8})
+ * @returns {number[]} array of line numbers to be highlighted
  */
 function rangeParser(rangeString) {
 	const result = []
@@ -44,7 +39,7 @@ function rangeParser(rangeString) {
  * @param html {string} - code to highlight
  * @returns {string} - highlighted html
  */
-function makeFocussable(html) {
+function makeFocusable(html) {
 	const root = parse(html)
 	root.querySelector('pre').setAttribute('tabIndex', '0')
 	return root.toString()
@@ -72,13 +67,15 @@ async function highlighter(code, lang, meta) {
 
 		html = shikiHighlighter.codeToHtml(code, {
 			lang,
-			lineOptions: highlightLines.map((element) => ({
-				line: element,
-				classes: ['highlight-line']
-			}))
+			lineOptions: highlightLines.map((element) => {
+				return {
+					line: element,
+					classes: ['highlight-line']
+				}
+			})
 		})
 	}
-	html = makeFocussable(html)
+	html = makeFocusable(html)
 	return escapeHtml(html)
 }
 

@@ -4,10 +4,7 @@
 	--colour-code-background-hue: 220;
 	--colour-code-background-saturation: 13%;
 	--colour-code-background-lightness: 18%;
-	--colour-code-background-highlighted: hsl(
-		var(--colour-code-background-hue) var(--colour-code-background-saturation)
-			calc(var(--colour-code-background-lightness) + 5%)
-	);
+	--colour-code-background-highlighted: hsl(43deg 48% 77% / 8%);
 
 	--spacing-0: 0rem;
 	--spacing-1: 0.25rem;
@@ -25,26 +22,36 @@
 		-20px 20px 31.8px -2.5px hsl(var(--shadow-color) / 0.36);
 }
 
+/* BEGIN: code `[pre]` element styling */
 .shiki {
+	position: relative;
+	display: flex;
+	flex-direction: column;
 	border-radius: var(--spacing-1);
-	padding: var(--spacing-8) var(--spacing-2) var(--spacing-6) var(--spacing-4);
+	padding: var(--spacing-0) var(--spacing-0) var(--spacing-6) var(--spacing-0);
 	margin: var(--spacing-4) auto var(--spacing-18);
 	box-shadow: var(--shadow-elevation-medium);
 	overflow-x: auto;
 	max-width: var(--max-width-full);
+	font-family: 'Fira Code', 'SF Mono', 'Menlo', 'Courier New', monospace;
 }
+/* END: code `[pre]` element styling */
 
+/* BEGIN: Line number styling */
 code {
 	counter-reset: step;
 	counter-increment: step 0;
 }
 
+.line:not(.highlight-line) {
+	border-left: var(--spacing-1) solid transparent;
+}
+
 .highlight-line {
 	display: inline-block;
 	background-color: var(--colour-code-background-highlighted);
-	width: calc(var(--max-width-full) + var(--spacing-1));
+	width: var(--max-width-full);
 	border-left: var(--spacing-1) solid var(--colour-code-line-highlight);
-	margin-left: calc(-1 * var(--spacing-1));
 }
 
 code .line::before {
@@ -52,8 +59,37 @@ code .line::before {
 	content: counter(step);
 	counter-increment: step;
 	width: var(--spacing-6);
+	margin-left: var(--spacing-4);
 	margin-right: var(--spacing-6);
 	text-align: right;
 	font-variant-numeric: tabular-nums;
 	color: var(--colour-line-numbers);
 }
+/* END: Line number styling */
+
+/* BEGIN: Copy-to-clipboard button styling */
+.remark-code-title {
+	/* Hidden element used to derive code language */
+	display: none;
+}
+.copy-code-to-clipboard {
+	align-self: end;
+	min-width: 100px;
+	user-select: none;
+	background-color: #262335;
+	border: none;
+	border-bottom-left-radius: 10px;
+	color: #317ac3;
+	font-weight: bold;
+	letter-spacing: 0.03rem;
+	cursor: pointer;
+	padding: 6px 14px;
+	transition: background-color 0.4s ease-out;
+	text-align: right;
+}
+
+.copy-code-to-clipboard:hover {
+	background-color: hsla(0, 0%, 100%, 0.072);
+	color: #fcb32c;
+}
+/* END: Copy-to-clipboard button styling */

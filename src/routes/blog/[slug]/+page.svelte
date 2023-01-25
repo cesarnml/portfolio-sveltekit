@@ -1,6 +1,5 @@
 <script lang="ts">
 	import '@styles/shiki.css'
-	import '@github/clipboard-copy-element'
 	import { onMount } from 'svelte'
 	import type { PageServerData } from './$types'
 	import PageHead from '@components/PageHead.svelte'
@@ -23,12 +22,12 @@
 				codeEle.id = `code-${index}`
 			}
 			const remarkCodeTitle = remarkCodeTitles[index] as HTMLElement
-			const clipboardCopy = document.createElement('clipboard-copy')
-			clipboardCopy.textContent = remarkCodeTitle.textContent
-			clipboardCopy.setAttribute('for', `code-${index}`)
-			clipboardCopy.role = 'button'
-			clipboardCopy.addEventListener('click', handleCopyClick)
-			ele.appendChild(clipboardCopy)
+			const button = document.createElement('button')
+			button.className = 'copy-code-to-clipboard'
+			button.textContent = remarkCodeTitle.textContent
+			button.role = 'button'
+			button.addEventListener('click', handleCopyClick)
+			ele.prepend(button)
 		})
 	})
 </script>
