@@ -4,7 +4,8 @@ module.exports = {
 	theme: {
 		screens: {
 			// Default tailwind breakpoints + 2xs, xs, 2md for more flexibility
-			'2xs': '375px', // iPhone SE
+			'3xs': '375px', // iPhone SE
+			'2xs': '480px',
 			xs: '576px',
 			sm: '640px',
 			md: '768px', // iPad
