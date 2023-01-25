@@ -17,10 +17,8 @@
 	{#if $sidebar}
 		<Sidebar />
 	{/if}
-	<div class="flex flex-col flex-grow min-h-full pt-4">
-		<div class="flex-grow">
-			<slot />
-		</div>
-		<Footer />
+	<div class="lg:w-5xl flex flex-col flex-grow min-h-full py-4 mx-auto">
+		<slot />
 	</div>
+	<Footer />
 </div>
