@@ -6,10 +6,10 @@
 
 <div
 	transition:fade
-	class="bg-slate-900/75 backdrop-blur text-slate-50 fixed z-50 flex flex-col items-center w-full h-full gap-6 py-16 font-medium"
+	class="fixed z-50 flex flex-col items-center w-full h-full py-16 font-medium bg-slate-900/75 backdrop-blur text-slate-50 gap-6"
 	data-testid="navlink-container"
 >
-	<div class="top-4 right-4 absolute">
+	<div class="absolute top-4 right-4">
 		<NavHamburgerMenu />
 	</div>
 	<NavLinks />

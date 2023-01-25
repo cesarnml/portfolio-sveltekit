@@ -7,7 +7,7 @@
 
 <a
 	href={Url.Home}
-	class="hover:text-yellow-300 text-slate-50 flex items-center justify-center gap-4 transition-colors"
+	class="flex items-center justify-center hover:text-yellow-300 text-slate-50 gap-4 transition-colors"
 	on:click={sidebar.close}
 >
 	<SiteLogo src="/avatar.png" alt="avatar" />
