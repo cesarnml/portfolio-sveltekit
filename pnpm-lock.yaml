@@ -28,6 +28,7 @@ specifiers:
   mdsvex: ^0.10.6
   mdsvex-relative-images: ^1.0.3
   node-html-parser: 6.1.4
+  party-js: ^2.2.0
   postcss: ^8.4.21
   prettier: ^2.8.0
   prettier-plugin-svelte: ^2.8.1
@@ -77,6 +78,7 @@ devDependencies:
   mdsvex: 0.10.6_svelte@3.55.1
   mdsvex-relative-images: 1.0.3
   node-html-parser: 6.1.4
+  party-js: 2.2.0
   postcss: 8.4.21
   prettier: 2.8.3
   prettier-plugin-svelte: 2.9.0_kdmmghgdi3ngrsq6otxkjilbry
@@ -2798,6 +2800,10 @@ packages:
     resolution: {integrity: sha512-Czj1WaSVpaoj0wbhMzLmWD69anp2WH7FXMB9n1Sy8/ZFF9jolSQVMu1Ij5WIyGmcBmhk7EOndpO4mIpihVqAXw==}
     dependencies:
       entities: 4.4.0
+    dev: true
+
+  /party-js/2.2.0:
+    resolution: {integrity: sha512-50hGuALCpvDTrQLPQ1fgUgxKIWAH28ShVkmeK/3zhO0YJyCqkhrZhQEkWPxDYLvbFJ7YAXyROmFEu35gKpZLtQ==}
     dev: true
 
   /path-exists/4.0.0:
