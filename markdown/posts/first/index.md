@@ -53,7 +53,7 @@ const code = 'yay!'
 const code = 'yay!'
 ```
 
-<ReusableImage src="/revue-subscribers-list-search.png" alt="cool"/>
+<ReusableImage src="/images/revue-subscribers-list-search.png" alt="cool"/>
 
 - [ ] Do checkboxes worK?
 - [x] Maybe?

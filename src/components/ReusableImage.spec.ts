@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/svelte'
 import ReusableImage from './ReusableImage.svelte'
 
 describe('ReusableImage', () => {
-	const src = 'test-image.png'
+	const src = '/images/test-image.png'
 	const alt = 'happy test dog'
 
 	beforeEach(() => {
