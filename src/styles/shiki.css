@@ -3,9 +3,6 @@
 	--colour-code-line-highlight-normal: hsl(34deg 96% 50%);
 	--colour-code-line-highlight-add: hsl(129deg 96% 50%);
 	--colour-code-line-highlight-remove: hsl(337deg 96% 50%);
-	--colour-code-background-hue: 220;
-	--colour-code-background-saturation: 13%;
-	--colour-code-background-lightness: 18%;
 	--colour-code-background-highlighted-normal: hsl(43deg 48% 77% / 7%);
 	--colour-code-background-highlighted-remove: hsl(340deg 97% 52% / 7%);
 	--colour-code-background-highlighted-add: hsl(129deg 65% 62% / 7%);
@@ -43,7 +40,7 @@
 /* END: code `[pre]` element styling */
 
 /* BEGIN: Line number styling */
-code {
+.shiki code {
 	counter-reset: step;
 	counter-increment: step 0;
 }

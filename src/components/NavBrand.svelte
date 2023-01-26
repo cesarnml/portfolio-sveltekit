@@ -6,11 +6,11 @@
 </script>
 
 <!-- <a
-	href={Url.Home}
 	class="flex items-center justify-center hover:text-yellow-300 text-slate-50 gap-4 transition-colors"
+	href={Url.Home}
 	on:click={sidebar.close}
 > -->
-<a href={Url.Home} on:click={sidebar.close}>
+<a class="flex items-center justify-center gap-4" href={Url.Home} on:click={sidebar.close}>
 	<SiteLogo src="/images/avatar.png" alt="avatar" />
 	<SiteAuthorDetails />
 </a>

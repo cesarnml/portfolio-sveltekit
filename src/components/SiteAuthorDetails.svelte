@@ -6,7 +6,6 @@
 	export let profession = 'Web Dev'
 </script>
 
-<!-- <div class="font-medium"> -->
 <div>
 	{author}
 	{#if $media.md}

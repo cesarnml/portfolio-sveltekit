@@ -1,7 +1,7 @@
 import { sveltekit } from '@sveltejs/kit/vite'
+import { resolve } from 'path'
 import type { UserConfig } from 'vite'
 import { configDefaults, type UserConfig as VitestConfig } from 'vitest/config'
-import { resolve } from 'path'
 
 const config: UserConfig & { test: VitestConfig['test'] } = {
 	plugins: [sveltekit()],
