@@ -20,12 +20,12 @@
 	}
 </script>
 
-<form class="row flex-center flex" on:submit|preventDefault={handleLogin}>
-	<div class="col-6 form-widget">
-		<h1 class="header">Supabase + SvelteKit</h1>
-		<p class="description">Sign in via magic link with your email below</p>
+<form class="" on:submit|preventDefault={handleLogin}>
+	<div class="">
+		<h1 class="">Welcome to my website! Let's learn to be better together.</h1>
+		<p class="">Sign in via magic link with your email below</p>
 		<div>
-			<input class="inputField" type="email" placeholder="Your email" bind:value={email} />
+			<input class="" type="email" placeholder="Your email" bind:value={email} />
 		</div>
 		<div>
 			<input type="submit" class="button block" value={loading ? 'Loading' : 'Send magic link'} disabled={loading} />

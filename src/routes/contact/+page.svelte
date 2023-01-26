@@ -5,44 +5,58 @@
 		PUBLIC_EMAIL_FROM,
 		PUBLIC_EMAIL_SUBJECT
 	} from '$env/static/public'
-	import { error } from '@sveltejs/kit'
+	import { error, type HttpError } from '@sveltejs/kit'
 	import { onMount } from 'svelte'
 	import party from 'party-js'
+	import toast, { Toaster } from 'svelte-french-toast'
 
-	let sendEmail: (e: Event) => void
+	let sendEmail: (e: Event) => Promise<void | HttpError>
 	let name: string
 	let email: string
 	let message: string
 	let buttonText = 'Send Message'
 	let buttonDisabled = false
 
-	onMount(() => {
-		sendEmail = (e: Event) => {
+	onMount(async () => {
+		sendEmail = async (e: Event) => {
 			buttonDisabled = true
-			buttonText = 'Sending ...'
-			return Email.send({
-				SecureToken: PUBLIC_EMAIL_SECURE_TOKEN,
-				To: PUBLIC_EMAIL_TO,
-				From: PUBLIC_EMAIL_FROM,
-				Subject: PUBLIC_EMAIL_SUBJECT,
-				Body: `${name}<br/>${email}<br/>${message}`
-			})
-				.then(() => {
-					if (e.target) {
-						party.confetti(e.target as HTMLButtonElement, {
-							count: party.variation.range(80, 100),
-							size: party.variation.range(0.6, 1.4)
-						})
-					}
-					buttonText = 'Message Sent 🎉'
-					setTimeout(() => {
-						buttonDisabled = false
-						buttonText = 'Send Message'
-					}, 4000)
+			try {
+				await Email.send({
+					SecureToken: PUBLIC_EMAIL_SECURE_TOKEN,
+					To: PUBLIC_EMAIL_TO,
+					From: PUBLIC_EMAIL_FROM,
+					Subject: PUBLIC_EMAIL_SUBJECT,
+					Body: `${name}<br/>${email}<br/>${message}`
 				})
-				.catch((err: Error) => error(400, err.message))
+
+				if (e.target) {
+					party.confetti(e.target as HTMLButtonElement, {
+						count: party.variation.range(80, 100),
+						size: party.variation.range(0.6, 1.4)
+					})
+				}
+				setTimeout(() => {
+					buttonDisabled = false
+				}, 4000)
+			} catch (err) {
+				error(400, 'Email failed 😬')
+			}
 		}
 	})
+
+	const handleSend = (e: Event) => {
+		toast.promise(
+			sendEmail(e),
+			{
+				loading: 'Sending Message',
+				success: 'Message sent!',
+				error: 'Could not send.'
+			},
+			{
+				className: 'toasty'
+			}
+		)
+	}
 </script>
 
 <div class="flex justify-center w-full px-4">
@@ -52,9 +66,11 @@
 
 	<button type="button" on:click={sendEmail}>Send Email</button> -->
 
-	<div class="2xs:max-w-screen-2xs w-full p-6 bg-white rounded-lg shadow-lg">
+	<div class="2xs:max-w-screen-2xs w-full p-6 bg-white rounded-lg shadow-lg relative">
+		<Toaster />
+
 		<h1 class="mb-4 text-2xl font-bold text-center text-blue-900 select-none">Contact Me</h1>
-		<form on:submit|preventDefault={sendEmail}>
+		<form on:submit|preventDefault={(e) => handleSend(e)}>
 			<div class="mb-6">
 				<input
 					class="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"

@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.toasty {
+	position: absolute !important;
+	bottom: 10px;
+	right: 10px;
+	z-index: 1000;
+}
+
+.wrapper:has(.toasty) {
+	position: relative !important;
+	height: 100%;
+}
