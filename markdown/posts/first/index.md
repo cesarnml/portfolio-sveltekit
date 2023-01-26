@@ -27,7 +27,7 @@ date: 2023-01-17
 1. Make a list
 2. Yup
 
-```js:JavaScript {5-7}
+```js:JavaScript {5-7a,3a,4a, 2r, 9-10n}
 export async function load({ fetch }) {
 	const res = await fetch(`/posts.json`)
 	if (res.ok) {
@@ -40,7 +40,7 @@ const code = 'yay!'
 const code = 'yay!'
 ```
 
-```js:Svelte {2,4,7}
+```js:Svelte
 export async function load({ fetch }) {
 	const res = await fetch(`/posts.json`)
 	if (res.ok) {
@@ -65,10 +65,10 @@ const code = 'yay!'
 
 <nav class="navbar bg-base-100">
 	<div class="navbar-start">
-		<a class="text-xl normal-case btn btn-ghost" href="#logo">daisyUI</a>
+		<a class="btn btn-ghost text-xl normal-case" href="#logo">daisyUI</a>
 	</div>
 	<div class="navbar-center lg:flex">
-		<ul class="px-1 menu menu-horizontal">
+		<ul class="menu menu-horizontal px-1">
 			<li><a href={Url.Home}>Home</a></li>
 			<li><a href={Url.About}>About</a></li>
 			<li><a href={Url.Blog}>Blog</a></li>

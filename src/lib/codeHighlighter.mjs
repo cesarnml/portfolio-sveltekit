@@ -62,17 +62,50 @@ async function highlighter(code, lang, meta) {
 			lang
 		})
 	} else {
-		const highlightMeta = /{([\d,-]+)}/.exec(meta)[1]
-		const highlightLines = rangeParser(highlightMeta)
+		// const highlightMeta = /{([\d,-]+)}/.exec(meta)[1]
+		const highlightMetaAdd =
+			meta
+				.match(/[\d-]+a/g)
+				.join(',')
+				.replaceAll('a', '') ?? []
+
+		const highlightMetaRemove =
+			meta
+				.match(/[\d-]+r/g)
+				.join(',')
+				.replaceAll('r', '') ?? []
+		const highlightMetaNormal =
+			meta
+				.match(/[\d-]+n/g)
+				.join(',')
+				.replaceAll('n', '') ?? []
+
+		const highlightLinesAdd = rangeParser(highlightMetaAdd)
+		const highlightLinesRemove = rangeParser(highlightMetaRemove)
+		const highlightLinesNormal = rangeParser(highlightMetaNormal)
 
 		html = shikiHighlighter.codeToHtml(code, {
 			lang,
-			lineOptions: highlightLines.map((element) => {
-				return {
-					line: element,
-					classes: ['highlight-line']
-				}
-			})
+			lineOptions: [
+				...highlightLinesAdd.map((element) => {
+					return {
+						line: element,
+						classes: ['highlight-line-add']
+					}
+				}),
+				...highlightLinesRemove.map((element) => {
+					return {
+						line: element,
+						classes: ['highlight-line-remove']
+					}
+				}),
+				...highlightLinesNormal.map((element) => {
+					return {
+						line: element,
+						classes: ['highlight-line-normal']
+					}
+				})
+			]
 		})
 	}
 	html = makeFocusable(html)
