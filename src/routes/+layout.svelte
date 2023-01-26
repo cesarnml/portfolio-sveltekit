@@ -9,6 +9,7 @@
 	import { sidebar } from '@stores/sidebar'
 	import '@skeletonlabs/skeleton/themes/theme-modern.css'
 	import '@styles/app.css'
+	import { AppShell } from '@skeletonlabs/skeleton'
 
 	onMount(() => {
 		const {
@@ -29,14 +30,25 @@
 </script>
 
 <!-- <div class="bg-slate-800 text-slate-300 flex flex-col min-h-screen"> -->
-<div>
+<!-- <div>
 	<Navbar />
 	{#if $sidebar}
 		<Sidebar />
-	{/if}
-	<!-- <div class="lg:max-w-5xl flex flex-col flex-grow w-full min-h-full py-6 mx-auto"> -->
-	<div>
+	{/if} -->
+<!-- <div class="lg:max-w-5xl flex flex-col flex-grow w-full min-h-full py-6 mx-auto"> -->
+<!-- <div>
 		<slot />
 	</div>
 	<Footer />
-</div>
+</div> -->
+<AppShell>
+	<svelte:fragment slot="header"><Navbar /></svelte:fragment>
+	<!-- <svelte:fragment slot="sidebarLeft">Sidebar Left</svelte:fragment>
+	<svelte:fragment slot="sidebarRight">Sidebar Right</svelte:fragment>
+	<svelte:fragment slot="pageHeader">Page Header</svelte:fragment> -->
+	<!-- Router Slot -->
+	<slot />
+	<!-- ---- / ---- -->
+	<!-- <svelte:fragment slot="pageFooter">Page Footer</svelte:fragment> -->
+	<svelte:fragment slot="footer"><Footer /></svelte:fragment>
+</AppShell>
