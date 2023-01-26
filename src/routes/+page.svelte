@@ -8,6 +8,7 @@
 </script>
 
 <div class="flex items-center justify-center">
+	<button class="btn variant-filled-primary btn-base"> Skeleton </button>
 	<ReusableButton />
 </div>
 <div>

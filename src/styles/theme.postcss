@@ -1,0 +1,96 @@
+:root {
+	/* =~= Theme Properties =~= */
+	--theme-font-family-base: system-ui;
+	--theme-font-family-heading: system-ui;
+	--theme-font-color-base: 0 0 0;
+	--theme-font-color-dark: 255 255 255;
+	--theme-rounded-base: 9999px;
+	--theme-rounded-container: 8px;
+	--theme-border-base: 1px;
+	/* =~= Theme On-X Colors =~= */
+	--on-primary: 0 0 0;
+	--on-secondary: 0 0 0;
+	--on-tertiary: 255 255 255;
+	--on-success: 255 255 255;
+	--on-warning: 255 255 255;
+	--on-error: 255 255 255;
+	--on-surface: 255 255 255;
+	/* =~= Theme Colors  =~= */
+	/* primary | #65bda2 */
+	--color-primary-50: 232 245 241; /* ⬅ #e8f5f1 */
+	--color-primary-100: 224 242 236; /* ⬅ #e0f2ec */
+	--color-primary-200: 217 239 232; /* ⬅ #d9efe8 */
+	--color-primary-300: 193 229 218; /* ⬅ #c1e5da */
+	--color-primary-400: 147 209 190; /* ⬅ #93d1be */
+	--color-primary-500: 101 189 162; /* ⬅ #65bda2 */
+	--color-primary-600: 91 170 146; /* ⬅ #5baa92 */
+	--color-primary-700: 76 142 122; /* ⬅ #4c8e7a */
+	--color-primary-800: 61 113 97; /* ⬅ #3d7161 */
+	--color-primary-900: 49 93 79; /* ⬅ #315d4f */
+	/* secondary | #9b80cf */
+	--color-secondary-50: 240 236 248; /* ⬅ #f0ecf8 */
+	--color-secondary-100: 235 230 245; /* ⬅ #ebe6f5 */
+	--color-secondary-200: 230 223 243; /* ⬅ #e6dff3 */
+	--color-secondary-300: 215 204 236; /* ⬅ #d7ccec */
+	--color-secondary-400: 185 166 221; /* ⬅ #b9a6dd */
+	--color-secondary-500: 155 128 207; /* ⬅ #9b80cf */
+	--color-secondary-600: 140 115 186; /* ⬅ #8c73ba */
+	--color-secondary-700: 116 96 155; /* ⬅ #74609b */
+	--color-secondary-800: 93 77 124; /* ⬅ #5d4d7c */
+	--color-secondary-900: 76 63 101; /* ⬅ #4c3f65 */
+	/* tertiary | #093ac4 */
+	--color-tertiary-50: 218 225 246; /* ⬅ #dae1f6 */
+	--color-tertiary-100: 206 216 243; /* ⬅ #ced8f3 */
+	--color-tertiary-200: 194 206 240; /* ⬅ #c2cef0 */
+	--color-tertiary-300: 157 176 231; /* ⬅ #9db0e7 */
+	--color-tertiary-400: 83 117 214; /* ⬅ #5375d6 */
+	--color-tertiary-500: 9 58 196; /* ⬅ #093ac4 */
+	--color-tertiary-600: 8 52 176; /* ⬅ #0834b0 */
+	--color-tertiary-700: 7 44 147; /* ⬅ #072c93 */
+	--color-tertiary-800: 5 35 118; /* ⬅ #052376 */
+	--color-tertiary-900: 4 28 96; /* ⬅ #041c60 */
+	/* success | #786244 */
+	--color-success-50: 235 231 227; /* ⬅ #ebe7e3 */
+	--color-success-100: 228 224 218; /* ⬅ #e4e0da */
+	--color-success-200: 221 216 208; /* ⬅ #ddd8d0 */
+	--color-success-300: 201 192 180; /* ⬅ #c9c0b4 */
+	--color-success-400: 161 145 124; /* ⬅ #a1917c */
+	--color-success-500: 120 98 68; /* ⬅ #786244 */
+	--color-success-600: 108 88 61; /* ⬅ #6c583d */
+	--color-success-700: 90 74 51; /* ⬅ #5a4a33 */
+	--color-success-800: 72 59 41; /* ⬅ #483b29 */
+	--color-success-900: 59 48 33; /* ⬅ #3b3021 */
+	/* warning | #612e45 */
+	--color-warning-50: 231 224 227; /* ⬅ #e7e0e3 */
+	--color-warning-100: 223 213 218; /* ⬅ #dfd5da */
+	--color-warning-200: 216 203 209; /* ⬅ #d8cbd1 */
+	--color-warning-300: 192 171 181; /* ⬅ #c0abb5 */
+	--color-warning-400: 144 109 125; /* ⬅ #906d7d */
+	--color-warning-500: 97 46 69; /* ⬅ #612e45 */
+	--color-warning-600: 87 41 62; /* ⬅ #57293e */
+	--color-warning-700: 73 35 52; /* ⬅ #492334 */
+	--color-warning-800: 58 28 41; /* ⬅ #3a1c29 */
+	--color-warning-900: 48 23 34; /* ⬅ #301722 */
+	/* error | #9c29ab */
+	--color-error-50: 240 223 242; /* ⬅ #f0dff2 */
+	--color-error-100: 235 212 238; /* ⬅ #ebd4ee */
+	--color-error-200: 230 202 234; /* ⬅ #e6caea */
+	--color-error-300: 215 169 221; /* ⬅ #d7a9dd */
+	--color-error-400: 186 105 196; /* ⬅ #ba69c4 */
+	--color-error-500: 156 41 171; /* ⬅ #9c29ab */
+	--color-error-600: 140 37 154; /* ⬅ #8c259a */
+	--color-error-700: 117 31 128; /* ⬅ #751f80 */
+	--color-error-800: 94 25 103; /* ⬅ #5e1967 */
+	--color-error-900: 76 20 84; /* ⬅ #4c1454 */
+	/* surface | #3f6388 */
+	--color-surface-50: 226 232 237; /* ⬅ #e2e8ed */
+	--color-surface-100: 217 224 231; /* ⬅ #d9e0e7 */
+	--color-surface-200: 207 216 225; /* ⬅ #cfd8e1 */
+	--color-surface-300: 178 193 207; /* ⬅ #b2c1cf */
+	--color-surface-400: 121 146 172; /* ⬅ #7992ac */
+	--color-surface-500: 63 99 136; /* ⬅ #3f6388 */
+	--color-surface-600: 57 89 122; /* ⬅ #39597a */
+	--color-surface-700: 47 74 102; /* ⬅ #2f4a66 */
+	--color-surface-800: 38 59 82; /* ⬅ #263b52 */
+	--color-surface-900: 31 49 67; /* ⬅ #1f3143 */
+}
