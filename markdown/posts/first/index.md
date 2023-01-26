@@ -12,8 +12,6 @@ date: 2023-01-17
   import ReusableImage from '@components/ReusableImage.svelte'
 </script>
 
-## Table of Contents
-
 ## Heading 1
 
 ## Heading 2

@@ -43,11 +43,11 @@
 </div> -->
 <AppShell>
 	<svelte:fragment slot="header"><Navbar /></svelte:fragment>
-	<!-- <svelte:fragment slot="sidebarLeft">Sidebar Left</svelte:fragment>
-	<svelte:fragment slot="sidebarRight">Sidebar Right</svelte:fragment>
-	<svelte:fragment slot="pageHeader">Page Header</svelte:fragment> -->
+	<svelte:fragment slot="sidebarLeft" />
+	<svelte:fragment slot="sidebarRight" />
+	<svelte:fragment slot="pageHeader" />
 	<!-- Router Slot -->
-	<div class="container flex justify-center mx-auto">
+	<div class="container flex justify-center mx-auto 2md:max-w-screen-2md">
 		<slot />
 	</div>
 	<!-- ---- / ---- -->

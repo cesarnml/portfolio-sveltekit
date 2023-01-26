@@ -6,6 +6,7 @@
 	import ArticleTitle from '@components/ArticleTitle.svelte'
 	import ArticleMeta from '@components/ArticleMeta.svelte'
 	import { handleCopyClick } from '@lib/handleCopyClick'
+	import { TableOfContents } from '@skeletonlabs/skeleton'
 	export let data: PageServerData
 
 	onMount(async () => {
@@ -37,6 +38,7 @@
 <ArticleMeta author={data.frontmatter.author} date={data.frontmatter.date} />
 <div>{data.frontmatter.readingTime.text}</div>
 <div>Word Count: {data.frontmatter.readingTime.words}</div>
-<div data-testid="raw-html-wrapper">
+<TableOfContents target="#toc-target" width="w-[150px]" />
+<div id="toc-target" data-testid="raw-html-wrapper">
 	{@html data.html}
 </div>
