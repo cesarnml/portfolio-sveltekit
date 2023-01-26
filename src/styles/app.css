@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+	@apply h-full overflow-hidden;
+}
+
 .toasty {
 	position: absolute !important;
 	bottom: 10px;

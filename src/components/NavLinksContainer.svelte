@@ -2,6 +2,6 @@
 	import NavLinks from './NavLinks.svelte'
 </script>
 
-<div class="flex items-center md:gap-6 gap-4" data-testid="navlink-container">
+<nav class="list-nav flex items-center" data-testid="navlink-container">
 	<NavLinks />
-</div>
+</nav>

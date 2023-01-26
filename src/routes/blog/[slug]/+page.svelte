@@ -18,6 +18,9 @@
 		// Add a copy button to each markdown code block
 		preElements.forEach((ele, index) => {
 			const codeEle = ele.querySelector('code')
+			if (codeEle) {
+				codeEle.className = 'unstyled' // prevent application of dark mode styles
+			}
 			const remarkCodeTitle = remarkCodeTitles[index] as HTMLElement
 			const button = document.createElement('button')
 			button.className = 'copy-code-to-clipboard'

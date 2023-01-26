@@ -27,6 +27,7 @@
 /* BEGIN: code `[pre]` element styling */
 .shiki {
 	position: relative;
+	color: var(--colour-code-line-numbers);
 	display: flex;
 	flex-direction: column;
 	border-radius: var(--spacing-1);

@@ -47,7 +47,9 @@
 	<svelte:fragment slot="sidebarRight">Sidebar Right</svelte:fragment>
 	<svelte:fragment slot="pageHeader">Page Header</svelte:fragment> -->
 	<!-- Router Slot -->
-	<slot />
+	<div class="container flex justify-center mx-auto">
+		<slot />
+	</div>
 	<!-- ---- / ---- -->
 	<!-- <svelte:fragment slot="pageFooter">Page Footer</svelte:fragment> -->
 	<svelte:fragment slot="footer"><Footer /></svelte:fragment>
