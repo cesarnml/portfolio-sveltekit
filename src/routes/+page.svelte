@@ -9,7 +9,8 @@
 	const { posts } = data
 </script>
 
-<div class="flex items-center justify-center">
+<!-- <div class="flex items-center justify-center"> -->
+<div>
 	{#if !$page.data.session}
 		<button
 			on:click={async function signInWithGitHub() {
@@ -31,13 +32,8 @@
 				const { error } = await supabase.auth.signOut()
 			}}>Sign out</button
 		>
-	{/if} <button class="btn variant-filled-primary btn-base"> Skeleton </button>
+	{/if}
 	<ReusableButton />
-	<div class="input-group input-group-divider grid-cols-[auto_1fr_auto]">
-		<div class="input-group-shim">(segment)</div>
-		<input type="search" placeholder="Search..." />
-		<button class="variant-filled-secondary">Submit</button>
-	</div>
 </div>
 <div>
 	<ul>

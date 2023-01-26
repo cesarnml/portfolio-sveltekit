@@ -6,7 +6,8 @@
 	export let profession = 'Web Dev'
 </script>
 
-<div class="font-medium">
+<!-- <div class="font-medium"> -->
+<div>
 	{author}
 	{#if $media.md}
 		<span transition:fade>&nbsp;&nbsp;|&nbsp;&nbsp;{profession} </span>

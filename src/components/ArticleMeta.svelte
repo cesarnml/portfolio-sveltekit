@@ -5,11 +5,13 @@
 </script>
 
 <p>
-	<span class="author">{author}</span>
-	<span class="date">{formattedDate}</span>
+	<span>{author}</span>
+	<span>{formattedDate}</span>
+	<!-- <span class="author">{author}</span>
+	<span class="date">{formattedDate}</span> -->
 </p>
 
-<style>
+<!-- <style>
 	p {
 		margin: 0;
 		margin-bottom: calc(var(--spacing-unit) * 4);
@@ -21,4 +23,4 @@
 	.date {
 		color: var(--color-text-secondary);
 	}
-</style>
+</style> -->

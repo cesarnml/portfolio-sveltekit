@@ -9,20 +9,22 @@
 </script>
 
 {#if slug}
-	<h3 class="heading" class:large={!slug} {id}>
+	<!-- <h3 class="heading" class:large={!slug} {id}> -->
+	<h3 {id}>
 		<a {href}>
 			{title}
 		</a>
 	</h3>
 {:else}
-	<h2 class="heading" class:large={!slug} {id}>
+	<!-- <h2 class="heading" class:large={!slug} {id}> -->
+	<h2 {id}>
 		<a {href}>
 			{title}
 		</a>
 	</h2>
 {/if}
 
-<style>
+<!-- <style>
 	h2 {
 		margin: 0;
 	}
@@ -34,4 +36,4 @@
 		margin-top: calc(var(--spacing-unit) * 12);
 		font-size: 2.2rem;
 	}
-</style>
+</style> -->

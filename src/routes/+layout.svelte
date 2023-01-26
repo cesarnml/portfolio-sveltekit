@@ -28,12 +28,14 @@
 	}
 </script>
 
-<div class="bg-slate-800 text-slate-300 flex flex-col min-h-screen">
+<!-- <div class="bg-slate-800 text-slate-300 flex flex-col min-h-screen"> -->
+<div>
 	<Navbar />
 	{#if $sidebar}
 		<Sidebar />
 	{/if}
-	<div class="lg:max-w-5xl flex flex-col flex-grow w-full min-h-full py-6 mx-auto">
+	<!-- <div class="lg:max-w-5xl flex flex-col flex-grow w-full min-h-full py-6 mx-auto"> -->
+	<div>
 		<slot />
 	</div>
 	<Footer />

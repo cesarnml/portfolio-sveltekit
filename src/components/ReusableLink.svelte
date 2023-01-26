@@ -8,4 +8,5 @@
 	$: isActive = $page.url.pathname === href
 </script>
 
-<a {href} class={clsx(`hover:text-yellow-500 transition-colors`, isActive && 'text-yellow-300')}>{label}</a>
+<!-- <a {href} class={clsx(`hover:text-yellow-500 transition-colors`, isActive && 'text-yellow-300')}>{label}</a> -->
+<a {href}>{label}</a>
