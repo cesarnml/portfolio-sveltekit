@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { supabase } from '$lib/supabaseClient'
+	// import { supabase } from '$lib/supabaseClient'
 	import { invalidate } from '$app/navigation'
 	import { onMount } from 'svelte'
 	import Footer from '@components/Footer.svelte'
@@ -12,15 +12,14 @@
 	import { AppShell } from '@skeletonlabs/skeleton'
 
 	onMount(() => {
-		const {
-			data: { subscription }
-		} = supabase.auth.onAuthStateChange(() => {
-			invalidate('supabase:auth')
-		})
-
-		return () => {
-			subscription.unsubscribe()
-		}
+		// const {
+		// 	data: { subscription }
+		// } = supabase.auth.onAuthStateChange(() => {
+		// 	invalidate('supabase:auth')
+		// })
+		// return () => {
+		// 	subscription.unsubscribe()
+		// }
 	})
 
 	// Reactively close sidebar if screen > media.sm and sidebar is open

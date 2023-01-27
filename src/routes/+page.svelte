@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores'
 	import ReusableButton from '@components/ReusableButton.svelte'
-	import { supabase } from '@lib/supabaseClient'
+	// import { supabase } from '@lib/supabaseClient'
 	import { Url } from '@lib/url'
 	import type { PageData } from './$types'
 
@@ -11,7 +11,7 @@
 
 <!-- <div class="flex items-center justify-center"> -->
 <div>
-	{#if !$page.data.session}
+	<!-- {#if !$page.data.session}
 		<button
 			on:click={async function signInWithGitHub() {
 				const { data, error } = await supabase.auth.signInWithOAuth({
@@ -32,7 +32,7 @@
 				const { error } = await supabase.auth.signOut()
 			}}>Sign out</button
 		>
-	{/if}
+	{/if} -->
 	<ReusableButton />
 </div>
 <div>
