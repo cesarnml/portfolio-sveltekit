@@ -29,8 +29,7 @@ module.exports = {
 	plugins: [
 		require('@tailwindcss/typography'),
 		require('@tailwindcss/forms'),
-		require('@tailwindcss/line-clamp'),
-		require('@tailwindcss/aspect-ratio'),
-		...require('@skeletonlabs/skeleton/tailwind/skeleton.cjs')()
+		require('@tailwindcss/line-clamp')
+		// ...require('@skeletonlabs/skeleton/tailwind/skeleton.cjs')()
 	]
 }
