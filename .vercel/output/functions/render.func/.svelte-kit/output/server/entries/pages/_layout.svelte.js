@@ -1,0 +1,341 @@
+import { c as create_ssr_component, e as escape, d as add_attribute, f as compute_slots, b as subscribe, g as createEventDispatcher, v as validate_component, h as each } from "../../chunks/index3.js";
+import { s as storeLightSwitch, a as storePrefersDarkScheme } from "../../chunks/ProgressBar.svelte_svelte_type_style_lang.js";
+import { U as Url } from "../../chunks/url.js";
+import { w as writable } from "../../chunks/index2.js";
+import { p as page } from "../../chunks/stores.js";
+import "iconify-icon";
+const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<footer class="${"py-4 text-xs text-center border-t-slate-600 border-t"}"><div class="${"pb-1"}">Made with ❤️ and ☕️ by Cesar Mejia</div>
+	<div>Copyright © 2023</div></footer>`;
+});
+const cBase = "flex items-center";
+const cLead = "flex-none flex justify-between items-center";
+const cCenter = "flex-auto";
+const cTrail = "flex-none flex items-center space-x-4";
+const AppBar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let classesBase;
+  let classesLead;
+  let classesCenter;
+  let classesTrail;
+  let $$slots = compute_slots(slots);
+  let { background = "bg-surface-100-800-token" } = $$props;
+  let { border = "" } = $$props;
+  let { padding = "p-4" } = $$props;
+  let { shadow = "shadow-lg" } = $$props;
+  let { space = "space-x-4" } = $$props;
+  let { slotLead = "" } = $$props;
+  let { slotDefault = "" } = $$props;
+  let { slotTrail = "" } = $$props;
+  let { label = "" } = $$props;
+  let { labelledby = "" } = $$props;
+  if ($$props.background === void 0 && $$bindings.background && background !== void 0)
+    $$bindings.background(background);
+  if ($$props.border === void 0 && $$bindings.border && border !== void 0)
+    $$bindings.border(border);
+  if ($$props.padding === void 0 && $$bindings.padding && padding !== void 0)
+    $$bindings.padding(padding);
+  if ($$props.shadow === void 0 && $$bindings.shadow && shadow !== void 0)
+    $$bindings.shadow(shadow);
+  if ($$props.space === void 0 && $$bindings.space && space !== void 0)
+    $$bindings.space(space);
+  if ($$props.slotLead === void 0 && $$bindings.slotLead && slotLead !== void 0)
+    $$bindings.slotLead(slotLead);
+  if ($$props.slotDefault === void 0 && $$bindings.slotDefault && slotDefault !== void 0)
+    $$bindings.slotDefault(slotDefault);
+  if ($$props.slotTrail === void 0 && $$bindings.slotTrail && slotTrail !== void 0)
+    $$bindings.slotTrail(slotTrail);
+  if ($$props.label === void 0 && $$bindings.label && label !== void 0)
+    $$bindings.label(label);
+  if ($$props.labelledby === void 0 && $$bindings.labelledby && labelledby !== void 0)
+    $$bindings.labelledby(labelledby);
+  classesBase = `${cBase} ${background} ${border} ${padding} ${shadow} ${space} ${$$props.class ?? ""}`;
+  classesLead = `${cLead} ${slotLead}`;
+  classesCenter = `${cCenter} ${slotDefault}`;
+  classesTrail = `${cTrail} ${slotTrail}`;
+  return `<div class="${"app-bar " + escape(classesBase, true)}" data-testid="${"app-bar"}" role="${"toolbar"}"${add_attribute("aria-label", label, 0)}${add_attribute("aria-labelledby", labelledby, 0)}>
+	${$$slots.lead ? `<div class="${"app-bar-lead " + escape(classesLead, true)}">${slots.lead ? slots.lead({}) : ``}</div>` : ``}
+
+	
+	<div class="${"app-bar-center " + escape(classesCenter, true)}">${slots.default ? slots.default({}) : ``}</div>
+
+	
+	${$$slots.trail ? `<div class="${"app-bar-trail " + escape(classesTrail, true)}">${slots.trail ? slots.trail({}) : ``}</div>` : ``}</div>`;
+});
+const cBaseAppShell = "w-full h-full flex flex-col overflow-hidden";
+const cContentArea = "w-full h-full flex overflow-hidden";
+const cPage = "flex-1 overflow-x-hidden overflow-y-auto flex flex-col";
+const cSidebarLeft = "flex-none overflow-x-hidden overflow-y-auto";
+const cSidebarRight = "flex-none overflow-x-hidden overflow-y-auto";
+const AppShell = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let classesBase;
+  let classesheader;
+  let classesSidebarLeft;
+  let classesSidebarRight;
+  let classesPageHeader;
+  let classesPageContent;
+  let classesPageFooter;
+  let classesFooter;
+  let $$slots = compute_slots(slots);
+  let { slotHeader = "z-10" } = $$props;
+  let { slotSidebarLeft = "w-auto" } = $$props;
+  let { slotSidebarRight = "w-auto" } = $$props;
+  let { slotPageHeader = "" } = $$props;
+  let { slotPageContent = "" } = $$props;
+  let { slotPageFooter = "" } = $$props;
+  let { slotFooter = "" } = $$props;
+  if ($$props.slotHeader === void 0 && $$bindings.slotHeader && slotHeader !== void 0)
+    $$bindings.slotHeader(slotHeader);
+  if ($$props.slotSidebarLeft === void 0 && $$bindings.slotSidebarLeft && slotSidebarLeft !== void 0)
+    $$bindings.slotSidebarLeft(slotSidebarLeft);
+  if ($$props.slotSidebarRight === void 0 && $$bindings.slotSidebarRight && slotSidebarRight !== void 0)
+    $$bindings.slotSidebarRight(slotSidebarRight);
+  if ($$props.slotPageHeader === void 0 && $$bindings.slotPageHeader && slotPageHeader !== void 0)
+    $$bindings.slotPageHeader(slotPageHeader);
+  if ($$props.slotPageContent === void 0 && $$bindings.slotPageContent && slotPageContent !== void 0)
+    $$bindings.slotPageContent(slotPageContent);
+  if ($$props.slotPageFooter === void 0 && $$bindings.slotPageFooter && slotPageFooter !== void 0)
+    $$bindings.slotPageFooter(slotPageFooter);
+  if ($$props.slotFooter === void 0 && $$bindings.slotFooter && slotFooter !== void 0)
+    $$bindings.slotFooter(slotFooter);
+  classesBase = `${cBaseAppShell} ${$$props.class ?? ""}`;
+  classesheader = `${slotHeader}`;
+  classesSidebarLeft = `${cSidebarLeft} ${slotSidebarLeft}`;
+  classesSidebarRight = `${cSidebarRight} ${slotSidebarRight}`;
+  classesPageHeader = `${slotPageHeader}`;
+  classesPageContent = `${slotPageContent}`;
+  classesPageFooter = `${slotPageFooter}`;
+  classesFooter = `${slotFooter}`;
+  return `<div id="${"appShell"}"${add_attribute("class", classesBase, 0)} data-testid="${"app-shell"}">
+	${$$slots.header ? `<header id="${"shell-header"}" class="${"flex-none " + escape(classesheader, true)}">${slots.header ? slots.header({}) : ``}</header>` : ``}
+
+	
+	<div class="${"flex-auto " + escape(cContentArea, true)}">
+		${$$slots.sidebarLeft ? `<aside id="${"sidebar-left"}"${add_attribute("class", classesSidebarLeft, 0)}>${slots.sidebarLeft ? slots.sidebarLeft({}) : ``}</aside>` : ``}
+
+		
+		<div id="${"page"}"${add_attribute("class", cPage, 0)}>
+			${$$slots.pageHeader ? `<header id="${"page-header"}" class="${"flex-none " + escape(classesPageHeader, true)}">${slots.pageHeader ? slots.pageHeader({}) : `(slot:header)`}</header>` : ``}
+
+			
+			<main id="${"page-content"}" class="${"flex-auto " + escape(classesPageContent, true)}">${slots.default ? slots.default({}) : ``}</main>
+
+			
+			${$$slots.pageFooter ? `<footer id="${"page-footer"}" class="${"flex-none " + escape(classesPageFooter, true)}">${slots.pageFooter ? slots.pageFooter({}) : `(slot:footer)`}</footer>` : ``}</div>
+
+		
+		${$$slots.sidebarRight ? `<aside id="${"sidebar-right"}"${add_attribute("class", classesSidebarRight, 0)}>${slots.sidebarRight ? slots.sidebarRight({}) : ``}</aside>` : ``}</div>
+
+	
+	${$$slots.footer ? `<footer id="${"shell-footer"}" class="${"flex-none " + escape(classesFooter, true)}">${slots.footer ? slots.footer({}) : ``}</footer>` : ``}</div>`;
+});
+const cTrack = "inline-block bg-surface-200-700-token ring-[1px] ring-surface-300-600-token ring-inset w-12 h-6 rounded-full cursor-pointer transition-all duration-[100ms]";
+const cThumb = "bg-white dark:bg-black fill-white dark:fill-black w-6 h-6 flex justify-center items-center rounded-full shadow-lg transition-all duration-[100ms] scale-90";
+const cIcon = "block w-4 h-4";
+function setColorScheme() {
+  if (localStorage.getItem("storeLightSwitch") === "true" || !("storeLightSwitch" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    document.documentElement.classList.add("dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+  }
+}
+const LightSwitch = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let classesPosition;
+  let classesBase;
+  let classesThumb;
+  let $storeLightSwitch, $$unsubscribe_storeLightSwitch;
+  let $$unsubscribe_storePrefersDarkScheme;
+  $$unsubscribe_storeLightSwitch = subscribe(storeLightSwitch, (value) => $storeLightSwitch = value);
+  $$unsubscribe_storePrefersDarkScheme = subscribe(storePrefersDarkScheme, (value) => value);
+  createEventDispatcher();
+  classesPosition = $storeLightSwitch ? "translate-x-full" : "translate-x-0";
+  classesBase = `${cTrack} ${$$props.class ?? ""}`;
+  classesThumb = `${cThumb} ${classesPosition}`;
+  $$unsubscribe_storeLightSwitch();
+  $$unsubscribe_storePrefersDarkScheme();
+  return `
+
+
+${$$result.head += `<!-- HEAD_svelte-1b2q2h6_START --><!-- HTML_TAG_START -->${`<script>${setColorScheme.toString()} setColorScheme();<\/script>`}<!-- HTML_TAG_END --><!-- HEAD_svelte-1b2q2h6_END -->`, ""}
+
+
+<div class="${"lightswitch " + escape(classesBase, true)}" role="${"switch"}" aria-label="${"Light Switch"}"${add_attribute("aria-checked", $storeLightSwitch, 0)} title="${"Toggle " + escape($storeLightSwitch ? "Light" : "Dark", true) + " Mode"}" tabindex="${"0"}">
+	<div class="${"lightswitch-thumb " + escape(classesThumb, true)}">${$storeLightSwitch === false ? `
+			<svg class="${"lightswitch-icon fill-black " + escape(cIcon, true)}" xmlns="${"http://www.w3.org/2000/svg"}" viewBox="${"0 0 512 512"}"><path d="${"M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM352 256c0 53-43 96-96 96s-96-43-96-96s43-96 96-96s96 43 96 96zm32 0c0-70.7-57.3-128-128-128s-128 57.3-128 128s57.3 128 128 128s128-57.3 128-128z"}"></path></svg>` : `
+			<svg class="${"lightswitch-icon fill-white " + escape(cIcon, true)}" xmlns="${"http://www.w3.org/2000/svg"}" viewBox="${"0 0 384 512"}"><path d="${"M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"}"></path></svg>`}</div></div>`;
+});
+function createSidebar() {
+  const { subscribe: subscribe2, set, update } = writable(false);
+  return {
+    subscribe: subscribe2,
+    open: () => set(true),
+    close: () => set(false),
+    toggle: () => update((prev) => !prev)
+  };
+}
+const sidebar = createSidebar();
+function watchMedia(t) {
+  return writable({ classNames: "" }, (e) => {
+    if ("undefined" == typeof window)
+      return;
+    let n = {}, r = () => e(function(e2) {
+      let t2 = { classNames: "" }, n2 = [];
+      for (let r2 in e2)
+        t2[r2] = e2[r2].matches, t2[r2] && n2.push("media-" + r2);
+      return t2.classNames = n2.join(" "), t2;
+    }(n));
+    for (let e2 in t) {
+      let i = window.matchMedia(t[e2]);
+      n[e2] = i, n[e2].addListener(r);
+    }
+    return r(), () => {
+      for (let e2 in n)
+        n[e2].removeListener(r);
+    };
+  });
+}
+const mediaQueries = {
+  "3xs": "(min-width: 375px)",
+  "2xs": "(min-width: 480px)",
+  xs: "(min-width: 576px)",
+  sm: "(min-width: 640px)",
+  md: "(min-width: 768px)",
+  "2md": "(min-width: 896px)",
+  lg: "(min-width: 1024px)",
+  xl: "(min-width: 1280px)",
+  "2xl": "(min-width: 1536px)"
+};
+const media = watchMedia(mediaQueries);
+const SiteAuthorDetails = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let $storeLightSwitch, $$unsubscribe_storeLightSwitch;
+  let $media, $$unsubscribe_media;
+  $$unsubscribe_storeLightSwitch = subscribe(storeLightSwitch, (value) => $storeLightSwitch = value);
+  $$unsubscribe_media = subscribe(media, (value) => $media = value);
+  let { author = "Cesar Mejia" } = $$props;
+  let { profession = "Web Dev" } = $$props;
+  if ($$props.author === void 0 && $$bindings.author && author !== void 0)
+    $$bindings.author(author);
+  if ($$props.profession === void 0 && $$bindings.profession && profession !== void 0)
+    $$bindings.profession(profession);
+  $$unsubscribe_storeLightSwitch();
+  $$unsubscribe_media();
+  return `<div${add_attribute(
+    "class",
+    $storeLightSwitch ? "hover:!text-primary-400" : "hover:!text-secondary-800",
+    0
+  )}>${escape(author)}
+	${$media.md ? `<span>  |  ${escape(profession)}</span>` : ``}</div>`;
+});
+const SiteLogo = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let { src } = $$props;
+  let { alt } = $$props;
+  if ($$props.src === void 0 && $$bindings.src && src !== void 0)
+    $$bindings.src(src);
+  if ($$props.alt === void 0 && $$bindings.alt && alt !== void 0)
+    $$bindings.alt(alt);
+  return `<div class="${"w-12 h-12"}"><img class="${"object-contain w-full h-12"}"${add_attribute("src", src, 0)}${add_attribute("alt", alt, 0)}></div>`;
+});
+const NavBrand = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `
+<a class="${"flex items-center justify-center gap-2"}"${add_attribute("href", Url.Home, 0)}>${validate_component(SiteLogo, "SiteLogo").$$render($$result, { src: "/images/avatar.png", alt: "avatar" }, {}, {})}
+	${validate_component(SiteAuthorDetails, "SiteAuthorDetails").$$render($$result, {}, {}, {})}</a>`;
+});
+const ReusableLink = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let setActiveClass;
+  let $page, $$unsubscribe_page;
+  let $storeLightSwitch, $$unsubscribe_storeLightSwitch;
+  $$unsubscribe_page = subscribe(page, (value) => $page = value);
+  $$unsubscribe_storeLightSwitch = subscribe(storeLightSwitch, (value) => $storeLightSwitch = value);
+  let { href = "/" } = $$props;
+  let { label = "No label" } = $$props;
+  if ($$props.href === void 0 && $$bindings.href && href !== void 0)
+    $$bindings.href(href);
+  if ($$props.label === void 0 && $$bindings.label && label !== void 0)
+    $$bindings.label(label);
+  setActiveClass = (href2) => href2 === $page.url.pathname ? "text-secondary-600 dark:text-primary-200" : "";
+  $$unsubscribe_page();
+  $$unsubscribe_storeLightSwitch();
+  return `
+<a${add_attribute("href", href, 0)}${add_attribute(
+    "class",
+    `${setActiveClass(href)} hover:!bg-transparent ${$storeLightSwitch ? "hover:!text-primary-400" : "hover:!text-secondary-800"}`,
+    0
+  )}>${escape(label)}</a>`;
+});
+const NavLinks = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  const excludedUrls = ["BlogDetail"];
+  const navLinks = Object.keys(Url).filter((url) => !excludedUrls.includes(url));
+  return `${each(navLinks, (navLink) => {
+    return `<div>${validate_component(ReusableLink, "ReusableLink").$$render(
+      $$result,
+      {
+        href: String(Url[navLink]),
+        label: navLink
+      },
+      {},
+      {}
+    )}
+	</div>`;
+  })}`;
+});
+const NavLinksContainer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<nav class="${"list-nav flex items-center"}" data-testid="${"navlink-container"}">${validate_component(NavLinks, "NavLinks").$$render($$result, {}, {}, {})}</nav>`;
+});
+const NavHamburgerMenu = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let $sidebar, $$unsubscribe_sidebar;
+  $$unsubscribe_sidebar = subscribe(sidebar, (value) => $sidebar = value);
+  $$unsubscribe_sidebar();
+  return `
+<button>${$sidebar ? `
+		<iconify-icon icon="${"material-symbols:close-rounded"}" alt="${"close-sidebar-icon"}"></iconify-icon>` : `
+		<iconify-icon icon="${"material-symbols:menu-rounded"}" alt="${"open-sidebar-icon"}"></iconify-icon>`}</button>`;
+});
+const NavMenu = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let $media, $$unsubscribe_media;
+  $$unsubscribe_media = subscribe(media, (value) => $media = value);
+  $$unsubscribe_media();
+  return `${$media.sm ? `${validate_component(NavLinksContainer, "NavLinksContainer").$$render($$result, {}, {}, {})}` : `${validate_component(NavHamburgerMenu, "NavHamburgerMenu").$$render($$result, {}, {}, {})}`}
+${validate_component(LightSwitch, "LightSwitch").$$render($$result, {}, {}, {})}`;
+});
+const Navbar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `
+${validate_component(AppBar, "AppBar").$$render($$result, {}, {}, {
+    trail: () => {
+      return `${validate_component(NavMenu, "NavMenu").$$render($$result, {}, {}, {})}`;
+    },
+    lead: () => {
+      return `${validate_component(NavBrand, "NavBrand").$$render($$result, {}, {}, {})}`;
+    }
+  })}`;
+});
+const app = "";
+const themeModern = "";
+const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let $sidebar, $$unsubscribe_sidebar;
+  let $media, $$unsubscribe_media;
+  $$unsubscribe_sidebar = subscribe(sidebar, (value) => $sidebar = value);
+  $$unsubscribe_media = subscribe(media, (value) => $media = value);
+  {
+    if ($media.sm && $sidebar) {
+      sidebar.close();
+    }
+  }
+  $$unsubscribe_sidebar();
+  $$unsubscribe_media();
+  return `${validate_component(AppShell, "AppShell").$$render($$result, {}, {}, {
+    footer: () => {
+      return `${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}`;
+    },
+    header: () => {
+      return `${validate_component(Navbar, "Navbar").$$render($$result, {}, {}, {})}`;
+    },
+    default: () => {
+      return `
+	<div class="${"dark:prose-invert md:p-8 prose-a:no-underline hover:prose-a:text-secondary-800 dark:hover:prose-a:text-primary-500 prose-headings:mt-0 container relative max-w-screen-md p-4 mx-auto prose"}">${slots.default ? slots.default({}) : ``}</div>
+	
+	`;
+    }
+  })}`;
+});
+export {
+  Layout as default
+};
