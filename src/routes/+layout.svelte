@@ -1,14 +1,13 @@
 <script lang="ts">
 	// import { supabase } from '$lib/supabaseClient'
-	import { invalidate } from '$app/navigation'
+	// import { invalidate } from '$app/navigation'
 	import { onMount } from 'svelte'
 	import Footer from '@components/Footer.svelte'
 	import Navbar from '@components/Navbar.svelte'
-	import Sidebar from '@components/Sidebar.svelte'
+	// import Sidebar from '@components/Sidebar.svelte'
 	import { media } from '@stores/media'
 	import { sidebar } from '@stores/sidebar'
 	import '@skeletonlabs/skeleton/themes/theme-modern.css'
-	import '@skeletonlabs/skeleton/styles/all.css'
 	import '@styles/app.css'
 	import { AppShell } from '@skeletonlabs/skeleton'
 
