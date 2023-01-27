@@ -72,6 +72,5 @@
 		"vite": "^4.0.4",
 		"vitest": "^0.27.2"
 	},
-	"type": "module",
-	"packageManager": "pnpm@7.25.0"
+	"type": "module"
 }
