@@ -1,10 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	darkMode: 'class',
-	purge: [
-		'./src/**/*.{js,ts,jsx,tsx, html, svelte}'
-		// Add more here
-	],
 	content: [
 		'./src/**/*.{html,js,svelte,ts}',
 		require('path').join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')
