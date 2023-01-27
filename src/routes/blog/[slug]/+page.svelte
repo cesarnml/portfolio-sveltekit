@@ -6,6 +6,7 @@
 	import ArticleTitle from '@components/ArticleTitle.svelte'
 	import ArticleMeta from '@components/ArticleMeta.svelte'
 	import { handleCopyClick } from '@lib/handleCopyClick'
+	import { TableOfContents } from '@skeletonlabs/skeleton'
 	export let data: PageServerData
 
 	onMount(async () => {
@@ -18,6 +19,9 @@
 		// Add a copy button to each markdown code block
 		preElements.forEach((ele, index) => {
 			const codeEle = ele.querySelector('code')
+			if (codeEle) {
+				codeEle.className = 'unstyled' // prevent application of dark mode styles
+			}
 			const remarkCodeTitle = remarkCodeTitles[index] as HTMLElement
 			const button = document.createElement('button')
 			button.className = 'copy-code-to-clipboard'
@@ -30,10 +34,29 @@
 </script>
 
 <PageHead title={data.frontmatter.title} description={data.frontmatter.description} />
-<ArticleTitle title={data.frontmatter.title} />
-<ArticleMeta author={data.frontmatter.author} date={data.frontmatter.date} />
-<div>{data.frontmatter.readingTime.text}</div>
-<div>Word Count: {data.frontmatter.readingTime.words}</div>
-<div data-testid="raw-html-wrapper">
-	{@html data.html}
+
+<div class="hidden absolute w-[240px] xl:inline-block h-full top-0 -right-[264px]">
+	<TableOfContents
+		target="#toc-target"
+		class="top-8 card variant-soft-primary sticky p-4"
+		width="w-fit"
+		hover="dark:hover:text-primary-400 hover:text-secondary-900"
+		regionList="list-none font-semibold"
+	/>
 </div>
+
+<article>
+	<section class="mb-8">
+		<ArticleTitle title={data.frontmatter.title} />
+		<ArticleMeta
+			author={data.frontmatter.author}
+			date={data.frontmatter.date}
+			readingTime={data.frontmatter.readingTime.text}
+			wordCount={data.frontmatter.readingTime.words}
+			image={data.frontmatter.image}
+		/>
+	</section>
+	<section id="toc-target" data-testid="raw-html-wrapper" class="">
+		{@html data.html}
+	</section>
+</article>

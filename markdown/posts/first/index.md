@@ -2,33 +2,30 @@
 published: true
 title: First Svelte MDX post
 description: My first markdown content
-author: Cesar Napoleon Mejia Leiva
+author: Cesar Mejia
 tags: ['cool', 'beans']
+image: '/images/hero.webp'
 date: 2023-01-17
 ---
 
-<script>
-  import ReusableButton from '@components/ReusableButton.svelte'
+<script lang="ts">
   import ReusableImage from '@components/ReusableImage.svelte'
 </script>
 
-## Table of Contents
+## Heading 2 First
 
-## Heading 1
+## Heading 2 Second
 
-## Heading 2
+### Heading 3 First
 
-### Heading 3
-
-<ReusableButton />
-
-## Heading 4
+## Heading 2 Third
 
 1. Make a list
 2. Yup
 
 ```js:JavaScript {5-7a,3a,4a, 2r, 9-10n}
 export async function load({ fetch }) {
+	const variable = "this is a super long variable declaration come on"
 	const res = await fetch(`/posts.json`)
 	if (res.ok) {
 		const { posts } = await res.json()
@@ -57,26 +54,3 @@ const code = 'yay!'
 
 - [ ] Do checkboxes worK?
 - [x] Maybe?
-
-```svelte:Svelte
-<script lang="ts">
-	import { Url } from '@lib/url'
-</script>
-
-<nav class="navbar bg-base-100">
-	<div class="navbar-start">
-		<a class="btn btn-ghost text-xl normal-case" href="#logo">daisyUI</a>
-	</div>
-	<div class="navbar-center lg:flex">
-		<ul class="menu menu-horizontal px-1">
-			<li><a href={Url.Home}>Home</a></li>
-			<li><a href={Url.About}>About</a></li>
-			<li><a href={Url.Blog}>Blog</a></li>
-			<li><a href={Url.Contact}>Contact</a></li>
-		</ul>
-	</div>
-	<div class="navbar-end">
-		<a class="btn" href="#bang">Get started</a>
-	</div>
-</nav>
-```

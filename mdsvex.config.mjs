@@ -20,7 +20,7 @@ const config = defineConfig({
 	remarkPlugins: [
 		readingTime(),
 		remarkCodeTitles,
-		remarkToc,
+		// remarkToc,
 		relativeImages,
 		// external links open in a new tab
 		[remarkExternalLinks, { target: '_blank', rel: 'noopener noreferrer' }]

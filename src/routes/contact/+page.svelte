@@ -59,53 +59,58 @@
 	}
 </script>
 
-<div class="flex justify-center w-full px-4">
-	<!-- <input type="text" name="name" bind:value={name} />
-	<input type="email" name="email" bind:value={email} />
-	<input type="text" name="message" bind:value={message} />
-
-	<button type="button" on:click={sendEmail}>Send Email</button> -->
-
-	<div class="2xs:max-w-screen-2xs w-full p-6 bg-white rounded-lg shadow-lg relative">
+<!-- <div class="flex justify-center w-full px-4"> -->
+<div>
+	<!-- <div class="2xs:max-w-screen-2xs w-full p-6 bg-white rounded-lg shadow-lg relative"> -->
+	<div>
 		<Toaster />
 
-		<h1 class="mb-4 text-2xl font-bold text-center text-blue-900 select-none">Contact Me</h1>
+		<!-- <h1 class="mb-4 text-2xl font-bold text-center text-blue-900 select-none">Contact Me</h1> -->
+		<h1>Contact Me</h1>
+
 		<form on:submit|preventDefault={(e) => handleSend(e)}>
-			<div class="mb-6">
-				<input
+			<!-- <div class="mb-6"> -->
+			<div>
+				<!-- <input
 					class="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
 					type="text"
 					name="name"
 					required
 					bind:value={name}
 					placeholder="Enter your name"
-				/>
+				/> -->
+				<input type="text" name="name" required bind:value={name} placeholder="Enter your name" />
 			</div>
-			<div class="mb-6">
-				<input
+			<!-- <div class="mb-6"> -->
+			<div>
+				<!-- <input
 					class="block w-full px-3 py-1.5 text-base text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
 					type="email"
 					name="email"
 					required
 					bind:value={email}
 					placeholder="Enter your email"
-				/>
+				/> -->
+				<input type="email" name="email" required bind:value={email} placeholder="Enter your email" />
 			</div>
-			<div class="mb-6">
-				<textarea
+			<!-- <div class="mb-6"> -->
+			<div>
+				<!-- <textarea
 					class="w-full px-3 py-1.5 text-gray-700 border border-solid border-gray-300 rounded transition ease-in-out  focus:text-gray-700  focus:border-blue-600 focus:outline-none"
 					name="message"
 					bind:value={message}
 					rows="4"
 					required
 					placeholder="Write your message..."
-				/>
+				/> -->
+				<textarea name="message" bind:value={message} rows="4" required placeholder="Write your message..." />
 			</div>
-			<button
+			<!-- <button
 				type="submit"
 				disabled={buttonDisabled}
 				class="w-full py-3.5 bg-blue-700 text-white font-semibold tracking-wider rounded shadow-md hover:bg-blue-600 hover:shadow-lg focus:bg-blue-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-900 active:shadow-lg transition duration-300 ease-in-out disabled:bg-transparent disabled:text-blue-700 disabled:border disabled:border-blue-700 select-none"
-			>
+			> -->
+			<button type="submit" disabled={buttonDisabled}>
 				{buttonText}
 			</button>
 		</form>

@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	// darkMode: 'class',
+	darkMode: 'class',
 	content: [
 		'./src/**/*.{html,js,svelte,ts}',
 		require('path').join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')
@@ -9,7 +9,7 @@ module.exports = {
 		screens: {
 			// Default tailwind breakpoints + 2xs, xs, 2md for more flexibility
 			'3xs': '375px', // iPhone SE
-			'2xs': '480px',
+			'2xs': '430px',
 			xs: '576px',
 			sm: '640px',
 			md: '768px', // iPad
