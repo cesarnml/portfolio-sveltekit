@@ -7,8 +7,9 @@
 	import Sidebar from '@components/Sidebar.svelte'
 	import { media } from '@stores/media'
 	import { sidebar } from '@stores/sidebar'
-	import '@styles/app.css'
 	import '@skeletonlabs/skeleton/themes/theme-modern.css'
+	import '@skeletonlabs/skeleton/styles/all.css'
+	import '@styles/app.css'
 	import { AppShell } from '@skeletonlabs/skeleton'
 
 	onMount(() => {
