@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores'
-	import ReusableButton from '@components/ReusableButton.svelte'
+	// import ReusableButton from '@components/ReusableButton.svelte'
 	// import { supabase } from '@lib/supabaseClient'
 	import { Url } from '@lib/url'
 	import type { PageData } from './$types'
@@ -33,7 +33,7 @@
 			}}>Sign out</button
 		>
 	{/if} -->
-	<ReusableButton />
+	<!-- <ReusableButton /> -->
 </div>
 <div>
 	<ul>
