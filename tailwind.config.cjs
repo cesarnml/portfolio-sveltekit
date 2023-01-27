@@ -20,15 +20,15 @@ module.exports = {
 		},
 		extend: {}
 	},
-	corePlugins: {
-		aspectRatio: false
-	},
-	future: {
-		hoverOnlyWhenSupported: true
-	},
+	// corePlugins: {
+	// 	aspectRatio: false
+	// },
+	// future: {
+	// 	hoverOnlyWhenSupported: true
+	// },
 	plugins: [
-		require('@tailwindcss/typography'),
 		require('@tailwindcss/forms'),
+		require('@tailwindcss/typography'),
 		require('@tailwindcss/line-clamp'),
 		...require('@skeletonlabs/skeleton/tailwind/skeleton.cjs')()
 	]
