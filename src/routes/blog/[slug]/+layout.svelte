@@ -1,3 +1,3 @@
-<div data-testid="blog-layout-div" class="relative">
+<div data-testid="blog-layout-div">
 	<slot />
 </div>

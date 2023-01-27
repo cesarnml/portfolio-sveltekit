@@ -29,25 +29,15 @@
 	}
 </script>
 
-<!-- <div class="bg-slate-800 text-slate-300 flex flex-col min-h-screen"> -->
-<!-- <div>
-	<Navbar />
-	{#if $sidebar}
-		<Sidebar />
-	{/if} -->
-<!-- <div class="lg:max-w-5xl flex flex-col flex-grow w-full min-h-full py-6 mx-auto"> -->
-<!-- <div>
-		<slot />
-	</div>
-	<Footer />
-</div> -->
 <AppShell>
 	<svelte:fragment slot="header"><Navbar /></svelte:fragment>
 	<svelte:fragment slot="sidebarLeft" />
 	<svelte:fragment slot="sidebarRight" />
 	<svelte:fragment slot="pageHeader" />
 	<!-- Router Slot -->
-	<div class="container flex justify-center mx-auto 2md:max-w-screen-2md">
+	<div
+		class="dark:prose-invert md:p-8 prose-a:no-underline hover:prose-a:text-secondary-800 dark:hover:prose-a:text-primary-500 prose-headings:mt-0 container relative max-w-screen-md p-4 mx-auto prose"
+	>
 		<slot />
 	</div>
 	<!-- ---- / ---- -->

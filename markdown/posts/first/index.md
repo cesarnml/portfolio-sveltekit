@@ -2,31 +2,30 @@
 published: true
 title: First Svelte MDX post
 description: My first markdown content
-author: Cesar Napoleon Mejia Leiva
+author: Cesar Mejia
 tags: ['cool', 'beans']
+image: '/images/hero.webp'
 date: 2023-01-17
 ---
 
-<script>
-  import ReusableButton from '@components/ReusableButton.svelte'
+<script lang="ts">
   import ReusableImage from '@components/ReusableImage.svelte'
 </script>
 
-## Heading 1
+## Heading 2 First
 
-## Heading 2
+## Heading 2 Second
 
-### Heading 3
+### Heading 3 First
 
-<ReusableButton />
-
-## Heading 4
+## Heading 2 Third
 
 1. Make a list
 2. Yup
 
 ```js:JavaScript {5-7a,3a,4a, 2r, 9-10n}
 export async function load({ fetch }) {
+	const variable = "this is a super long variable declaration come on"
 	const res = await fetch(`/posts.json`)
 	if (res.ok) {
 		const { posts } = await res.json()

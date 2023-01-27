@@ -34,11 +34,29 @@
 </script>
 
 <PageHead title={data.frontmatter.title} description={data.frontmatter.description} />
-<ArticleTitle title={data.frontmatter.title} />
-<ArticleMeta author={data.frontmatter.author} date={data.frontmatter.date} />
-<div>{data.frontmatter.readingTime.text}</div>
-<div>Word Count: {data.frontmatter.readingTime.words}</div>
-<TableOfContents target="#toc-target" width="w-[150px]" />
-<div id="toc-target" data-testid="raw-html-wrapper">
-	{@html data.html}
+
+<div class="hidden absolute w-[240px] xl:inline-block h-full top-0 -right-[264px]">
+	<TableOfContents
+		target="#toc-target"
+		class="top-8 card variant-soft-primary sticky p-4"
+		width="w-fit"
+		hover="dark:hover:text-primary-400 hover:text-secondary-900"
+		regionList="list-none font-semibold"
+	/>
 </div>
+
+<article>
+	<section class="mb-8">
+		<ArticleTitle title={data.frontmatter.title} />
+		<ArticleMeta
+			author={data.frontmatter.author}
+			date={data.frontmatter.date}
+			readingTime={data.frontmatter.readingTime.text}
+			wordCount={data.frontmatter.readingTime.words}
+			image={data.frontmatter.image}
+		/>
+	</section>
+	<section id="toc-target" data-testid="raw-html-wrapper" class="">
+		{@html data.html}
+	</section>
+</article>

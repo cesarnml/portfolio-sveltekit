@@ -37,6 +37,7 @@
 	overflow-x: auto;
 	max-width: var(--max-width-full);
 	font-family: 'Fira Code', 'SF Mono', 'Menlo', 'Courier New', monospace;
+	padding: 0 !important;
 }
 /* END: code `[pre]` element styling */
 

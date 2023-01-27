@@ -10,7 +10,7 @@
 	href={Url.Home}
 	on:click={sidebar.close}
 > -->
-<a class="flex items-center justify-center gap-4" href={Url.Home} on:click={sidebar.close}>
+<a class="flex items-center justify-center gap-2" href={Url.Home} on:click={sidebar.close}>
 	<SiteLogo src="/images/avatar.png" alt="avatar" />
 	<SiteAuthorDetails />
 </a>
