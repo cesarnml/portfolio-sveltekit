@@ -9,7 +9,7 @@
 	import { sidebar } from '@stores/sidebar'
 	// import '@skeletonlabs/skeleton/themes/theme-modern.css'
 	// import '@skeletonlabs/skeleton/styles/all.css'
-	import '@skeletonlabs/skeleton/themes/theme-modern.css'
+	import '@skeletonlabs/skeleton/themes/theme-gold-nouveau.css'
 	import '@skeletonlabs/skeleton/styles/all.css'
 	import '../app.postcss'
 

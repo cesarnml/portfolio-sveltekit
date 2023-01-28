@@ -9,6 +9,20 @@
 	import { TableOfContents } from '@skeletonlabs/skeleton'
 	export let data: PageServerData
 
+	const wordsPerMinute = 50
+	/**
+	 * @param time in milliseconds
+	 */
+	function adjustReadingTime(time: number, wordsPerMinute: number) {
+		const defaultWordsPerMinute = 200
+		const sec2ms = 1000
+		const min2sec = 60
+		const conversionFactor = defaultWordsPerMinute / wordsPerMinute
+		const newMinutes = Math.ceil((time * conversionFactor) / sec2ms / min2sec)
+		const isSingular = newMinutes === 1
+		return isSingular ? `${newMinutes} minute` : `${newMinutes} minutes`
+	}
+
 	onMount(async () => {
 		/**
 		 * .remark-code-title is a hidden element that contains the code language (e.g. JavaScript)
@@ -46,16 +60,21 @@
 </div>
 
 <article>
-	<section class="mb-8">
+	<section class="mb-4">
 		<ArticleTitle title={data.frontmatter.title} />
 		<ArticleMeta
 			author={data.frontmatter.author}
 			date={data.frontmatter.date}
-			readingTime={data.frontmatter.readingTime.text}
+			readingTime={adjustReadingTime(data.frontmatter.readingTime.time, wordsPerMinute)}
 			wordCount={data.frontmatter.readingTime.words}
 			image={data.frontmatter.image}
 		/>
 	</section>
+	<div class="space-x-5 mb-2">
+		{#each data.frontmatter.tags as tag (tag)}
+			<span class="badge variant-ringed-primary">{tag}</span>
+		{/each}
+	</div>
 	<section id="toc-target" data-testid="raw-html-wrapper" class="">
 		{@html data.html}
 	</section>

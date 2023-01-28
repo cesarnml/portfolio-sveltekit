@@ -30,5 +30,5 @@
 </div>
 
 <div>
-	<img src={image} alt="article hero" />
+	<img src={image} alt="article hero" class="mb-4" />
 </div>
