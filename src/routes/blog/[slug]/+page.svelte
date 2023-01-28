@@ -38,7 +38,7 @@
 			}
 			const remarkCodeTitle = remarkCodeTitles[index] as HTMLElement
 			const button = document.createElement('button')
-			button.className = 'copy-code-to-clipboard'
+			button.className = 'btn variant-ringed-primary btn-sm ring-2 ring-primary-500 text-secondary-500 self-end mb-2'
 			button.textContent = remarkCodeTitle.textContent
 			button.role = 'button'
 			button.addEventListener('click', handleCopyClick)
@@ -52,9 +52,8 @@
 <div class="hidden absolute w-[240px] xl:inline-block h-full top-0 -right-[264px]">
 	<TableOfContents
 		target="#toc-target"
-		class="sticky p-4 top-8 card variant-soft-primary"
+		class="top-8 card variant-soft-primary sticky p-4"
 		width="w-fit"
-		hover="dark:hover:text-primary-400 hover:text-secondary-900"
 		regionList="list-none font-semibold"
 	/>
 </div>
@@ -70,9 +69,9 @@
 			image={data.frontmatter.image}
 		/>
 	</section>
-	<div class="space-x-5 mb-2">
+	<div class="mb-2 space-x-5">
 		{#each data.frontmatter.tags as tag (tag)}
-			<span class="badge variant-ringed-primary">{tag}</span>
+			<span class="badge variant-ringed-primary">{`#${tag}`}</span>
 		{/each}
 	</div>
 	<section id="toc-target" data-testid="raw-html-wrapper" class="">
