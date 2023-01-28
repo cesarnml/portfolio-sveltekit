@@ -3,7 +3,6 @@ import relativeImages from 'mdsvex-relative-images'
 import autolinkHeadings from 'rehype-autolink-headings'
 import slugPlugin from 'rehype-slug'
 import remarkExternalLinks from 'remark-external-links'
-import remarkToc from 'remark-toc'
 import remarkCodeTitles from 'remark-code-titles'
 import readingTime from 'remark-reading-time'
 import highlighter from './src/lib/codeHighlighter.mjs'
@@ -20,7 +19,6 @@ const config = defineConfig({
 	remarkPlugins: [
 		readingTime(),
 		remarkCodeTitles,
-		// remarkToc,
 		relativeImages,
 		// external links open in a new tab
 		[remarkExternalLinks, { target: '_blank', rel: 'noopener noreferrer' }]

@@ -41,7 +41,6 @@ specifiers:
   remark-code-titles: ^0.1.2
   remark-external-links: ^9.0.1
   remark-reading-time: 1.0.1
-  remark-toc: ^8.0.1
   shiki: ^0.11.1
   svelte: ^3.54.0
   svelte-check: ^3.0.1
@@ -97,7 +96,6 @@ devDependencies:
   remark-code-titles: 0.1.2
   remark-external-links: 9.0.1
   remark-reading-time: 1.0.1
-  remark-toc: 8.0.1
   shiki: 0.11.1
   svelte: 3.55.1
   svelte-check: 3.0.2_pehl75e5jsy22vp33udjja4soi
@@ -771,14 +769,6 @@ packages:
 
   /@types/cookie/0.5.1:
     resolution: {integrity: sha512-COUnqfB2+ckwXXSFInsFdOAWQzCCx+a5hq2ruyj+Vjund94RJQd4LG2u9hnvJrTgunKAaax7ancBYlDrNYxA0g==}
-    dev: true
-
-  /@types/extend/3.0.1:
-    resolution: {integrity: sha512-R1g/VyKFFI2HLC1QGAeTtCBWCo6n75l41OnsVYNbmKG+kempOESaodf6BeJyUM3Q0rKa/NQcTHbB2+66lNnxLw==}
-    dev: true
-
-  /@types/github-slugger/1.3.0:
-    resolution: {integrity: sha512-J/rMZa7RqiH/rT29TEVZO4nBoDP9XJOjnbbIofg7GQKs4JIduEO3WLpte+6WeUz/TcrXKlY+bM7FYrp8yFB+3g==}
     dev: true
 
   /@types/hast/2.3.4:
@@ -2178,10 +2168,6 @@ packages:
       has-symbols: 1.0.3
     dev: true
 
-  /github-slugger/1.5.0:
-    resolution: {integrity: sha512-wIh+gKBI9Nshz2o46B0B3f5k/W+WI9ZAv6y5Dn5WJ5SK1t0TnDimB4WE5rmTD05ZAIn8HALCZVmCsvj0w0v0lw==}
-    dev: true
-
   /github-slugger/2.0.0:
     resolution: {integrity: sha512-IaOQ9puYtjrkq7Y0Ygl9KDZnrf/aiUJYUpVf89y8kyaxbRG7Y1SrX/jaumrv81vc61+kiMempujsM3Yw7w5qcw==}
     dev: true
@@ -2855,23 +2841,6 @@ packages:
       unist-util-visit: 4.1.1
     dev: true
 
-  /mdast-util-to-string/3.1.0:
-    resolution: {integrity: sha512-n4Vypz/DZgwo0iMHLQL49dJzlp7YtAJP+N07MZHpjPf/5XJuHUWstviF4Mn2jEiR/GNmtnRRqnwsXExk3igfFA==}
-    dev: true
-
-  /mdast-util-toc/6.1.0:
-    resolution: {integrity: sha512-0PuqZELXZl4ms1sF7Lqigrqik4Ll3UhbI+jdTrfw7pZ9QPawgl7LD4GQ8MkU7bT/EwiVqChNTbifa2jLLKo76A==}
-    dependencies:
-      '@types/extend': 3.0.1
-      '@types/github-slugger': 1.3.0
-      '@types/mdast': 3.0.10
-      extend: 3.0.2
-      github-slugger: 1.5.0
-      mdast-util-to-string: 3.1.0
-      unist-util-is: 5.1.1
-      unist-util-visit: 3.1.0
-    dev: true
-
   /mdsvex-relative-images/1.0.3:
     resolution: {integrity: sha512-3XvpnaguRAhC5gchpqCH+A5Yl28xG9WDPylVla0+k90c5LT+QqSM+hwHd1v5C7gB2cAT0AIhuMsY/g6aCw+WDg==}
     dependencies:
@@ -3510,14 +3479,6 @@ packages:
     dependencies:
       reading-time: 1.5.0
       unist-util-visit: 3.1.0
-    dev: true
-
-  /remark-toc/8.0.1:
-    resolution: {integrity: sha512-7he2VOm/cy13zilnOTZcyAoyoolV26ULlon6XyCFU+vG54Z/LWJnwphj/xKIDLOt66QmJUgTyUvLVHi2aAElyg==}
-    dependencies:
-      '@types/mdast': 3.0.10
-      mdast-util-toc: 6.1.0
-      unified: 10.1.2
     dev: true
 
   /require-directory/2.1.1:
