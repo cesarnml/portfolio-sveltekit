@@ -38,7 +38,7 @@
 <div class="hidden absolute w-[240px] xl:inline-block h-full top-0 -right-[264px]">
 	<TableOfContents
 		target="#toc-target"
-		class="top-8 card variant-soft-primary sticky p-4"
+		class="sticky p-4 top-8 card variant-soft-primary"
 		width="w-fit"
 		hover="dark:hover:text-primary-400 hover:text-secondary-900"
 		regionList="list-none font-semibold"

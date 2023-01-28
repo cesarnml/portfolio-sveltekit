@@ -39,7 +39,7 @@
 	<svelte:fragment slot="pageHeader" />
 	<!-- Router Slot -->
 	<div
-		class="dark:prose-invert md:p-8 prose-a:no-underline hover:prose-a:text-secondary-800 dark:hover:prose-a:text-primary-500 prose-headings:mt-0 container relative max-w-screen-md p-4 mx-auto prose"
+		class="container relative p-4 mx-auto dark:prose-invert md:p-8 prose-a:no-underline hover:prose-a:text-secondary-800 dark:hover:prose-a:text-primary-500 prose-headings:mt-0 max-w-screen-md prose"
 	>
 		<slot />
 	</div>

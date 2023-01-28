@@ -61,7 +61,7 @@
 
 <!-- <div class="flex justify-center w-full px-4"> -->
 <div>
-	<!-- <div class="2xs:max-w-screen-2xs w-full p-6 bg-white rounded-lg shadow-lg relative"> -->
+	<!-- <div class="relative w-full p-6 bg-white rounded-lg shadow-lg 2xs:max-w-screen-2xs"> -->
 	<div>
 		<Toaster />
 
