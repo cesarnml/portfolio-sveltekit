@@ -44,14 +44,14 @@
 		class="dark:prose-invert md:p-8 prose-a:no-underline hover:prose-a:text-secondary-800 dark:hover:prose-a:text-primary-500 prose-headings:mt-0 container relative max-w-screen-md p-4 mx-auto prose"
 	>
 		<Drawer position="top" bgDrawer="backdrop-blur bg-surface-backdrop-token" height="h-screen" duration={250}>
-			<div class="flex flex-col items-center p-4">
+			<div class="flex flex-col items-center gap-3 p-4">
 				<div class="flex items-center justify-between w-full">
 					<div class="px-[11px]">
 						<LightSwitch />
 					</div>
 					<NavHamburgerMenu />
 				</div>
-				<NavLinks className="list-nav" />
+				<NavLinks className="list-nav text-xl font-semibold" />
 			</div>
 		</Drawer>
 		<slot />
