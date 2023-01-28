@@ -12,9 +12,11 @@
 	import '@skeletonlabs/skeleton/themes/theme-gold-nouveau.css'
 	import '@skeletonlabs/skeleton/styles/all.css'
 	import '../app.postcss'
-
+	import type { DrawerSettings } from '@skeletonlabs/skeleton'
+	import { Drawer, drawerStore, LightSwitch } from '@skeletonlabs/skeleton'
 	import { AppShell } from '@skeletonlabs/skeleton'
-
+	import NavLinks from '@components/NavLinks.svelte'
+	import NavHamburgerMenu from '@components/NavHamburgerMenu.svelte'
 	onMount(() => {
 		// const {
 		// 	data: { subscription }
@@ -27,8 +29,8 @@
 	})
 
 	// Reactively close sidebar if screen > media.sm and sidebar is open
-	$: if ($media.sm && $sidebar) {
-		sidebar.close()
+	$: if ($media.sm && $drawerStore.open) {
+		drawerStore.close()
 	}
 </script>
 
@@ -39,8 +41,19 @@
 	<svelte:fragment slot="pageHeader" />
 	<!-- Router Slot -->
 	<div
-		class="container relative p-4 mx-auto dark:prose-invert md:p-8 prose-a:no-underline hover:prose-a:text-secondary-800 dark:hover:prose-a:text-primary-500 prose-headings:mt-0 max-w-screen-md prose"
+		class="dark:prose-invert md:p-8 prose-a:no-underline hover:prose-a:text-secondary-800 dark:hover:prose-a:text-primary-500 prose-headings:mt-0 container relative max-w-screen-md p-4 mx-auto prose"
 	>
+		<Drawer position="top" bgDrawer="backdrop-blur bg-surface-backdrop-token h-screen" duration={250}>
+			<div class="flex flex-col items-center px-2 pt-4">
+				<div class="flex items-center justify-between w-full">
+					<div class="px-5">
+						<LightSwitch />
+					</div>
+					<NavHamburgerMenu />
+				</div>
+				<NavLinks className="list-nav" />
+			</div>
+		</Drawer>
 		<slot />
 	</div>
 	<!-- ---- / ---- -->

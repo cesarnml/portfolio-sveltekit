@@ -1,9 +1,16 @@
 <script lang="ts">
+	import { fade } from 'svelte/transition'
+
 	import { page } from '$app/stores'
 	// import ReusableButton from '@components/ReusableButton.svelte'
 	// import { supabase } from '@lib/supabaseClient'
 	import { Url } from '@lib/url'
+	import { onMount } from 'svelte'
+	import type { DrawerSettings } from '@skeletonlabs/skeleton'
+	import { Drawer, drawerStore } from '@skeletonlabs/skeleton'
 	import type { PageData } from './$types'
+	import NavLinks from '@components/NavLinks.svelte'
+	import NavHamburgerMenu from '@components/NavHamburgerMenu.svelte'
 
 	export let data: PageData
 	const { posts } = data

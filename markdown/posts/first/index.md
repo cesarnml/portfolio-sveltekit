@@ -12,13 +12,13 @@ date: 2023-01-17
   import ReusableImage from '@components/ReusableImage.svelte'
 </script>
 
-## Heading 2 First
+## First Heading
 
-## Heading 2 Second
+## Second Heading
 
-### Heading 3 First
+### Subheading
 
-## Heading 2 Third
+## Third Headings
 
 1. Make a list
 2. Yup
