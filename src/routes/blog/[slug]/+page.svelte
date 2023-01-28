@@ -71,7 +71,7 @@
 	</section>
 	<div class="mb-2 space-x-5">
 		{#each data.frontmatter.tags as tag (tag)}
-			<span class="badge variant-ringed-primary">{`#${tag}`}</span>
+			<span class="badge variant-ringed-primary"><a href={`/blog/tag/${tag}`}>{`#${tag}`}</a></span>
 		{/each}
 	</div>
 	<section id="toc-target" data-testid="raw-html-wrapper" class="">

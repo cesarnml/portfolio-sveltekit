@@ -13,8 +13,7 @@
 	import '@skeletonlabs/skeleton/styles/all.css'
 	import '../app.postcss'
 	import type { DrawerSettings } from '@skeletonlabs/skeleton'
-	import { Drawer, drawerStore, LightSwitch } from '@skeletonlabs/skeleton'
-	import { AppShell } from '@skeletonlabs/skeleton'
+	import { Drawer, drawerStore, LightSwitch, AppShell } from '@skeletonlabs/skeleton'
 	import NavLinks from '@components/NavLinks.svelte'
 	import NavHamburgerMenu from '@components/NavHamburgerMenu.svelte'
 	onMount(() => {
