@@ -36,6 +36,7 @@ specifiers:
   postcss: ^8.4.21
   prettier: ^2.8.0
   prettier-plugin-svelte: ^2.8.1
+  reading-time: ^1.3.0
   rehype-autolink-headings: ^6.1.1
   rehype-slug: ^5.1.0
   remark-code-titles: ^0.1.2
@@ -48,10 +49,10 @@ specifiers:
   svelte-french-toast: ^1.0.3
   svelte-htm: ^1.2.0
   svelte-media: ^0.1.5
-  svelte-preprocess: ^5.0.1
   tailwindcss: ^3.2.4
   tslib: ^2.4.1
   typescript: ^4.9.3
+  unist-util-visit: ^3.1.0
   vite: ^4.0.4
   vitest: ^0.27.2
 
@@ -91,6 +92,7 @@ devDependencies:
   postcss: 8.4.21
   prettier: 2.8.3
   prettier-plugin-svelte: 2.9.0_kdmmghgdi3ngrsq6otxkjilbry
+  reading-time: 1.3.0
   rehype-autolink-headings: 6.1.1
   rehype-slug: 5.1.0
   remark-code-titles: 0.1.2
@@ -103,10 +105,10 @@ devDependencies:
   svelte-french-toast: 1.0.3_svelte@3.55.1
   svelte-htm: 1.2.0_svelte@3.55.1
   svelte-media: 0.1.5_svelte@3.55.1
-  svelte-preprocess: 5.0.1_oifjsu5oar4lzyaoppb2hxramu
   tailwindcss: 3.2.4_postcss@8.4.21
   tslib: 2.4.1
   typescript: 4.9.4
+  unist-util-visit: 3.1.0
   vite: 4.0.4
   vitest: 0.27.2_jsdom@21.0.0
 
@@ -2838,7 +2840,7 @@ packages:
     dependencies:
       '@types/mdast': 3.0.10
       '@types/unist': 2.0.6
-      unist-util-visit: 4.1.1
+      unist-util-visit: 4.1.2
     dev: true
 
   /mdsvex-relative-images/1.0.3:
@@ -3401,6 +3403,10 @@ packages:
       picomatch: 2.3.1
     dev: true
 
+  /reading-time/1.3.0:
+    resolution: {integrity: sha512-RJ8J5O6UvrclfZpcPSPuKusrdRfoY7uXXoYOOdeswZNtSkQaewT3919yz6RyloDBR+iwcUyz5zGOUjhgvfuv3g==}
+    dev: true
+
   /reading-time/1.5.0:
     resolution: {integrity: sha512-onYyVhBNr4CmAxFsKS7bz+uTLRakypIe4R+5A824vBSkQy/hB3fZepoVEf8OVAxzLvK+H/jm9TzpI3ETSm64Kg==}
     dev: true
@@ -3440,7 +3446,7 @@ packages:
       hast-util-heading-rank: 2.1.1
       hast-util-is-element: 2.1.3
       unified: 10.1.2
-      unist-util-visit: 4.1.1
+      unist-util-visit: 4.1.2
     dev: true
 
   /rehype-slug/5.1.0:
@@ -3452,7 +3458,7 @@ packages:
       hast-util-heading-rank: 2.1.1
       hast-util-to-string: 2.0.0
       unified: 10.1.2
-      unist-util-visit: 4.1.1
+      unist-util-visit: 4.1.2
     dev: true
 
   /remark-code-titles/0.1.2:
@@ -3471,7 +3477,7 @@ packages:
       mdast-util-definitions: 5.1.1
       space-separated-tokens: 2.0.2
       unified: 10.1.2
-      unist-util-visit: 4.1.1
+      unist-util-visit: 4.1.2
     dev: true
 
   /remark-reading-time/1.0.1:
@@ -4173,8 +4179,8 @@ packages:
       unist-util-visit-parents: 4.1.1
     dev: true
 
-  /unist-util-visit/4.1.1:
-    resolution: {integrity: sha512-n9KN3WV9k4h1DxYR1LoajgN93wpEi/7ZplVe02IoB4gH5ctI1AaF2670BLHQYbwj+pY83gFtyeySFiyMHJklrg==}
+  /unist-util-visit/4.1.2:
+    resolution: {integrity: sha512-MSd8OUGISqHdVvfY9TPhyK2VdUrPgxkUtWSuMHF6XAAFuL4LokseigBnZtPnJMu+FbynTkFNnFlyjxpVKujMRg==}
     dependencies:
       '@types/unist': 2.0.6
       unist-util-is: 5.1.1

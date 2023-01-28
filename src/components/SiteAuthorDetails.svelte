@@ -1,7 +1,8 @@
 <script lang="ts">
+	import { storeLightSwitch } from '@skeletonlabs/skeleton'
+
 	import { media } from '@stores/media'
 	import { fade } from 'svelte/transition'
-	import { storeLightSwitch } from '@skeletonlabs/skeleton'
 	export let author = 'Cesar Mejia'
 	export let profession = 'Web Dev'
 </script>
