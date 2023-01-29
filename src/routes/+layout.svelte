@@ -16,10 +16,10 @@
 </script>
 
 <AppShell>
-	<svelte:fragment slot="header"><Navbar /></svelte:fragment>
+	<svelte:fragment slot="header" />
 	<svelte:fragment slot="sidebarLeft" />
 	<svelte:fragment slot="sidebarRight" />
-	<svelte:fragment slot="pageHeader" />
+	<svelte:fragment slot="pageHeader"><Navbar /></svelte:fragment>
 	<!-- Router Slot -->
 	<div
 		class="dark:prose-invert md:p-8 prose-a:no-underline hover:prose-a:text-secondary-800 dark:hover:prose-a:text-primary-500 prose-headings:mt-0 container relative max-w-screen-md p-4 mx-auto prose"
