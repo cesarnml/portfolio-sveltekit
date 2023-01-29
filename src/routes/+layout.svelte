@@ -9,9 +9,6 @@
 	import NavLinks from '@components/NavLinks.svelte'
 	import NavHamburgerMenu from '@components/NavHamburgerMenu.svelte'
 
-	$: {
-		console.log('LightSwitch:', $storeLightSwitch)
-	}
 	// Close drawer if screen > media.sm and drawer is open
 	$: if ($media.sm && $drawerStore.open) {
 		drawerStore.close()
