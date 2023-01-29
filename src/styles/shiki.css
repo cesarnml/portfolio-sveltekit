@@ -1,5 +1,4 @@
 :root {
-	--colour-code-line-numbers: hsl(219 14% 71% / 0.8);
 	--colour-code-line-highlight-normal: hsl(34deg 96% 50%);
 	--colour-code-line-highlight-add: hsl(129deg 96% 50%);
 	--colour-code-line-highlight-remove: hsl(337deg 96% 50%);
@@ -7,14 +6,10 @@
 	--colour-code-background-highlighted-remove: hsl(340deg 97% 52% / 7%);
 	--colour-code-background-highlighted-add: hsl(129deg 65% 62% / 7%);
 
-	--spacing-0: 0rem;
 	--spacing-1: 0.25rem;
 	--spacing-2: 0.5rem;
-	--spacing-4: 1rem;
 	--spacing-6: 1.5rem;
-	--spacing-8: 2rem;
 	--spacing-10: 2.5rem;
-	--spacing-18: 4.5rem;
 	--max-width-full: 100%;
 
 	/* CREDIT: https://www.joshwcomeau.com/shadow-palette/ */
@@ -27,14 +22,9 @@
 /* BEGIN: code `[pre]` element styling */
 .shiki {
 	position: relative;
-	color: var(--colour-code-line-numbers);
 	display: flex;
 	flex-direction: column;
-	border-radius: var(--spacing-1);
-	padding: var(--spacing-0) var(--spacing-0) var(--spacing-6) var(--spacing-0);
-	margin: var(--spacing-4) auto var(--spacing-18);
 	box-shadow: var(--shadow-elevation-medium);
-	overflow-x: auto;
 	max-width: var(--max-width-full);
 	font-family: 'Fira Code', 'SF Mono', 'Menlo', 'Courier New', monospace;
 	padding: 0 !important;
@@ -48,104 +38,65 @@
 	counter-increment: step 0;
 }
 
+.line {
+	width: var(--max-width-full);
+	display: inline-block;
+}
+
 .line:not(.highlight-line-normal, .highlight-line-add, .highlight-line-remove) {
 	border-left: var(--spacing-1) solid transparent;
 }
 
 .highlight-line-normal {
-	display: inline-block;
 	background-color: var(--colour-code-background-highlighted-normal);
-	width: var(--max-width-full);
 	border-left: var(--spacing-1) solid var(--colour-code-line-highlight-normal);
 }
 
 .highlight-line-add {
-	display: inline-block;
 	background-color: var(--colour-code-background-highlighted-add);
-	width: var(--max-width-full);
 	border-left: var(--spacing-1) solid var(--colour-code-line-highlight-add);
 }
 
 .highlight-line-remove {
-	display: inline-block;
 	background-color: var(--colour-code-background-highlighted-remove);
-	width: var(--max-width-full);
 	border-left: var(--spacing-1) solid var(--colour-code-line-highlight-remove);
 }
 
-code .line:not(.highlight-line-normal, .highlight-line-add, .highlight-line-remove)::before {
+code .line::before {
 	display: inline-block;
-	content: ' ' counter(step);
-	counter-increment: step;
 	width: var(--spacing-10);
 	margin-left: var(--spacing-2);
 	margin-right: var(--spacing-6);
 	text-align: right;
 	font-variant-numeric: tabular-nums;
+}
+
+code .line:not(.highlight-line-normal, .highlight-line-add, .highlight-line-remove)::before {
+	content: ' ' counter(step);
+	counter-increment: step;
 	color: var(--colour-line-numbers);
 }
 
 code .highlight-line-add::before {
-	display: inline-block;
 	content: '+ ' counter(step);
 	counter-increment: step;
-	width: var(--spacing-10);
-	margin-left: var(--spacing-2);
-	margin-right: var(--spacing-6);
-	text-align: right;
-	font-variant-numeric: tabular-nums;
 	color: var(--colour-code-line-highlight-add);
 }
 
 code .highlight-line-remove::before {
-	display: inline-block;
 	content: '- ' counter(step);
 	counter-increment: step;
-	width: var(--spacing-10);
-	margin-left: var(--spacing-2);
-	margin-right: var(--spacing-6);
-	text-align: right;
-	font-variant-numeric: tabular-nums;
 	color: var(--colour-code-line-highlight-remove);
 }
 
 code .highlight-line-normal::before {
-	display: inline-block;
 	content: '  ' counter(step);
 	counter-increment: step;
-	width: var(--spacing-10);
-	margin-left: var(--spacing-2);
-	margin-right: var(--spacing-6);
-	text-align: right;
-	font-variant-numeric: tabular-nums;
 	color: var(--colour-code-line-highlight-normal);
 }
 /* END: Line number styling */
 
-/* BEGIN: Copy-to-clipboard button styling */
 .remark-code-title {
 	/* Hidden element used to derive code language */
 	display: none;
 }
-.copy-code-to-clipboard {
-	position: absolute;
-	align-self: end;
-	min-width: 100px;
-	user-select: none;
-	background-color: #262335;
-	border: none;
-	border-bottom-left-radius: 10px;
-	color: #317ac3;
-	font-weight: bold;
-	letter-spacing: 0.03rem;
-	cursor: pointer;
-	padding: 6px 14px;
-	transition: background-color 0.4s ease-out;
-	text-align: right;
-}
-
-.copy-code-to-clipboard:hover {
-	background-color: hsla(0, 0%, 100%, 0.072);
-	color: #fcb32c;
-}
-/* END: Copy-to-clipboard button styling */
