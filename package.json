@@ -17,6 +17,7 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"devDependencies": {
+		"@codewithshin/svelte-utterances": "^0.2.4",
 		"@playwright/test": "^1.28.1",
 		"@skeletonlabs/skeleton": "^0.99.5",
 		"@supabase/auth-helpers-sveltekit": "^0.8.7",
