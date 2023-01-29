@@ -43,6 +43,7 @@
 
 /* BEGIN: Line number styling */
 .shiki code {
+	min-width: fit-content;
 	counter-reset: step;
 	counter-increment: step 0;
 }
@@ -77,7 +78,7 @@ code .line:not(.highlight-line-normal, .highlight-line-add, .highlight-line-remo
 	content: ' ' counter(step);
 	counter-increment: step;
 	width: var(--spacing-10);
-	margin-left: var(--spacing-4);
+	margin-left: var(--spacing-2);
 	margin-right: var(--spacing-6);
 	text-align: right;
 	font-variant-numeric: tabular-nums;
@@ -89,7 +90,7 @@ code .highlight-line-add::before {
 	content: '+ ' counter(step);
 	counter-increment: step;
 	width: var(--spacing-10);
-	margin-left: var(--spacing-4);
+	margin-left: var(--spacing-2);
 	margin-right: var(--spacing-6);
 	text-align: right;
 	font-variant-numeric: tabular-nums;
@@ -101,7 +102,7 @@ code .highlight-line-remove::before {
 	content: '- ' counter(step);
 	counter-increment: step;
 	width: var(--spacing-10);
-	margin-left: var(--spacing-4);
+	margin-left: var(--spacing-2);
 	margin-right: var(--spacing-6);
 	text-align: right;
 	font-variant-numeric: tabular-nums;
@@ -113,7 +114,7 @@ code .highlight-line-normal::before {
 	content: '  ' counter(step);
 	counter-increment: step;
 	width: var(--spacing-10);
-	margin-left: var(--spacing-4);
+	margin-left: var(--spacing-2);
 	margin-right: var(--spacing-6);
 	text-align: right;
 	font-variant-numeric: tabular-nums;
@@ -127,6 +128,7 @@ code .highlight-line-normal::before {
 	display: none;
 }
 .copy-code-to-clipboard {
+	position: absolute;
 	align-self: end;
 	min-width: 100px;
 	user-select: none;

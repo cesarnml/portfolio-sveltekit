@@ -10,23 +10,7 @@
 		<meta name="robots" content="index, follow" />
 		<link rel="canonical" href="https://cesar-mejia.com/" />
 		%sveltekit.head%
-		<script type="text/javascript">
-			// no preference ... default to system preference
-			if (localStorage.storeLightSwitch === undefined) {
-				if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-					document.documentElement.classList.add('dark')
-				} else {
-					document.documentElement.classList.remove('dark')
-				}
-				// has preference ... obey lightSwitch
-			} else {
-				if (localStorage.storeLightSwitch === 'true') {
-					document.documentElement.classList.add('dark')
-				} else {
-					document.documentElement.classList.remove('dark')
-				}
-			}
-		</script>
+		<script type="text/javascript" src="/js/initializeDarkThemePreference.js"></script>
 	</head>
 	<body data-sveltekit-preload-data="hover" data-theme="modern">
 		<div style="display: contents" class="h-full overflow-hidden">%sveltekit.body%</div>
