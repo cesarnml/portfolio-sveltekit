@@ -1,33 +1,18 @@
 <script lang="ts">
-	// import { supabase } from '$lib/supabaseClient'
-	// import { invalidate } from '$app/navigation'
-	import { onMount } from 'svelte'
 	import Footer from '@components/Footer.svelte'
 	import Navbar from '@components/Navbar.svelte'
-	// import Sidebar from '@components/Sidebar.svelte'
 	import { media } from '@stores/media'
-	import { sidebar } from '@stores/sidebar'
-	// import '@skeletonlabs/skeleton/themes/theme-modern.css'
-	// import '@skeletonlabs/skeleton/styles/all.css'
 	import '@skeletonlabs/skeleton/themes/theme-gold-nouveau.css'
 	import '@skeletonlabs/skeleton/styles/all.css'
 	import '../app.postcss'
-	import type { DrawerSettings } from '@skeletonlabs/skeleton'
-	import { Drawer, drawerStore, LightSwitch, AppShell } from '@skeletonlabs/skeleton'
+	import { Drawer, drawerStore, LightSwitch, AppShell, storeLightSwitch } from '@skeletonlabs/skeleton'
 	import NavLinks from '@components/NavLinks.svelte'
 	import NavHamburgerMenu from '@components/NavHamburgerMenu.svelte'
-	onMount(() => {
-		// const {
-		// 	data: { subscription }
-		// } = supabase.auth.onAuthStateChange(() => {
-		// 	invalidate('supabase:auth')
-		// })
-		// return () => {
-		// 	subscription.unsubscribe()
-		// }
-	})
 
-	// Reactively close sidebar if screen > media.sm and sidebar is open
+	$: {
+		console.log('LightSwitch:', $storeLightSwitch)
+	}
+	// Close drawer if screen > media.sm and drawer is open
 	$: if ($media.sm && $drawerStore.open) {
 		drawerStore.close()
 	}
@@ -56,6 +41,6 @@
 		<slot />
 	</div>
 	<!-- ---- / ---- -->
-	<!-- <svelte:fragment slot="pageFooter">Page Footer</svelte:fragment> -->
+	<svelte:fragment slot="pageFooter" />
 	<svelte:fragment slot="footer"><Footer /></svelte:fragment>
 </AppShell>

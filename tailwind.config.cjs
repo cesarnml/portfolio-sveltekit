@@ -20,12 +20,9 @@ module.exports = {
 		},
 		extend: {}
 	},
-	// corePlugins: {
-	// 	aspectRatio: false
-	// },
-	// future: {
-	// 	hoverOnlyWhenSupported: true
-	// },
+	future: {
+		hoverOnlyWhenSupported: true
+	},
 	plugins: [
 		require('@tailwindcss/forms'),
 		require('@tailwindcss/typography'),
