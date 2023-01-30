@@ -61,11 +61,11 @@
 </script>
 
 <Toaster />
-<div>
+<div class="dark:prose-invert prose">
 	<div class="flex flex-col items-center">
 		<h1>Contact Me</h1>
 		<form
-			class="flex flex-col w-full items-stretch gap-4 max-w-screen-xs"
+			class="max-w-screen-xs flex flex-col items-stretch w-full gap-4"
 			on:submit|preventDefault={(e) => handleSend(e)}
 		>
 			<div>

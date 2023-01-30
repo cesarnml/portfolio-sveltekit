@@ -1,51 +1,16 @@
 <script lang="ts">
-	import { fade } from 'svelte/transition'
-
-	import { page } from '$app/stores'
-	// import ReusableButton from '@components/ReusableButton.svelte'
-	// import { supabase } from '@lib/supabaseClient'
 	import { Url } from '@lib/url'
-	import { onMount } from 'svelte'
-	import type { DrawerSettings } from '@skeletonlabs/skeleton'
-	import { Drawer, drawerStore } from '@skeletonlabs/skeleton'
 	import type { PageData } from './$types'
-	import NavLinks from '@components/NavLinks.svelte'
-	import NavHamburgerMenu from '@components/NavHamburgerMenu.svelte'
 
 	export let data: PageData
 	const { posts } = data
 </script>
 
-<!-- <div class="flex items-center justify-center"> -->
-<div>
-	<!-- {#if !$page.data.session}
-		<button
-			on:click={async function signInWithGitHub() {
-				const { data, error } = await supabase.auth.signInWithOAuth({
-					provider: 'github'
-				})
-			}}>Sign in with Github</button
-		>
-		<button
-			on:click={async function signInWithGitHub() {
-				const { data, error } = await supabase.auth.signInWithOAuth({
-					provider: 'google'
-				})
-			}}>Sign in with Google</button
-		>
-	{:else}
-		<button
-			on:click={async function signout() {
-				const { error } = await supabase.auth.signOut()
-			}}>Sign out</button
-		>
-	{/if} -->
-	<!-- <ReusableButton /> -->
-</div>
+<div />
 <div>
 	<ul>
 		{#each posts as post (post.slug)}
-			<li><a href={Url.BlogDetail(post.slug)}>{post.title}</a></li>
+			<li><a class="unstyled" href={Url.BlogDetail(post.slug)}>{post.title}</a></li>
 		{/each}
 	</ul>
 </div>

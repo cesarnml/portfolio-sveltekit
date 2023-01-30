@@ -1,7 +1,6 @@
 <script lang="ts">
 	import avatarSrc from '$lib/assets/images/favicon.png'
 	import Img from '@zerodevx/svelte-img'
-	import 'iconify-icon'
 	export let author: string
 	export let date: string
 	export let readingTime: string
@@ -12,7 +11,7 @@
 </script>
 
 <div class="flex items-center gap-4">
-	<div class="w-12 h-12 md:w-14 md:h-14">
+	<div class="md:w-14 md:h-14 w-12 h-12">
 		<Img class="m-0" src={avatarSrc} alt="avatar" />
 	</div>
 	<div class="flex flex-col">

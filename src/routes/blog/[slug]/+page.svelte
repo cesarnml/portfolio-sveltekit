@@ -49,7 +49,7 @@
 
 <PageHead title={data.frontmatter.title} description={data.frontmatter.description} />
 
-<div class="hidden absolute w-[240px] xl:inline-block h-full top-8 -right-[264px]">
+<div class="hidden absolute w-[240px] xl:inline-block h-full top-8 -right-[240px]">
 	<TableOfContents
 		target="#toc-target"
 		class="top-8 card variant-soft-primary sticky p-4"
@@ -59,7 +59,7 @@
 </div>
 
 <article
-	class="dark:prose-invert prose-a:no-underline hover:prose-a:text-secondary-800 dark:hover:prose-a:text-primary-500 prose-headings:mt-0 prose"
+	class="dark:prose-invert prose-a:no-underline hover:prose-a:text-secondary-800 dark:hover:prose-a:text-primary-500 prose-headings:mt-0 max-w-screen-2md prose"
 >
 	<section class="mb-4">
 		<ArticleTitle title={data.frontmatter.title} />
