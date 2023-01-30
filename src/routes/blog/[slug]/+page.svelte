@@ -1,10 +1,6 @@
 <script lang="ts">
 	import '@styles/shiki.css'
 	import { onMount } from 'svelte'
-	import { Utterances } from '@codewithshin/svelte-utterances'
-	const theme = 'icy-dark'
-	let reponame = 'cesarnml/svelte-kit-tutorial'
-
 	import type { PageServerData } from './$types'
 	import PageHead from '@components/PageHead.svelte'
 	import ArticleTitle from '@components/ArticleTitle.svelte'
@@ -81,5 +77,4 @@
 	<section id="toc-target" data-testid="raw-html-wrapper" class="">
 		{@html data.html}
 	</section>
-	<Utterances {reponame} {theme} />
 </article>

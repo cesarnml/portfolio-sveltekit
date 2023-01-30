@@ -12,3 +12,8 @@ pnpm-lock.yaml
 package-lock.json
 yarn.lock
 coverage
+.vercel
+.eslintrc.cjs
+.github
+.prettierrc
+.vscode

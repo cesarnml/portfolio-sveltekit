@@ -6,7 +6,7 @@
 	export let date: string
 	export let readingTime: string
 	export let wordCount: number
-	export let image: string = ''
+	export let image: string
 
 	const formattedDate = new Date(date).toDateString().split(' ').slice(1).join(' ')
 </script>

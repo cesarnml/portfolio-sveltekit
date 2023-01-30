@@ -3,7 +3,7 @@
 	import { Url } from '@lib/url'
 	import { drawerStore } from '@skeletonlabs/skeleton'
 
-	export let className: string = ''
+	export let className = ''
 	const excludedUrls = ['BlogDetail']
 	const navLinks = Object.keys(Url).filter((url) => !excludedUrls.includes(url)) as (keyof typeof Url)[]
 </script>
