@@ -42,7 +42,7 @@
 			}
 			const remarkCodeTitle = remarkCodeTitles[index] as HTMLElement
 			const button = document.createElement('button')
-			button.className = 'btn btn-sm ring-2 ring-primary-500 text-secondary-500 m-3 self-start'
+			button.className = 'btn variant-filled-primary btn-sm m-3 self-start'
 			button.textContent = remarkCodeTitle.textContent
 			button.role = 'button'
 			button.addEventListener('click', handleCopyClick)
