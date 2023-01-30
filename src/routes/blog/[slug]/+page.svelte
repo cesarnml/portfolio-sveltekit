@@ -32,13 +32,16 @@
 		const preElements = document.querySelectorAll('pre')
 		// Add a copy button to each markdown code block
 		preElements.forEach((ele, index) => {
+			const oldHtml = ele.innerHTML
+			const newHtml = "<div class='pre-wrap overflow-x-auto'>" + oldHtml + '</div>'
+			ele.innerHTML = newHtml
 			const codeEle = ele.querySelector('code')
 			if (codeEle) {
 				codeEle.className = 'unstyled' // prevent application of dark mode styles
 			}
 			const remarkCodeTitle = remarkCodeTitles[index] as HTMLElement
 			const button = document.createElement('button')
-			button.className = 'btn variant-filled-primary btn-sm m-3 self-start'
+			button.className = 'btn variant-filled-primary btn-sm m-3 absolute top-0 right-0'
 			button.textContent = remarkCodeTitle.textContent
 			button.role = 'button'
 			button.addEventListener('click', handleCopyClick)
