@@ -7,7 +7,7 @@
 			"@lib/*": ["src/lib/*"],
 			"$lib": ["src/lib"],
 			"$lib/*": ["src/lib/*"],
-			"@markdown/*": ["markdown/*"],
+			"@content/*": ["src/content/*"],
 			"@styles/*": ["src/styles/*"],
 			"@stores/*": ["src/stores/*"]
 		},

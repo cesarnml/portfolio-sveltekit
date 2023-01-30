@@ -8,7 +8,7 @@ const config: UserConfig & { test: VitestConfig['test'] } = {
 	plugins: [
 		sveltekit(),
 		imagetools({
-			defaultDirectives: () => new URLSearchParams('?width=480;1024;1920&format=avif;webp;jpg&lqip=128&run')
+			defaultDirectives: () => new URLSearchParams('?width=480;1024;1920&format=avif;webp;jpg&lqip=0&run')
 		})
 	],
 	define: {
@@ -25,7 +25,7 @@ const config: UserConfig & { test: VitestConfig['test'] } = {
 		alias: {
 			'@components': resolve('./src/components'),
 			'@lib': resolve('./src/lib'),
-			'@markdown': resolve('./markdown'),
+			'@content': resolve('./src/content'),
 			'@styles': resolve('./src/styles'),
 			'@stores': resolve('./src/stores')
 		}

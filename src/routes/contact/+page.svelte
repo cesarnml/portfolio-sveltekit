@@ -10,6 +10,7 @@
 	import party from 'party-js'
 	import toast, { Toaster } from 'svelte-french-toast'
 
+	const rows = 5
 	let sendEmail: (e: Event) => Promise<void | HttpError>
 	let name: string
 	let email: string
@@ -59,58 +60,27 @@
 	}
 </script>
 
-<!-- <div class="flex justify-center w-full px-4"> -->
+<Toaster />
 <div>
-	<!-- <div class="relative w-full p-6 bg-white rounded-lg shadow-lg 2xs:max-w-screen-2xs"> -->
-	<div>
-		<Toaster />
-
-		<!-- <h1 class="mb-4 text-2xl font-bold text-center text-blue-900 select-none">Contact Me</h1> -->
+	<div class="flex flex-col items-center">
 		<h1>Contact Me</h1>
-
-		<form on:submit|preventDefault={(e) => handleSend(e)}>
-			<!-- <div class="mb-6"> -->
+		<form
+			class="flex flex-col w-full items-stretch gap-4 max-w-screen-xs"
+			on:submit|preventDefault={(e) => handleSend(e)}
+		>
 			<div>
-				<!-- <input
-					class="block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-					type="text"
-					name="name"
-					required
-					bind:value={name}
-					placeholder="Enter your name"
-				/> -->
-				<input type="text" name="name" required bind:value={name} placeholder="Enter your name" />
+				<label for="name">Name</label>
+				<input id="name" type="text" name="name" required bind:value={name} placeholder="Enter your name" />
 			</div>
-			<!-- <div class="mb-6"> -->
 			<div>
-				<!-- <input
-					class="block w-full px-3 py-1.5 text-base text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-					type="email"
-					name="email"
-					required
-					bind:value={email}
-					placeholder="Enter your email"
-				/> -->
-				<input type="email" name="email" required bind:value={email} placeholder="Enter your email" />
+				<label for="email">Email</label>
+				<input id="email" type="email" name="email" required bind:value={email} placeholder="Enter your email" />
 			</div>
-			<!-- <div class="mb-6"> -->
 			<div>
-				<!-- <textarea
-					class="w-full px-3 py-1.5 text-gray-700 border border-solid border-gray-300 rounded transition ease-in-out  focus:text-gray-700  focus:border-blue-600 focus:outline-none"
-					name="message"
-					bind:value={message}
-					rows="4"
-					required
-					placeholder="Write your message..."
-				/> -->
-				<textarea name="message" bind:value={message} rows="4" required placeholder="Write your message..." />
+				<label for="message">Message</label>
+				<textarea id="mesage" name="message" bind:value={message} {rows} required placeholder="Write your message..." />
 			</div>
-			<!-- <button
-				type="submit"
-				disabled={buttonDisabled}
-				class="w-full py-3.5 bg-blue-700 text-white font-semibold tracking-wider rounded shadow-md hover:bg-blue-600 hover:shadow-lg focus:bg-blue-900 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-900 active:shadow-lg transition duration-300 ease-in-out disabled:bg-transparent disabled:text-blue-700 disabled:border disabled:border-blue-700 select-none"
-			> -->
-			<button type="submit" disabled={buttonDisabled}>
+			<button class="tn variant-filled-primary btn-base text-white" type="submit" disabled={buttonDisabled}>
 				{buttonText}
 			</button>
 		</form>

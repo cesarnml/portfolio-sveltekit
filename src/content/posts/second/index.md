@@ -1,10 +1,10 @@
 ---
 published: true
-title: First Svelte MDX post
+title: Second Svelte MDX post
 description: My first markdown content
 author: Cesar Mejia
-tags: ['cool', 'beans']
-image: '/images/hero.webp'
+tags: ['beans']
+image: '/images/hero.jpg'
 date: 2023-01-17
 ---
 

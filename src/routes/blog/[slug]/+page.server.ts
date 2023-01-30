@@ -3,7 +3,7 @@ import { error } from '@sveltejs/kit'
 
 export const load = (async ({ params }) => {
 	try {
-		const postModule = (await import(`../../../../markdown/posts/${params.slug}/index.md`)) as App.MdsvexModule
+		const postModule = (await import(`../../../content/posts/${params.slug}/index.md`)) as App.MdsvexModule
 
 		if (!postModule || !postModule.metadata.published) {
 			throw error(404, 'Post not found') // Couldn't resolve the post

@@ -3,8 +3,7 @@
 	import { drawerStore } from '@skeletonlabs/skeleton'
 </script>
 
-<!-- <button class=" hover:text-yellow-500" on:click={sidebar.toggle}> -->
-<button class="btn btn-primary self-end">
+<button class="btn btn-primary self-end" aria-label="nav menu">
 	{#if $drawerStore.open}
 		<iconify-icon
 			on:click={drawerStore.close}
