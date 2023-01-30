@@ -1,7 +1,7 @@
 <script lang="ts">
 	import '@styles/shiki.css'
 	import { onMount } from 'svelte'
-	import { Utterances, utterancesTheme } from '@codewithshin/svelte-utterances'
+	import { Utterances } from '@codewithshin/svelte-utterances'
 	const theme = 'icy-dark'
 	let reponame = 'cesarnml/svelte-kit-tutorial'
 
