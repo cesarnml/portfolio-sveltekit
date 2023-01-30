@@ -8,7 +8,6 @@ specifiers:
   '@sveltejs/adapter-vercel': ^1.0.5
   '@sveltejs/kit': ^1.0.0
   '@sveltejs/vite-plugin-svelte': ^2.0.2
-  '@tailwindcss/aspect-ratio': ^0.4.2
   '@tailwindcss/forms': ^0.5.3
   '@tailwindcss/line-clamp': ^0.4.2
   '@tailwindcss/typography': ^0.5.9
@@ -60,7 +59,6 @@ devDependencies:
   '@sveltejs/adapter-vercel': 1.0.5_@sveltejs+kit@1.1.0
   '@sveltejs/kit': 1.1.0_svelte@3.55.1+vite@4.0.4
   '@sveltejs/vite-plugin-svelte': 2.0.2_svelte@3.55.1+vite@4.0.4
-  '@tailwindcss/aspect-ratio': 0.4.2_tailwindcss@3.2.4
   '@tailwindcss/forms': 0.5.3_tailwindcss@3.2.4
   '@tailwindcss/line-clamp': 0.4.2_tailwindcss@3.2.4
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.2.4
@@ -652,14 +650,6 @@ packages:
       vitefu: 0.2.4_vite@4.0.4
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /@tailwindcss/aspect-ratio/0.4.2_tailwindcss@3.2.4:
-    resolution: {integrity: sha512-8QPrypskfBa7QIMuKHg2TA7BqES6vhBrDLOv8Unb6FcFyd3TjKbc6lcmb9UPQHxfl24sXoJ41ux/H7qQQvfaSQ==}
-    peerDependencies:
-      tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
-    dependencies:
-      tailwindcss: 3.2.4_postcss@8.4.21
     dev: true
 
   /@tailwindcss/forms/0.5.3_tailwindcss@3.2.4:
