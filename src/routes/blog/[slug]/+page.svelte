@@ -58,7 +58,9 @@
 	/>
 </div>
 
-<article>
+<article
+	class="dark:prose-invert prose-a:no-underline hover:prose-a:text-secondary-800 dark:hover:prose-a:text-primary-500 prose-headings:mt-0 prose"
+>
 	<section class="mb-4">
 		<ArticleTitle title={data.frontmatter.title} />
 		<ArticleMeta
@@ -74,7 +76,7 @@
 			<span class="badge variant-ringed-primary"><a href={`/blog/tag/${tag}`}>{`#${tag}`}</a></span>
 		{/each}
 	</div>
-	<section id="toc-target" data-testid="raw-html-wrapper" class="">
+	<section id="toc-target" data-testid="raw-html-wrapper">
 		{@html data.html}
 	</section>
 </article>

@@ -1,5 +1,4 @@
 import { defineMDSveXConfig as defineConfig } from 'mdsvex'
-import relativeImages from 'mdsvex-relative-images'
 import autolinkHeadings from 'rehype-autolink-headings'
 import slugPlugin from 'rehype-slug'
 import remarkExternalLinks from 'remark-external-links'
@@ -19,7 +18,6 @@ const config = defineConfig({
 	remarkPlugins: [
 		readingTime(),
 		remarkCodeTitles,
-		relativeImages,
 		// external links open in a new tab
 		[remarkExternalLinks, { target: '_blank', rel: 'noopener noreferrer' }]
 	],

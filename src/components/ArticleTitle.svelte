@@ -8,7 +8,7 @@
 	const href = slug ? `/posts/${slug}` : '#' + id
 </script>
 
-<h1 {id}>
+<h1 class="mb-3 text-3xl" {id}>
 	<a {href}>
 		{title}
 	</a>
