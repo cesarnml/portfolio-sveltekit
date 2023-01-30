@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { storeLightSwitch } from '@skeletonlabs/skeleton'
-
 	import { media } from '@stores/media'
 	import { fade } from 'svelte/transition'
 	export let author = 'Cesar Mejia'

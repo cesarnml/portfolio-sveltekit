@@ -8,10 +8,6 @@ image: '/images/hero.webp'
 date: 2023-01-17
 ---
 
-<script lang="ts">
-  import ReusableImage from '@components/ReusableImage.svelte'
-</script>
-
 ## First Heading
 
 ## Second Heading
@@ -49,8 +45,6 @@ const code = 'yay!'
 
 const code = 'yay!'
 ```
-
-<ReusableImage src="/images/revue-subscribers-list-search.png" alt="cool"/>
 
 - [ ] Do checkboxes worK?
 - [x] Maybe?

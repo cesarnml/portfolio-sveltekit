@@ -1,3 +1,8 @@
+<script lang="ts">
+	import resumeSrc from '$lib/assets/images/Resume-CesarMejia.png'
+	import Img from '@zerodevx/svelte-img'
+</script>
+
 <div>
 	<form method="get" action="/pdfs/Resume-CesarMejia.pdf">
 		<button class="px-4 py-2 font-bold text-white bg-blue-700 border border-blue-400 rounded hover:bg-blue-600">
@@ -5,6 +10,6 @@
 		</button>
 	</form>
 	<div>
-		<img src="/images/Resume-CesarMejia.png" alt="resume" />
+		<Img src={resumeSrc} alt="resume" />
 	</div>
 </div>

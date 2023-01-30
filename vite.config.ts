@@ -2,9 +2,15 @@ import { sveltekit } from '@sveltejs/kit/vite'
 import { resolve } from 'path'
 import type { UserConfig } from 'vite'
 import { configDefaults, type UserConfig as VitestConfig } from 'vitest/config'
+import { imagetools } from '@zerodevx/svelte-img/vite'
 
 const config: UserConfig & { test: VitestConfig['test'] } = {
-	plugins: [sveltekit()],
+	plugins: [
+		sveltekit(),
+		imagetools({
+			defaultDirectives: () => new URLSearchParams('?width=480;1024;1920&format=avif;webp;jpg&lqip=128&run')
+		})
+	],
 	define: {
 		// Eliminate in-source test code
 		'import.meta.vitest': 'undefined'
