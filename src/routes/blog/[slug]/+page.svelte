@@ -84,4 +84,3 @@
 		{@html data.html}
 	</section>
 </article>
-<Comments />
