@@ -8,7 +8,6 @@
 	$: setActiveClass = (href: string) => (href === $page.url.pathname ? 'text-secondary-500 dark:text-primary-400' : '')
 </script>
 
-<!-- <a {href} class={clsx(`hover:text-yellow-500 transition-colors`, isActive && 'text-yellow-300')}>{label}</a> -->
 <a
 	{href}
 	class={`${setActiveClass(href)} hover:!bg-transparent ${

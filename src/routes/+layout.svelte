@@ -5,11 +5,11 @@
 	import '@skeletonlabs/skeleton/themes/theme-gold-nouveau.css'
 	import '@skeletonlabs/skeleton/styles/all.css'
 	import '../app.postcss'
-	import { Drawer, drawerStore, LightSwitch, AppShell, storeLightSwitch } from '@skeletonlabs/skeleton'
+	import { Drawer, drawerStore, LightSwitch, AppShell } from '@skeletonlabs/skeleton'
 	import NavLinks from '@components/NavLinks.svelte'
 	import NavHamburgerMenu from '@components/NavHamburgerMenu.svelte'
 
-	// Close drawer if screen > media.sm and drawer is open
+	// Close drawer if screen > media.sm and drawer is currently open
 	$: if ($media.sm && $drawerStore.open) {
 		drawerStore.close()
 	}
@@ -26,7 +26,7 @@
 			<div class="flex flex-col items-center gap-3 p-4">
 				<div class="flex items-center justify-between w-full">
 					<div class="px-[11px]">
-						<LightSwitch />
+						<LightSwitch class="outline-none" />
 					</div>
 					<NavHamburgerMenu />
 				</div>
