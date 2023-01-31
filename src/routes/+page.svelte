@@ -12,7 +12,6 @@
 	<link rel="canonical" href={$page.url.href} />
 </svelte:head>
 
-<div />
 <div>
 	<ul>
 		{#each posts as post (post.slug)}
