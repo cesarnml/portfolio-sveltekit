@@ -7,6 +7,7 @@
 	import ArticleMeta from '@components/ArticleMeta.svelte'
 	import { handleCopyClick } from '@lib/handleCopyClick'
 	import { TableOfContents } from '@skeletonlabs/skeleton'
+	import Comments from '@components/Comments.svelte'
 	export let data: PageServerData
 
 	const wordsPerMinute = 50
@@ -33,7 +34,7 @@
 		// Add a copy button to each markdown code block
 		preElements.forEach((ele, index) => {
 			const oldHtml = ele.innerHTML
-			const newHtml = "<div class='overflow-x-auto pre-wrap'>" + oldHtml + '</div>'
+			const newHtml = "<div class='pre-wrap overflow-x-auto'>" + oldHtml + '</div>'
 			ele.innerHTML = newHtml
 			const codeEle = ele.querySelector('code')
 			if (codeEle) {
@@ -55,7 +56,7 @@
 <div class="hidden absolute w-[240px] xl:inline-block h-full top-8 -right-[240px]">
 	<TableOfContents
 		target="#toc-target"
-		class="sticky p-4 top-8 card variant-soft-primary"
+		class="top-8 card variant-soft-primary sticky p-4"
 		width="w-fit"
 		regionList="list-none font-semibold"
 	/>
@@ -83,3 +84,4 @@
 		{@html data.html}
 	</section>
 </article>
+<Comments />
