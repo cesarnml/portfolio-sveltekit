@@ -33,7 +33,7 @@
 		// Add a copy button to each markdown code block
 		preElements.forEach((ele, index) => {
 			const oldHtml = ele.innerHTML
-			const newHtml = "<div class='pre-wrap overflow-x-auto'>" + oldHtml + '</div>'
+			const newHtml = "<div class='overflow-x-auto pre-wrap'>" + oldHtml + '</div>'
 			ele.innerHTML = newHtml
 			const codeEle = ele.querySelector('code')
 			if (codeEle) {
@@ -41,7 +41,7 @@
 			}
 			const remarkCodeTitle = remarkCodeTitles[index] as HTMLElement
 			const button = document.createElement('button')
-			button.className = 'btn variant-filled-primary btn-sm m-3 absolute top-0 right-0'
+			button.className = 'absolute top-0 right-0 m-3 btn variant-filled-primary btn-sm'
 			button.textContent = remarkCodeTitle.textContent
 			button.role = 'button'
 			button.addEventListener('click', handleCopyClick)
@@ -55,7 +55,7 @@
 <div class="hidden absolute w-[240px] xl:inline-block h-full top-8 -right-[240px]">
 	<TableOfContents
 		target="#toc-target"
-		class="top-8 card variant-soft-primary sticky p-4"
+		class="sticky p-4 top-8 card variant-soft-primary"
 		width="w-fit"
 		regionList="list-none font-semibold"
 	/>

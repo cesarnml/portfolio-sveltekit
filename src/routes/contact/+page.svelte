@@ -65,22 +65,46 @@
 	<div class="flex flex-col items-center">
 		<h1>Contact Me</h1>
 		<form
-			class="max-w-screen-xs flex flex-col items-stretch w-full gap-4"
+			class="flex flex-col items-stretch w-full max-w-screen-xs gap-4"
 			on:submit|preventDefault={(e) => handleSend(e)}
 		>
-			<div>
-				<label for="name">Name</label>
-				<input id="name" type="text" name="name" required bind:value={name} placeholder="Enter your name" />
-			</div>
-			<div>
-				<label for="email">Email</label>
-				<input id="email" type="email" name="email" required bind:value={email} placeholder="Enter your email" />
-			</div>
-			<div>
-				<label for="message">Message</label>
-				<textarea id="mesage" name="message" bind:value={message} {rows} required placeholder="Write your message..." />
-			</div>
-			<button class="tn variant-filled-primary btn-base text-white" type="submit" disabled={buttonDisabled}>
+			<label class="input-label" for="name">
+				<span class="font-semibold">Your name</span>
+				<input
+					class="italic"
+					id="name"
+					type="text"
+					name="name"
+					required
+					bind:value={name}
+					placeholder="What should I call you?"
+				/>
+			</label>
+			<label for="email" class="input-label">
+				<span class="font-semibold">Your email</span>
+				<input
+					class="italic"
+					id="email"
+					type="email"
+					name="email"
+					required
+					bind:value={email}
+					placeholder="Where can I send my response?"
+				/>
+			</label>
+			<label for="message" class="input-label">
+				<span class="font-semibold">What's on your mind?</span>
+				<textarea
+					class="italic"
+					id="mesage"
+					name="message"
+					bind:value={message}
+					{rows}
+					required
+					placeholder="What would you like to talk about?"
+				/>
+			</label>
+			<button class="text-white tn variant-filled-primary btn-base" type="submit" disabled={buttonDisabled}>
 				{buttonText}
 			</button>
 		</form>

@@ -16,21 +16,21 @@
 </script>
 
 <AppShell>
-	<svelte:fragment slot="header" />
+	<svelte:fragment slot="header"><Navbar /></svelte:fragment>
 	<svelte:fragment slot="sidebarLeft" />
 	<svelte:fragment slot="sidebarRight" />
-	<svelte:fragment slot="pageHeader"><Navbar /></svelte:fragment>
+	<svelte:fragment slot="pageHeader" />
 	<!-- Router Slot -->
-	<div class="md:p-8 container relative max-w-screen-md p-4 mx-auto">
-		<Drawer position="top" bgDrawer="backdrop-blur bg-surface-backdrop-token" height="h-screen" duration={250}>
-			<div class="flex flex-col items-center gap-3 p-4">
+	<div class="container relative p-4 mx-auto md:p-8 max-w-screen-md">
+		<Drawer position="top" bgDrawer="backdrop-blur" height="h-screen" duration={250}>
+			<div class="flex flex-col items-center p-4 gap-3">
 				<div class="flex items-center justify-between w-full">
 					<div class="px-[11px]">
 						<LightSwitch />
 					</div>
 					<NavHamburgerMenu />
 				</div>
-				<NavLinks className="list-nav text-xl font-semibold" />
+				<NavLinks className="text-xl font-semibold list-nav" />
 			</div>
 		</Drawer>
 		<slot />
