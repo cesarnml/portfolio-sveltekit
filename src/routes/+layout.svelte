@@ -21,9 +21,9 @@
 	<svelte:fragment slot="sidebarRight" />
 	<svelte:fragment slot="pageHeader" />
 	<!-- Router Slot -->
-	<div class="container relative p-4 mx-auto md:p-8 max-w-screen-md">
+	<div class="md:p-8 container relative max-w-screen-md p-4 mx-auto">
 		<Drawer position="top" bgDrawer="backdrop-blur" height="h-screen" duration={250}>
-			<div class="flex flex-col items-center p-4 gap-3">
+			<div class="flex flex-col items-center gap-3 p-4">
 				<div class="flex items-center justify-between w-full">
 					<div class="px-[11px]">
 						<LightSwitch />

@@ -1,10 +1,16 @@
 <script lang="ts">
+	import { page } from '$app/stores'
 	import { Url } from '@lib/url'
 	import type { PageData } from './$types'
-
 	export let data: PageData
+
 	const { posts } = data
 </script>
+
+<svelte:head>
+	<title>Cesar Mejia's Web Portfolio</title>
+	<link rel="canonical" href={$page.url.href} />
+</svelte:head>
 
 <div />
 <div>
