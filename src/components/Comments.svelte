@@ -3,7 +3,7 @@
 	import { storeLightSwitch } from '@skeletonlabs/skeleton'
 
 	// Translate the user's dark mode preference to a theme
-	const siteTheme = $storeLightSwitch ? 'github-dark' : 'github-light'
+	$: siteTheme = $storeLightSwitch ? 'github-dark' : 'github-light'
 
 	// An object with all the utterances options I want
 	const options = {
