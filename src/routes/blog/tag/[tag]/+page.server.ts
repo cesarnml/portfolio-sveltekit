@@ -3,7 +3,7 @@ import type { PageServerLoad } from './$types'
 import { basename, dirname } from 'path'
 
 export const load: PageServerLoad = async ({ params }) => {
-	const modules = import.meta.glob(`@content/posts/**/*.md`, { eager: true })
+	const modules = import.meta.glob(`@content/blog/**/*.md`, { eager: true })
 
 	const posts = Object.entries(modules).map(([path, svxModule]) => {
 		const slug = basename(dirname(path))

@@ -4,7 +4,7 @@ import { basename, dirname } from 'path'
 const MAX_POSTS = 10
 
 export const load: PageServerLoad = async () => {
-	const modules = import.meta.glob(`@content/posts/**/*.md`, { eager: true })
+	const modules = import.meta.glob(`@content/blog/**/*.md`, { eager: true })
 
 	const posts = Object.entries(modules).map(([path, svxModule]) => {
 		const slug = basename(dirname(path))
