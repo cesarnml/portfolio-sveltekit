@@ -7,7 +7,6 @@
 	import ArticleMeta from '@components/ArticleMeta.svelte'
 	import { handleCopyClick } from '@lib/handleCopyClick'
 	import { TableOfContents } from '@skeletonlabs/skeleton'
-	import Comments from '@components/Comments.svelte'
 	export let data: PageServerData
 
 	const wordsPerMinute = 50
@@ -41,11 +40,17 @@
 				codeEle.className = 'unstyled' // prevent application of dark mode styles
 			}
 			const remarkCodeTitle = remarkCodeTitles[index] as HTMLElement
+			const languageDiv = document.createElement('div')
+			languageDiv.textContent = remarkCodeTitle.textContent
+			languageDiv.className = 'absolute top-0 left-0 m-3 h-8 flex items-center text-zinc-500'
+
 			const button = document.createElement('button')
 			button.className = 'absolute top-0 right-0 m-3 btn variant-filled-primary btn-sm'
-			button.textContent = remarkCodeTitle.textContent
+			button.textContent = 'Copy'
 			button.role = 'button'
+
 			button.addEventListener('click', handleCopyClick)
+			ele.prepend(languageDiv)
 			ele.prepend(button)
 		})
 	})

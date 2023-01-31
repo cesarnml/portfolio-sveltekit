@@ -8,18 +8,12 @@ const config: UserConfig & { test: VitestConfig['test'] } = {
 	plugins: [
 		sveltekit(),
 		imagetools({
-			defaultDirectives: () => new URLSearchParams('?width=480;1024;1920&format=avif;webp;jpg&lqip=0&run')
+			defaultDirectives: () => new URLSearchParams('?width=480;1024;1920&format=avif;webp;jpg&lqip=128&run')
 		})
 	],
 	define: {
 		// Eliminate in-source test code
 		'import.meta.vitest': 'undefined'
-	},
-	server: {
-		fs: {
-			// Allow serving files from one level up to the project root
-			allow: ['..']
-		}
 	},
 	resolve: {
 		alias: {

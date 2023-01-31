@@ -1,4 +1,4 @@
-const animationDuration = 1000 // ms
+const animationDuration = 1500 // ms
 const feedbackText = 'Copied 🎉'
 const attribute = 'data-copy-to-clipboard-animating'
 
