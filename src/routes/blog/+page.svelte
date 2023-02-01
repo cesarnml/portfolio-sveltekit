@@ -42,7 +42,7 @@
 						<h3 class="mb-1 font-bold">{post.title}</h3>
 						<div>{post.description}</div>
 					</div>
-					<footer class=" flex justify-between text-sm">
+					<footer class="flex justify-between text-sm ">
 						<span>{new Date(post.date).toDateString()}</span><span>{post.readingTime.text}</span>
 					</footer>
 				</div>
