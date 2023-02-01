@@ -1,12 +1,12 @@
 import { basename, dirname } from 'path'
 import { adjustPostReadingTimeText } from './blogHelpers'
 
-const NO_LIMIT_FLAG = -1
+const ALL_POST_FLAG = -1
 
 /**
  * Returns a sorted an array of blog posts
  */
-export async function fetchPosts({ offset = 0, limit = NO_LIMIT_FLAG, tag = '' } = {}) {
+export async function fetchPosts({ offset = 0, limit = ALL_POST_FLAG, tag = '' } = {}) {
 	const modules = import.meta.glob(`@content/blog/**/*.md`)
 	const posts = await Promise.all(
 		Object.entries(modules).map(async ([path, resolver]) => {
@@ -28,7 +28,7 @@ export async function fetchPosts({ offset = 0, limit = NO_LIMIT_FLAG, tag = '' }
 		sortedPosts = sortedPosts.slice(offset)
 	}
 
-	if (limit && limit < sortedPosts.length && limit !== NO_LIMIT_FLAG) {
+	if (limit && limit < sortedPosts.length && limit !== ALL_POST_FLAG) {
 		sortedPosts = sortedPosts.slice(0, limit)
 	}
 

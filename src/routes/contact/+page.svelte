@@ -8,7 +8,6 @@
 	import { error, type HttpError } from '@sveltejs/kit'
 	import { onMount } from 'svelte'
 	import party from 'party-js'
-	import toast, { Toaster } from 'svelte-french-toast'
 
 	const rows = 5
 	let sendEmail: (e: Event) => Promise<void | HttpError>
@@ -44,30 +43,12 @@
 			}
 		}
 	})
-
-	const handleSend = (e: Event) => {
-		toast.promise(
-			sendEmail(e),
-			{
-				loading: 'Sending Message',
-				success: 'Message sent!',
-				error: 'Could not send.'
-			},
-			{
-				className: 'toasty'
-			}
-		)
-	}
 </script>
 
-<Toaster />
 <div class="dark:prose-invert prose">
 	<div class="flex flex-col items-center">
 		<h1>Contact Me</h1>
-		<form
-			class="flex flex-col items-stretch w-full max-w-screen-xs gap-4"
-			on:submit|preventDefault={(e) => handleSend(e)}
-		>
+		<form class="max-w-screen-xs flex flex-col items-stretch w-full gap-4" on:submit|preventDefault={sendEmail}>
 			<label class="input-label" for="name">
 				<span class="font-semibold">Your name</span>
 				<input
@@ -104,12 +85,11 @@
 					placeholder="What would you like to talk about?"
 				/>
 			</label>
-			<button class="text-white tn variant-filled-primary btn-base" type="submit" disabled={buttonDisabled}>
+			<button class="tn variant-filled-primary btn-base text-white" type="submit" disabled={buttonDisabled}>
 				{buttonText}
 			</button>
 		</form>
 	</div>
-
 	<script src="/js/smtp.js">
 	</script>
 </div>
