@@ -9,20 +9,6 @@
 	import { TableOfContents } from '@skeletonlabs/skeleton'
 	export let data: PageServerData
 
-	const wordsPerMinute = 50
-	/**
-	 * @param time in milliseconds
-	 */
-	function adjustReadingTime(time: number, wordsPerMinute: number) {
-		const defaultWordsPerMinute = 200
-		const sec2ms = 1000
-		const min2sec = 60
-		const conversionFactor = defaultWordsPerMinute / wordsPerMinute
-		const newMinutes = Math.ceil((time * conversionFactor) / sec2ms / min2sec)
-		const isSingular = newMinutes === 1
-		return isSingular ? `${newMinutes} minute` : `${newMinutes} minutes`
-	}
-
 	onMount(async () => {
 		/**
 		 * .remark-code-title is a hidden element that contains the code language (e.g. JavaScript)
@@ -33,7 +19,7 @@
 		// Add a copy button to each markdown code block
 		preElements.forEach((ele, index) => {
 			const oldHtml = ele.innerHTML
-			const newHtml = "<div class='overflow-x-auto pre-wrap'>" + oldHtml + '</div>'
+			const newHtml = "<div class='pre-wrap overflow-x-auto'>" + oldHtml + '</div>'
 			ele.innerHTML = newHtml
 			const codeEle = ele.querySelector('code')
 			if (codeEle) {
@@ -61,7 +47,7 @@
 <div class="hidden absolute w-[240px] xl:inline-block h-full top-8 -right-[240px]">
 	<TableOfContents
 		target="#toc-target"
-		class="sticky p-4 top-8 card variant-soft-primary"
+		class="top-8 card variant-soft-primary sticky p-4"
 		width="w-fit"
 		regionList="list-none font-semibold"
 	/>
@@ -75,7 +61,7 @@
 		<ArticleMeta
 			author={data.frontmatter.author}
 			date={data.frontmatter.date}
-			readingTime={adjustReadingTime(data.frontmatter.readingTime.time, wordsPerMinute)}
+			readingTime={data.frontmatter.readingTime.text}
 			wordCount={data.frontmatter.readingTime.words}
 			image={data.frontmatter.image}
 		/>

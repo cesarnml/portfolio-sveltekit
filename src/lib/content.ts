@@ -1,4 +1,5 @@
 import { basename, dirname } from 'path'
+import { adjustPostReadingTimeText } from './blogHelpers'
 
 const NO_LIMIT_FLAG = -1
 
@@ -30,6 +31,11 @@ export async function fetchPosts({ offset = 0, limit = NO_LIMIT_FLAG, tag = '' }
 	if (limit && limit < sortedPosts.length && limit !== NO_LIMIT_FLAG) {
 		sortedPosts = sortedPosts.slice(0, limit)
 	}
+
+	//  Adjust readingTime.text
+	//  NOTE: `time` and `minutes` will NOT be adjusted for new readingTime since we don't make use of them in the blog)
+	sortedPosts = sortedPosts.map(adjustPostReadingTimeText)
+
 	return sortedPosts
 }
 

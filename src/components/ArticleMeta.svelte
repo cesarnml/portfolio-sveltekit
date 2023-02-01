@@ -5,13 +5,13 @@
 	export let date: string
 	export let readingTime: string
 	export let wordCount: number
-	export let image: string
+	export let image: string | undefined
 
 	const formattedDate = new Date(date).toDateString().split(' ').slice(1).join(' ')
 </script>
 
 <div class="flex items-center gap-4">
-	<div class="w-12 h-12 md:w-14 md:h-14">
+	<div class="md:w-14 md:h-14 w-12 h-12">
 		<Img class="m-0" src={avatarSrc} alt="avatar" />
 	</div>
 	<div class="flex flex-col">
@@ -31,6 +31,8 @@
 	</div>
 </div>
 
-<div>
-	<img src={image} alt="article hero" class="mb-4" />
-</div>
+{#if image}
+	<div>
+		<img src={image} alt="article hero" class="mb-4" />
+	</div>
+{/if}
