@@ -54,7 +54,7 @@
 </div>
 
 <article
-	class="dark:prose-invert prose-a:no-underline hover:prose-a:text-secondary-800 dark:hover:prose-a:text-primary-500 prose-headings:mt-0 max-w-screen-2md prose"
+	class="dark:prose-invert prose-a:no-underline hover:prose-a:text-secondary-800 dark:hover:prose-a:text-primary-500 max-w-screen-2md prose"
 >
 	<section class="mb-4">
 		<ArticleTitle title={data.frontmatter.title} />

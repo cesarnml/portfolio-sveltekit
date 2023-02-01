@@ -8,18 +8,46 @@ image: '/images/hero.jpg'
 date: 2023-01-17
 ---
 
-## First Heading
+## Markdown Examples
 
-## Second Heading
+This is the first line.  
+And this is the second line.
 
-### Subheading
+I just love __bold text__.	
+Italicized text is the _cat's meow_.
 
-## Third Headings
+> Dorothy followed her through many of the beautiful rooms in her castle.
 
-1. Make a list
-2. Yup
+1. First item
+2. Second item
+3. Third item
+    1. Indented item
+    2. Indented item
+4. Fourth item
 
-```js:JavaScript {5-7a,3a,4a, 2r, 9-10n}
+- unordered
+  - indented list
+## Code Examples
+
+### No Highlighting
+
+```js:Svelte
+<script lang="ts">
+export let message = "Hello, world!"
+</script>
+
+export async function load({ fetch }) {
+	const res = await fetch(`/posts.json`)
+	if (res.ok) {
+		const { posts } = await res.json()
+		return { posts }
+	}
+}
+```
+
+### With Highlighting
+
+```js:JavaScript {5-7a,3a,4a, 2r, 10n, 12n}
 export async function load({ fetch }) {
 	const variable = "this is a super long variable declaration come on"
 	const res = await fetch(`/posts.json`)
@@ -28,23 +56,28 @@ export async function load({ fetch }) {
 		return { posts }
 	}
 }
+
 const code = 'yay!'
 
 const code = 'yay!'
 ```
 
-```js:Svelte
-export async function load({ fetch }) {
-	const res = await fetch(`/posts.json`)
-	if (res.ok) {
-		const { posts } = await res.json()
-		return { posts }
-	}
-}
-const code = 'yay!'
+## Remark Abbreviations Examples
 
-const code = 'yay!'
-```
+This plugin works on MDAST, a Markdown AST
+implemented by [remark](https://github.com/remarkjs/remark)
 
-- [ ] Do checkboxes worK?
-- [x] Maybe?
+*[MDAST]: Markdown Abstract Syntax Tree.
+*[AST]: Abstract syntax tree
+
+## Remark-Github Examples
+
+- ref: https://github.com/remarkjs/remark-github
+- Commit: 63cf895ba37b7bca05bdbfcb8fafe1aae3bde839
+- Discussion: #1
+- Issue: #2
+- Mention: @cesarnml
+
+## A11y Emojis
+
+test 🙂 inline

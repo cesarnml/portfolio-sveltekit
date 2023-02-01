@@ -8,7 +8,7 @@
 	import '@skeletonlabs/skeleton/themes/theme-gold-nouveau.css'
 	import { media } from '@stores/media'
 	import 'iconify-icon'
-	import '../app.postcss'
+	import '@styles/app.css'
 
 	// Close drawer if screen > media.sm and drawer is currently open
 	$: if ($media.sm && $drawerStore.open) {

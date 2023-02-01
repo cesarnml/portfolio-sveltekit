@@ -43,6 +43,8 @@ type SendParams = {
 	Subject: string
 	Body: string
 }
-declare namespace Email {
-	export const send: (params: SendParams) => Promise<string>
+
+// eslint-disable-next-line no-var
+declare var Email: {
+	send: (params: SendParams) => Promise<string>
 }

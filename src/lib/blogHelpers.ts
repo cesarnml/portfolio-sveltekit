@@ -1,4 +1,4 @@
-import { wordsPerMinute as wpm } from './config'
+import { wordsPerMinute as wpm } from '$lib/config.mjs'
 
 /**
  * Hack to programmatically adjusted remark-reading-time output by custom wordsPerMinute
