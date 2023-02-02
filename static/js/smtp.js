@@ -37,5 +37,5 @@ var Email = {
 				: (t = null),
 			t
 		)
-	}
+	},
 }

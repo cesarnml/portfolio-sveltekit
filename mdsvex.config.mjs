@@ -12,7 +12,7 @@ import { repository } from './src/lib/config.mjs'
 const config = defineConfig({
 	extensions: ['.svelte.md', '.md', '.svx'],
 	smartypants: {
-		dashes: 'oldschool'
+		dashes: 'oldschool',
 	},
 	highlight: { highlighter },
 	remarkPlugins: [
@@ -20,17 +20,17 @@ const config = defineConfig({
 		[remarkGithub, { repository }],
 		remarkReadingTime(),
 		remarkCodeTitles,
-		[remarkExternalLinks, { target: '_blank', rel: 'noopener noreferrer' }]
+		[remarkExternalLinks, { target: '_blank', rel: 'noopener noreferrer' }],
 	],
 	rehypePlugins: [
 		rehypeSlug,
 		[
 			rehypeAutolinkHeadings,
 			{
-				behavior: 'wrap'
-			}
-		]
-	]
+				behavior: 'wrap',
+			},
+		],
+	],
 })
 
 export default config

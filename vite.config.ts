@@ -8,26 +8,27 @@ const config: UserConfig & { test: VitestConfig['test'] } = {
 	plugins: [
 		sveltekit(),
 		imagetools({
-			defaultDirectives: () => new URLSearchParams('?width=480;1024;1920&format=avif;webp;jpg&lqip=128&run')
-		})
+			defaultDirectives: () => new URLSearchParams('?width=480;1024;1920&format=avif;webp;jpg&lqip=128&run'),
+		}),
 	],
 	define: {
 		// Eliminate in-source test code
-		'import.meta.vitest': 'undefined'
+		'import.meta.vitest': 'undefined',
 	},
 	resolve: {
 		alias: {
+			'@assets': resolve('./src/assets'),
 			'@components': resolve('./src/components'),
 			'@lib': resolve('./src/lib'),
 			'@content': resolve('./src/content'),
 			'@styles': resolve('./src/styles'),
-			'@stores': resolve('./src/stores')
-		}
+			'@stores': resolve('./src/stores'),
+		},
 	},
 	// ref: https://github.com/vitest-dev/vitest/issues/821
 	test: {
 		deps: {
-			inline: ['clsx']
+			inline: ['clsx'],
 		},
 		// jest like globals
 		globals: true,
@@ -45,12 +46,12 @@ const config: UserConfig & { test: VitestConfig['test'] } = {
 			exclude: configDefaults.coverage.exclude?.concat([
 				'src/**/+page*.{ts,svelte}',
 				'src/**/+layout*.{ts,svelte}',
-				'setupTest.ts'
-			])
+				'setupTest.ts',
+			]),
 		},
 		// Exclude playwright tests folder
-		exclude: [...configDefaults.exclude, 'tests']
-	}
+		exclude: [...configDefaults.exclude, 'tests'],
+	},
 }
 
 export default config

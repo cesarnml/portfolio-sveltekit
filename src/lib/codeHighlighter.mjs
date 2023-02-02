@@ -53,13 +53,13 @@ function makeFocusable(html) {
  */
 async function highlighter(code, lang, meta) {
 	const shikiHighlighter = await getHighlighter({
-		theme: synthwaveJson
+		theme: synthwaveJson,
 	})
 
 	let html
 	if (!meta) {
 		html = shikiHighlighter.codeToHtml(code, {
-			lang
+			lang,
 		})
 	} else {
 		// const highlightMeta = /{([\d,-]+)}/.exec(meta)[1]
@@ -90,22 +90,22 @@ async function highlighter(code, lang, meta) {
 				...highlightLinesAdd.map((element) => {
 					return {
 						line: element,
-						classes: ['highlight-line-add']
+						classes: ['highlight-line-add'],
 					}
 				}),
 				...highlightLinesRemove.map((element) => {
 					return {
 						line: element,
-						classes: ['highlight-line-remove']
+						classes: ['highlight-line-remove'],
 					}
 				}),
 				...highlightLinesNormal.map((element) => {
 					return {
 						line: element,
-						classes: ['highlight-line-normal']
+						classes: ['highlight-line-normal'],
 					}
-				})
-			]
+				}),
+			],
 		})
 	}
 	html = makeFocusable(html)

@@ -17,3 +17,4 @@ coverage
 .github
 .prettierrc
 .vscode
+*.md

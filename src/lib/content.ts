@@ -15,7 +15,7 @@ export async function fetchPosts({ offset = 0, limit = ALL_POST_FLAG, tag = '' }
 			const html = module.default.render().html
 			const metadata = module.metadata
 			return { slug, html, ...metadata }
-		})
+		}),
 	)
 
 	let sortedPosts = posts.filter((post) => post.published)
@@ -55,7 +55,7 @@ export async function fetchAbout() {
 			const html = module.default.render().html
 			const metadata = module.metadata
 			return { slug, html, ...metadata }
-		})
+		}),
 	)
 }
 

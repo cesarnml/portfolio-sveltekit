@@ -1,5 +1,5 @@
 <script lang="ts">
-	import resumeSrc from '$lib/assets/images/Resume-CesarMejia.png'
+	import resumeSrc from '@assets/images/Resume-CesarMejia.png'
 	import Img from '@zerodevx/svelte-img'
 </script>
 

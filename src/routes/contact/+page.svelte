@@ -3,7 +3,7 @@
 		PUBLIC_EMAIL_SECURE_TOKEN,
 		PUBLIC_EMAIL_TO,
 		PUBLIC_EMAIL_FROM,
-		PUBLIC_EMAIL_SUBJECT
+		PUBLIC_EMAIL_SUBJECT,
 	} from '$env/static/public'
 	import { error, type HttpError } from '@sveltejs/kit'
 	import { onMount } from 'svelte'
@@ -26,13 +26,13 @@
 					To: PUBLIC_EMAIL_TO,
 					From: PUBLIC_EMAIL_FROM,
 					Subject: PUBLIC_EMAIL_SUBJECT,
-					Body: `${name}<br/>${email}<br/>${message}`
+					Body: `${name}<br/>${email}<br/>${message}`,
 				})
 
 				if (e.target) {
 					party.confetti(e.target as HTMLButtonElement, {
 						count: party.variation.range(80, 100),
-						size: party.variation.range(0.6, 1.4)
+						size: party.variation.range(0.6, 1.4),
 					})
 				}
 				setTimeout(() => {

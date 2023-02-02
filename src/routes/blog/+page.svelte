@@ -10,12 +10,12 @@
 		offset: 0,
 		limit: 4,
 		size: posts.length,
-		amounts: [4, 8, 20, 50]
+		amounts: [4, 8, 20, 50],
 	}
 
 	$: paginatedData = posts.slice(
 		paginator.offset * paginator.limit,
-		paginator.offset * paginator.limit + paginator.limit
+		paginator.offset * paginator.limit + paginator.limit,
 	)
 </script>
 

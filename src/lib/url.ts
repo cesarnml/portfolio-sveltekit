@@ -5,7 +5,7 @@ export const Url = {
 	Contact: '/contact',
 	Blog: '/blog',
 	BlogDetail: (slug: string) => `${Url.Blog}/${slug}`,
-	Resume: '/resume'
+	Resume: '/resume',
 } as const
 
 export type UrlType = (typeof Url)[keyof typeof Url]

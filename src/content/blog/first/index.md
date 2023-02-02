@@ -13,7 +13,7 @@ date: 2023-01-17
 This is the first line.  
 And this is the second line.
 
-I just love __bold text__.	
+I just love **bold text**.
 Italicized text is the _cat's meow_.
 
 > Dorothy followed her through many of the beautiful rooms in her castle.
@@ -21,12 +21,13 @@ Italicized text is the _cat's meow_.
 1. First item
 2. Second item
 3. Third item
-    1. Indented item
-    2. Indented item
+   1. Indented item
+   2. Indented item
 4. Fourth item
 
 - unordered
   - indented list
+
 ## Code Examples
 
 ### No Highlighting

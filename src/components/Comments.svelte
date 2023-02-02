@@ -11,7 +11,7 @@
 		crossorigin: 'anonymous',
 		theme,
 		async: '',
-		'issue-term': 'pathname'
+		'issue-term': 'pathname',
 	}
 
 	const postMessage = (theme: string) => {

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import avatarSrc from '$lib/assets/images/favicon.png'
+	import avatarSrc from '@assets/images/favicon.png'
 	import Img from '@zerodevx/svelte-img'
 	export let author: string
 	export let date: string

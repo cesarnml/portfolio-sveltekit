@@ -33,7 +33,7 @@ describe('PageHead with defined title', () => {
 	test('to have a meta httpequiv', () => {
 		expect(getMetaByHttpEquiv('Content-Security-Policy')).toHaveAttribute(
 			'content',
-			expect.stringContaining("script-src 'self'")
+			expect.stringContaining("script-src 'self'"),
 		)
 	})
 })
@@ -69,7 +69,7 @@ describe('PageHead with empty string title', () => {
 	test('to have a meta httpequiv', () => {
 		expect(getMetaByHttpEquiv('Content-Security-Policy')).toHaveAttribute(
 			'content',
-			expect.stringContaining("script-src 'self'")
+			expect.stringContaining("script-src 'self'"),
 		)
 	})
 })

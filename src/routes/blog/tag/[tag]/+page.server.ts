@@ -10,6 +10,6 @@ export const load: PageServerLoad = async ({ params: { tag } }) => {
 	}
 
 	return {
-		posts: postByTag
+		posts: postByTag,
 	}
 }

@@ -13,7 +13,7 @@ export const load = (async ({ params }) => {
 
 		return {
 			html,
-			frontmatter: postModule.metadata
+			frontmatter: postModule.metadata,
 		}
 	} catch (err) {
 		throw error(428, 'I am a teacup')
