@@ -5,6 +5,7 @@
 	export let data: PageData
 
 	const { posts } = data
+	console.log(posts.map((post) => post.slug))
 </script>
 
 <svelte:head>

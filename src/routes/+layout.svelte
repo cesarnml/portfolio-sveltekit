@@ -1,4 +1,5 @@
 <script lang="ts">
+	import PageTransition from '@components/PageTransition.svelte'
 	import Footer from '@components/Footer.svelte'
 	import Navbar from '@components/Navbar.svelte'
 	import NavHamburgerMenu from '@components/NavHamburgerMenu.svelte'
@@ -7,8 +8,8 @@
 	import '@skeletonlabs/skeleton/styles/all.css'
 	import '@skeletonlabs/skeleton/themes/theme-gold-nouveau.css'
 	import { media } from '@stores/media'
-	import 'iconify-icon'
 	import '@styles/app.css'
+	import 'iconify-icon'
 
 	// Close drawer if screen > media.sm and drawer is currently open
 	$: if ($media.sm && $drawerStore.open) {
@@ -34,7 +35,9 @@
 				<NavLinks className="text-xl font-semibold list-nav" />
 			</div>
 		</Drawer>
-		<slot />
+		<PageTransition>
+			<slot />
+		</PageTransition>
 	</div>
 	<!-- ---- / ---- -->
 	<svelte:fragment slot="pageFooter"><Footer /></svelte:fragment>
