@@ -1,7 +1,16 @@
 import type { LayoutLoad } from './$types'
-// import { getSupabase } from '@supabase/auth-helpers-sveltekit'
+import { error } from '@sveltejs/kit'
 
-export const load: LayoutLoad = async (event) => {
-	// const { session } = await getSupabase(event)
-	// return { session }
+export const prerender = true
+
+export const load: LayoutLoad = async ({ url }) => {
+	try {
+		return {
+			pathname: url.pathname,
+		}
+	} catch (err) {
+		if (err instanceof Error) {
+			throw error(500, err)
+		}
+	}
 }

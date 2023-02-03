@@ -1,9 +1,10 @@
 <script lang="ts">
-	import PageTransition from '@components/PageTransition.svelte'
+	import type { LayoutData } from './$types'
 	import Footer from '@components/Footer.svelte'
 	import Navbar from '@components/Navbar.svelte'
 	import NavHamburgerMenu from '@components/NavHamburgerMenu.svelte'
 	import NavLinks from '@components/NavLinks.svelte'
+	import PageTransition from '@components/PageTransition.svelte'
 	import { AppShell, Drawer, drawerStore, LightSwitch } from '@skeletonlabs/skeleton'
 	import '@skeletonlabs/skeleton/styles/all.css'
 	import '@skeletonlabs/skeleton/themes/theme-gold-nouveau.css'
@@ -11,6 +12,8 @@
 	import '@styles/app.css'
 	import 'iconify-icon'
 
+	export let data: LayoutData
+	const { pathname } = data
 	// Close drawer if screen > media.sm and drawer is currently open
 	$: if ($media.sm && $drawerStore.open) {
 		drawerStore.close()
@@ -35,7 +38,7 @@
 				<NavLinks className="text-xl font-semibold list-nav" />
 			</div>
 		</Drawer>
-		<PageTransition>
+		<PageTransition {pathname}>
 			<slot />
 		</PageTransition>
 	</div>
