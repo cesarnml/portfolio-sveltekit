@@ -4,7 +4,7 @@
 </script>
 
 {#key pathname}
-	<div in:blur={{ delay: 150, duration: 300 }} out:blur={{ duration: 150 }}>
+	<div in:blur={{ delay: 1000, duration: 3000 }} out:blur={{ duration: 1000 }}>
 		<slot />
 	</div>
 {/key}
