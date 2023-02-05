@@ -28,7 +28,7 @@
 			const remarkCodeTitle = remarkCodeTitles[index] as HTMLElement
 			const languageDiv = document.createElement('div')
 			languageDiv.textContent = remarkCodeTitle.textContent
-			languageDiv.className = 'absolute top-0 left-0 flex items-center h-8 m-3 text-zinc-500'
+			languageDiv.className = 'absolute top-0 left-0 flex items-center h-8 m-3 text-orange-500'
 
 			const button = document.createElement('button')
 			button.className = 'absolute top-0 right-0 m-3 btn variant-filled-primary btn-sm'

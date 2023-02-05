@@ -20,7 +20,12 @@
 			setTimeout(() => postMessage(theme), 500)
 		} else {
 			if (iframe.contentWindow) {
-				iframe.contentWindow.postMessage({ type: 'set-theme', theme }, 'https://utteranc.es')
+				try {
+					iframe.contentWindow.postMessage({ type: 'set-theme', theme }, 'https://utteranc.es')
+				} catch (error) {
+					console.log('error')
+					console.log(error)
+				}
 			}
 		}
 	}

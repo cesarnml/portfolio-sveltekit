@@ -40,7 +40,6 @@
 		sources: Record<Format, Image[]>
 		fallback: Image
 	}
-	console.log('pictures:', pictures)
 
 	$: picture = pictures[src] as Picture
 </script>
