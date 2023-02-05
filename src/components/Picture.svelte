@@ -2,13 +2,12 @@
 	const pictures = import.meta.glob('/src/lib/assets/picture/*.{heic,heif,avif,jpg,jpeg,png,tiff,webp,gif}', {
 		query: {
 			format: 'webp;avif;jpg',
-			width: '480;1024;1920',
+			width: '360;480;768;1024',
 			picture: '',
 		},
 		import: 'default',
 		eager: true,
 	})
-	console.log('pictures:', pictures)
 </script>
 
 <script lang="ts">
