@@ -8,6 +8,7 @@
 		import: 'default',
 		eager: true,
 	})
+	console.log('pictures:', pictures)
 </script>
 
 <script lang="ts">

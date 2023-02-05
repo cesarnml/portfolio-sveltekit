@@ -2,7 +2,7 @@ import { sveltekit } from '@sveltejs/kit/vite'
 import { resolve } from 'node:path'
 import type { UserConfig } from 'vite'
 import { configDefaults, type UserConfig as VitestConfig } from 'vitest/config'
-import { imagetools } from '@zerodevx/svelte-img/vite'
+import { imagetools } from 'vite-imagetools'
 
 const config: UserConfig & { test: VitestConfig['test'] } = {
 	plugins: [sveltekit(), imagetools()],
