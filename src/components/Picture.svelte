@@ -4,8 +4,6 @@
 			format: 'webp;avif;jpg',
 			width: '480;1024;1920',
 			picture: '',
-			fit: 'cover',
-			position: 'center',
 		},
 		import: 'default',
 		eager: true,
