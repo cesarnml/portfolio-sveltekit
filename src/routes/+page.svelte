@@ -15,7 +15,7 @@
 <div>
 	<ul>
 		{#each posts as post (post.slug)}
-			<li><a class="unstyled" href={Url.BlogDetail(post.slug)}>{post.title}</a></li>
+			<li class="mb-4"><a class="unstyled" href={Url.BlogDetail(post.slug)}>{post.title}</a></li>
 		{/each}
 	</ul>
 </div>
