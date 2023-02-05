@@ -31,6 +31,6 @@
 
 {#if image}
 	<div>
-		<Picture src={image} alt="article hero" class="mb-4" />
+		<Picture src={image} alt="article hero" class="mb-4" loading="eager" decoding="sync" />
 	</div>
 {/if}
