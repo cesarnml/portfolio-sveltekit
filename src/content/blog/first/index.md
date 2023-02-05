@@ -4,7 +4,7 @@ title: First Svelte MDX post
 description: My first markdown content
 author: Cesar Mejia
 tags: ['cool', 'beans']
-image: '/images/hero.jpg'
+image: '/src/lib/assets/picture/hero.jpg'
 date: 2023-01-17
 ---
 

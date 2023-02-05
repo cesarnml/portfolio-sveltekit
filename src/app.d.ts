@@ -20,7 +20,7 @@ declare namespace App {
 		published: boolean
 		tags: string[]
 		readingTime: ReadingTime
-		image?: string
+		image: string
 	}
 
 	interface ReadingTime {

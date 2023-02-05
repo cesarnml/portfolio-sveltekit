@@ -4,6 +4,7 @@
 	import type { PageData } from './$types'
 	export let data: PageData
 	import { Paginator } from '@skeletonlabs/skeleton'
+	import Picture from '@components/Picture.svelte'
 	const { posts, tags } = data
 
 	$: paginator = {
@@ -36,7 +37,7 @@
 	<div class="md:grid-cols-2 grid grid-cols-1 gap-8">
 		{#each paginatedData as post (post.slug)}
 			<a class="card card-hover variant-glass-surface " href={Url.BlogDetail(post.slug)}>
-				<header><img class="object-cover" src={post.image} alt="blog" /></header>
+				<header><Picture class="object-cover" src={post.image} alt="blog" /></header>
 				<div class="p-4">
 					<div class="mb-4">
 						<h3 class="mb-1 font-bold">{post.title}</h3>

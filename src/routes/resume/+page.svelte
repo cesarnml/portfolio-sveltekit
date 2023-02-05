@@ -1,6 +1,5 @@
 <script lang="ts">
-	import resumeSrc from '@assets/images/Resume-CesarMejia.png'
-	import Img from '@zerodevx/svelte-img'
+	import Picture from '@components/Picture.svelte'
 </script>
 
 <div>
@@ -10,6 +9,6 @@
 		</button>
 	</form>
 	<div>
-		<Img src={resumeSrc} alt="resume" />
+		<Picture src="/src/lib/assets/picture/Resume-CesarMejia.png" alt="resume" />
 	</div>
 </div>

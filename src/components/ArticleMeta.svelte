@@ -1,18 +1,16 @@
 <script lang="ts">
-	import avatarSrc from '@assets/images/favicon.png'
-	import Img from '@zerodevx/svelte-img'
+	import Picture from '@components/Picture.svelte'
 	export let author: string
 	export let date: string
 	export let readingTime: string
 	export let wordCount: number
 	export let image: string | undefined
-
 	const formattedDate = new Date(date).toDateString().split(' ').slice(1).join(' ')
 </script>
 
 <div class="flex items-center gap-4">
 	<div class="md:w-14 md:h-14 w-12 h-12">
-		<Img class="m-0" src={avatarSrc} alt="avatar" />
+		<Picture class="m-0" src="/src/lib/assets/picture/favicon.png" alt="avatar" />
 	</div>
 	<div class="flex flex-col">
 		<div class="space-x-1">
@@ -33,6 +31,6 @@
 
 {#if image}
 	<div>
-		<img src={image} alt="article hero" class="mb-4" />
+		<Picture src={image} alt="article hero" class="mb-4" />
 	</div>
 {/if}
