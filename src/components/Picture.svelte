@@ -48,14 +48,5 @@
 		<source srcset={images.map((img) => `${img.src} ${img.w}w`).join(', ')} type="image/{format}" />
 	{/each}
 
-	<img
-		class={classes}
-		{decoding}
-		{loading}
-		{draggable}
-		src={picture.fallback.src}
-		{alt}
-		width={picture.fallback.w}
-		height={picture.fallback.h}
-	/>
+	<img class={classes} {decoding} {loading} {draggable} src={picture.fallback.src} {alt} />
 </picture>
