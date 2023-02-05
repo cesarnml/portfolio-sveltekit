@@ -6,7 +6,13 @@
 
 <a class="flex items-center justify-center gap-2" href={Url.Home}>
 	<div class="w-12 h-12">
-		<Picture class="object-contain w-full h-12" src="/src/lib/assets/picture/avatar.png" alt="avatar" />
+		<Picture
+			class="object-contain w-full h-12"
+			src="/src/lib/assets/picture/avatar.png"
+			alt="avatar"
+			loading="eager"
+			decoding="sync"
+		/>
 	</div>
 	<SiteAuthorDetails />
 </a>

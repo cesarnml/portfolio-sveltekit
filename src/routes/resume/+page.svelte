@@ -8,5 +8,5 @@
 	</button>
 </form>
 <div>
-	<Picture src="/src/lib/assets/picture/Resume-CesarMejia.png" alt="resume" />
+	<Picture src="/src/lib/assets/picture/Resume-CesarMejia.png" alt="resume" loading="eager" decoding="sync" />
 </div>

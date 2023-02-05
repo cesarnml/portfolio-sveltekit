@@ -8,6 +8,7 @@
 		import: 'default',
 		eager: true,
 	})
+	console.log('pictures:', JSON.stringify(pictures, null, 2))
 </script>
 
 <script lang="ts">

@@ -10,7 +10,7 @@
 
 <div class="flex items-center gap-4">
 	<div class="md:w-14 md:h-14 w-12 h-12">
-		<Picture class="m-0" src="/src/lib/assets/picture/favicon.png" alt="avatar" />
+		<Picture class="m-0" src="/src/lib/assets/picture/favicon.png" alt="avatar" loading="eager" decoding="sync" />
 	</div>
 	<div class="flex flex-col">
 		<div class="space-x-1">
