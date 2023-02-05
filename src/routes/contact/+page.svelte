@@ -45,6 +45,8 @@
 	})
 </script>
 
+<svelte:head><title>Contact Me</title></svelte:head>
+
 <div class="dark:prose-invert prose">
 	<div class="flex flex-col items-center">
 		<h1>Contact Me</h1>
