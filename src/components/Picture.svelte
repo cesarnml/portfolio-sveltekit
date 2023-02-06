@@ -4,11 +4,11 @@
 			format: 'webp;avif;jpg',
 			width: '360;480;768;1024',
 			picture: '',
+			withoutEnlargement: '',
 		},
 		import: 'default',
 		eager: true,
 	})
-	console.log('pictures:', JSON.stringify(pictures, null, 2))
 </script>
 
 <script lang="ts">
