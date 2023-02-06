@@ -24,6 +24,12 @@
 			const codeEle = ele.querySelector('code')
 			if (codeEle) {
 				codeEle.className = 'unstyled' // prevent application of dark mode styles
+				codeEle.addEventListener('mouseenter', () => {
+					codeEle.className = 'unstyled hovered'
+				})
+				codeEle.addEventListener('mouseleave', () => {
+					codeEle.className = 'unstyled'
+				})
 			}
 			const focus = ele.querySelector('.highlight-line-focus')
 			if (focus && codeEle) {
