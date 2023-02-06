@@ -31,16 +31,13 @@
 			if (codeEle) {
 				codeEle.className = 'unstyled' // prevent application of dark mode styles
 				codeEle.addEventListener('mouseenter', () => {
-					codeEle.className = 'unstyled hovered'
+					codeEle.classList.toggle('hovered')
 				})
 				codeEle.addEventListener('mouseleave', () => {
-					codeEle.className = 'unstyled'
+					codeEle.classList.toggle('hovered')
 				})
 			}
-			const focus = ele.querySelector('.highlight-line-focus')
-			if (focus && codeEle) {
-				codeEle.className = 'unstyled focus'
-			}
+
 			const remarkCodeTitle = remarkCodeTitles[index] as HTMLElement
 			const languageDiv = document.createElement('div')
 			languageDiv.textContent = remarkCodeTitle.textContent
@@ -51,8 +48,24 @@
 			button.textContent = 'Copy'
 			button.role = 'button'
 
+			const buttonWrap = document.createElement('button')
+			buttonWrap.className = 'absolute top-0 right-28 m-3 btn variant-filled-primary btn-sm'
+			buttonWrap.textContent = 'Wrap'
+			buttonWrap.role = 'button'
+			buttonWrap.addEventListener('click', () => {
+				if (codeEle) {
+					codeEle.classList.toggle('whitespace-pre-wrap')
+					if (!buttonWrap?.textContent?.includes('NoWrap')) {
+						buttonWrap.textContent = 'NoWrap'
+					} else {
+						buttonWrap.textContent = 'Wrap'
+					}
+				}
+			})
+
 			button.addEventListener('click', handleCopyClick)
 			ele.prepend(languageDiv)
+			ele.prepend(buttonWrap)
 			ele.prepend(button)
 		})
 	})
