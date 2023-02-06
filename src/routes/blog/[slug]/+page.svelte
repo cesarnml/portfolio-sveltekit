@@ -28,7 +28,12 @@
 				ele.className = 'shiki'
 			})
 			const codeEle = ele.querySelector('code')
+			let hasHorizontalScroll = false
+			const preWrap = ele.querySelector('.pre-wrap')
+			hasHorizontalScroll = preWrap.scrollWidth > preWrap.clientWidth
+
 			if (codeEle) {
+				console.log('hasHorizontalScroll:', hasHorizontalScroll)
 				codeEle.className = 'unstyled' // prevent application of dark mode styles
 				codeEle.addEventListener('mouseenter', () => {
 					codeEle.classList.toggle('hovered')
@@ -52,6 +57,20 @@
 			buttonWrap.className = 'absolute top-0 right-28 m-3 btn variant-filled-primary btn-sm'
 			buttonWrap.textContent = 'Wrap'
 			buttonWrap.role = 'button'
+			if (!hasHorizontalScroll) {
+				buttonWrap.classList.add('hidden')
+			}
+			window?.addEventListener('resize', () => {
+				hasHorizontalScroll = preWrap.scrollWidth > preWrap.clientWidth
+				if (hasHorizontalScroll) {
+					buttonWrap.classList.remove('hidden')
+				} else {
+					buttonWrap.classList.add('hidden')
+					codeEle.classList.remove('whitespace-pre-wrap')
+					buttonWrap.textContent = 'Wrap'
+				}
+			})
+
 			buttonWrap.addEventListener('click', () => {
 				if (codeEle) {
 					codeEle.classList.toggle('whitespace-pre-wrap')
@@ -65,8 +84,8 @@
 
 			button.addEventListener('click', handleCopyClick)
 			ele.prepend(languageDiv)
-			ele.prepend(buttonWrap)
 			ele.prepend(button)
+			ele.prepend(buttonWrap)
 		})
 	})
 </script>
