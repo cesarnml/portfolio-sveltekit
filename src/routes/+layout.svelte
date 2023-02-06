@@ -21,7 +21,9 @@
 </script>
 
 <AppShell>
-	<svelte:fragment slot="header"><Navbar /></svelte:fragment>
+	<!-- <svelte:fragment slot="header"><Navbar /></svelte:fragment> -->
+	<Navbar />
+
 	<svelte:fragment slot="sidebarLeft" />
 	<svelte:fragment slot="sidebarRight" />
 	<svelte:fragment slot="pageHeader" />

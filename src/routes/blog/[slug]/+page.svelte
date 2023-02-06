@@ -63,7 +63,7 @@
 <div class="hidden absolute w-[240px] xl:inline-block h-full top-8 -right-[240px]">
 	<TableOfContents
 		target="#toc-target"
-		class="top-8 card variant-soft-primary sticky p-4"
+		class="top-28 card variant-soft-primary sticky p-4"
 		width="w-fit"
 		regionList="list-none font-semibold"
 	/>
