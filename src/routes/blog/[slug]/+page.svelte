@@ -63,20 +63,16 @@
 			window?.addEventListener('resize', (e) => {
 				hasHorizontalScroll = preWrap.scrollWidth > preWrap.clientWidth
 				if (hasHorizontalScroll) {
-					if (e.target === buttonWrap) {
-						buttonWrap.classList.remove('hidden')
-					}
+					buttonWrap.classList.remove('hidden')
 				} else {
-					if (e.target === buttonWrap) {
-						buttonWrap.classList.add('hidden')
-						codeEle.classList.remove('whitespace-pre-wrap')
-						buttonWrap.textContent = 'Wrap'
-					}
+					buttonWrap.classList.add('hidden')
+					codeEle.classList.remove('whitespace-pre-wrap')
+					buttonWrap.textContent = 'Wrap'
 				}
 			})
 
-			buttonWrap.addEventListener('click', () => {
-				if (codeEle) {
+			buttonWrap.addEventListener('click', (e) => {
+				if (codeEle && e.target === buttonWrap) {
 					codeEle.classList.toggle('whitespace-pre-wrap')
 					if (!buttonWrap?.textContent?.includes('NoWrap')) {
 						buttonWrap.textContent = 'NoWrap'
