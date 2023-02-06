@@ -50,6 +50,14 @@
 	display: inline-block;
 }
 
+code:has(span.highlight-line-focus) > span.line {
+	filter: blur(4px);
+}
+
+.highlight-line-focus {
+	filter: none !important;
+}
+
 .line:not(.highlight-line-normal, .highlight-line-add, .highlight-line-remove) {
 	border-left: var(--spacing-1) solid transparent;
 }

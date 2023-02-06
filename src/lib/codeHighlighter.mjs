@@ -63,49 +63,42 @@ async function highlighter(code, lang, meta) {
 		})
 	} else {
 		// const highlightMeta = /{([\d,-]+)}/.exec(meta)[1]
-		const highlightMetaAdd =
-			meta
-				.match(/[\d-]+a/g)
-				.join(',')
-				.replaceAll('a', '') ?? []
-
-		const highlightMetaRemove =
-			meta
-				.match(/[\d-]+r/g)
-				.join(',')
-				.replaceAll('r', '') ?? []
-		const highlightMetaNormal =
-			meta
-				.match(/[\d-]+n/g)
-				.join(',')
-				.replaceAll('n', '') ?? []
+		const highlightMetaAdd = (meta.match(/[\d-]+a/g) ?? []).join(',').replaceAll('a', '')
+		const highlightMetaRemove = (meta.match(/[\d-]+r/g) ?? []).join(',').replaceAll('r', '')
+		const highlightMetaNormal = (meta.match(/[\d-]+n/g) ?? []).join(',').replaceAll('n', '')
+		const highlightMetaFocus = (meta.match(/[\d-]+f/g) ?? []).join(',').replaceAll('f', '')
 
 		const highlightLinesAdd = rangeParser(highlightMetaAdd)
 		const highlightLinesRemove = rangeParser(highlightMetaRemove)
 		const highlightLinesNormal = rangeParser(highlightMetaNormal)
+		const highlightLinesFocus = rangeParser(highlightMetaFocus)
+
+		const isFocus = !!highlightLinesFocus.length
 
 		html = shikiHighlighter.codeToHtml(code, {
 			lang,
-			lineOptions: [
-				...highlightLinesAdd.map((element) => {
-					return {
-						line: element,
-						classes: ['highlight-line-add'],
-					}
-				}),
-				...highlightLinesRemove.map((element) => {
-					return {
-						line: element,
-						classes: ['highlight-line-remove'],
-					}
-				}),
-				...highlightLinesNormal.map((element) => {
-					return {
-						line: element,
-						classes: ['highlight-line-normal'],
-					}
-				}),
-			],
+			lineOptions: isFocus
+				? highlightLinesFocus.map((element) => ({ line: element, classes: ['highlight-line-focus'] }))
+				: [
+						...highlightLinesAdd.map((element) => {
+							return {
+								line: element,
+								classes: ['highlight-line-add'],
+							}
+						}),
+						...highlightLinesRemove.map((element) => {
+							return {
+								line: element,
+								classes: ['highlight-line-remove'],
+							}
+						}),
+						...highlightLinesNormal.map((element) => {
+							return {
+								line: element,
+								classes: ['highlight-line-normal'],
+							}
+						}),
+				  ],
 		})
 	}
 	html = makeFocusable(html)

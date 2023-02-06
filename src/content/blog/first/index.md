@@ -48,7 +48,7 @@ export async function load({ fetch }) {
 
 ### With Highlighting
 
-```js:JavaScript {5-7a,3a,4a, 2r, 10n, 12n}
+```js:JavaScript {5-7a,3a,4a, 2r, 10f, 12n}
 export async function load({ fetch }) {
 	const variable = "this is a super long variable declaration come on"
 	const res = await fetch(`/posts.json`)

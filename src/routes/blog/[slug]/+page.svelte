@@ -25,6 +25,10 @@
 			if (codeEle) {
 				codeEle.className = 'unstyled' // prevent application of dark mode styles
 			}
+			const focus = ele.querySelector('.highlight-line-focus')
+			if (focus && codeEle) {
+				codeEle.className = 'unstyled focus'
+			}
 			const remarkCodeTitle = remarkCodeTitles[index] as HTMLElement
 			const languageDiv = document.createElement('div')
 			languageDiv.textContent = remarkCodeTitle.textContent
