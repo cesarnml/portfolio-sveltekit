@@ -18,6 +18,7 @@ function escapeHtml(code) {
  * @returns {number[]} array of line numbers to be highlighted
  */
 function rangeParser(rangeString) {
+	if (rangeString === '') return []
 	const result = []
 	const ranges = rangeString.split(',')
 	ranges.forEach((element) => {
