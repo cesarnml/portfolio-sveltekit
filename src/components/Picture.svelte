@@ -4,7 +4,7 @@
 			format: 'webp;avif;jpg',
 			width: '360;480;768;1024',
 			picture: '',
-			withoutEnlargement: '',
+			// withoutEnlargement: '',
 		},
 		import: 'default',
 		eager: true,
