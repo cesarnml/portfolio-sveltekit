@@ -21,6 +21,12 @@
 			const oldHtml = ele.innerHTML
 			const newHtml = "<div class='pre-wrap overflow-x-auto'>" + oldHtml + '</div>'
 			ele.innerHTML = newHtml
+			ele.addEventListener('mouseenter', () => {
+				ele.className = 'shiki hovered'
+			})
+			ele.addEventListener('mouseleave', () => {
+				ele.className = 'shiki'
+			})
 			const codeEle = ele.querySelector('code')
 			if (codeEle) {
 				codeEle.className = 'unstyled' // prevent application of dark mode styles

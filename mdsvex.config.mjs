@@ -16,7 +16,7 @@ const config = defineConfig({
 	},
 	highlight: { highlighter },
 	remarkPlugins: [
-		remarkAbbr,
+		[remarkAbbr, { expandFirst: true }],
 		[remarkGithub, { repository }],
 		remarkReadingTime(),
 		remarkCodeTitles,

@@ -52,14 +52,10 @@
 
 code:has(span.highlight-line-focus) > span.line {
 	filter: blur(4px);
-	transition: all 0.5s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
-code.hovered:has(span.highlight-line-focus) > span.line {
-	filter: none;
-}
-
-code:has(span.highlight-line-focus) > span.line:hover {
+pre.hovered:has(div > code > span.highlight-line-focus) > div > code > span.line {
 	filter: none;
 }
 

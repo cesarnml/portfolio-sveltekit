@@ -48,7 +48,7 @@ export async function load({ fetch }) {
 
 ### With Highlighting
 
-```js:JavaScript {5-7a,3a,4a, 2r, 10f, 12n}
+```js:JavaScript {5-7a,3a,4a, 2r, 10n, 12n}
 export async function load({ fetch }) {
 	const variable = "this is a super long variable declaration come on"
 	const res = await fetch(`/posts.json`)
@@ -63,13 +63,28 @@ const code = 'yay!'
 const code = 'yay!'
 ```
 
+### With Focus
+```js:JavaScript {4-6f}
+export async function load({ fetch }) {
+	const variable = "this is a super long variable declaration come on"
+	const res = await fetch(`/posts.json`)
+	if (res.ok) {
+		const { posts } = await res.json()
+		return { posts }
+	}
+}
+
+const code = 'yay!'
+
+const code = 'yay!'
+```
 ## Remark Abbreviations Examples
 
 This plugin works on MDAST, a Markdown AST
 implemented by [remark](https://github.com/remarkjs/remark)
 
-*[MDAST]: Markdown Abstract Syntax Tree.
-*[AST]: Abstract syntax tree
+*[MDAST]: Markdown Abstract Syntax Tree
+*[AST]: Abstract Syntax Tree
 
 ## Remark-Github Examples
 
