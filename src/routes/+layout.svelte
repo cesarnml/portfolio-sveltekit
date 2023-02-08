@@ -32,7 +32,6 @@
 		<PageTransition {pathname}>
 			<slot />
 		</PageTransition>
-		<button class="fixed top-[80vh] right-4 z-50 btn-icon variant-filled-primary" type="button">&uarr;</button>
 	</div>
 	<!-- ---- / ---- -->
 	<svelte:fragment slot="pageFooter"><Footer /></svelte:fragment>
