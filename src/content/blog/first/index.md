@@ -32,23 +32,33 @@ Italicized text is the _cat's meow_.
 
 ### No Highlighting
 
-```js:Svelte
+```svelte
 <script lang="ts">
-export let message = "Hello, world!"
+	import { page } from '$app/stores'
+	import { Url } from '@lib/url'
+	import type { PageData } from './$types'
+	export let data: PageData
+
+	const { posts } = data
 </script>
 
-export async function load({ fetch }) {
-	const res = await fetch(`/posts.json`)
-	if (res.ok) {
-		const { posts } = await res.json()
-		return { posts }
-	}
-}
+<svelte:head>
+	<title>Cesar Mejia's Web Portfolio</title>
+	<link rel="canonical" href={$page.url.href} />
+</svelte:head>
+
+<div>
+	<ul>
+		{#each posts as post (post.slug)}
+			<li class="mb-4"><a class="unstyled" href={Url.BlogDetail(post.slug)}>{post.title}</a></li>
+		{/each}
+	</ul>
+</div>
 ```
 
 ### With Highlighting
 
-```js:JavaScript {5-7a,3a,4a, 2r, 10n, 12n}
+```js {5-7a,3a,4a, 2r, 10n, 12n}
 export async function load({ fetch }) {
 	const variable = "this is a super long variable declaration come on"
 	const res = await fetch(`/posts.json`)
@@ -64,7 +74,7 @@ const code = 'yay!'
 ```
 
 ### With Focus
-```js:JavaScript {4-6f}
+```ts {4-6f}
 export async function load({ fetch }) {
 	const variable = "this is a super long variable declaration come on"
 	const res = await fetch(`/posts.json`)

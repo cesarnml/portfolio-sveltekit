@@ -1,4 +1,3 @@
-import { parse } from 'node-html-parser'
 import { getHighlighter, renderToHtml } from 'shiki'
 import { readFile } from 'fs/promises'
 const synthWave84Theme = JSON.parse(await readFile(new URL('./synthWave84.json', import.meta.url)))
@@ -7,6 +6,16 @@ const htmlEscapes = {
 	'{': '&lbrace;',
 	'}': '&rbrace;',
 	'`': '&grave;',
+}
+
+const langToLabel = {
+	js: 'JavaScript',
+	ts: 'TypeScript',
+	svelte: 'Svelte',
+	css: 'CSS',
+	html: 'HTML',
+	jsx: 'JSX',
+	tsx: 'TSX',
 }
 
 /**
@@ -20,10 +29,11 @@ function escapeHtml(code) {
 
 /**
  * Returns array of line numbers to be highlighted
- * @param {string} rangeString range string to be parsed (e.g. {1,3-5,8})
+ * @param {string} rangeString range string to be parsed (e.g. '1,3-5,8')
  * @returns {number[]} array of line numbers to be highlighted
  */
 function rangeParser(rangeString) {
+	// Empty rangeString return empty array
 	if (rangeString === '') return []
 	const result = []
 	const ranges = rangeString.split(',')
@@ -67,12 +77,22 @@ async function highlighter(code, lang, meta) {
 
 	const isFocus = !!highlightLinesFocus.length
 
+	const codeToolbarHtml = `
+	<div class="flex items-center justify-between p-4">
+		<div style="color: orange;">${langToLabel[lang]}</div>
+		<div class="flex gap-4">
+			<button class="btn btn-sm variant-filled-primary code-wrap-btn hidden" type="button">Wrap</button>
+			<button class="btn btn-sm variant-filled-primary code-copy-btn" type="button">Copy</button>
+		</div>
+	</div>
+	`
+
 	const html = renderToHtml(tokens, {
 		fg: getForegroundColor(synthWave84Theme),
 		bg: getBackgroundColor(synthWave84Theme),
 		elements: {
 			pre({ className, style, children }) {
-				return `<pre tabindex="0" class="${className}" style="${style}">${children}</pre>`
+				return `<pre class="${className}" style="${style}" data-code-label="${langToLabel[lang]}" tabindex="0">${codeToolbarHtml}<div class="code-wrapper overflow-x-auto">${children}</div></pre>`
 			},
 		},
 		lineOptions: isFocus

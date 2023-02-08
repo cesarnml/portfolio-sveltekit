@@ -10,87 +10,61 @@
 	export let data: PageServerData
 
 	onMount(async () => {
-		/**
-		 * .remark-code-title is a hidden element that contains the code language (e.g. JavaScript)
-		 *  It's used to add the code language to the copy button
-		 */
-		const remarkCodeTitles = document.querySelectorAll('.remark-code-title')
+		// Get all <pre> elements
 		const preElements = document.querySelectorAll('pre')
-		// Add a copy button to each markdown code block
-		preElements.forEach((ele, index) => {
-			const oldHtml = ele.innerHTML
-			const newHtml = "<div class='pre-wrap overflow-x-auto'>" + oldHtml + '</div>'
-			ele.innerHTML = newHtml
-			ele.addEventListener('mouseenter', () => {
-				ele.className = 'shiki hovered'
-			})
-			ele.addEventListener('mouseleave', () => {
-				ele.className = 'shiki'
-			})
+
+		// For each <pre> element
+		preElements.forEach((ele) => {
+			// Track if it's being hovered (needed for "focus" code styling)
+			ele.addEventListener('mouseenter', () => ele.classList.add('hovered'))
+			ele.addEventListener('mouseleave', () => ele.classList.remove('hovered'))
+
+			const codeWrapper = ele.querySelector('.code-wrapper')
 			const codeEle = ele.querySelector('code')
-			let hasHorizontalScroll = false
-			const preWrap = ele.querySelector('.pre-wrap')
-			hasHorizontalScroll = preWrap.scrollWidth > preWrap.clientWidth
 
-			if (codeEle) {
-				codeEle.className = 'unstyled' // prevent application of dark mode styles
-				codeEle.addEventListener('mouseenter', () => {
-					codeEle.classList.add('hovered')
-				})
-				codeEle.addEventListener('mouseleave', () => {
-					codeEle.classList.remove('hovered')
-				})
+			const buttonCopy = ele.querySelector('.code-copy-btn') as HTMLButtonElement
+			const buttonWrap = ele.querySelector('.code-wrap-btn')
+
+			// OnMount determine if we should show/hide wrap button
+			let hasHorizontalScroll = codeWrapper ? codeWrapper.scrollWidth > codeWrapper.clientWidth : false
+			if (hasHorizontalScroll) {
+				buttonWrap?.classList.remove('hidden')
 			}
 
-			const remarkCodeTitle = remarkCodeTitles[index] as HTMLElement
-			const languageDiv = document.createElement('div')
-			languageDiv.textContent = remarkCodeTitle.textContent
-			languageDiv.className = 'absolute top-0 left-0 flex items-center h-8 m-3 text-orange-500'
-
-			const button = document.createElement('button')
-			button.className = 'absolute top-0 right-0 m-3 btn variant-filled-primary btn-sm'
-			button.textContent = 'Copy'
-			button.role = 'button'
-
-			const buttonWrap = document.createElement('button')
-			buttonWrap.className = 'absolute top-0 right-28 m-3 btn variant-filled-primary btn-sm'
-			buttonWrap.textContent = 'Wrap'
-			buttonWrap.role = 'button'
-			if (!hasHorizontalScroll) {
-				buttonWrap.classList.add('hidden')
-			}
+			// Show wrap button if code-wrapper has horizontal scroll bar
 			window?.addEventListener(
 				'resize',
-				(e) => {
-					hasHorizontalScroll = preWrap.scrollWidth > preWrap.clientWidth
-					if (hasHorizontalScroll === true) {
-						buttonWrap.classList.remove('hidden')
-					} else {
-						if (buttonWrap.textContent !== 'NoWrap') {
+				() => {
+					hasHorizontalScroll = codeWrapper ? codeWrapper.scrollWidth > codeWrapper.clientWidth : false
+					if (buttonWrap) {
+						if (hasHorizontalScroll) {
+							buttonWrap.classList.remove('hidden')
+						} else {
 							buttonWrap.classList.add('hidden')
-							codeEle?.classList.remove('whitespace-pre-wrap')
 							buttonWrap.textContent = 'Wrap'
+							codeEle?.classList.remove('whitespace-pre-wrap')
 						}
 					}
 				},
 				{ passive: true },
 			)
 
-			buttonWrap.addEventListener('click', (e) => {
-				if (codeEle && e.target === buttonWrap) {
-					codeEle.classList.toggle('whitespace-pre-wrap')
-					if (!buttonWrap?.textContent?.includes('NoWrap')) {
+			// Enable wrap button behavior on click
+			if (buttonWrap) {
+				buttonWrap.addEventListener('click', (e) => {
+					codeEle?.classList.toggle('whitespace-pre-wrap')
+					if (!buttonWrap.textContent?.includes('NoWrap')) {
 						buttonWrap.textContent = 'NoWrap'
 					} else {
 						buttonWrap.textContent = 'Wrap'
 					}
-				}
-			})
+				})
+			}
 
-			button.addEventListener('click', handleCopyClick)
-			ele.prepend(languageDiv)
-			ele.prepend(button)
-			ele.prepend(buttonWrap)
+			// Enable copy button behavior click
+			if (buttonCopy) {
+				buttonCopy.addEventListener('click', handleCopyClick)
+			}
 		})
 	})
 </script>

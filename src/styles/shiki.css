@@ -30,6 +30,7 @@
 	max-width: var(--max-width-full);
 	font-family: 'Fira Code', 'SF Mono', 'Menlo', 'Courier New', monospace;
 	padding: 0 !important;
+	margin-top: 0 !important;
 	margin-bottom: var(--spacing-10) !important;
 	overflow: hidden;
 }
@@ -42,7 +43,6 @@
 	counter-reset: step;
 	counter-increment: step 0;
 	padding-bottom: var(--spacing-2);
-	padding-top: var(--spacing-14);
 }
 
 .line {
@@ -118,6 +118,7 @@ code .highlight-line-normal::before {
 /* END: Line number styling */
 
 .remark-code-title {
-	/* Hidden element used to derive code language */
-	display: none;
+	border: 1px solid red;
+	display: inline-block;
+	padding: 0 1rem;
 }
