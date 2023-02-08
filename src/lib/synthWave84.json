@@ -2,6 +2,8 @@
 	"name": "SynthWave 84",
 	"type": "dark",
 	"semanticHighlighting": true,
+	"fg": "#ffffff",
+	"bg": "#262335",
 	"colors": {
 		"focusBorder": "#1f212b",
 		"foreground": "#ffffff",
