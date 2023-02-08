@@ -79,7 +79,7 @@ async function highlighter(code, lang, meta) {
 
 	const codeToolbarHtml = `
 	<div class="flex items-center justify-between p-4">
-		<div style="color: orange;">${langToLabel[lang]}</div>
+		<div style="color: rgb(249 115 22);">${langToLabel[lang]}</div>
 		<div class="flex gap-4">
 			<button class="btn btn-sm variant-filled-primary code-wrap-btn hidden" type="button">Wrap</button>
 			<button class="btn btn-sm variant-filled-primary code-copy-btn" type="button">Copy</button>
