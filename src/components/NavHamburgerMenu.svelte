@@ -2,7 +2,7 @@
 	import { drawerStore } from '@skeletonlabs/skeleton'
 </script>
 
-<button class="self-end btn btn-primary" aria-label="nav menu">
+<button aria-label="nav menu">
 	{#if $drawerStore.open}
 		<iconify-icon
 			on:click={drawerStore.close}
