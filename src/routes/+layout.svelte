@@ -29,22 +29,24 @@
 	<svelte:fragment slot="pageHeader" />
 	<!-- Router Slot -->
 	<div class="container relative p-4 mx-auto md:p-8 max-w-screen-2md">
-		<Drawer position="top" bgDrawer="backdrop-blur" height="h-screen" duration={250}>
-			<div class="flex flex-col items-center p-4 gap-3">
-				<div class="flex items-center justify-between w-full">
-					<div class="px-[11px]">
-						<LightSwitch class="outline-none" />
-					</div>
-					<NavHamburgerMenu />
-				</div>
-				<NavLinks className="text-xl font-semibold list-nav" />
-			</div>
-		</Drawer>
 		<PageTransition {pathname}>
 			<slot />
 		</PageTransition>
+		<button class="fixed top-[80vh] right-4 z-50 btn-icon variant-filled-primary" type="button">&uarr;</button>
 	</div>
 	<!-- ---- / ---- -->
 	<svelte:fragment slot="pageFooter"><Footer /></svelte:fragment>
 	<svelte:fragment slot="footer" />
 </AppShell>
+
+<Drawer position="top" bgDrawer="backdrop-blur" height="h-screen" duration={250}>
+	<div class="flex flex-col items-center p-4 gap-3">
+		<div class="flex items-center justify-between w-full">
+			<div class="px-[11px]">
+				<LightSwitch class="outline-none" />
+			</div>
+			<NavHamburgerMenu />
+		</div>
+		<NavLinks className="text-xl font-semibold list-nav" />
+	</div>
+</Drawer>

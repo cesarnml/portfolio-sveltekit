@@ -48,6 +48,8 @@
 .line {
 	width: var(--max-width-full);
 	display: inline-block;
+	text-indent: -2rem;
+	padding-left: 2rem;
 }
 
 code:has(span.highlight-line-focus) > span.line {

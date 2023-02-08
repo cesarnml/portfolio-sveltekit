@@ -33,7 +33,6 @@
 			hasHorizontalScroll = preWrap.scrollWidth > preWrap.clientWidth
 
 			if (codeEle) {
-				console.log('hasHorizontalScroll:', hasHorizontalScroll)
 				codeEle.className = 'unstyled' // prevent application of dark mode styles
 				codeEle.addEventListener('mouseenter', () => {
 					codeEle.classList.add('hovered')
@@ -60,16 +59,22 @@
 			if (!hasHorizontalScroll) {
 				buttonWrap.classList.add('hidden')
 			}
-			window?.addEventListener('resize', (e) => {
-				hasHorizontalScroll = preWrap.scrollWidth > preWrap.clientWidth
-				if (hasHorizontalScroll) {
-					buttonWrap.classList.remove('hidden')
-				} else {
-					buttonWrap.classList.add('hidden')
-					codeEle.classList.remove('whitespace-pre-wrap')
-					buttonWrap.textContent = 'Wrap'
-				}
-			})
+			window?.addEventListener(
+				'resize',
+				(e) => {
+					hasHorizontalScroll = preWrap.scrollWidth > preWrap.clientWidth
+					if (hasHorizontalScroll === true) {
+						buttonWrap.classList.remove('hidden')
+					} else {
+						if (buttonWrap.textContent !== 'NoWrap') {
+							buttonWrap.classList.add('hidden')
+							codeEle?.classList.remove('whitespace-pre-wrap')
+							buttonWrap.textContent = 'Wrap'
+						}
+					}
+				},
+				{ passive: true },
+			)
 
 			buttonWrap.addEventListener('click', (e) => {
 				if (codeEle && e.target === buttonWrap) {
