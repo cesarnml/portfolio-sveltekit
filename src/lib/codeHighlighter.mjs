@@ -81,7 +81,7 @@ async function highlighter(code, lang, meta) {
 	<div class="flex items-center justify-between p-4">
 		<div style="color: rgb(249 115 22);">${langToLabel[lang]}</div>
 		<div class="flex gap-4">
-			<button class="btn btn-sm variant-filled-primary code-wrap-btn hidden" type="button">Wrap</button>
+			<button class="hidden btn btn-sm variant-filled-primary code-wrap-btn" type="button">Wrap</button>
 			<button class="btn btn-sm variant-filled-primary code-copy-btn" type="button">Copy</button>
 		</div>
 	</div>
@@ -92,7 +92,7 @@ async function highlighter(code, lang, meta) {
 		bg: getBackgroundColor(synthWave84Theme),
 		elements: {
 			pre({ className, style, children }) {
-				return `<pre class="${className}" style="${style}" data-code-label="${langToLabel[lang]}" tabindex="0">${codeToolbarHtml}<div class="code-wrapper overflow-x-auto">${children}</div></pre>`
+				return `<pre class="${className}" style="${style}" data-code-label="${langToLabel[lang]}" tabindex="0">${codeToolbarHtml}<div class="overflow-x-auto code-wrapper">${children}</div></pre>`
 			},
 		},
 		lineOptions: isFocus
