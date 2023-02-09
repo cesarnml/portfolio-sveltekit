@@ -39,7 +39,7 @@
 
 <Drawer position="top" bgDrawer="backdrop-blur" height="h-screen" duration={250}>
 	<div class="flex flex-col items-center gap-2 py-6 px-4">
-		<div class="mb-8 flex w-full items-center justify-between">
+		<div class="mb-8 flex w-full items-center justify-between ">
 			<div class="px-[11px]">
 				<LightSwitch class="outline-none" />
 			</div>
