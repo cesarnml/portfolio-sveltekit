@@ -18,7 +18,6 @@
 	$: if ($media.sm && $drawerStore.open) {
 		drawerStore.close()
 	}
-	const item = new Object()
 </script>
 
 <AppShell>

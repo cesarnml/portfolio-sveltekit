@@ -6,11 +6,6 @@
 	export let wordCount: number
 	export let image: string | undefined
 	const formattedDate = new Date(date).toDateString().split(' ').slice(1).join(' ')
-
-	const array = [1, 2, 3]
-	const total = array.reduce(function (sum, cur) {
-		return sum + cur
-	})
 </script>
 
 <div class="flex items-center gap-4">

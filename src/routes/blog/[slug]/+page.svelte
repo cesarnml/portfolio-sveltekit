@@ -51,7 +51,7 @@
 
 			// Enable wrap button behavior on click
 			if (buttonWrap) {
-				buttonWrap.addEventListener('click', (e) => {
+				buttonWrap.addEventListener('click', () => {
 					codeEle?.classList.toggle('whitespace-pre-wrap')
 					if (!buttonWrap.textContent?.includes('NoWrap')) {
 						buttonWrap.textContent = 'NoWrap'

@@ -24,6 +24,7 @@
 		"ignoreDeprecations": "5.0"
 	},
 	"include": [
+		"./node_modules/@sveltejs/kit/types/ambient-modules.d.ts",
 		"./svelte-kit/ambient.d.ts",
 		"./svelte-kit/types/**/$types.d.ts",
 		"vite.config.ts",

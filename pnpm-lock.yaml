@@ -29,7 +29,6 @@ specifiers:
   eslint-import-resolver-typescript: ^3.5.3
   eslint-plugin-import: ^2.27.5
   eslint-plugin-svelte3: ^4.0.0
-  eslint-plugin-vitest-globals: ^1.2.0
   husky: ^8.0.3
   iconify-icon: ^1.0.4
   jsdom: ^21.1.0
@@ -90,7 +89,6 @@ devDependencies:
   eslint-import-resolver-typescript: 3.5.3_ohdts44xlqyeyrlje4qnefqeay
   eslint-plugin-import: 2.27.5_kuqv7qxblf6fgldep4hddd7xwa
   eslint-plugin-svelte3: 4.0.0_4omm2ewoudhgnmf7aocafatnc4
-  eslint-plugin-vitest-globals: 1.2.0
   husky: 8.0.3
   iconify-icon: 1.0.4
   jsdom: 21.1.0
@@ -2021,11 +2019,6 @@ packages:
       eslint: 8.33.0
     dev: true
 
-  /eslint-config-sets/1.8.3:
-    resolution: {integrity: sha512-X9OtGgO3olmrUB42aWMIm9rO+ehz89dysyfWBITHq8N9hB/AxHuNkqHVNU3YLT53WpbRopVCEHIBhZ2i1dMFyw==}
-    deprecated: '这个项目已停止维护，推荐使用重新开发的更现代化的@eslint-sets: https://github.com/saqqdy/eslint-sets'
-    dev: true
-
   /eslint-import-resolver-node/0.3.7:
     resolution: {integrity: sha512-gozW2blMLJCeFpBwugLTGyvVjNoeo1knonXAcatC6bjPBZitotxdWf7Gimr25N4c0AAOo4eOUfaG82IJPDpqCA==}
     dependencies:
@@ -2127,12 +2120,6 @@ packages:
     dependencies:
       eslint: 8.33.0
       svelte: 3.55.1
-    dev: true
-
-  /eslint-plugin-vitest-globals/1.2.0:
-    resolution: {integrity: sha512-vINsci+UOvObny6vutsa0c9xzM0PfdKgtkhnH8lLSe4+gZPjhK9O4v26oSu5Svb1n8Rvug4iX2k6keuKBoRlOg==}
-    dependencies:
-      eslint-config-sets: 1.8.3
     dev: true
 
   /eslint-scope/5.1.1:

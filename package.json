@@ -13,7 +13,7 @@
 		"coverage": "vitest run --coverage",
 		"test": "vitest run src -- --watch",
 		"test:watch": "vitest src -- --watch",
-		"lint": "prettier --plugin-search-dir . --check . && eslint . --fix",
+		"lint": "prettier --plugin-search-dir . --check . && eslint . --ext .js,.ts,.svelte",
 		"format": "prettier --plugin-search-dir . --write .",
 		"fix": "npm run format && npm run lint -- --fix",
 		"prepare": "husky install"
@@ -46,7 +46,6 @@
 		"eslint-import-resolver-typescript": "^3.5.3",
 		"eslint-plugin-import": "^2.27.5",
 		"eslint-plugin-svelte3": "^4.0.0",
-		"eslint-plugin-vitest-globals": "^1.2.0",
 		"husky": "^8.0.3",
 		"iconify-icon": "^1.0.4",
 		"jsdom": "^21.1.0",

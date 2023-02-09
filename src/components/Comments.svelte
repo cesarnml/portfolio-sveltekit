@@ -30,9 +30,10 @@
 		const targetTag = document.getElementById('utterances-comments')
 
 		// Loop over the options & apply each property as an attribute
-		for (const prop in options) {
+		Object.keys(options).forEach((prop) => {
 			utteranceScript.setAttribute(prop, options[prop as keyof typeof options])
-		}
+		})
+
 		if (targetTag) {
 			targetTag.appendChild(utteranceScript)
 		}
