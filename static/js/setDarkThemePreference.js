@@ -7,6 +7,7 @@ if (localStorage.storeLightSwitch === undefined) {
 	}
 } else {
 	// has preference ... obey lightSwitch
+	// eslint-disable-next-line no-lonely-if
 	if (localStorage.storeLightSwitch === 'true') {
 		document.documentElement.classList.add('dark')
 	} else {

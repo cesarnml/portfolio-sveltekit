@@ -1,13 +1,13 @@
 import { defineMDSveXConfig as defineConfig } from 'mdsvex'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeSlug from 'rehype-slug'
-import remarkExternalLinks from 'remark-external-links'
-import remarkCodeTitles from 'remark-code-titles'
-import remarkReadingTime from 'remark-reading-time'
-import highlighter from './src/lib/codeHighlighter.mjs'
-import remarkGithub from 'remark-github'
 import remarkAbbr from 'remark-abbr'
-import { repository } from './src/lib/config.mjs'
+import remarkCodeTitles from 'remark-code-titles'
+import remarkExternalLinks from 'remark-external-links'
+import remarkGithub from 'remark-github'
+import remarkReadingTime from 'remark-reading-time'
+import highlighter from './src/lib/codeHighlighter'
+import { repository } from './src/lib/config'
 
 const config = defineConfig({
 	extensions: ['.svelte.md', '.md', '.svx'],

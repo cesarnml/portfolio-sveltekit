@@ -22,7 +22,7 @@
 }
 
 /* BEGIN: code `[pre]` element styling */
-.shiki {
+pre .shiki {
 	position: relative;
 	display: flex;
 	flex-direction: column;
@@ -36,7 +36,7 @@
 }
 /* END: code `[pre]` element styling */
 
-/* BEGIN: Line number styling */
+/* BEGIN: Line number & highlight/focus styling */
 .shiki code {
 	display: block;
 	min-width: fit-content;

@@ -1,11 +1,11 @@
-import { wordsPerMinute as wpm } from '$lib/config.mjs'
+import { wordsPerMinute as wpm } from '$lib/config'
 
 /**
  * Hack to programmatically adjusted remark-reading-time output by custom wordsPerMinute
  * @param time in milliseconds
  * @param wordsPerMinute blog reading speed
  */
-function _adjustReadingTimeText(time: number, wordsPerMinute = wpm) {
+function adjustReadingTimeText(time: number, wordsPerMinute = wpm) {
 	const defaultWordsPerMinute = 200
 	const sec2ms = 1000
 	const min2sec = 60
@@ -19,7 +19,7 @@ function _adjustReadingTimeText(time: number, wordsPerMinute = wpm) {
  * Adjust a blog post's readingTime.text by custom wordsPerMinute
  */
 export function adjustPostReadingTimeText(post: App.BlogPost) {
-	const adjustedReadingTimeText = _adjustReadingTimeText(post.readingTime.time)
+	const adjustedReadingTimeText = adjustReadingTimeText(post.readingTime.time)
 	post.readingTime.text = adjustedReadingTimeText
 	return post
 }

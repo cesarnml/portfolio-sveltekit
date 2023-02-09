@@ -10,6 +10,6 @@ describe('NavBrand', () => {
 
 	test('should render a link to Home', async () => {
 		const brandLink = screen.getByRole('link')
-		expect(brandLink).toHaveAttribute('href', Url.Home)
+		await expect(brandLink).toHaveAttribute('href', Url.Home)
 	})
 })

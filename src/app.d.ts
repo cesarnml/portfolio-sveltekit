@@ -1,6 +1,11 @@
 // See https://kit.svelte.dev/docs/types#app
 // for information about these interfaces
 // and what to do when importing types
+
+// eslint-disable-next-line no-var
+declare var Email: {
+	send: (params: SendParams) => Promise<string>
+}
 declare namespace App {
 	// interface Error {}
 	// interface Locals {}
@@ -44,7 +49,4 @@ type SendParams = {
 	Body: string
 }
 
-// eslint-disable-next-line no-var
-declare var Email: {
-	send: (params: SendParams) => Promise<string>
-}
+declare module 'remark-abbr'

@@ -12,8 +12,8 @@ export async function fetchPosts({ offset = 0, limit = ALL_POST_FLAG, tag = '' }
 		Object.entries(modules).map(async ([path, resolver]) => {
 			const slug = basename(dirname(path))
 			const module = (await resolver()) as App.MdsvexModule
-			const html = module.default.render().html
-			const metadata = module.metadata
+			const { html } = module.default.render()
+			const { metadata } = module
 			return { slug, html, ...metadata }
 		}),
 	)
@@ -46,17 +46,7 @@ export async function fetchAllTags() {
 }
 
 export async function fetchAbout() {
-	const aboutModule = await import(`../content/about/index.md`)
-
-	const about = await Promise.all(
-		Object.entries(aboutModule).map(async ([path, resolver]) => {
-			const slug = basename(dirname(path))
-			const module = (await resolver()) as App.MdsvexModule
-			const html = module.default.render().html
-			const metadata = module.metadata
-			return { slug, html, ...metadata }
-		}),
-	)
+	// const aboutModule =  import(`../content/about/index.md`)
 }
 
 // ref: https://github.com/cesarnml/sveltekit-blog-starter/blob/62bed7db2d872206b86cefa74d01ac7290ade301/src/lib/assets/js/fetchPosts.js#L9

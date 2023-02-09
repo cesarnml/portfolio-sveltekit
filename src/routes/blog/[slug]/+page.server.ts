@@ -1,5 +1,5 @@
-import type { PageServerLoad } from './$types'
 import { error } from '@sveltejs/kit'
+import type { PageServerLoad } from './$types'
 
 export const load = (async ({ params }) => {
 	try {
@@ -9,7 +9,7 @@ export const load = (async ({ params }) => {
 			throw error(404, 'Post not found') // Couldn't resolve the post
 		}
 
-		const html = postModule.default.render().html
+		const { html } = postModule.default.render()
 
 		return {
 			html,

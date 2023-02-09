@@ -1,5 +1,6 @@
 import { getHighlighter, renderToHtml } from 'shiki'
 import { readFile } from 'fs/promises'
+
 const synthWave84Theme = JSON.parse(await readFile(new URL('./synthWave84.json', import.meta.url)))
 
 const htmlEscapes = {
@@ -102,24 +103,18 @@ async function highlighter(code, lang, meta) {
 		lineOptions: isFocus
 			? highlightLinesFocus.map((element) => ({ line: element, classes: ['highlight-line-focus'] }))
 			: [
-					...highlightLinesAdd.map((element) => {
-						return {
-							line: element,
-							classes: ['highlight-line-add'],
-						}
-					}),
-					...highlightLinesRemove.map((element) => {
-						return {
-							line: element,
-							classes: ['highlight-line-remove'],
-						}
-					}),
-					...highlightLinesNormal.map((element) => {
-						return {
-							line: element,
-							classes: ['highlight-line-normal'],
-						}
-					}),
+					...highlightLinesAdd.map((element) => ({
+						line: element,
+						classes: ['highlight-line-add'],
+					})),
+					...highlightLinesRemove.map((element) => ({
+						line: element,
+						classes: ['highlight-line-remove'],
+					})),
+					...highlightLinesNormal.map((element) => ({
+						line: element,
+						classes: ['highlight-line-normal'],
+					})),
 			  ],
 	})
 

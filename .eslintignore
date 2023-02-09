@@ -12,3 +12,6 @@ pnpm-lock.yaml
 package-lock.json
 yarn.lock
 .vercel
+playwright-report
+static/js/*.js
+src/**/*.spec.ts

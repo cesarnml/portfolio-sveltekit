@@ -1,6 +1,5 @@
 import { Url } from '@lib/url'
 import { render, screen } from '@testing-library/svelte'
-import { sidebar } from '@stores/sidebar'
 
 import NavLinks from './NavLinks.svelte'
 

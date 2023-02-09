@@ -1,3 +1,4 @@
+/* eslint-disable import/extensions */
 // setupTest.ts
 // ref: https://github.com/davipon/svelte-component-test-recipes#setuptestts
 /* eslint-disable @typescript-eslint/no-empty-function */
