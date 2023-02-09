@@ -47,10 +47,10 @@
 
 <svelte:head><title>Contact Me</title></svelte:head>
 
-<div class="dark:prose-invert prose">
+<div class="prose dark:prose-invert">
 	<div class="flex flex-col items-center">
 		<h1>Contact Me</h1>
-		<form class="max-w-screen-xs flex flex-col items-stretch w-full gap-4" on:submit|preventDefault={sendEmail}>
+		<form class="flex w-full max-w-screen-xs flex-col items-stretch gap-4" on:submit|preventDefault={sendEmail}>
 			<label class="input-label" for="name">
 				<span class="font-semibold">Your name</span>
 				<input
@@ -87,7 +87,7 @@
 					placeholder="What would you like to talk about?"
 				/>
 			</label>
-			<button class="tn variant-filled-primary btn-base text-white" type="submit" disabled={buttonDisabled}>
+			<button class="tn btn-base variant-filled-primary text-white" type="submit" disabled={buttonDisabled}>
 				{buttonText}
 			</button>
 		</form>

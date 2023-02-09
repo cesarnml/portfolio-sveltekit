@@ -5,9 +5,9 @@
 </script>
 
 <a class="flex items-center justify-center gap-2" href={Url.Home}>
-	<div class="w-12 h-12">
+	<div class="h-12 w-12">
 		<Picture
-			class="object-contain w-full h-12"
+			class="h-12 w-full object-contain"
 			src="/src/lib/assets/picture/avatar.png"
 			alt="avatar"
 			loading="eager"

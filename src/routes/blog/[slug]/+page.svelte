@@ -71,17 +71,17 @@
 
 <PageHead title={data.frontmatter.title} description={data.frontmatter.description} />
 
-<div class="hidden absolute w-[240px] xl:inline-block h-full top-8 -right-[240px]">
+<div class="absolute top-8 -right-[240px] hidden h-full w-[240px] xl:inline-block">
 	<TableOfContents
 		target="#toc-target"
-		class="top-8 card variant-soft-primary sticky p-4"
+		class="card variant-soft-primary sticky top-8 p-4"
 		width="w-fit"
 		regionList="list-none font-semibold"
 	/>
 </div>
 
 <article
-	class="dark:prose-invert prose-a:no-underline hover:prose-a:text-secondary-800 dark:hover:prose-a:text-primary-500 max-w-screen-2md prose"
+	class="prose max-w-screen-2md prose-a:no-underline hover:prose-a:text-secondary-800 dark:prose-invert dark:hover:prose-a:text-primary-500"
 >
 	<section class="mb-4">
 		<ArticleTitle title={data.frontmatter.title} />

@@ -34,7 +34,7 @@
 
 <div class="space-y-4">
 	<h2 class="font-bold">All Blog Posts</h2>
-	<div class="md:grid-cols-2 grid grid-cols-1 gap-8">
+	<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
 		{#each paginatedData as post (post.slug)}
 			<a class="card card-hover variant-glass-surface " href={Url.BlogDetail(post.slug)}>
 				<header><Picture class="object-cover" src={post.image} alt="blog" /></header>

@@ -17,3 +17,6 @@ static/js/*.js
 src/**/*.spec.ts
 src/**/*.mjs
 *.mjs
+playwright.config.ts
+setupTest.ts
+svelte.config.js

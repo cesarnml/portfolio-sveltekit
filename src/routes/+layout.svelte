@@ -27,7 +27,7 @@
 	<svelte:fragment slot="sidebarRight" />
 	<svelte:fragment slot="pageHeader" />
 	<!-- Router Slot -->
-	<div class="container relative p-4 mx-auto md:p-8 max-w-screen-2md">
+	<div class="container relative mx-auto max-w-screen-2md p-4 md:p-8">
 		<PageTransition {pathname}>
 			<slot />
 		</PageTransition>
@@ -38,8 +38,8 @@
 </AppShell>
 
 <Drawer position="top" bgDrawer="backdrop-blur" height="h-screen" duration={250}>
-	<div class="flex flex-col items-center py-6 px-4 gap-2">
-		<div class="flex items-center justify-between w-full mb-8">
+	<div class="flex flex-col items-center gap-2 py-6 px-4">
+		<div class="mb-8 flex w-full items-center justify-between">
 			<div class="px-[11px]">
 				<LightSwitch class="outline-none" />
 			</div>

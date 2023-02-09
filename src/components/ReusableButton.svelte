@@ -5,4 +5,4 @@
 	let name = 'Hello world!'
 </script>
 
-<button class="btn variant-filled-primary btn-base" on:click={onClick}>{name}</button>
+<button class="btn btn-base variant-filled-primary" on:click={onClick}>{name}</button>

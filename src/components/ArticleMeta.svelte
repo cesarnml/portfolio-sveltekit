@@ -14,7 +14,7 @@
 </script>
 
 <div class="flex items-center gap-4">
-	<div class="w-12 h-12 md:w-14 md:h-14">
+	<div class="h-12 w-12 md:h-14 md:w-14">
 		<Picture class="m-0" src="/src/lib/assets/picture/favicon.png" alt="avatar" loading="eager" decoding="sync" />
 	</div>
 	<div class="flex flex-col">
