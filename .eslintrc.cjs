@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 module.exports = {
 	root: true,
 	parser: '@typescript-eslint/parser',
@@ -36,7 +37,6 @@ module.exports = {
 	rules: {
 		'import/no-extraneous-dependencies': 0,
 		'@typescript-eslint/no-shadow': 0,
-		'global-require': 0,
 		'@typescript-eslint/no-var-requires': 0,
 		'import/prefer-default-export': 0,
 		'@typescript-eslint/no-throw-literal': 0,

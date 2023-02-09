@@ -11,12 +11,11 @@ node_modules
 pnpm-lock.yaml
 package-lock.json
 yarn.lock
+
+# Custom ignore
 .vercel
 playwright-report
 static/js/*.js
 src/**/*.spec.ts
-src/**/*.mjs
-*.mjs
-playwright.config.ts
-setupTest.ts
-svelte.config.js
+src/**/codeHighlighter.mjs
+./mdsvex.config.mjs

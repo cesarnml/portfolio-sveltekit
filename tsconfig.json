@@ -33,6 +33,20 @@
 		"tests/**/*.js",
 		"tests/**/*.ts",
 		"tests/**/*.svelte",
-		".eslintrc.cjs"
+		".*.cjs",
+		"*.ts",
+		"*.js"
+	],
+	"exclude": [
+		"node_modules/**",
+		".svelte-kit/[!ambient.d.ts]**",
+		"src/service-worker.js",
+		"src/service-worker.ts",
+		"src/service-worker.d.ts",
+		// Excluded because lint errors are tough to debug and files won't change
+		"mdsvex.config.mjs",
+		"src/lib/codeHighlighter.mjs",
+		"svelte.config.js",
+		"tailwind.config.cjs"
 	]
 }

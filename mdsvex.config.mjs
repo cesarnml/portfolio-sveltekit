@@ -1,4 +1,3 @@
-/* eslint-disable import/extensions */
 import { defineMDSveXConfig as defineConfig } from 'mdsvex'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeSlug from 'rehype-slug'
