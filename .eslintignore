@@ -15,3 +15,5 @@ yarn.lock
 playwright-report
 static/js/*.js
 src/**/*.spec.ts
+src/**/*.mjs
+*.mjs

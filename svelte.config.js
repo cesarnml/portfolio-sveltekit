@@ -2,7 +2,7 @@ import adapter from '@sveltejs/adapter-vercel'
 import { vitePreprocess } from '@sveltejs/kit/vite'
 import { mdsvex } from 'mdsvex'
 import { resolve } from 'path'
-import mdsvexConfig from './mdsvex.config'
+import mdsvexConfig from './mdsvex.config.mjs'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
