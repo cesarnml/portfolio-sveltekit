@@ -30,15 +30,9 @@
 		"src/**/*.js",
 		"src/**/*.ts",
 		"src/**/*.svelte",
-		"src/**/*.js",
-		"src/**/*.ts",
-		"src/**/*.svelte",
 		"tests/**/*.js",
 		"tests/**/*.ts",
 		"tests/**/*.svelte",
-		"*.cjs",
-		".eslintrc.cjs",
-		"*.js",
-		"*.ts"
+		".eslintrc.cjs"
 	]
 }
