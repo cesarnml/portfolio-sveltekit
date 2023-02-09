@@ -28,7 +28,7 @@
 <div class="mb-4 space-x-4">
 	<span>All Tags:</span>
 	{#each tags as tag (tag)}
-		<a href={`/blog/tag/${tag}`} class="btn btn-base variant-soft-primary">{tag}</a>
+		<a href={`/blog/tag/${tag}`} class="btn-base btn variant-soft-primary">{tag}</a>
 	{/each}
 </div>
 
