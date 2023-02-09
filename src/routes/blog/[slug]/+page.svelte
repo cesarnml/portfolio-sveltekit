@@ -81,7 +81,7 @@
 </div>
 
 <article
-	class="prose max-w-screen-2md prose-a:no-underline hover:prose-a:text-secondary-800 dark:prose-invert dark:hover:prose-a:text-primary-500"
+	class="prose max-w-screen-2md dark:prose-invert prose-a:no-underline hover:prose-a:text-secondary-800 dark:hover:prose-a:text-primary-500"
 >
 	<section class="mb-4">
 		<ArticleTitle title={data.frontmatter.title} />
