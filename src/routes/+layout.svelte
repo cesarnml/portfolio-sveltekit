@@ -37,13 +37,13 @@
 </AppShell>
 
 <Drawer position="top" bgDrawer="backdrop-blur" height="h-screen" duration={250}>
-	<div class="flex flex-col items-center p-4 gap-3">
-		<div class="flex items-center justify-between w-full">
+	<div class="flex flex-col items-center py-6 px-4 gap-2">
+		<div class="flex items-center justify-between w-full mb-8">
 			<div class="px-[11px]">
 				<LightSwitch class="outline-none" />
 			</div>
 			<NavHamburgerMenu />
 		</div>
-		<NavLinks className="text-xl font-semibold list-nav" />
+		<NavLinks className="text-xl font-semibold list-nav py-6" />
 	</div>
 </Drawer>
