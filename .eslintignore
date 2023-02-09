@@ -15,7 +15,10 @@ yarn.lock
 # Custom ignore
 .vercel
 playwright-report
+
+# Annoying
 static/js/*.js
 src/**/*.spec.ts
-src/**/codeHighlighter.mjs
-./mdsvex.config.mjs
+mdsvex.config.mjs
+src/lib/codeHighlighter.mjs
+setupTest.ts

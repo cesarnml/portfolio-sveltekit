@@ -33,9 +33,11 @@
 		"tests/**/*.js",
 		"tests/**/*.ts",
 		"tests/**/*.svelte",
-		".*.cjs",
+		"*.js",
+		"*.cjs",
+		"*.mjs",
 		"*.ts",
-		"*.js"
+		".*.cjs"
 	],
 	"exclude": [
 		"node_modules/**",
@@ -46,7 +48,8 @@
 		// Excluded because lint errors are tough to debug and files won't change
 		"mdsvex.config.mjs",
 		"src/lib/codeHighlighter.mjs",
+		"tailwind.config.cjs",
 		"svelte.config.js",
-		"tailwind.config.cjs"
+		"setupTest.ts"
 	]
 }
