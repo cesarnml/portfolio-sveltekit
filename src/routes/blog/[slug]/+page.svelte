@@ -5,8 +5,8 @@
 	import PageHead from '@components/PageHead.svelte'
 	import ArticleTitle from '@components/ArticleTitle.svelte'
 	import ArticleMeta from '@components/ArticleMeta.svelte'
-	import { handleCopyClick } from '@lib/handleCopyClick'
 	import { TableOfContents } from '@skeletonlabs/skeleton'
+	import handleCopyClick from '@lib/handleCopyClick'
 	export let data: PageServerData
 
 	onMount(async () => {

@@ -1,8 +1,8 @@
-import { retrieveTextToCopy } from './retrieveTextToCopy'
-import { copyToClipboard } from './copyToClipboard'
-import { showCopyFeedbackAnimation } from './showCopyFeedbackAnimation'
+import copyToClipboard from './copyToClipboard'
+import retrieveTextToCopy from './retrieveTextToCopy'
+import showCopyFeedbackAnimation from './showCopyFeedbackAnimation'
 
-export const handleCopyClick = (evt: MouseEvent | TouchEvent) => {
+export default function handleCopyClick(evt: MouseEvent | TouchEvent) {
 	const textToCopy = retrieveTextToCopy(evt)
 	copyToClipboard(textToCopy)
 	showCopyFeedbackAnimation(evt.target as HTMLButtonElement)

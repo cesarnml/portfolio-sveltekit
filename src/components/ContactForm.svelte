@@ -54,7 +54,7 @@
 			<label class="input-label" for="name">
 				<span class="font-semibold">Your name</span>
 				<input
-					class="italic"
+					class="input italic"
 					id="name"
 					type="text"
 					name="name"
@@ -66,7 +66,7 @@
 			<label for="email" class="input-label">
 				<span class="font-semibold">Your email</span>
 				<input
-					class="italic"
+					class="input italic"
 					id="email"
 					type="email"
 					name="email"
@@ -78,7 +78,7 @@
 			<label for="message" class="input-label">
 				<span class="font-semibold">What's on your mind?</span>
 				<textarea
-					class="italic"
+					class="textarea italic"
 					id="mesage"
 					name="message"
 					bind:value={message}
@@ -87,7 +87,7 @@
 					placeholder="What would you like to talk about?"
 				/>
 			</label>
-			<button class="tn btn-base variant-filled-primary text-white" type="submit" disabled={buttonDisabled}>
+			<button class="btn btn-base variant-filled-primary text-white" type="submit" disabled={buttonDisabled}>
 				{buttonText}
 			</button>
 		</form>

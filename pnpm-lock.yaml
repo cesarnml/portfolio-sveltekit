@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@playwright/test': ^1.30.0
-  '@skeletonlabs/skeleton': ^0.99.5
+  '@skeletonlabs/skeleton': ^0.124.2
   '@supabase/auth-helpers-sveltekit': ^0.8.7
   '@supabase/supabase-js': ^2.7.1
   '@sveltejs/adapter-vercel': ^1.0.6
@@ -63,7 +63,7 @@ dependencies:
 
 devDependencies:
   '@playwright/test': 1.30.0
-  '@skeletonlabs/skeleton': 0.99.5
+  '@skeletonlabs/skeleton': 0.124.2
   '@supabase/auth-helpers-sveltekit': 0.8.7_wwkefq4crizglppdxtjqhrdudm
   '@supabase/supabase-js': 2.7.1
   '@sveltejs/adapter-vercel': 1.0.6_@sveltejs+kit@1.5.0
@@ -544,8 +544,10 @@ packages:
     resolution: {integrity: sha512-gFukHN4t8K4+wVC+ECqeqwzBDeFeTzBXroBTqE6vcWrQGbEUpHO7LYdG0f4xnvYq4VOEwITSlHlp0JBAIFMS/g==}
     dev: true
 
-  /@skeletonlabs/skeleton/0.99.5:
-    resolution: {integrity: sha512-P3YvmAItNk/IzT6ma9q1D3T8leiit+T4BgpVynWuKOZg9FVWakB1M88ncuuEOkk+nAH/cGtjIEtougGB9+ynNw==}
+  /@skeletonlabs/skeleton/0.124.2:
+    resolution: {integrity: sha512-SQ0tgXXEj/QJ5BSA+UwKdSMADW5Xt+5iNpks1y94YnX2iwAY80MlffEfip+//VXYayeGvzx4xiU4//MpK9+Zgg==}
+    dependencies:
+      svelte: 3.55.1
     dev: true
 
   /@supabase/auth-helpers-shared/0.2.4_wwkefq4crizglppdxtjqhrdudm:

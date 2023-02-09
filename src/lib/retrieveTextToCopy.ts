@@ -15,7 +15,7 @@
 
 const codeElementTagName = 'code'
 
-export const retrieveTextToCopy = (evt: MouseEvent | TouchEvent) => {
+export default function retrieveTextToCopy(evt: MouseEvent | TouchEvent) {
 	const copyButton = evt.target as HTMLButtonElement
 	const preElement = copyButton.parentElement?.parentElement?.parentElement as HTMLPreElement
 	const codeElement = preElement.querySelector(codeElementTagName) as HTMLElement

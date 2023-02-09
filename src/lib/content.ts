@@ -1,5 +1,5 @@
 import { basename, dirname } from 'path'
-import { adjustPostReadingTimeText } from './blogHelpers'
+import adjustPostReadingTimeText from './blogHelpers'
 
 const ALL_POST_FLAG = -1
 

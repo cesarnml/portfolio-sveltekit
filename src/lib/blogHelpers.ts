@@ -18,7 +18,7 @@ function adjustReadingTimeText(time: number, wordsPerMinute = wpm) {
 /**
  * Adjust a blog post's readingTime.text by custom wordsPerMinute
  */
-export function adjustPostReadingTimeText(post: App.BlogPost) {
+export default function adjustPostReadingTimeText(post: App.BlogPost) {
 	const adjustedReadingTimeText = adjustReadingTimeText(post.readingTime.time)
 	post.readingTime.text = adjustedReadingTimeText
 	return post

@@ -2,7 +2,7 @@
  * Programmatically copies `text` to user clipboard and
  * restores any previously user selected text on the page
  */
-export const copyToClipboard = async (text: string) => {
+export default async function copyToClipboard(text: string) {
 	// Take steps to preserve user existing selection - if any
 	// ref. https://developer.mozilla.org/en-US/docs/Web/API/Selection/
 	const selection = document.getSelection()

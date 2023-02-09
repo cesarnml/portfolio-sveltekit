@@ -2,7 +2,7 @@ const animationDuration = 1500 // ms
 const feedbackText = 'Copied 🎉'
 const attribute = 'data-copy-to-clipboard-animating'
 
-export const showCopyFeedbackAnimation = (copyButton: HTMLButtonElement) => {
+export default function showCopyFeedbackAnimation(copyButton: HTMLButtonElement) {
 	if (copyButton.getAttribute(attribute) === 'true') return
 	// store code language
 	const codeLanguage = copyButton.innerText
