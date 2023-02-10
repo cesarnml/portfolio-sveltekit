@@ -5,7 +5,8 @@
 	export let href = '/'
 	export let label = 'No label'
 
-	$: setActiveClass = (href: string) => (href === $page.url.pathname ? 'text-secondary-400 dark:text-primary-400' : '')
+	$: setActiveClass = (href: string) =>
+		href === $page.url.pathname ? 'text-secondary-400 dark:text-primary-400' : ''
 </script>
 
 <a

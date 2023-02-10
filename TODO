@@ -1,0 +1,30 @@
+PersonalWebsite:
+  ☐ Create content for Home page
+    ☐ Add typing animation
+    ☐ Feature blog post
+    ☐ Minimal self blurb
+    ☐ Latest articles
+  ✔ Create content for About page @done(23-02-10 15:28)
+    ✔ Create AboutMe card @started(23-02-10 13:21) @done(23-02-10 15:05) @lasted(1h44m14s)
+    ✔ Skills/Tools @started(23-02-10 15:05) @done(23-02-10 15:27) @lasted(22m49s)
+  ☐ Create Contact page
+  ☐ Customize skeleton theme
+  ☐ Update Resume
+  ☐ Write minimal playwright test
+  ☐ Write minimal component test
+  ☐ Create logo
+  ☐ Add supabase to track page views?
+  ☐ Incorporate WakaTime?
+  ☐ Add some unsplash images to spice things up
+  ☐ Write articles
+    ☐ Article 1:
+    ☐ Article 2:
+    ☐ Article 3:
+    ☐ Article 4:
+    ☐ Article 5:
+ 
+ThaiSpicyFlashCards:
+  ☐ Scaffold NextJS13 app
+
+LearnLocker:
+  ☐ Scaffold SvelteKit app

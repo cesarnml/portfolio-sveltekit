@@ -386,7 +386,10 @@
 		},
 		{
 			"name": "Template expression",
-			"scope": ["punctuation.definition.template-expression.begin", "punctuation.definition.template-expression.end"],
+			"scope": [
+				"punctuation.definition.template-expression.begin",
+				"punctuation.definition.template-expression.end"
+			],
 			"settings": {
 				"foreground": "#72f1b8"
 			}
@@ -435,7 +438,10 @@
 		},
 		{
 			"name": "Pseudo CSS",
-			"scope": ["entity.other.attribute-name.pseudo-element", "entity.other.attribute-name.pseudo-class"],
+			"scope": [
+				"entity.other.attribute-name.pseudo-element",
+				"entity.other.attribute-name.pseudo-class"
+			],
 			"settings": {
 				"foreground": "#D50"
 			}
@@ -578,7 +584,10 @@
 		},
 		{
 			"name": "Elixir Classes",
-			"scope": ["source.elixir support.type.elixir", "source.elixir meta.module.elixir entity.name.class.elixir"],
+			"scope": [
+				"source.elixir support.type.elixir",
+				"source.elixir meta.module.elixir entity.name.class.elixir"
+			],
 			"settings": {
 				"foreground": "#36f9f6"
 			}
@@ -592,7 +601,10 @@
 		},
 		{
 			"name": "Elixir Constants",
-			"scope": ["source.elixir constant.other.symbol.elixir", "source.elixir constant.other.keywords.elixir"],
+			"scope": [
+				"source.elixir constant.other.symbol.elixir",
+				"source.elixir constant.other.keywords.elixir"
+			],
 			"settings": {
 				"foreground": "#36f9f6"
 			}
@@ -693,14 +705,22 @@
 		},
 		{
 			"name": "Go interfaces",
-			"scope": ["source.go storage.type", "source.go keyword.struct.go", "source.go keyword.interface.go"],
+			"scope": [
+				"source.go storage.type",
+				"source.go keyword.struct.go",
+				"source.go keyword.interface.go"
+			],
 			"settings": {
 				"foreground": "#72f1b8"
 			}
 		},
 		{
 			"name": "Go Constants e.g. nil, string format (%s, %d, etc.)",
-			"scope": ["source.go constant.language.go", "source.go constant.other.placeholder.go", "source.go variable"],
+			"scope": [
+				"source.go constant.language.go",
+				"source.go constant.other.placeholder.go",
+				"source.go variable"
+			],
 			"settings": {
 				"foreground": "#2EE2FA"
 			}

@@ -4,7 +4,7 @@
 	import NavMenu from './NavMenu.svelte'
 </script>
 
-<AppBar>
+<AppBar class="shadow-lg">
 	<svelte:fragment slot="lead"><NavBrand /></svelte:fragment>
 	<svelte:fragment slot="trail"><NavMenu /></svelte:fragment>
 </AppBar>

@@ -5,7 +5,9 @@ import NavLinks from './NavLinks.svelte'
 
 describe('NavLinks', () => {
 	const excludedUrls = ['BlogDetail']
-	const navLinks = Object.keys(Url).filter((url) => !excludedUrls.includes(url)) as (keyof typeof Url)[]
+	const navLinks = Object.keys(Url).filter(
+		(url) => !excludedUrls.includes(url),
+	) as (keyof typeof Url)[]
 
 	beforeEach(() => {
 		render(NavLinks)

@@ -20,3 +20,31 @@ export const github = 'https://github.com/cesarnml'
 export const devTo = 'https://dev.to/cesarnml'
 export const stackoverflow = 'https://stackoverflow.com/users/9323122/cesar-napoleon-mejia-leiva'
 export const twitter = 'https://twitter.com/cesarnm'
+
+/**
+ * Skills to display on About page
+ */
+export const skills = [
+	'HTML',
+	'CSS',
+	'Git',
+	'JavaScript',
+	'TypeScript',
+	'Python',
+	'SQL',
+	'React',
+	'NextJS',
+	'SvelteKit',
+	'AstroJS',
+	'Django',
+	'NodeJS',
+	'Express',
+	'Prisma ORM',
+	'PostgreSQL',
+	'SWR',
+	'Vitest',
+	'Testing Library',
+	'Playwright',
+	'SCSS',
+	'TailwindCSS',
+]

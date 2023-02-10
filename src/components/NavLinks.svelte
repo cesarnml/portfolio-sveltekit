@@ -5,7 +5,9 @@
 
 	export let className = ''
 	const excludedUrls = ['BlogDetail']
-	const navLinks = Object.keys(Url).filter((url) => !excludedUrls.includes(url)) as (keyof typeof Url)[]
+	const navLinks = Object.keys(Url).filter(
+		(url) => !excludedUrls.includes(url),
+	) as (keyof typeof Url)[]
 </script>
 
 {#each navLinks as navLink (navLink)}

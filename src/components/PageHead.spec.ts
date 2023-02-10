@@ -15,11 +15,17 @@ describe('PageHead with defined title', () => {
 		expect(document.querySelector('title')).toHaveTextContent(formattedTitle)
 	})
 	test('to have a meta description', () => {
-		expect(getMetaByName('description')).toHaveAttribute('content', expect.stringContaining(description))
+		expect(getMetaByName('description')).toHaveAttribute(
+			'content',
+			expect.stringContaining(description),
+		)
 	})
 
 	test('to have a meta og:site_name', () => {
-		expect(getMetaByProperty('og:site_name')).toHaveAttribute('content', expect.stringContaining(siteTitle))
+		expect(getMetaByProperty('og:site_name')).toHaveAttribute(
+			'content',
+			expect.stringContaining(siteTitle),
+		)
 	})
 
 	test('to have a meta og:title', () => {
@@ -27,7 +33,10 @@ describe('PageHead with defined title', () => {
 	})
 
 	test('to have a meta og:description', () => {
-		expect(getMetaByProperty('og:description')).toHaveAttribute('content', expect.stringContaining(description))
+		expect(getMetaByProperty('og:description')).toHaveAttribute(
+			'content',
+			expect.stringContaining(description),
+		)
 	})
 
 	test('to have a meta httpequiv', () => {
@@ -51,19 +60,31 @@ describe('PageHead with empty string title', () => {
 		expect(document.querySelector('title')).toHaveTextContent(formattedTitle)
 	})
 	test('to have a meta description', () => {
-		expect(getMetaByName('description')).toHaveAttribute('content', expect.stringContaining(description))
+		expect(getMetaByName('description')).toHaveAttribute(
+			'content',
+			expect.stringContaining(description),
+		)
 	})
 
 	test('to have a meta og:site_name', () => {
-		expect(getMetaByProperty('og:site_name')).toHaveAttribute('content', expect.stringContaining(siteTitle))
+		expect(getMetaByProperty('og:site_name')).toHaveAttribute(
+			'content',
+			expect.stringContaining(siteTitle),
+		)
 	})
 
 	test('to have a meta og:title', () => {
-		expect(getMetaByProperty('og:title')).toHaveAttribute('content', expect.stringContaining(formattedTitle))
+		expect(getMetaByProperty('og:title')).toHaveAttribute(
+			'content',
+			expect.stringContaining(formattedTitle),
+		)
 	})
 
 	test('to have a meta og:description', () => {
-		expect(getMetaByProperty('og:description')).toHaveAttribute('content', expect.stringContaining(description))
+		expect(getMetaByProperty('og:description')).toHaveAttribute(
+			'content',
+			expect.stringContaining(description),
+		)
 	})
 
 	test('to have a meta httpequiv', () => {

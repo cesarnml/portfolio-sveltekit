@@ -26,7 +26,9 @@
 			const buttonWrap = ele.querySelector('.code-wrap-btn')
 
 			// OnMount determine if we should show/hide wrap button
-			let hasHorizontalScroll = codeWrapper ? codeWrapper.scrollWidth > codeWrapper.clientWidth : false
+			let hasHorizontalScroll = codeWrapper
+				? codeWrapper.scrollWidth > codeWrapper.clientWidth
+				: false
 			if (hasHorizontalScroll) {
 				buttonWrap?.classList.remove('hidden')
 			}
@@ -35,7 +37,9 @@
 			window?.addEventListener(
 				'resize',
 				() => {
-					hasHorizontalScroll = codeWrapper ? codeWrapper.scrollWidth > codeWrapper.clientWidth : false
+					hasHorizontalScroll = codeWrapper
+						? codeWrapper.scrollWidth > codeWrapper.clientWidth
+						: false
 					if (buttonWrap) {
 						if (hasHorizontalScroll) {
 							buttonWrap.classList.remove('hidden')

@@ -11,6 +11,7 @@
 	import '@styles/app.css'
 	import 'iconify-icon'
 	import type { LayoutData } from './$types'
+	import { Toast } from '@skeletonlabs/skeleton'
 
 	export let data: LayoutData
 	const { pathname } = data
@@ -26,7 +27,7 @@
 	<svelte:fragment slot="sidebarRight" />
 	<svelte:fragment slot="pageHeader" />
 	<!-- Router Slot -->
-	<div class="container relative mx-auto max-w-screen-2md p-4 md:p-8">
+	<div class="container relative mx-auto max-w-screen-lg p-4 md:p-6 lg:p-8">
 		<PageTransition {pathname}>
 			<slot />
 		</PageTransition>
@@ -47,3 +48,5 @@
 		<NavLinks className="text-xl font-semibold list-nav py-6" />
 	</div>
 </Drawer>
+
+<Toast />

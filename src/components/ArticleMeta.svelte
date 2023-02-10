@@ -10,7 +10,13 @@
 
 <div class="flex items-center gap-4">
 	<div class="h-12 w-12 md:h-14 md:w-14">
-		<Picture class="m-0" src="/src/lib/assets/picture/favicon.png" alt="avatar" loading="eager" decoding="sync" />
+		<Picture
+			class="m-0"
+			src="/src/lib/assets/picture/favicon.png"
+			alt="avatar"
+			loading="eager"
+			decoding="sync"
+		/>
 	</div>
 	<div class="flex flex-col">
 		<div class="space-x-1">
@@ -20,7 +26,11 @@
 		</div>
 		<div class="flex items-center space-x-2">
 			<div class="flex items-center gap-2">
-				<iconify-icon icon="material-symbols:menu-book-outline" alt="book-outline" class="text-lg" />
+				<iconify-icon
+					icon="material-symbols:menu-book-outline"
+					alt="book-outline"
+					class="text-lg"
+				/>
 				<span> {readingTime}</span>
 			</div>
 			<span>&middot;</span>
