@@ -5,7 +5,7 @@
 		.toLowerCase()
 		.replace(/[^a-zA-Z ]/g, '')
 		.replace(/\s/g, '-')
-	const href = slug ? `/blog/${slug}` : `'#'${id}`
+	const href = slug ? `/blog/${slug}` : `#${id}`
 </script>
 
 <h1 class="text-3xl" {id}>
