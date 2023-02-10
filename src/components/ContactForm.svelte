@@ -87,7 +87,7 @@
 					placeholder="What would you like to talk about?"
 				/>
 			</label>
-			<button class="btn-base btn variant-filled-primary text-white" type="submit" disabled={buttonDisabled}>
+			<button class="btn btn-base variant-filled-primary text-white" type="submit" disabled={buttonDisabled}>
 				{buttonText}
 			</button>
 		</form>
