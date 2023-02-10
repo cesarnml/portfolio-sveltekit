@@ -21,7 +21,7 @@
 </script>
 
 <svelte:head>
-	<title>All Blog Posts</title>
+	<title>Blog Posts</title>
 	<link rel="canonical" href={$page.url.href} />
 </svelte:head>
 
@@ -33,7 +33,7 @@
 </div>
 
 <div class="space-y-4">
-	<h2 class="font-bold">All Blog Posts</h2>
+	<h2 class="font-bold">All Posts</h2>
 	<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
 		{#each paginatedData as post (post.slug)}
 			<a class="card card-hover variant-glass-surface " href={Url.BlogDetail(post.slug)}>
