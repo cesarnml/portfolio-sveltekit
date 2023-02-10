@@ -15,6 +15,7 @@ specifiers:
   '@testing-library/jest-dom': ^5.16.5
   '@testing-library/svelte': ^3.2.2
   '@testing-library/user-event': ^14.4.3
+  '@types/lodash': ^4.14.191
   '@types/testing-library__jest-dom': ^5.14.5
   '@typescript-eslint/eslint-plugin': ^5.51.0
   '@typescript-eslint/parser': ^5.51.0
@@ -58,9 +59,6 @@ specifiers:
   vite-imagetools: ^4.0.18
   vitest: ^0.27.3
 
-dependencies:
-  dayjs: 1.11.7
-
 devDependencies:
   '@playwright/test': 1.30.0
   '@skeletonlabs/skeleton': 0.124.2
@@ -76,12 +74,14 @@ devDependencies:
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/svelte': 3.2.2_svelte@3.55.1
   '@testing-library/user-event': 14.4.3_yxlyej73nftwmh2fiao7paxmlm
+  '@types/lodash': 4.14.191
   '@types/testing-library__jest-dom': 5.14.5
   '@typescript-eslint/eslint-plugin': 5.51.0_b635kmla6dsb4frxfihkw4m47e
   '@typescript-eslint/parser': 5.51.0_4vsywjlpuriuw3tl5oq6zy5a64
   '@vitest/coverage-c8': 0.27.3_jsdom@21.1.0
   autoprefixer: 10.4.13_postcss@8.4.21
   clsx: 1.2.1
+  dayjs: 1.11.7
   eslint: 8.33.0
   eslint-config-airbnb-base: 15.0.0_ohdts44xlqyeyrlje4qnefqeay
   eslint-config-airbnb-typescript: 17.0.0_hr4vvfxda2sq3vvto4fmjggsgy
@@ -821,6 +821,10 @@ packages:
 
   /@types/json5/0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
+    dev: true
+
+  /@types/lodash/4.14.191:
+    resolution: {integrity: sha512-BdZ5BCCvho3EIXw6wUCXHe7rS53AIDPLE+JzwgT+OsJk53oBfbSmZZ7CX4VaRoN78N+TJpFi9QPlfIVNmJYWxQ==}
     dev: true
 
   /@types/mdast/3.0.10:
@@ -1596,7 +1600,7 @@ packages:
 
   /dayjs/1.11.7:
     resolution: {integrity: sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ==}
-    dev: false
+    dev: true
 
   /debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
