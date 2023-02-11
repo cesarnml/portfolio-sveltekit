@@ -6,7 +6,6 @@
  -->
 <script lang="ts">
 	import { github, linkedIn, stackoverflow, twitter, devTo } from '@lib/config'
-	import { keys } from 'lodash'
 
 	/**
 	 * Extend map with additional imports/icons if desired
@@ -31,7 +30,7 @@
 </script>
 
 <div class="flex gap-8 text-2xl">
-	{#each keys(hrefToIconMap) as href}
+	{#each Object.keys(hrefToIconMap) as href}
 		<!-- Render link if truthy. See lib/config.js -->
 		{#if Boolean(href)}
 			<a {href} target="_blank" rel="noreferrer noopener">
