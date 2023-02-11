@@ -7,7 +7,7 @@ PersonalWebsite:
   ✔ Create content for About page @done(23-02-10 15:28)
     ✔ Create AboutMe card @started(23-02-10 13:21) @done(23-02-10 15:05) @lasted(1h44m14s)
     ✔ Skills/Tools @started(23-02-10 15:05) @done(23-02-10 15:27) @lasted(22m49s)
-  ☐ Create Contact page
+  ✔ Create Contact page @done(23-02-11 08:23)
   ☐ Customize skeleton theme
   ☐ Update Resume
   ☐ Write minimal playwright test
@@ -22,9 +22,6 @@ PersonalWebsite:
     ☐ Article 3:
     ☐ Article 4:
     ☐ Article 5:
- 
-ThaiSpicyFlashCards:
-  ☐ Scaffold NextJS13 app
-
-LearnLocker:
-  ☐ Scaffold SvelteKit app
+  ☐ Add robots.txt
+  ☐ Add XML Sitemaps
+  ☐ Add Google Analytics
