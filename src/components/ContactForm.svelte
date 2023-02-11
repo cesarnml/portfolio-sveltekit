@@ -70,9 +70,9 @@
 		<div class="w-full max-w-screen-xs">
 			<h2 class="mb-8 text-center">Contact Me</h2>
 			<form class="flex flex-col items-stretch gap-6" on:submit|preventDefault={sendEmail}>
-				<p class="mb-4 !text-lg">
-					You can contact me through this contact form or through my <a
-						href="mailto:cmejia@gmail.com">personal email</a
+				<p class="!text-lg">
+					You can contact me via this contact form or through my <a href="mailto:cmejia@gmail.com"
+						>personal email</a
 					> and I will get back to you as soon as I can.
 				</p>
 				<label class="input-label" for="name">
@@ -88,7 +88,7 @@
 					/>
 				</label>
 				<label class="input-label" for="email">
-					<div class="mb-2 font-semibold">Your email</div>
+					<div class="mb-2 font-semibold">Your email or phone number</div>
 					<input
 						class="input italic"
 						id="email"
