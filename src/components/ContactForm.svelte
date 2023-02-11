@@ -18,6 +18,7 @@
 	let message: string
 	let buttonDisabled = false
 	let showProgress = false
+	let partyRef: HTMLDivElement
 
 	function resetForm() {
 		name = ''
@@ -32,13 +33,13 @@
 			message: 'Message delivered 🎉',
 			preset: 'tertiary',
 			autohide: true,
-			timeout: 3000,
+			timeout: 4000,
 		}
 		toastStore.trigger(t)
 	}
 
 	onMount(async () => {
-		sendEmail = async (e: Event) => {
+		sendEmail = async () => {
 			showProgress = true
 			buttonDisabled = true
 			try {
@@ -50,12 +51,11 @@
 					Body: `${name}<br/>${email}<br/>${message}`,
 				})
 
-				if (e.target) {
-					party.confetti(e.target as HTMLButtonElement, {
-						count: party.variation.range(90, 100),
-						size: party.variation.range(0.8, 1.4),
-					})
-				}
+				party.confetti(partyRef, {
+					count: party.variation.range(90, 100),
+					size: party.variation.range(0.8, 1.4),
+				})
+
 				resetForm()
 				triggerToast()
 			} catch (err) {
@@ -116,7 +116,7 @@
 					type="submit"
 					disabled={buttonDisabled}
 				>
-					<div>Send</div>
+					<div bind:this={partyRef}>Send</div>
 					{#if showProgress}
 						<div class="w-5">
 							<ProgressRadial stroke={300} track="stroke-tertiary-400" />
