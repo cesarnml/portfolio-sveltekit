@@ -8,6 +8,7 @@
 declare var Email: {
 	send: (params: SendParams) => Promise<string>
 }
+
 declare namespace App {
 	// interface Error {}
 	// interface Locals {}

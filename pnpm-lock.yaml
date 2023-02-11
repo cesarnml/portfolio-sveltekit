@@ -15,10 +15,12 @@ specifiers:
   '@testing-library/jest-dom': ^5.16.5
   '@testing-library/svelte': ^3.2.2
   '@testing-library/user-event': ^14.4.3
+  '@types/gtag.js': ^0.0.12
   '@types/lodash': ^4.14.191
   '@types/testing-library__jest-dom': ^5.14.5
   '@typescript-eslint/eslint-plugin': ^5.51.0
   '@typescript-eslint/parser': ^5.51.0
+  '@vercel/analytics': ^0.1.8
   '@vitest/coverage-c8': ^0.27.3
   autoprefixer: ^10.4.13
   clsx: ^1.2.1
@@ -74,10 +76,12 @@ devDependencies:
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/svelte': 3.2.2_svelte@3.55.1
   '@testing-library/user-event': 14.4.3_yxlyej73nftwmh2fiao7paxmlm
+  '@types/gtag.js': 0.0.12
   '@types/lodash': 4.14.191
   '@types/testing-library__jest-dom': 5.14.5
   '@typescript-eslint/eslint-plugin': 5.51.0_b635kmla6dsb4frxfihkw4m47e
   '@typescript-eslint/parser': 5.51.0_4vsywjlpuriuw3tl5oq6zy5a64
+  '@vercel/analytics': 0.1.8
   '@vitest/coverage-c8': 0.27.3_jsdom@21.1.0
   autoprefixer: 10.4.13_postcss@8.4.21
   clsx: 1.2.1
@@ -786,6 +790,10 @@ packages:
     resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
     dev: true
 
+  /@types/gtag.js/0.0.12:
+    resolution: {integrity: sha512-YQV9bUsemkzG81Ea295/nF/5GijnD2Af7QhEofh7xu+kvCN6RdodgNwwGWXB5GMI3NoyvQo0odNctoH/qLMIpg==}
+    dev: true
+
   /@types/hast/2.3.4:
     resolution: {integrity: sha512-wLEm0QvaoawEDoTRwzTXp4b4jpwiJDvR5KMnFnVodm3scufTlBOWRD6N1OBf9TZMhjlNsSfcO5V+7AF4+Vy+9g==}
     dependencies:
@@ -1007,6 +1015,12 @@ packages:
     dependencies:
       '@typescript-eslint/types': 5.51.0
       eslint-visitor-keys: 3.3.0
+    dev: true
+
+  /@vercel/analytics/0.1.8:
+    resolution: {integrity: sha512-PQrOI8BJ9qUiVJuQfnKiJd15eDjDJH9TBKsNeMrtelT4NAk7d9mBVz1CoZkvoFnHQ0OW7Xnqmr1F2nScfAnznQ==}
+    peerDependencies:
+      react: ^16.8||^17||^18
     dev: true
 
   /@vercel/nft/0.22.6:

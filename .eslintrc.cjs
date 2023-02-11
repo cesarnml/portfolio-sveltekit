@@ -62,5 +62,6 @@ module.exports = {
 		'prefer-const': 0,
 		'import/no-extraneous-dependencies': 0,
 		'import/prefer-default-export': 0,
+		'no-undef': 0, // duplicate
 	},
 }

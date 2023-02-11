@@ -1,19 +1,25 @@
 <script lang="ts">
+	import type { LayoutData } from './$types'
 	import Footer from '@components/Footer.svelte'
 	import Navbar from '@components/Navbar.svelte'
 	import NavHamburgerMenu from '@components/NavHamburgerMenu.svelte'
 	import NavLinks from '@components/NavLinks.svelte'
 	import PageTransition from '@components/PageTransition.svelte'
+	import GoogleAnalytics from '@components/GoogleAnalytics.svelte'
 	import { AppShell, Drawer, drawerStore, LightSwitch } from '@skeletonlabs/skeleton'
+	import { media } from '@stores/media'
+	import { Toast } from '@skeletonlabs/skeleton'
+	import { dev } from '$app/environment'
+	import { inject } from '@vercel/analytics'
+	import 'iconify-icon'
 	import '@skeletonlabs/skeleton/themes/theme-gold-nouveau.css'
 	import '@skeletonlabs/skeleton/styles/all.css'
-	import { media } from '@stores/media'
 	import '@styles/app.css'
-	import 'iconify-icon'
-	import type { LayoutData } from './$types'
-	import { Toast } from '@skeletonlabs/skeleton'
+
+	inject({ mode: dev ? 'development' : 'production' })
 
 	export let data: LayoutData
+
 	const { pathname } = data
 	// Close drawer if screen > media.sm and drawer is currently open
 	$: if ($media.sm && $drawerStore.open) {
@@ -21,6 +27,7 @@
 	}
 </script>
 
+<GoogleAnalytics />
 <AppShell>
 	<svelte:fragment slot="header"><Navbar /></svelte:fragment>
 	<svelte:fragment slot="sidebarLeft" />

@@ -24,4 +24,5 @@ PersonalWebsite:
     ☐ Article 5:
   ☐ Add robots.txt
   ☐ Add XML Sitemaps
-  ☐ Add Google Analytics
+  ✔ Add Google Analytics @started(23-02-11 09:10) @done(23-02-11 09:24) @lasted(14m15s)
+  ✔ Add Vercel Analytics @done(23-02-11 09:24)
