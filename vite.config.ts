@@ -1,30 +1,11 @@
 import { sveltekit } from '@sveltejs/kit/vite'
-import { resolve } from 'node:path'
 import type { UserConfig } from 'vite'
 import { configDefaults, type UserConfig as VitestConfig } from 'vitest/config'
 import { imagetools } from 'vite-imagetools'
 
 const config: UserConfig & { test: VitestConfig['test'] } = {
 	plugins: [sveltekit(), imagetools()],
-	define: {
-		// Eliminate in-source test code
-		'import.meta.vitest': 'undefined',
-	},
-	resolve: {
-		alias: {
-			'@assets': resolve('./src/assets'),
-			'@components': resolve('./src/components'),
-			'@lib': resolve('./src/lib'),
-			'@content': resolve('./src/content'),
-			'@styles': resolve('./src/styles'),
-			'@stores': resolve('./src/stores'),
-		},
-	},
-	// ref: https://github.com/vitest-dev/vitest/issues/821
 	test: {
-		deps: {
-			inline: ['clsx'],
-		},
 		// jest like globals
 		globals: true,
 		environment: 'jsdom',

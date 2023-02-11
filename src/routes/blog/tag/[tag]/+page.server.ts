@@ -1,5 +1,5 @@
-import { fetchPosts } from '@lib/content'
 import { error } from '@sveltejs/kit'
+import { fetchPosts } from '$lib/content'
 import type { PageServerLoad } from './$types'
 
 export const load: PageServerLoad = async ({ params: { tag } }) => {

@@ -35,7 +35,7 @@ Italicized text is the _cat's meow_.
 ```svelte
 <script lang="ts">
 	import { page } from '$app/stores'
-	import { Url } from '@lib/url'
+	import { Url } from '$lib/url'
 	import type { PageData } from './$types'
 	export let data: PageData
 

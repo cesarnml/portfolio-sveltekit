@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores'
-	import Comments from '@components/Comments.svelte'
+	import Comments from '$lib/components/Comments.svelte'
 </script>
 
 <svelte:head><link rel="canonical" href={$page.url.href} /></svelte:head>

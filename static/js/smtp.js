@@ -1,4 +1,7 @@
-﻿/* SmtpJS.com - v3.0.0 */
+﻿/* eslint-disable */
+// @ts-nocheck
+
+/* SmtpJS.com - v3.0.0 */
 var Email = {
 	send: function (a) {
 		return new Promise(function (n, e) {

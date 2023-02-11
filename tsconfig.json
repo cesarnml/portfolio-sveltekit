@@ -2,17 +2,6 @@
 	"extends": "./.svelte-kit/tsconfig.json",
 	"compilerOptions": {
 		"outDir": "./svelte-kit/output",
-		"baseUrl": ".",
-		"paths": {
-			"assets/*": ["src/assets/*"],
-			"@components/*": ["src/components/*"],
-			"@lib/*": ["src/lib/*"],
-			"$lib": ["src/lib"],
-			"$lib/*": ["src/lib/*"],
-			"@content/*": ["src/content/*"],
-			"@styles/*": ["src/styles/*"],
-			"@stores/*": ["src/stores/*"]
-		},
 		"allowJs": true,
 		"checkJs": true,
 		"esModuleInterop": true,
@@ -24,8 +13,8 @@
 		"ignoreDeprecations": "5.0"
 	},
 	"include": [
-		"./svelte-kit/ambient.d.ts",
-		"./svelte-kit/types/**/$types.d.ts",
+		".svelte-kit/ambient.d.ts",
+		".svelte-kit/types/**/$types.d.ts",
 		"vite.config.ts",
 		"src/**/*.js",
 		"src/**/*.ts",
@@ -34,22 +23,9 @@
 		"tests/**/*.ts",
 		"tests/**/*.svelte",
 		"*.js",
-		"*.cjs",
-		"*.mjs",
 		"*.ts",
-		".*.cjs"
-	],
-	"exclude": [
-		"node_modules/**",
-		".svelte-kit/[!ambient.d.ts]**",
-		"src/service-worker.js",
-		"src/service-worker.ts",
-		"src/service-worker.d.ts",
-		// Excluded because lint errors are tough to debug and files won't change
-		"mdsvex.config.mjs",
-		"src/lib/codeHighlighter.mjs",
-		"tailwind.config.cjs",
-		"svelte.config.js",
-		"setupTest.ts"
+		".*.cjs",
+		"*.cjs",
+		"static/js/*.js"
 	]
 }

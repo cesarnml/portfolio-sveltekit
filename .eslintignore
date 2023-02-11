@@ -15,11 +15,3 @@ yarn.lock
 # Custom ignore
 .vercel
 playwright-report
-
-# Annoying
-static/js/*.js
-src/**/*.spec.ts
-mdsvex.config.mjs
-src/lib/codeHighlighter.mjs
-setupTest.ts
-svelte.config.js

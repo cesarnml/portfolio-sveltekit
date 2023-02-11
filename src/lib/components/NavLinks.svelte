@@ -1,6 +1,6 @@
 <script lang="ts">
-	import ReusableLink from '@components/ReusableLink.svelte'
-	import { Url } from '@lib/url'
+	import ReusableLink from '$lib/components/ReusableLink.svelte'
+	import { Url } from '$lib/url'
 	import { drawerStore } from '@skeletonlabs/skeleton'
 
 	export let className = ''

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Url } from '@lib/url'
+	import { Url } from '$lib/url'
 	import type { PageData } from './$types'
 
 	export let data: PageData

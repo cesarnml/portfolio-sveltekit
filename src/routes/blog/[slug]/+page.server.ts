@@ -4,7 +4,7 @@ import type { PageServerLoad } from './$types'
 export const load = (async ({ params }) => {
 	try {
 		const postModule = (await import(
-			`../../../content/blog/${params.slug}/index.md`
+			`../../../lib/content/blog/${params.slug}/index.md`
 		)) as App.MdsvexModule
 
 		if (!postModule || !postModule.metadata.published) {

@@ -1,7 +1,7 @@
 <script lang="ts">
-	import AboutMe from '@components/AboutMe.svelte'
-	import Skills from '@components/Skills.svelte'
-	import { skills } from '@lib/config'
+	import AboutMe from '$lib/components/AboutMe.svelte'
+	import Skills from '$lib/components/Skills.svelte'
+	import { skills } from '$lib/config'
 </script>
 
 <svelte:head><title>About Me</title></svelte:head>

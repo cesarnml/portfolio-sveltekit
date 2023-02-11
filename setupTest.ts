@@ -2,8 +2,8 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import matchers from '@testing-library/jest-dom/matchers'
 import { expect, vi } from 'vitest'
-import * as environment from '$app/environment'
-import * as navigation from '$app/navigation'
+import type * as environment from '$app/environment'
+import type * as navigation from '$app/navigation'
 
 // Add custom jest matchers
 expect.extend(matchers)

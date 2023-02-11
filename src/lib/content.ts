@@ -7,7 +7,7 @@ const ALL_POST_FLAG = -1
  * Returns a sorted an array of blog posts
  */
 export async function fetchPosts({ offset = 0, limit = ALL_POST_FLAG, tag = '' } = {}) {
-	const modules = import.meta.glob(`@content/blog/**/*.md`)
+	const modules = import.meta.glob(`$lib/content/blog/**/*.md`)
 	const posts = await Promise.all(
 		Object.entries(modules).map(async ([path, resolver]) => {
 			const slug = basename(dirname(path))

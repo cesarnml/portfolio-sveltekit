@@ -1,20 +1,20 @@
 <script lang="ts">
 	import type { LayoutData } from './$types'
-	import Footer from '@components/Footer.svelte'
-	import Navbar from '@components/Navbar.svelte'
-	import NavHamburgerMenu from '@components/NavHamburgerMenu.svelte'
-	import NavLinks from '@components/NavLinks.svelte'
-	import PageTransition from '@components/PageTransition.svelte'
-	import GoogleAnalytics from '@components/GoogleAnalytics.svelte'
+	import Footer from '$lib/components/Footer.svelte'
+	import Navbar from '$lib/components/Navbar.svelte'
+	import NavHamburgerMenu from '$lib/components/NavHamburgerMenu.svelte'
+	import NavLinks from '$lib/components/NavLinks.svelte'
+	import PageTransition from '$lib/components/PageTransition.svelte'
+	import GoogleAnalytics from '$lib/components/GoogleAnalytics.svelte'
 	import { AppShell, Drawer, drawerStore, LightSwitch } from '@skeletonlabs/skeleton'
-	import { media } from '@stores/media'
+	import { media } from '$lib/stores/media'
 	import { Toast } from '@skeletonlabs/skeleton'
 	import { dev } from '$app/environment'
 	import { inject } from '@vercel/analytics'
 	import 'iconify-icon'
 	import '@skeletonlabs/skeleton/themes/theme-gold-nouveau.css'
 	import '@skeletonlabs/skeleton/styles/all.css'
-	import '@styles/app.css'
+	import '$lib/styles/app.css'
 
 	inject({ mode: dev ? 'development' : 'production' })
 

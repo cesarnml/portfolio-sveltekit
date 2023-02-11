@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Url } from '@lib/url'
+	import { Url } from '$lib/url'
 	import Picture from './Picture.svelte'
 	import SiteAuthorDetails from './SiteAuthorDetails.svelte'
 </script>

@@ -5,7 +5,7 @@
   Falsy links are not be rendered
  -->
 <script lang="ts">
-	import { github, linkedIn, stackoverflow, twitter, devTo } from '@lib/config'
+	import { github, linkedIn, stackoverflow, twitter, devTo } from '$lib/config'
 
 	/**
 	 * Extend map with additional imports/icons if desired

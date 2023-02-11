@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { getHighlighter, renderToHtml } from 'shiki'
 import { readFile } from 'fs/promises'
 

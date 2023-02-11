@@ -1,4 +1,4 @@
-import { fetchPosts } from '@lib/content'
+import { fetchPosts } from '$lib/content'
 import type { PageServerLoad } from './$types'
 
 // Ensures all pages under this layout (which is all of them) are statically prerendered at build time
