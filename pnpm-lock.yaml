@@ -16,6 +16,7 @@ specifiers:
   '@testing-library/svelte': ^3.2.2
   '@testing-library/user-event': ^14.4.3
   '@types/gtag.js': ^0.0.12
+  '@types/jest': ^29.4.0
   '@types/testing-library__jest-dom': ^5.14.5
   '@typescript-eslint/eslint-plugin': ^5.51.0
   '@typescript-eslint/parser': ^5.51.0
@@ -75,6 +76,7 @@ devDependencies:
   '@testing-library/svelte': 3.2.2_svelte@3.55.1
   '@testing-library/user-event': 14.4.3_yxlyej73nftwmh2fiao7paxmlm
   '@types/gtag.js': 0.0.12
+  '@types/jest': 29.4.0
   '@types/testing-library__jest-dom': 5.14.5
   '@typescript-eslint/eslint-plugin': 5.51.0_b635kmla6dsb4frxfihkw4m47e
   '@typescript-eslint/parser': 5.51.0_4vsywjlpuriuw3tl5oq6zy5a64

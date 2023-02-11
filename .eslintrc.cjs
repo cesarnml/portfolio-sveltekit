@@ -9,7 +9,7 @@ module.exports = {
 		'airbnb-typescript/base',
 		'prettier',
 	],
-	plugins: ['svelte3', '@typescript-eslint', 'import'],
+	plugins: ['svelte3', '@typescript-eslint'],
 	ignorePatterns: ['*.cjs', '*.mjs'],
 	overrides: [
 		{
