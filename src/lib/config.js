@@ -44,7 +44,9 @@ export const skills = [
 	'SWR',
 	'Vitest',
 	'Testing Library',
+	'Pytest',
 	'Playwright',
 	'SCSS',
 	'TailwindCSS',
+	'GitHub Actions',
 ]

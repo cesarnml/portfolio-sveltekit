@@ -3,7 +3,10 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
-		<meta httpequiv="Content-Security-Policy" content="script-src 'none'" />
+		<meta
+			httpequiv="Content-Security-Policy"
+			content="default-src 'self'; script-src 'self' vitals.vercel-insights.com google.com"
+		/>
 		<meta name="description" content="Tech blog post by Cesar Mejia" />
 		<meta name="robots" content="index, follow" />
 		<link rel="icon" href="%sveltekit.assets%/images/favicon.png" />
