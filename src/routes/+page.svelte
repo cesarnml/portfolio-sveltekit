@@ -20,7 +20,7 @@
 </svelte:head>
 
 <div class="flex h-full w-full flex-col items-center justify-center">
-	<div class="w-3/4">
+	<div class="aspect-[4/3] w-3/4">
 		<div bind:this={lottieContainer} />
 	</div>
 	<h2>Site under construction <span>🚧</span></h2>
