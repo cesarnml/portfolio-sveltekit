@@ -8,7 +8,7 @@
 	const href = slug ? `/blog/${slug}` : `#${id}`
 </script>
 
-<h1 class="text-3xl" {id}>
+<h1 class="mt-0 text-3xl" {id}>
 	<a {href}>
 		{title}
 	</a>

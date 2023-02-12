@@ -25,10 +25,9 @@
 	<link rel="canonical" href={$page.url.href} />
 </svelte:head>
 
-<div class="mb-4 space-x-4">
-	<span>All Tags:</span>
+<div class="mb-4 space-x-4 overflow-x-auto">
 	{#each tags as tag (tag)}
-		<a href={`/blog/tag/${tag}`} class="btn-base btn variant-soft-primary">{tag}</a>
+		<a href={`/blog/tag/${tag}`} class="btn-base btn variant-soft-primary">{`#${tag}`}</a>
 	{/each}
 </div>
 

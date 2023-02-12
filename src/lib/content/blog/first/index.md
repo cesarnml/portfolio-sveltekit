@@ -30,6 +30,9 @@ Italicized text is the _cat's meow_.
 
 ## Code Examples
 
+### Inline Code
+
+Here is some inline code `console.log('Hey I'm inline-code')`
 ### No Highlighting
 
 ```svelte

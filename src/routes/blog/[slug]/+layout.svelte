@@ -11,7 +11,7 @@
 	<a
 		target="_blank"
 		rel="noreferrer noopener"
-		href={`https://github.com/cesarnml/svelte-kit-tutorial/edit/main/src/content${$page.url.pathname}/index.md`}
+		href={`https://github.com/cesarnml/svelte-kit-tutorial/edit/main/src/lib/content${$page.url.pathname}/index.md`}
 		class="!text-orange-500">Edit on GitHub</a
 	>
 	<Comments />
