@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores'
 	import { onMount } from 'svelte'
-	import lottie from 'lottie-web'
+	import lottie from 'lottie-web-light'
 	import constructionAnimation from '$lib/assets/json/construction.json'
 
 	let lottieContainer: HTMLDivElement

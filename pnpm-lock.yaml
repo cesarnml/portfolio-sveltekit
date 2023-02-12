@@ -35,7 +35,7 @@ specifiers:
   husky: ^8.0.3
   iconify-icon: ^1.0.5
   jsdom: ^21.1.0
-  lottie-web: ^5.10.2
+  lottie-web-light: ^1.1.0
   mdsvex: ^0.10.6
   party-js: ^2.2.0
   postcss: ^8.4.21
@@ -96,7 +96,7 @@ devDependencies:
   husky: 8.0.3
   iconify-icon: 1.0.5
   jsdom: 21.1.0
-  lottie-web: 5.10.2
+  lottie-web-light: 1.1.0
   mdsvex: 0.10.6_svelte@3.55.1
   party-js: 2.2.0
   postcss: 8.4.21
@@ -3186,8 +3186,8 @@ packages:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
     dev: true
 
-  /lottie-web/5.10.2:
-    resolution: {integrity: sha512-d0PFIGiwuMsJYaF4uPo+qG8dEorlI+xFI2zrrFtE1bGO4WoLIz+NjremxEq1swpR7juR10aeOtmNh3d6G3ub0A==}
+  /lottie-web-light/1.1.0:
+    resolution: {integrity: sha512-4DS7AdcRywHCuDJTm1/R3Rna6yg1GH4UCRsbBDjzmg3Zxuu8plGCcXqQdFQoxyEvJqiRSW866PVQLislf1b6MQ==}
     dev: true
 
   /loupe/2.3.6:

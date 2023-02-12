@@ -53,7 +53,7 @@
 		"husky": "^8.0.3",
 		"iconify-icon": "^1.0.5",
 		"jsdom": "^21.1.0",
-		"lottie-web": "^5.10.2",
+		"lottie-web-light": "^1.1.0",
 		"mdsvex": "^0.10.6",
 		"party-js": "^2.2.0",
 		"postcss": "^8.4.21",
