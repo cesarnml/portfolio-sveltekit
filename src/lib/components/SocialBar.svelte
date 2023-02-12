@@ -33,7 +33,7 @@
 	{#each Object.keys(hrefToIconMap) as href}
 		<!-- Render link if truthy. See lib/config.js -->
 		{#if Boolean(href)}
-			<a {href} target="_blank" rel="noreferrer noopener">
+			<a {href} target="_blank" rel="noreferrer noopener" aria-label={`${href}`}>
 				<iconify-icon icon={getIconFromHref(href)} />
 			</a>
 		{/if}
