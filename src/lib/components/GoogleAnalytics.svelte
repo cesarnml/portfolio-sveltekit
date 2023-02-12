@@ -1,4 +1,4 @@
-<script lang="ts">
+<script context="module">
 	import { PUBLIC_GA_TRACKING_ID } from '$env/static/public'
 </script>
 
