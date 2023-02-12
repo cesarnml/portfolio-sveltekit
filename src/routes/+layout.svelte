@@ -43,7 +43,6 @@
 	<script>
 		// Forward the necessary functions to the web worker layer
 		partytown = {
-			debug: true,
 			forward: ['dataLayer.push'],
 			resolveUrl: (url) => {
 				const siteUrl = 'https://cesar-mejia.com/proxytown'
