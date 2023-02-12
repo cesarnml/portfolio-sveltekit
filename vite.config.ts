@@ -1,19 +1,10 @@
 import type { UserConfig } from 'vite'
-import { join } from 'path'
 import { sveltekit } from '@sveltejs/kit/vite'
 import { configDefaults, type UserConfig as VitestConfig } from 'vitest/config'
 import { imagetools } from 'vite-imagetools'
-import { partytownVite } from '@builder.io/partytown/utils'
 
 const config: UserConfig & { test: VitestConfig['test'] } = {
-	plugins: [
-		sveltekit(),
-		imagetools(),
-		partytownVite({
-			// `dest` specifies where files are copied to in production
-			dest: join(process.cwd(), 'static', '~js'),
-		}),
-	],
+	plugins: [sveltekit(), imagetools()],
 	test: {
 		// jest like globals
 		globals: true,
