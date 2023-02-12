@@ -11,7 +11,7 @@ const config = {
 
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
 	// for more information about preprocessors
-	preprocess: [vitePreprocess({ postcss: true }), mdsvex(mdsvexConfig)],
+	preprocess: [vitePreprocess({ postcss: true, preserve: ['partytown'] }), mdsvex(mdsvexConfig)],
 
 	kit: {
 		adapter: adapter(),

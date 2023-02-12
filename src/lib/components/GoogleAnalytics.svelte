@@ -1,7 +1,7 @@
 <svelte:head>
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-XHY9494ZV2">
+	<script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-XHY9494ZV2">
 	</script>
-	<script>
+	<script type="text/partytown">
 		window.dataLayer = window.dataLayer || []
 
 		function gtag() {
@@ -9,6 +9,6 @@
 		}
 
 		gtag('js', new Date())
-		gtag('config', 'G-XHY9494ZV2')
+		gtag('config', 'G-XHY9494ZV2', { page_path: window.location.pathname })
 	</script>
 </svelte:head>

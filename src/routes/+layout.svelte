@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { LayoutData } from './$types'
+	import { onMount } from 'svelte'
 	import Footer from '$lib/components/Footer.svelte'
 	import Navbar from '$lib/components/Navbar.svelte'
 	import NavHamburgerMenu from '$lib/components/NavHamburgerMenu.svelte'
@@ -11,12 +12,21 @@
 	import { Toast } from '@skeletonlabs/skeleton'
 	import { dev } from '$app/environment'
 	import { inject } from '@vercel/analytics'
+	import { partytownSnippet } from '@builder.io/partytown/integration'
+
 	import 'iconify-icon'
 	import '@skeletonlabs/skeleton/themes/theme-gold-nouveau.css'
 	import '@skeletonlabs/skeleton/styles/all.css'
 	import '$lib/styles/app.css'
 
 	inject({ mode: dev ? 'development' : 'production' })
+
+	let scriptEle: HTMLScriptElement
+	onMount(() => {
+		if (scriptEle) {
+			scriptEle.textContent = partytownSnippet()
+		}
+	})
 
 	export let data: LayoutData
 
@@ -27,7 +37,37 @@
 	}
 </script>
 
-<GoogleAnalytics />
+<svelte:head>
+	<!-- Config options -->
+	<script>
+		// Forward the necessary functions to the web worker layer
+		partytown = {
+			forward: ['dataLayer.push'],
+			resolveUrl: (url) => {
+				const siteUrl = 'https://cesar-mejia.com/proxytown'
+
+				if (url.hostname === 'www.googletagmanager.com') {
+					const proxyUrl = new URL(`${siteUrl}/gtm`)
+
+					const gtmId = new URL(url).searchParams.get('id')
+					gtmId && proxyUrl.searchParams.append('id', gtmId)
+
+					return proxyUrl
+				} else if (url.hostname === 'www.google-analytics.com') {
+					const proxyUrl = new URL(`${siteUrl}/ga`)
+
+					return proxyUrl
+				}
+
+				return url
+			},
+		}
+	</script>
+
+	<!-- `partytownSnippet` is inserted here -->
+	<script bind:this={scriptEle}></script>
+	<GoogleAnalytics />
+</svelte:head>
 
 <AppShell>
 	<svelte:fragment slot="header"><Navbar /></svelte:fragment>
