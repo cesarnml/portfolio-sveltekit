@@ -2,9 +2,10 @@
 	import { page } from '$app/stores'
 	import { Url } from '$lib/url'
 	import type { PageData } from './$types'
-	export let data: PageData
 	import { Paginator } from '@skeletonlabs/skeleton'
 	import Picture from '$lib/components/Picture.svelte'
+
+	export let data: PageData
 	const { posts, tags } = data
 
 	$: paginator = {

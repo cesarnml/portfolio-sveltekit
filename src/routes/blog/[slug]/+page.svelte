@@ -1,12 +1,13 @@
 <script lang="ts">
-	import '$lib/styles/shiki.css'
-	import { onMount } from 'svelte'
 	import type { PageServerData } from './$types'
+	import { onMount } from 'svelte'
 	import PageHead from '$lib/components/PageHead.svelte'
 	import ArticleTitle from '$lib/components/ArticleTitle.svelte'
 	import ArticleMeta from '$lib/components/ArticleMeta.svelte'
 	import { TableOfContents } from '@skeletonlabs/skeleton'
 	import handleCopyClick from '$lib/handleCopyClick'
+	import '$lib/styles/shiki.css'
+
 	export let data: PageServerData
 
 	onMount(async () => {

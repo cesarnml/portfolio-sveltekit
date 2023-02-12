@@ -12,7 +12,7 @@ PersonalWebsite:
   ☐ Update Resume
   ☐ Write minimal playwright test
   ☐ Write minimal component test
-  ☐ Create logo
+  ✔ Create logo @done(23-02-13 06:03)
   ☐ Add supabase to track page views?
   ☐ Incorporate WakaTime?
   ☐ Add some unsplash images to spice things up
@@ -22,7 +22,8 @@ PersonalWebsite:
     ☐ Article 3:
     ☐ Article 4:
     ☐ Article 5:
-  ☐ Add robots.txt
+  ✔ Add robots.txt @done(23-02-13 06:03)
   ☐ Add XML Sitemaps
   ✔ Add Google Analytics @started(23-02-11 09:10) @done(23-02-11 09:24) @lasted(14m15s)
   ✔ Add Vercel Analytics @done(23-02-11 09:24)
+  ✔ Add partytown @done(23-02-13 06:03)

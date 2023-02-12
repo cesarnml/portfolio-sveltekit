@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { blur } from 'svelte/transition'
+
 	export let pathname: string | undefined
 </script>
 
