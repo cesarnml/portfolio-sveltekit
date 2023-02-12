@@ -50,3 +50,8 @@ export const skills = [
 	'TailwindCSS',
 	'GitHub Actions',
 ]
+
+/**
+ * Google Analytics tracking id. Set to empty string if you don't want to use Google Analytics
+ */
+export const googleAnalyticsTrackingId = 'G-XHY9494ZV2'

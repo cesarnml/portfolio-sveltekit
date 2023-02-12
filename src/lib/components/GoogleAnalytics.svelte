@@ -1,9 +1,9 @@
-<script context="module">
-	import { PUBLIC_GA_TRACKING_ID } from '$env/static/public'
+<script lang="ts">
+	export let googleAnalyticsTrackingId: string
 </script>
 
 <svelte:head>
-	<script async src={`https://www.googletagmanager.com/gtag/js?id=${PUBLIC_GA_TRACKING_ID}`}>
+	<script async src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsTrackingId}`}>
 	</script>
 	<script>
 		window.dataLayer = window.dataLayer || []
@@ -13,6 +13,6 @@
 		}
 
 		gtag('js', new Date())
-		gtag('config', PUBLIC_GA_TRACKING_ID)
+		gtag('config', googleAnalyticsTrackingId)
 	</script>
 </svelte:head>
