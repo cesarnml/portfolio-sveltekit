@@ -1,24 +1,27 @@
 <script lang="ts">
 	import { page } from '$app/stores'
+	import { onMount } from 'svelte'
+	import lottie from 'lottie-web'
+	import constructionAnimation from '$lib/assets/json/construction.json'
+
+	let lottieContainer: HTMLDivElement
+
+	onMount(() => {
+		lottie.loadAnimation({
+			container: lottieContainer,
+			animationData: constructionAnimation,
+		})
+	})
 </script>
 
 <svelte:head>
 	<title>Cesar Mejia's Web Portfolio</title>
 	<link rel="canonical" href={$page.url.href} />
-	<script
-		async
-		src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"
-	></script>
 </svelte:head>
 
 <div class="flex h-full w-full flex-col items-center justify-center">
-	<lottie-player
-		src="https://assets7.lottiefiles.com/private_files/lf30_y9czxcb9.json"
-		background="transparent"
-		speed="1"
-		style="width: 500px; height: 500px;"
-		loop
-		autoplay
-	/>
-	<h2>Site under construction</h2>
+	<div class="w-3/4">
+		<div bind:this={lottieContainer} />
+	</div>
+	<h2>Site under construction <span>🚧</span></h2>
 </div>
