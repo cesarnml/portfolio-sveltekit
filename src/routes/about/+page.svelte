@@ -4,7 +4,7 @@
 	import { skills } from '$lib/config'
 </script>
 
-<svelte:head><title>About Me</title></svelte:head>
+<svelte:head><title>About Cesar</title></svelte:head>
 
 <h2 class="mb-4">About</h2>
 <div class="grid grid-cols-1 gap-8 md:grid-cols-2">

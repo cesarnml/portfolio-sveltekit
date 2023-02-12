@@ -21,7 +21,7 @@
 </script>
 
 <svelte:head>
-	<title>Blog Posts</title>
+	<title>Cesar's Blog Posts</title>
 	<link rel="canonical" href={$page.url.href} />
 </svelte:head>
 

@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@builder.io/partytown': ^0.7.5
   '@playwright/test': ^1.30.0
   '@skeletonlabs/skeleton': ^0.124.2
   '@supabase/auth-helpers-sveltekit': ^0.8.7
@@ -62,6 +63,7 @@ specifiers:
   vitest: ^0.27.3
 
 devDependencies:
+  '@builder.io/partytown': 0.7.5
   '@playwright/test': 1.30.0
   '@skeletonlabs/skeleton': 0.124.2
   '@supabase/auth-helpers-sveltekit': 0.8.7_wwkefq4crizglppdxtjqhrdudm
@@ -158,6 +160,11 @@ packages:
 
   /@bcoe/v8-coverage/0.2.3:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
+    dev: true
+
+  /@builder.io/partytown/0.7.5:
+    resolution: {integrity: sha512-Zbr2Eo0AQ4yzmQr/36/h+6LKjmdVBB3Q5cGzO6rtlIKB/IOpbQVUZW+XAnhpJmJr9sIF97OZjgbhG9k7Sjn4yw==}
+    hasBin: true
     dev: true
 
   /@esbuild/android-arm/0.16.17:
