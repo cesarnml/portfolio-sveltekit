@@ -11,7 +11,7 @@ const config: UserConfig & { test: VitestConfig['test'] } = {
 		imagetools(),
 		partytownVite({
 			// `dest` specifies where files are copied to in production
-			dest: join(process.cwd(), 'static', '~partytown'),
+			dest: join(process.cwd(), 'static', '~js'),
 		}),
 	],
 	test: {

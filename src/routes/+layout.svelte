@@ -22,6 +22,7 @@
 	inject({ mode: dev ? 'development' : 'production' })
 
 	let scriptEle: HTMLScriptElement
+
 	onMount(() => {
 		if (scriptEle) {
 			scriptEle.textContent = partytownSnippet()
