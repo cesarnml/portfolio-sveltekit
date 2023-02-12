@@ -13,6 +13,6 @@
 		}
 
 		gtag('js', new Date())
-		gtag('config', googleAnalyticsTrackingId)
+		gtag('config', `${googleAnalyticsTrackingId}`)
 	</script>
 </svelte:head>
