@@ -1,6 +1,6 @@
 // @ts-nocheck
 import adapter from '@sveltejs/adapter-vercel'
-import { vitePreprocess } from '@sveltejs/kit/vite'
+import preprocess from 'svelte-preprocess'
 import { mdsvex } from 'mdsvex'
 import { resolve } from 'path'
 import mdsvexConfig from './mdsvex.config.mjs'
@@ -11,7 +11,7 @@ const config = {
 
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
 	// for more information about preprocessors
-	preprocess: [vitePreprocess({ postcss: true, preserve: ['partytown'] }), mdsvex(mdsvexConfig)],
+	preprocess: [preprocess({ postcss: true, preserve: ['partytown'] }), mdsvex(mdsvexConfig)],
 
 	kit: {
 		adapter: adapter(),
