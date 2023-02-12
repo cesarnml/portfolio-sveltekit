@@ -15,7 +15,6 @@
 	import '@skeletonlabs/skeleton/themes/theme-gold-nouveau.css'
 	import '@skeletonlabs/skeleton/styles/all.css'
 	import '$lib/styles/app.css'
-	import { googleAnalyticsTrackingId } from '$lib/config'
 
 	inject({ mode: dev ? 'development' : 'production' })
 
@@ -28,9 +27,7 @@
 	}
 </script>
 
-{#if Boolean(googleAnalyticsTrackingId)}
-	<GoogleAnalytics {googleAnalyticsTrackingId} />
-{/if}
+<GoogleAnalytics />
 
 <AppShell>
 	<svelte:fragment slot="header"><Navbar /></svelte:fragment>

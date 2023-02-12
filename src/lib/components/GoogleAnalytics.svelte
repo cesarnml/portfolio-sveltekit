@@ -1,9 +1,5 @@
-<script lang="ts">
-	export let googleAnalyticsTrackingId: string
-</script>
-
 <svelte:head>
-	<script async src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsTrackingId}`}>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-XHY9494ZV2">
 	</script>
 	<script>
 		window.dataLayer = window.dataLayer || []
@@ -13,6 +9,6 @@
 		}
 
 		gtag('js', new Date())
-		gtag('config', `${googleAnalyticsTrackingId}`)
+		gtag('config', 'G-XHY9494ZV2')
 	</script>
 </svelte:head>
