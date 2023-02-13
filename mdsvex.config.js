@@ -1,3 +1,4 @@
+/* eslint-disable */
 // @ts-nocheck
 
 import { defineMDSveXConfig as defineConfig } from 'mdsvex'
@@ -8,7 +9,7 @@ import remarkCodeTitles from 'remark-code-titles'
 import remarkExternalLinks from 'remark-external-links'
 import remarkGithub from 'remark-github'
 import remarkReadingTime from 'remark-reading-time'
-import highlighter from './src/lib/codeHighlighter.mjs'
+import highlighter from './src/lib/codeHighlighter.js'
 import { repository } from './src/lib/config.js'
 
 const config = defineConfig({
