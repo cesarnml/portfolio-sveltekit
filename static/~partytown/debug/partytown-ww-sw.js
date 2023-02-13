@@ -1,6 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
 /* eslint-disable */
+// @ts-nocheck
 /* Partytown 0.7.5 - MIT builder.io */
 ;((self) => {
 	const WinIdKey = Symbol()

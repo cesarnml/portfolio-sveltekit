@@ -1,7 +1,5 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-nocheck
 /* eslint-disable */
-
+// @ts-nocheck
 /* Partytown 0.7.5 - MIT builder.io */
 !(function (t, e, n, i, r, o, a, d, s, c, p, l) {
 	function u() {
