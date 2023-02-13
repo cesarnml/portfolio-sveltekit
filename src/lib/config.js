@@ -33,6 +33,7 @@ export const skills = [
 	'Python',
 	'SQL',
 	'React',
+	'Redux Toolkit',
 	'NextJS',
 	'SvelteKit',
 	'AstroJS',
@@ -49,4 +50,5 @@ export const skills = [
 	'SCSS',
 	'TailwindCSS',
 	'GitHub Actions',
+	'Agile Workflow',
 ]

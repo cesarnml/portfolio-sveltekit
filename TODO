@@ -8,7 +8,7 @@ PersonalWebsite:
     ✔ Create AboutMe card @started(23-02-10 13:21) @done(23-02-10 15:05) @lasted(1h44m14s)
     ✔ Skills/Tools @started(23-02-10 15:05) @done(23-02-10 15:27) @lasted(22m49s)
   ✔ Create Contact page @done(23-02-11 08:23)
-  ☐ Customize skeleton theme
+  ☐ Customize skeleton them
   ☐ Update Resume
   ☐ Write minimal playwright test
   ☐ Write minimal component test
@@ -17,12 +17,13 @@ PersonalWebsite:
   ☐ Incorporate WakaTime?
   ☐ Add some unsplash images to spice things up
   ☐ Write articles
-    ☐ Article 1:
+    ☐ Article 1: Partytown SvelteKit integration
     ☐ Article 2:
     ☐ Article 3:
     ☐ Article 4:
     ☐ Article 5:
   ✔ Add robots.txt @done(23-02-13 06:03)
+  ☐ Add RSS Feed @started(23-02-13 12:05)
   ☐ Add XML Sitemaps
   ✔ Add Google Analytics @started(23-02-11 09:10) @done(23-02-11 09:24) @lasted(14m15s)
   ✔ Add Vercel Analytics @done(23-02-11 09:24)

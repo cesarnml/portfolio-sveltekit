@@ -4,12 +4,11 @@
 
 <div class="card variant-glass-surface space-y-4 p-6">
 	<Avatar src="images/favicon.png" width="w-16 md:20 lg:w-24" />
-	<h3>Hey there, I&apos;m Cesar! 👋</h3>
+	<h3>Hello, I'm Cesar! 👋</h3>
 	<p class="!text-lg">
-		I am a <strong>full-stack web developer</strong>
-		who enjoys building beautiful web apps with a focus on <strong>performance</strong> and
-		<strong>accessibility</strong>. I also like to <a href="/blog">blog</a> about my journey as a
-		web developer and share my knowledge via <strong>code tutorials</strong>.
+		I am a full-stack web developer who specializes in building high-performance, accessible web
+		applications. When I'm not coding, you can find me writing insightful articles on my blog about
+		my experiences in web development, as well as creating code tutorials to share my knowledge.
 	</p>
 	<p class="!text-lg">
 		In my free time, I enjoy studying <button
