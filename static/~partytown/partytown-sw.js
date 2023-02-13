@@ -1,5 +1,6 @@
-/* eslint-disable */
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
+/* eslint-disable */
 /* Partytown 0.7.5 - MIT builder.io */
 const e = new Map(),
 	t = (e, t) => ({ F: e.F, p: t }),

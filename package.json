@@ -16,6 +16,7 @@
 		"lint": "prettier --plugin-search-dir . --check . && eslint . --ext .js,.ts,.svelte",
 		"format": "prettier --plugin-search-dir . --write .",
 		"fix": "npm run format && npm run lint -- --fix",
+		"partytown": "partytown copylib static/~partytown",
 		"prepare": "husky install"
 	},
 	"devDependencies": {

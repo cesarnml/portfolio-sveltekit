@@ -32,7 +32,6 @@
 		"*.ts",
 		".*.cjs",
 		"*.cjs",
-		"static/js/*.js",
-		"static/~partytown/*.js"
+		"static/**/*.js"
 	]
 }
