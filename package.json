@@ -18,7 +18,7 @@
 		"fix": "npm run format && npm run lint -- --fix",
 		"partytown": "partytown copylib static/~partytown",
 		"prepare": "husky install",
-		"postbuild": "npx svelte-sitemap --out-dir .vercel/output/static --domain https://www.cesar-mejia.com"
+		"postbuild": "npx svelte-sitemap --out-dir .vercel/output/static --domain https://cesar-mejia.com"
 	},
 	"devDependencies": {
 		"@builder.io/partytown": "^0.7.5",
