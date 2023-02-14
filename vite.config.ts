@@ -8,14 +8,11 @@ const config: UserConfig & { test: VitestConfig['test'] } = {
 	plugins: [
 		sveltekit(),
 		SvelteKitPWA({
-			scope: '/',
-			srcDir: '/',
-			mode: 'production',
-			strategies: 'injectManifest',
-			injectManifest: {
-				globDirectory: '.svelte-kit/output',
-				globPatterns: ['./**/*.html'],
-				globIgnores: ['**/node_modules/**/*', 'client/sw.js', 'client/workbox-*.js'],
+			registerType: 'autoUpdate',
+			injectRegister: 'auto',
+			devOptions: {
+				enabled: true,
+				type: 'module',
 			},
 			manifest: {
 				name: "Cesar's Website",
