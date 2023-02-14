@@ -1,8 +1,8 @@
 {
 	"name": "Cesar's Website",
 	"short_name": "Cesar's Website",
-	"start_url": "https://cesar-mejia.com",
-	"scope": "https://cesar-mejia.com",
+	"start_url": "./",
+	"scope": "./",
 	"theme_color": "##ffeb3b",
 	"background_color": "##ffeb3b",
 	"display": "standalone",
