@@ -9,6 +9,12 @@ const config: UserConfig & { test: VitestConfig['test'] } = {
 		sveltekit(),
 		SvelteKitPWA({
 			scope: '/',
+			strategies: 'injectManifest',
+			injectManifest: {
+				globDirectory: '.svelte-kit/output',
+				globPatterns: ['./**/*.html'],
+				globIgnores: ['**/node_modules/**/*', 'client/sw.js', 'client/workbox-*.js'],
+			},
 			manifest: {
 				name: "Cesar's Website",
 				short_name: "Cesar's Website",
