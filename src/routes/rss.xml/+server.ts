@@ -8,7 +8,7 @@ export const GET: RequestHandler = async ({ setHeaders }) => {
 	const feed = new RSS({
 		title: "Cesar's RSS Feed",
 		site_url: 'https://cesar-mejia.com',
-		feed_url: 'https://cesar-mejia.com/api/rss.xml',
+		feed_url: 'https://cesar-mejia.com/rss.xml',
 	})
 
 	const posts = await fetchPosts()
