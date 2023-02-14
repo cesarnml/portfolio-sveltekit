@@ -15,3 +15,4 @@ yarn.lock
 # Custom ignore
 .vercel
 playwright-report
+service-worker.ts
