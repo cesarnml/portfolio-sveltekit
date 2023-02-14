@@ -9,6 +9,8 @@ const config: UserConfig & { test: VitestConfig['test'] } = {
 		sveltekit(),
 		SvelteKitPWA({
 			scope: '/',
+			srcDir: '/',
+			mode: 'production',
 			strategies: 'injectManifest',
 			injectManifest: {
 				globDirectory: '.svelte-kit/output',
