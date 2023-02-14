@@ -1,6 +1,8 @@
 {
+	"$schema": "https://json.schemastore.org/web-manifest-combined.json",
 	"name": "Cesar's Website",
 	"short_name": "Cesar's Website",
+	"description": "Cesar Mejia's web portfolio and blog.",
 	"start_url": "./",
 	"scope": "./",
 	"theme_color": "##ffeb3b",
