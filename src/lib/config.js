@@ -20,6 +20,7 @@ export const github = 'https://github.com/cesarnml'
 export const devTo = 'https://dev.to/cesarnml'
 export const stackoverflow = 'https://stackoverflow.com/users/9323122/cesar-napoleon-mejia-leiva'
 export const twitter = 'https://twitter.com/cesarnm'
+export const rss = '/api/rss.xml'
 
 /**
  * Skills to display on About page

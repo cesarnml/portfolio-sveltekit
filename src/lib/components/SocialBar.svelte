@@ -5,7 +5,7 @@
   Falsy links are not be rendered
  -->
 <script lang="ts">
-	import { github, linkedIn, stackoverflow, twitter, devTo } from '$lib/config'
+	import { github, linkedIn, stackoverflow, twitter, devTo, rss } from '$lib/config'
 
 	/**
 	 * Extend map with additional imports/icons if desired
@@ -18,6 +18,7 @@
 		[devTo]: 'fa6-brands:dev',
 		[stackoverflow]: 'fa6-brands:stack-overflow',
 		[twitter]: 'fa6-brands:square-twitter',
+		[rss]: 'ic:round-rss-feed',
 	}
 
 	/**
