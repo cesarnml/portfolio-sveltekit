@@ -2,9 +2,10 @@ import type { UserConfig } from 'vite'
 import { sveltekit } from '@sveltejs/kit/vite'
 import { configDefaults, type UserConfig as VitestConfig } from 'vitest/config'
 import { imagetools } from 'vite-imagetools'
+import { SvelteKitPWA } from '@vite-pwa/sveltekit'
 
 const config: UserConfig & { test: VitestConfig['test'] } = {
-	plugins: [sveltekit(), imagetools()],
+	plugins: [sveltekit(), SvelteKitPWA(), imagetools()],
 	test: {
 		// jest like globals
 		globals: true,
