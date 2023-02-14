@@ -8,8 +8,6 @@ const config: UserConfig & { test: VitestConfig['test'] } = {
 	plugins: [
 		sveltekit(),
 		SvelteKitPWA({
-			strategies: 'injectManifest',
-			srcDir: '/',
 			scope: '/',
 			manifest: {
 				name: "Cesar's Website",
