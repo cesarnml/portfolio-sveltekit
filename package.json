@@ -17,10 +17,12 @@
 		"format": "prettier --plugin-search-dir . --write .",
 		"fix": "npm run format && npm run lint -- --fix",
 		"partytown": "partytown copylib static/~partytown",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"postbuild": "npx svelte-sitemap --out-dir .vercel/output/static --domain https://www.cesar-mejia.com"
 	},
 	"devDependencies": {
 		"@builder.io/partytown": "^0.7.5",
+		"@lottiefiles/lottie-interactivity": "^1.6.2",
 		"@playwright/test": "^1.30.0",
 		"@skeletonlabs/skeleton": "^0.124.2",
 		"@supabase/auth-helpers-sveltekit": "^0.8.7",

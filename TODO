@@ -23,8 +23,8 @@ PersonalWebsite:
     ☐ Article 4:
     ☐ Article 5:
   ✔ Add robots.txt @done(23-02-13 06:03)
-  ☐ Add RSS Feed @started(23-02-13 12:05)
-  ☐ Add XML Sitemaps
+  ✔ Add RSS Feed @started(23-02-13 12:05) @done(23-02-13 13:19) @lasted(1h14m47s)
+  ☐ Add XML Sitemaps @started(23-02-14 08:01)
   ✔ Add Google Analytics @started(23-02-11 09:10) @done(23-02-11 09:24) @lasted(14m15s)
   ✔ Add Vercel Analytics @done(23-02-11 09:24)
   ✔ Add partytown @done(23-02-13 06:03)

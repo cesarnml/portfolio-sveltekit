@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@builder.io/partytown': ^0.7.5
+  '@lottiefiles/lottie-interactivity': ^1.6.2
   '@playwright/test': ^1.30.0
   '@skeletonlabs/skeleton': ^0.124.2
   '@supabase/auth-helpers-sveltekit': ^0.8.7
@@ -67,6 +68,7 @@ specifiers:
 
 devDependencies:
   '@builder.io/partytown': 0.7.5
+  '@lottiefiles/lottie-interactivity': 1.6.2
   '@playwright/test': 1.30.0
   '@skeletonlabs/skeleton': 0.124.2
   '@supabase/auth-helpers-sveltekit': 0.8.7_wwkefq4crizglppdxtjqhrdudm
@@ -469,6 +471,12 @@ packages:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.0
       '@jridgewell/sourcemap-codec': 1.4.14
+    dev: true
+
+  /@lottiefiles/lottie-interactivity/1.6.2:
+    resolution: {integrity: sha512-psmG/frpi4IIJjBa+Mj0ivKtfNRkasUnvU6sBrVfm7nSwBpEoyMop16uIEYg5PYdpboFbQQhibmwC006KGZhsA==}
+    dependencies:
+      core-js: 3.27.2
     dev: true
 
   /@mapbox/node-pre-gyp/1.0.10:
@@ -1571,6 +1579,11 @@ packages:
   /cookie/0.5.0:
     resolution: {integrity: sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==}
     engines: {node: '>= 0.6'}
+    dev: true
+
+  /core-js/3.27.2:
+    resolution: {integrity: sha512-9ashVQskuh5AZEZ1JdQWp1GqSoC1e1G87MzRqg2gIfVAQ7Qn9K+uFj8EcniUFA4P2NLZfV+TOlX1SzoKfo+s7w==}
+    requiresBuild: true
     dev: true
 
   /cross-fetch/3.1.5:
