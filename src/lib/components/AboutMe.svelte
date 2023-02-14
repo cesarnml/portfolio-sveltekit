@@ -3,7 +3,7 @@
 </script>
 
 <div class="card variant-glass-surface space-y-4 p-6">
-	<Avatar src="images/favicon.png" width="w-16 md:20 lg:w-24" />
+	<Avatar src="favicon.ico" width="w-16 md:20 lg:w-24" />
 	<h3>Hello, I'm Cesar! 👋</h3>
 	<p class="!text-lg">
 		I am a full-stack web developer who specializes in building high-performance, accessible web
