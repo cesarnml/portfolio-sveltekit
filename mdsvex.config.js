@@ -1,6 +1,4 @@
-/* eslint-disable */
-// @ts-nocheck
-
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { defineMDSveXConfig as defineConfig } from 'mdsvex'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeSlug from 'rehype-slug'
@@ -17,6 +15,7 @@ const config = defineConfig({
 	smartypants: {
 		dashes: 'oldschool',
 	},
+	// @ts-ignore
 	highlight: { highlighter },
 	remarkPlugins: [
 		[remarkAbbr, { expandFirst: true }],
@@ -26,8 +25,10 @@ const config = defineConfig({
 		[remarkExternalLinks, { target: '_blank', rel: 'noopener noreferrer' }],
 	],
 	rehypePlugins: [
+		// @ts-ignore
 		rehypeSlug,
 		[
+			// @ts-ignore
 			rehypeAutolinkHeadings,
 			{
 				behavior: 'wrap',

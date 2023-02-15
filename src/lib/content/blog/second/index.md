@@ -5,7 +5,7 @@ description: My first markdown content
 author: Cesar Mejia
 tags: ['cool', 'beans']
 image: '/src/lib/assets/picture/hero.jpg'
-date: 2023-01-17
+date: 2023-01-18
 ---
 
 ## First Heading

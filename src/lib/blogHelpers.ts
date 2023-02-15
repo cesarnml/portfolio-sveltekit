@@ -12,7 +12,7 @@ function adjustReadingTimeText(time: number, wordsPerMinute = wpm) {
 	const conversionFactor = defaultWordsPerMinute / wordsPerMinute
 	const newMinutes = Math.ceil((time * conversionFactor) / sec2ms / min2sec)
 	const isSingular = newMinutes === 1
-	return isSingular ? `${newMinutes} minute` : `${newMinutes} minutes`
+	return isSingular ? `${newMinutes} min` : `${newMinutes} mins`
 }
 
 /**

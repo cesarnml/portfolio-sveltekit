@@ -1,12 +1,11 @@
 <script lang="ts">
 	import { page } from '$app/stores'
-	import { Url } from '$lib/url'
 	import type { PageData } from './$types'
 	import { Paginator } from '@skeletonlabs/skeleton'
-	import Picture from '$lib/components/Picture.svelte'
+	import BlogPostCard from '$lib/components/BlogPostCard.svelte'
 
 	export let data: PageData
-	const { posts, tags } = data
+	const { posts, tags, views } = data
 
 	$: paginator = {
 		offset: 0,
@@ -36,18 +35,7 @@
 	<h2 class="font-bold">All Posts</h2>
 	<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
 		{#each paginatedData as post (post.slug)}
-			<a class="card card-hover variant-glass-surface " href={Url.BlogDetail(post.slug)}>
-				<header><Picture class="object-cover" src={post.image} alt="blog" /></header>
-				<div class="p-4">
-					<div class="mb-4">
-						<h3 class="mb-1 font-bold">{post.title}</h3>
-						<div>{post.description}</div>
-					</div>
-					<footer class="flex justify-between text-sm ">
-						<span>{new Date(post.date).toDateString()}</span><span>{post.readingTime.text}</span>
-					</footer>
-				</div>
-			</a>
+			<BlogPostCard {post} view={views.find((view) => view.slug === post.slug)} />
 		{/each}
 	</div>
 	<hr />

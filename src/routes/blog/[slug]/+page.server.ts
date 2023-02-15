@@ -1,4 +1,5 @@
 import { error } from '@sveltejs/kit'
+import { prisma } from '$lib/prismaClient'
 import type { PageServerLoad } from './$types'
 
 export const load = (async ({ params }) => {
@@ -13,9 +14,25 @@ export const load = (async ({ params }) => {
 
 		const { html } = postModule.default.render()
 
+		const view = await prisma.view.upsert({
+			where: {
+				slug: params.slug,
+			},
+			update: {
+				count: {
+					increment: 1,
+				},
+			},
+			create: {
+				slug: params.slug,
+				count: 1,
+			},
+		})
+
 		return {
 			html,
 			frontmatter: postModule.metadata,
+			view,
 		}
 	} catch (err) {
 		throw error(428, 'I am a teacup')

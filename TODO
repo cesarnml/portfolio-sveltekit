@@ -2,18 +2,23 @@ PersonalWebsite:
   ☐ Create content for Home page
     ☐ Add typing animation
     ☐ Feature blog post
-    ☐ Minimal self blurb
     ☐ Latest articles
   ✔ Create content for About page @done(23-02-10 15:28)
     ✔ Create AboutMe card @started(23-02-10 13:21) @done(23-02-10 15:05) @lasted(1h44m14s)
     ✔ Skills/Tools @started(23-02-10 15:05) @done(23-02-10 15:27) @lasted(22m49s)
   ✔ Create Contact page @done(23-02-11 08:23)
-  ☐ Customize skeleton them
+  ☐ Customize skeleton theme
   ☐ Update Resume
   ☐ Write minimal playwright test
   ☐ Write minimal component test
   ✔ Create logo @done(23-02-13 06:03)
-  ☐ Add supabase to track page views?
+  ✔ Add supabase @started(23-02-15 09:20) @done(23-02-15 17:41) @lasted(8h21m10s)
+    ✔ Register/Login with Supabase @started(23-02-15 09:19) @done(23-02-15 17:40) @lasted(8h21m44s)
+    ✔ Register article view @started(23-02-15 11:47) @done(23-02-15 17:40) @lasted(5h53m46s)
+    ✔ Display article views @started(23-02-15 11:47) @done(23-02-15 17:40) @lasted(5h53m47s)
+      ✔ On all blog posts @started(23-02-15 11:47) @done(23-02-15 17:40) @lasted(5h53m48s)
+      ✔ On individual blog post @started(23-02-15 11:47) @done(23-02-15 17:40) @lasted(5h53m49s)
+    ☐ Store wakatime data
   ☐ Incorporate WakaTime?
   ☐ Add some unsplash images to spice things up
   ☐ Write articles
@@ -28,4 +33,6 @@ PersonalWebsite:
   ✔ Add Google Analytics @started(23-02-11 09:10) @done(23-02-11 09:24) @lasted(14m15s)
   ✔ Add Vercel Analytics @done(23-02-11 09:24)
   ✔ Add partytown @done(23-02-13 06:03)
-  ☐ Make site PWA compliant
+  ✔ Make site PWA compliant @done(23-02-15 09:14)
+  ☐ Setup OG meta tags
+  ☐ Setup Twitter tags

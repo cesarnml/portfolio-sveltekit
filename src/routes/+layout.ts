@@ -1,3 +1,4 @@
+import { getSupabase } from '@supabase/auth-helpers-sveltekit'
 import { error } from '@sveltejs/kit'
 import type { LayoutLoad } from './$types'
 
@@ -7,10 +8,12 @@ export const prerender = true
 // Allows client side routing. Necessary for page transitions and link prefetching; change to false if you prefer ordinary routing without JS
 export const csr = true
 
-export const load: LayoutLoad = async ({ url }) => {
+export const load: LayoutLoad = async (event) => {
 	try {
+		const { session } = await getSupabase(event)
 		return {
-			pathname: url.pathname,
+			pathname: event.url.pathname,
+			session,
 		}
 	} catch (err) {
 		if (err instanceof Error) {

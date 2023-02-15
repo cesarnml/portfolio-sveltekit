@@ -1,6 +1,8 @@
 <script lang="ts">
 	import type { LayoutData } from './$types'
 	import { onMount } from 'svelte'
+	import { supabase } from '$lib/supabaseClient'
+	import { invalidate } from '$app/navigation'
 	import Footer from '$lib/components/Footer.svelte'
 	import Navbar from '$lib/components/Navbar.svelte'
 	import NavHamburgerMenu from '$lib/components/NavHamburgerMenu.svelte'
@@ -23,8 +25,19 @@
 	let scriptEle: HTMLScriptElement
 
 	onMount(() => {
+		// Initiate partytown script
 		if (scriptEle) {
 			scriptEle.textContent = partytownSnippet()
+		}
+		// Invalidate supabase auth
+		const {
+			data: { subscription },
+		} = supabase.auth.onAuthStateChange(() => {
+			invalidate('supabase:auth')
+		})
+
+		return () => {
+			subscription.unsubscribe()
 		}
 	})
 

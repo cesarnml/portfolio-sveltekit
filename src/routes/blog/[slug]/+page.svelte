@@ -6,6 +6,7 @@
 	import ArticleMeta from '$lib/components/ArticleMeta.svelte'
 	import { TableOfContents } from '@skeletonlabs/skeleton'
 	import handleCopyClick from '$lib/handleCopyClick'
+
 	import '$lib/styles/shiki.css'
 
 	export let data: PageServerData
@@ -96,6 +97,7 @@
 			readingTime={data.frontmatter.readingTime.text}
 			wordCount={data.frontmatter.readingTime.words}
 			image={data.frontmatter.image}
+			viewCount={data.view.count}
 		/>
 	</section>
 	<div class="mb-2 space-x-5">

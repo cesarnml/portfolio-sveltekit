@@ -4,16 +4,17 @@
 // for information about these interfaces
 // and what to do when importing types
 
-// eslint-disable-next-line no-var
-declare var Email: {
-	send: (params: SendParams) => Promise<string>
-}
-
 declare namespace App {
 	// interface Error {}
 	// interface Locals {}
-	// interface PageData {}
+	interface PageData {
+		session: import('@supabase/supabase-js').Session | null
+	}
 	// interface Platform {}
+	interface Supabase {
+		Database: import('./DatabaseDefinitions').Database
+		SchemaName: 'public'
+	}
 
 	interface MdsvexModule {
 		default: import('svelte/internal').SvelteComponent & { render: () => { html: string } }
@@ -51,7 +52,3 @@ type SendParams = {
 	Subject: string
 	Body: string
 }
-
-declare module 'remark-abbr'
-declare module 'remark-code-titles'
-declare module 'remark-reading-time'

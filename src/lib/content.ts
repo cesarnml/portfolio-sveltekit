@@ -1,3 +1,4 @@
+import dayjs from 'dayjs'
 import { basename, dirname } from 'path'
 import adjustPostReadingTimeText from './blogHelpers'
 
@@ -18,7 +19,9 @@ export async function fetchPosts({ offset = 0, limit = ALL_POST_FLAG, tag = '' }
 		}),
 	)
 
-	let sortedPosts = posts.filter((post) => post.published)
+	let sortedPosts = posts
+		.filter((post) => post.published)
+		.sort((a, b) => (dayjs(a.date).isBefore(b.date) ? 1 : -1))
 
 	if (tag) {
 		sortedPosts = sortedPosts.filter((post) => post.tags.includes(tag))
