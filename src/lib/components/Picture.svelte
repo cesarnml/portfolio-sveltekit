@@ -4,9 +4,8 @@
 		{
 			query: {
 				format: 'webp;avif;jpg',
-				width: '360;480;768;1024',
+				width: '400;800;1200',
 				picture: '',
-				// withoutEnlargement: '',
 			},
 			import: 'default',
 			eager: true,
