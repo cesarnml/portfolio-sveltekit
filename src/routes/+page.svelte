@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores'
 	import constructionAnimation from '$lib/assets/json/construction.json'
-	import Account from '$lib/components/Account.svelte'
-	import Auth from '$lib/components/Auth.svelte'
 	import lottie from 'lottie-web-light'
 	import { onMount } from 'svelte'
 
@@ -26,9 +24,4 @@
 		<div bind:this={lottieContainer} />
 	</div>
 	<h2><span>🚧</span> site under construction <span>🚧</span></h2>
-	{#if !$page.data.session}
-		<Auth />
-	{:else}
-		<Account session={$page.data.session} />
-	{/if}
 </div>

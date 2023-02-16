@@ -68,7 +68,7 @@
 <div>
 	<div class="flex flex-col items-center">
 		<div class="w-full max-w-screen-xs">
-			<h2 class="mb-8 text-center">Contact Me</h2>
+			<h2 class="mb-8">Contact Me</h2>
 			<form class="flex flex-col items-stretch gap-6" on:submit|preventDefault={sendEmail}>
 				<p class="!text-lg">
 					You can contact me via this contact form or through my <a href="mailto:cmejia@gmail.com"

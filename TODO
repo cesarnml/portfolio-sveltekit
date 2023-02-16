@@ -3,6 +3,7 @@ PersonalWebsite:
     ☐ Add typing animation
     ☐ Feature blog post
     ☐ Latest articles
+    ☐ Curvy (animated) background
   ✔ Create content for About page @done(23-02-10 15:28)
     ✔ Create AboutMe card @started(23-02-10 13:21) @done(23-02-10 15:05) @lasted(1h44m14s)
     ✔ Skills/Tools @started(23-02-10 15:05) @done(23-02-10 15:27) @lasted(22m49s)
@@ -35,4 +36,10 @@ PersonalWebsite:
   ✔ Add partytown @done(23-02-13 06:03)
   ✔ Make site PWA compliant @done(23-02-15 09:14)
   ☐ Setup OG meta tags
+    ☐ 1.91:1 and 1200x627
+    ☐ Main tags: `og:title` (40-60 chars), `og:description` (2-4 sentences), `og:image` (1.91:1 and 627), `og:url` (canonical), extra: (`og:image:width` and `og:image:height`), `og:type` (article, website, blog)
   ☐ Setup Twitter tags
+    ☐ `<meta name=”twitter:card” content=”summary” />`, `<meta name=”twitter:title” content=”Your title here” />` 70 char, `<meta name=”twitter:description” content=”Your 200-character description here” />`, `<meta name=”twitter:url” content=”http://www.yourdomain.com” />`, `<meta name=”twitter:image” content=”http://www.yourdomain.com /image-name.jpg” />` `mb limit, 280x150
+  ☐ Setup Privacy and Terms of Service links
+  ☐ Create a better logo
+  ☐ Fix page transition
