@@ -18,6 +18,9 @@
 	import '@skeletonlabs/skeleton/themes/theme-gold-nouveau.css'
 	import '@skeletonlabs/skeleton/styles/all.css'
 	import '$lib/styles/app.css'
+	import WaveSvg from '$lib/components/WaveSvg.svelte'
+	import { page } from '$app/stores'
+	import { Url } from '$lib/url'
 
 	inject({ mode: dev ? 'development' : 'production' })
 
@@ -83,6 +86,10 @@
 	<svelte:fragment slot="sidebarLeft" />
 	<svelte:fragment slot="sidebarRight" />
 	<svelte:fragment slot="pageHeader" />
+
+	{#if $page.url.pathname === Url.Home}
+		<WaveSvg />
+	{/if}
 	<!-- Router Slot -->
 	<div class="container relative mx-auto max-w-screen-lg p-4 md:p-6 lg:p-8">
 		<PageTransition>

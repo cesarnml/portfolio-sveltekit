@@ -38,9 +38,13 @@ PersonalWebsite:
   ☐ Setup OG meta tags
     ☐ 1.91:1 and 1200x627
     ☐ Main tags: `og:title` (40-60 chars), `og:description` (2-4 sentences), `og:image` (1.91:1 and 627), `og:url` (canonical), extra: (`og:image:width` and `og:image:height`), `og:type` (article, website, blog)
+    ☐ https://geoffrich.net/posts/svelte-social-image/
   ☐ Setup Twitter tags
+    ☐ https://www.npmjs.com/package/svelte-meta-tags  
     ☐ `<meta name=”twitter:card” content=”summary” />`, `<meta name=”twitter:title” content=”Your title here” />` 70 char, `<meta name=”twitter:description” content=”Your 200-character description here” />`, `<meta name=”twitter:url” content=”http://www.yourdomain.com” />`, `<meta name=”twitter:image” content=”http://www.yourdomain.com /image-name.jpg” />` `mb limit, 280x150
   ☐ Setup Privacy and Terms of Service links
   ☐ Create a better logo
   ✔ Fix page transition @done(23-02-16 13:10)
-  ☐ Create a catch all 404 page @started(23-02-16 13:10)
+  ✔ Create a catch all 404 page @started(23-02-16 13:10) @done(23-02-16 13:54) @lasted(44m59s)
+  ☐ Integrate Sentry
+  ☐ A11y https://geoffrich.net/posts/accessible-svelte-transitions/
