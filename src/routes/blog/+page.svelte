@@ -22,6 +22,10 @@
 
 <svelte:head>
 	<title>Cesar's Blog Posts</title>
+	<meta
+		name="description"
+		content="All of Cesar's blog posts on tech and web development live here."
+	/>
 	<link rel="canonical" href={$page.url.href} />
 </svelte:head>
 

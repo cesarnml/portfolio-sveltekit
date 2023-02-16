@@ -75,7 +75,11 @@
 	})
 </script>
 
-<PageHead title={data.frontmatter.title} description={data.frontmatter.description} />
+<PageHead
+	title={data.frontmatter.title}
+	description={data.frontmatter.description}
+	image={data.frontmatter.image}
+/>
 
 <div class="absolute top-8 -right-[240px] hidden h-full w-[240px] xl:inline-block">
 	<TableOfContents

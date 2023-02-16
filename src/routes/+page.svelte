@@ -16,6 +16,10 @@
 
 <svelte:head>
 	<title>Cesar's Portfolio</title>
+	<meta
+		name="description"
+		content="Explore my web portfolio and tech blog for insights on the latest trends in technology. Discover my creative designs and development skills in the portfolio, while the blog features in-depth analysis and expert tips on various tech topics. Join me on a journey of innovation and inspiration."
+	/>
 	<link rel="canonical" href={$page.url.href} />
 </svelte:head>
 
