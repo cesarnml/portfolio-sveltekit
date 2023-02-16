@@ -1,5 +1,4 @@
 <script lang="ts">
-	import type { LayoutData } from './$types'
 	import { onMount } from 'svelte'
 	import { supabase } from '$lib/supabaseClient'
 	import { invalidate } from '$app/navigation'
@@ -41,9 +40,6 @@
 		}
 	})
 
-	export let data: LayoutData
-
-	const { pathname } = data
 	// Close drawer if screen > media.sm and drawer is currently open
 	$: if ($media.sm && $drawerStore.open) {
 		drawerStore.close()
@@ -89,7 +85,7 @@
 	<svelte:fragment slot="pageHeader" />
 	<!-- Router Slot -->
 	<div class="container relative mx-auto max-w-screen-lg p-4 md:p-6 lg:p-8">
-		<PageTransition {pathname}>
+		<PageTransition>
 			<slot />
 		</PageTransition>
 	</div>
