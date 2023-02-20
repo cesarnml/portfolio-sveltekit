@@ -22,6 +22,16 @@
 	import { page } from '$app/stores'
 	import { Url } from '$lib/url'
 
+	import * as Sentry from '@sentry/svelte'
+	import { BrowserTracing } from '@sentry/tracing'
+	import { PUBLIC_SENTRY_DSN } from '$env/static/public'
+
+	Sentry.init({
+		dsn: PUBLIC_SENTRY_DSN,
+		integrations: [new BrowserTracing()],
+		tracesSampleRate: 1.0,
+	})
+
 	inject({ mode: dev ? 'development' : 'production' })
 
 	let scriptEle: HTMLScriptElement

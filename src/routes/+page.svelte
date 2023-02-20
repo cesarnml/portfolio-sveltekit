@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores'
 	import constructionAnimation from '$lib/assets/json/construction.json'
+	import ErrorTestButton from '$lib/components/ErrorTestButton.svelte'
 	import lottie from 'lottie-web-light'
 	import { onMount } from 'svelte'
 
@@ -28,4 +29,5 @@
 		<div bind:this={lottieContainer} />
 	</div> -->
 	<h2><span>🚧</span> site under construction <span>🚧</span></h2>
+	<ErrorTestButton />
 </div>
