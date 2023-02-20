@@ -4,4 +4,6 @@
 	}
 </script>
 
-<button type="button" on:click={unknownFunction}> Throw error </button>
+<button class="btn variant-filled-primary" type="button" on:click={unknownFunction}>
+	Throw error
+</button>
