@@ -27,8 +27,10 @@
 
 	Sentry.init({
 		dsn: PUBLIC_SENTRY_DSN,
-		integrations: [new BrowserTracing()],
+		integrations: [new BrowserTracing(), new Sentry.Replay()],
 		tracesSampleRate: 1.0,
+		replaysSessionSampleRate: 1.0,
+		replaysOnErrorSampleRate: 1.0,
 	})
 
 	inject({ mode: dev ? 'development' : 'production' })
