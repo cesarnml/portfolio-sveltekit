@@ -13,18 +13,17 @@
 	import { dev } from '$app/environment'
 	import { inject } from '@vercel/analytics'
 	import { partytownSnippet } from '@builder.io/partytown/integration'
+	import WavesSvg from '$lib/components/WavesSvg.svelte'
+	import { page } from '$app/stores'
+	import { Url } from '$lib/url'
+	import * as Sentry from '@sentry/svelte'
+	import { BrowserTracing } from '@sentry/tracing'
+	import { PUBLIC_SENTRY_DSN } from '$env/static/public'
 
 	import 'iconify-icon'
 	import '@skeletonlabs/skeleton/themes/theme-gold-nouveau.css'
 	import '@skeletonlabs/skeleton/styles/all.css'
 	import '$lib/styles/app.css'
-	import WaveSvg from '$lib/components/WaveSvg.svelte'
-	import { page } from '$app/stores'
-	import { Url } from '$lib/url'
-
-	import * as Sentry from '@sentry/svelte'
-	import { BrowserTracing } from '@sentry/tracing'
-	import { PUBLIC_SENTRY_DSN } from '$env/static/public'
 
 	Sentry.init({
 		dsn: PUBLIC_SENTRY_DSN,
@@ -98,7 +97,7 @@
 	<svelte:fragment slot="pageHeader" />
 
 	{#if $page.url.pathname === Url.Home}
-		<WaveSvg />
+		<WavesSvg />
 	{/if}
 	<!-- Router Slot -->
 	<div class="container relative mx-auto max-w-screen-lg p-4 md:p-6 lg:p-8">

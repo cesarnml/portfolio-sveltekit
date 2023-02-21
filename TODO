@@ -47,5 +47,5 @@ PersonalWebsite:
     ☐ Adapt to dark/light mode
   ✔ Fix page transition @done(23-02-16 13:10)
   ✔ Create a catch all 404 page @started(23-02-16 13:10) @done(23-02-16 13:54) @lasted(44m59s)
-  ☐ Integrate Sentry
+  ✔ Integrate Sentry @done(23-02-21 09:45)
   ☐ A11y https://geoffrich.net/posts/accessible-svelte-transitions/

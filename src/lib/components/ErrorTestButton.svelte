@@ -5,5 +5,5 @@
 </script>
 
 <button class="btn variant-filled-primary" type="button" on:click={unknownFunction}>
-	Throw error
+	Throw error (testing sentry)
 </button>
