@@ -16,22 +16,11 @@
 	import WavesSvg from '$lib/components/WavesSvg.svelte'
 	import { page } from '$app/stores'
 	import { Url } from '$lib/url'
-	import * as Sentry from '@sentry/svelte'
-	import { BrowserTracing } from '@sentry/tracing'
-	import { PUBLIC_SENTRY_DSN } from '$env/static/public'
 
 	import 'iconify-icon'
 	import '@skeletonlabs/skeleton/themes/theme-gold-nouveau.css'
 	import '@skeletonlabs/skeleton/styles/all.css'
 	import '$lib/styles/app.css'
-
-	Sentry.init({
-		dsn: PUBLIC_SENTRY_DSN,
-		integrations: [new BrowserTracing(), new Sentry.Replay()],
-		tracesSampleRate: 1.0,
-		replaysSessionSampleRate: 1.0,
-		replaysOnErrorSampleRate: 1.0,
-	})
 
 	inject({ mode: dev ? 'development' : 'production' })
 

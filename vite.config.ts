@@ -4,7 +4,10 @@ import { configDefaults } from 'vitest/config'
 import { imagetools } from 'vite-imagetools'
 import { sentryVitePlugin } from '@sentry/vite-plugin'
 
-const config = defineConfig(({ mode }) => {
+const config = defineConfig(({ command, mode }) => {
+	console.log('command:', command)
+	console.log('mode:', mode)
+
 	const env = loadEnv(mode, process.cwd(), '')
 
 	return {
@@ -16,6 +19,7 @@ const config = defineConfig(({ mode }) => {
 			sveltekit(),
 			imagetools(),
 			sentryVitePlugin({
+				telemetry: false,
 				org: env.PUBLIC_SENTRY_ORG,
 				project: env.PUBLIC_SENTRY_PROJECT,
 				include: './svelte-kit/output',
