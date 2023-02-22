@@ -3,6 +3,8 @@ import { sveltekit } from '@sveltejs/kit/vite'
 import { configDefaults } from 'vitest/config'
 import { imagetools } from 'vite-imagetools'
 import { sentryVitePlugin } from '@sentry/vite-plugin'
+import { purgeCss } from 'vite-plugin-svelte-purgecss'
+import Inspect from 'vite-plugin-inspect'
 
 const config = defineConfig(({ command, mode }) => {
 	console.log('command:', command)
@@ -18,6 +20,11 @@ const config = defineConfig(({ command, mode }) => {
 		plugins: [
 			sveltekit(),
 			imagetools(),
+			purgeCss(),
+			Inspect({
+				build: true,
+				outputDir: '.vite-inspect',
+			}),
 			sentryVitePlugin({
 				telemetry: false,
 				org: env.PUBLIC_SENTRY_ORG,
