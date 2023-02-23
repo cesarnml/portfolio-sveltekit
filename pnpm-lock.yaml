@@ -9,7 +9,7 @@ specifiers:
   '@sentry/svelte': ^7.38.0
   '@sentry/tracing': ^7.38.0
   '@sentry/vite-plugin': ^0.4.0
-  '@skeletonlabs/skeleton': ^0.132.5
+  '@skeletonlabs/skeleton': ^0.124.2
   '@supabase/auth-helpers-sveltekit': ^0.8.7
   '@supabase/supabase-js': ^2.8.0
   '@sveltejs/adapter-vercel': ^1.0.6
@@ -85,7 +85,7 @@ devDependencies:
   '@sentry/svelte': 7.38.0_svelte@3.55.1
   '@sentry/tracing': 7.38.0
   '@sentry/vite-plugin': 0.4.0
-  '@skeletonlabs/skeleton': 0.132.5
+  '@skeletonlabs/skeleton': 0.124.2
   '@supabase/auth-helpers-sveltekit': 0.8.7_h4fmw4dd6b3xkulak4k3c7hqqu
   '@supabase/supabase-js': 2.8.0
   '@sveltejs/adapter-vercel': 1.0.6_@sveltejs+kit@1.8.3
@@ -768,8 +768,8 @@ packages:
     resolution: {integrity: sha512-VEB8ygeP42CFLWyAJhN5OklpxUliqdNEUcXb4xZ/CINqtYGTjL5ukluKdKzQ0iWdUxyQ7B0539PAUhHKrCNWSQ==}
     dev: true
 
-  /@skeletonlabs/skeleton/0.132.5:
-    resolution: {integrity: sha512-xbw/2hWw7/BjIYjEw9fDNG/to9/nML6Lc7m/PPSHG7cP6+pQ5CwvNxAXhErCkIGICuAKXiesYglhw2PrZY6M2A==}
+  /@skeletonlabs/skeleton/0.124.2:
+    resolution: {integrity: sha512-SQ0tgXXEj/QJ5BSA+UwKdSMADW5Xt+5iNpks1y94YnX2iwAY80MlffEfip+//VXYayeGvzx4xiU4//MpK9+Zgg==}
     dependencies:
       svelte: 3.55.1
     dev: true

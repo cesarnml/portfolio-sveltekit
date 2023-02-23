@@ -18,7 +18,7 @@
 	import { Url } from '$lib/url'
 
 	import 'iconify-icon'
-	import '@skeletonlabs/skeleton/themes/theme-gold-nouveau.css'
+	import '$lib/styles/theme.css'
 	import '@skeletonlabs/skeleton/styles/all.css'
 	import '$lib/styles/app.css'
 
