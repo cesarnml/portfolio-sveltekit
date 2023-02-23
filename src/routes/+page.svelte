@@ -1,18 +1,18 @@
 <script lang="ts">
 	import { page } from '$app/stores'
-	import constructionAnimation from '$lib/assets/json/construction.json'
+	// import constructionAnimation from '$lib/assets/json/construction.json'
 	import ErrorTestButton from '$lib/components/ErrorTestButton.svelte'
-	import lottie from 'lottie-web-light'
-	import { onMount } from 'svelte'
+	// import lottie from 'lottie-web-light'
+	// import { onMount } from 'svelte'
 
-	let lottieContainer: HTMLDivElement
+	// let lottieContainer: HTMLDivElement
 
-	onMount(() => {
-		lottie.loadAnimation({
-			container: lottieContainer,
-			animationData: constructionAnimation,
-		})
-	})
+	// onMount(() => {
+	// 	lottie.loadAnimation({
+	// 		container: lottieContainer,
+	// 		animationData: constructionAnimation,
+	// 	})
+	// })
 </script>
 
 <svelte:head>
