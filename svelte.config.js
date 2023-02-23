@@ -15,9 +15,7 @@ const config = {
 	preprocess: [vitePreprocess({ postcss: true, preserve: ['partytown'] }), mdsvex(mdsvexConfig)],
 
 	kit: {
-		adapter: adapter({
-			edge: true,
-		}),
+		adapter: adapter(),
 		alias: {
 			$lib: resolve('./src/lib'),
 		},
