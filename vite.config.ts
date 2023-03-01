@@ -34,6 +34,19 @@ const config = defineConfig(({ command, mode }) => {
 			}),
 			SvelteKitPWA({
 				filename: 'service-worker.js',
+				strategies: 'injectManifest',
+				mode: 'development',
+				srcDir: './src',
+				scope: '/',
+				base: '/',
+				injectManifest: {
+					globPatterns: ['client/**/*.{js,css,ico,png,svg,webp,woff,woff2}'],
+				},
+				devOptions: {
+					enabled: true,
+					type: 'module',
+					navigateFallback: '/',
+				},
 				manifest: {
 					lang: 'en',
 					name: "Cesar's Website",
