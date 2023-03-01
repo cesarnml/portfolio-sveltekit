@@ -5,6 +5,7 @@ import { imagetools } from 'vite-imagetools'
 import { sentryVitePlugin } from '@sentry/vite-plugin'
 // import { purgeCss } from 'vite-plugin-svelte-purgecss'
 import Inspect from 'vite-plugin-inspect'
+import { SvelteKitPWA } from '@vite-pwa/sveltekit'
 
 const config = defineConfig(({ command, mode }) => {
 	console.log('command:', command)
@@ -30,6 +31,9 @@ const config = defineConfig(({ command, mode }) => {
 				project: env.PUBLIC_SENTRY_PROJECT,
 				include: './svelte-kit/output',
 				authToken: env.SENTRY_AUTH_TOKEN,
+			}),
+			SvelteKitPWA({
+				filename: 'service-worker.js',
 			}),
 		],
 		test: {
