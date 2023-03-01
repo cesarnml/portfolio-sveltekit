@@ -34,7 +34,7 @@ const config = defineConfig(({ command, mode }) => {
 			}),
 			SvelteKitPWA({
 				filename: 'service-worker.js',
-				strategies: 'injectManifest',
+				strategies: 'generateSW',
 				mode: 'development',
 				srcDir: './src',
 				scope: '/',
