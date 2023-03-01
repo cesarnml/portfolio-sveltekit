@@ -32,6 +32,7 @@
 		"*.ts",
 		".*.cjs",
 		"*.cjs",
-		"static/**/*.js"
+		"static/**/*.js",
+		"src/service-worker.js"
 	]
 }

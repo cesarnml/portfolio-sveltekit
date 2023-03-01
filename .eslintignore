@@ -16,3 +16,4 @@ yarn.lock
 .vercel
 playwright-report
 service-worker.ts
+service-worker.js
