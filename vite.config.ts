@@ -34,6 +34,30 @@ const config = defineConfig(({ command, mode }) => {
 			}),
 			SvelteKitPWA({
 				filename: 'service-worker.js',
+				manifest: {
+					lang: 'en',
+					name: "Cesar's Website",
+					short_name: "Cesar's Website",
+					description: "Cesar Mejia's web portfolio and blog.",
+					start_url: '/',
+					scope: '/',
+					display: 'standalone',
+					background_color: '#000',
+					theme_color: '#ffeb3b',
+					prefer_related_applications: false,
+					icons: [
+						{ src: 'android/android-launchericon-512-512.png', sizes: '512x512' },
+						{ src: 'android/android-launchericon-192-192.png', sizes: '192x192' },
+						{ src: 'ios/192.png', sizes: '192x192' },
+						{ src: 'ios/512.png', sizes: '512x512' },
+						{
+							src: 'maskable_icon_x192.png',
+							sizes: '192x192',
+							type: 'image/png',
+							purpose: 'any maskable',
+						},
+					],
+				},
 			}),
 		],
 		test: {
