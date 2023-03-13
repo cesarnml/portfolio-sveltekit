@@ -2,7 +2,6 @@ import type { HandleClientError } from '@sveltejs/kit'
 import * as SentrySvelte from '@sentry/svelte'
 import { BrowserTracing } from '@sentry/tracing'
 import { PUBLIC_SENTRY_DSN } from '$env/static/public'
-import '$lib/supabaseClient'
 
 SentrySvelte.init({
 	dsn: PUBLIC_SENTRY_DSN,
