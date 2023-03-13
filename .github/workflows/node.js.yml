@@ -20,13 +20,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+      - name: Create package-lock.json
+        run: npm i --package-lock-only
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-      - name: Create package-lock.json
-        run: npm i --package-lock-only
       - run: npm ci
       - run: npm run format
       - run: npm run lint
