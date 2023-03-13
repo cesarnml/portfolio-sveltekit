@@ -63,7 +63,6 @@
 		"eslint-plugin-import": "^2.27.5",
 		"eslint-plugin-svelte3": "^4.0.0",
 		"gray-matter": "^4.0.3",
-		"husky": "^8.0.3",
 		"iconify-icon": "^1.0.7",
 		"jsdom": "^21.1.1",
 		"lottie-web-light": "^1.1.0",
