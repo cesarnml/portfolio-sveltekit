@@ -35,8 +35,9 @@ export async function fetchPosts({ offset = 0, limit = ALL_POST_FLAG, tag = '' }
 		sortedPosts = sortedPosts.slice(0, limit)
 	}
 
-	//  Adjust readingTime.text
-	//  NOTE: `time` and `minutes` will NOT be adjusted for new readingTime since we don't make use of them in the blog)
+	// Adjust readingTime.text
+	// NOTE: `time` and `minutes` will NOT be adjusted
+	// This is okay since we don't make use of them in the blog)
 	sortedPosts = sortedPosts.map(adjustPostReadingTimeText)
 
 	return sortedPosts
