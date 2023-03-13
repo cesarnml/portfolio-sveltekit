@@ -38,5 +38,3 @@ export const load = (async ({ params }) => {
 		throw error(428, 'I am a teacup')
 	}
 }) satisfies PageServerLoad
-
-export const prerender = true

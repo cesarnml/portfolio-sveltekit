@@ -29,24 +29,14 @@ const config = defineConfig(({ mode }) => {
 			}),
 		],
 		test: {
-			// jest like globals
 			globals: true,
 			environment: 'jsdom',
-			// in-source testing
-			includeSource: ['src/**/*.{js,ts,svelte}'],
-			include: ['src/**/*.{test,spec}.{js,mjs,cjs,ts,mts,cts,jsx,tsx}'],
-			// Add @testing-library/jest-dom matchers & mocks of SvelteKit modules
 			setupFiles: ['./setupTest.ts'],
-			// Exclude files in c8
+			include: ['src/**/*.{test,spec}.{js,ts}'],
 			coverage: {
 				all: true,
 				reporter: ['text', 'html'],
 				src: ['./src'],
-				exclude: configDefaults.coverage.exclude?.concat([
-					'src/**/+page*.{ts,svelte}',
-					'src/**/+layout*.{ts,svelte}',
-					'setupTest.ts',
-				]),
 			},
 			// Exclude playwright tests folder
 			exclude: [...configDefaults.exclude, 'tests'],

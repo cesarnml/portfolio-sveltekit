@@ -13,5 +13,3 @@ export const load: PageServerLoad = async ({ params: { tag } }) => {
 		posts: postByTag,
 	}
 }
-
-export const prerender = true

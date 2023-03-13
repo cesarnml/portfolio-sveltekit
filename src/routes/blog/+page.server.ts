@@ -8,5 +8,3 @@ export const load: PageServerLoad = async () => {
 	const tags = await fetchAllTags()
 	return { posts, tags, views }
 }
-
-export const prerender = true
