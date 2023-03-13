@@ -17,7 +17,6 @@
 		"format": "prettier --plugin-search-dir . --write .",
 		"fix": "npm run format && npm run lint -- --fix",
 		"partytown": "partytown copylib static/~partytown",
-		"prepare": "husky install",
 		"postbuild": "svelte-sitemap --out-dir .vercel/output/static --domain https://cesar-mejia.com"
 	},
 	"devDependencies": {
