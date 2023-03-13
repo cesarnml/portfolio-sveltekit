@@ -5,14 +5,18 @@
 // and what to do when importing types
 
 declare namespace App {
+	interface Locals {
+		supabase: SupabaseClient
+		getSession(): Promise<Session | null>
+	}
+	interface PageData {
+		session: Session | null
+	}
+	// interface Platform {}
+
 	interface Error {
 		errorId?: string
 	}
-	// interface Locals {}
-	interface PageData {
-		session: import('@supabase/supabase-js').Session | null
-	}
-	// interface Platform {}
 	interface Supabase {
 		Database: import('./DatabaseDefinitions').Database
 		SchemaName: 'public'

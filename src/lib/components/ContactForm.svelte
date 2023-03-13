@@ -31,7 +31,6 @@
 	function triggerToast(): void {
 		const t: ToastSettings = {
 			message: 'Message delivered 🎉',
-			preset: 'tertiary',
 			autohide: true,
 			timeout: 4000,
 		}

@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { afterUpdate, onMount } from 'svelte'
-	import { storeLightSwitch } from '@skeletonlabs/skeleton'
+	import { modeCurrent } from '@skeletonlabs/skeleton'
 
-	$: theme = $storeLightSwitch ? 'github-dark' : 'github-light'
+	$: theme = $modeCurrent ? 'github-dark' : 'github-light'
 
 	$: options = {
 		src: 'https://utteranc.es/client.js',

@@ -1,6 +1,6 @@
 <script lang="ts">
+	import type { LayoutData } from './$types'
 	import { onMount } from 'svelte'
-	import { supabase } from '$lib/supabaseClient'
 	import { invalidate } from '$app/navigation'
 	import Footer from '$lib/components/Footer.svelte'
 	import Navbar from '$lib/components/Navbar.svelte'
@@ -22,6 +22,10 @@
 	import '@skeletonlabs/skeleton/styles/all.css'
 	import '$lib/styles/app.css'
 
+	export let data: LayoutData
+
+	$: ({ supabase } = data)
+
 	inject({ mode: dev ? 'development' : 'production' })
 
 	let scriptEle: HTMLScriptElement
@@ -31,16 +35,11 @@
 		if (scriptEle) {
 			scriptEle.textContent = partytownSnippet()
 		}
-		// Invalidate supabase auth
-		const {
-			data: { subscription },
-		} = supabase.auth.onAuthStateChange(() => {
+		const { data } = supabase.auth.onAuthStateChange(() => {
 			invalidate('supabase:auth')
 		})
 
-		return () => {
-			subscription.unsubscribe()
-		}
+		return () => data.subscription.unsubscribe()
 	})
 
 	// Close drawer if screen > media.sm and drawer is currently open

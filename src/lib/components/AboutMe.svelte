@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Avatar, tooltip } from '@skeletonlabs/skeleton'
+	import { Avatar } from '@skeletonlabs/skeleton'
 </script>
 
 <div class="card variant-glass-surface space-y-4 p-6">
@@ -12,27 +12,11 @@
 	</p>
 	<p class="!text-lg">
 		In my free time, I enjoy studying <button
-			use:tooltip={{
-				content: '<div>Learning Thai&nbsp;&nbsp;🇹🇭</div><div>Sawaatdee krap!</div>',
-				position: 'top',
-				background: 'bg-secondary-100-800-token',
-			}}><span class="border-b border-dotted">languages</span></button
+			><span class="border-b border-dotted">languages</span></button
 		>, improving my
-		<button
-			use:tooltip={{
-				content: '🥊&nbsp;&nbsp;It beats running on the treadmill&nbsp;&nbsp; 🙂',
-				position: 'top',
-				background: 'bg-secondary-100-800-token',
-			}}><span class="border-b border-dotted">Muay Thai</span></button
-		>
+		<button><span class="border-b border-dotted">Muay Thai</span></button>
 		skills, and watching the latest
-		<button
-			use:tooltip={{
-				content: '❤️&nbsp;&nbsp;We love Dance of Dragons and The Last of Us&nbsp;&nbsp;🍿',
-				position: 'top',
-				background: 'bg-secondary-100-800-token',
-			}}><span class="border-b border-dotted">Netflix/HBO</span></button
-		> series with my partner.
+		<button><span class="border-b border-dotted">Netflix/HBO</span></button> series with my partner.
 	</p>
 	<hr />
 	<form method="get" action="pdfs/Resume-CesarMejia.pdf">

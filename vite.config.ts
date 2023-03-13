@@ -3,14 +3,9 @@ import { sveltekit } from '@sveltejs/kit/vite'
 import { configDefaults } from 'vitest/config'
 import { imagetools } from 'vite-imagetools'
 import { sentryVitePlugin } from '@sentry/vite-plugin'
-// import { purgeCss } from 'vite-plugin-svelte-purgecss'
 import Inspect from 'vite-plugin-inspect'
-// import { SvelteKitPWA } from '@vite-pwa/sveltekit'
 
-const config = defineConfig(({ command, mode }) => {
-	console.log('command:', command)
-	console.log('mode:', mode)
-
+const config = defineConfig(({ mode }) => {
 	const env = loadEnv(mode, process.cwd(), '')
 
 	return {
@@ -32,45 +27,6 @@ const config = defineConfig(({ command, mode }) => {
 				include: './svelte-kit/output',
 				authToken: env.SENTRY_AUTH_TOKEN,
 			}),
-			// SvelteKitPWA({
-			// 	filename: 'service-worker.js',
-			// 	strategies: 'generateSW',
-			// 	srcDir: './	src',
-			// 	scope: '/',
-			// 	base: '/',
-			// 	injectManifest: {
-			// 		globPatterns: ['client/**/*.{js,css,ico,png,svg,webp,woff,woff2}'],
-			// 	},
-			// 	devOptions: {
-			// 		enabled: true,
-			// 		type: 'module',
-			// 		navigateFallback: '/',
-			// 	},
-			// 	manifest: {
-			// 		lang: 'en',
-			// 		name: "Cesar's Website",
-			// 		short_name: "Cesar's Website",
-			// 		description: "Cesar Mejia's web portfolio and blog.",
-			// 		start_url: '/',
-			// 		scope: '/',
-			// 		display: 'standalone',
-			// 		background_color: '#000',
-			// 		theme_color: '#ffeb3b',
-			// 		prefer_related_applications: false,
-			// 		icons: [
-			// 			{ src: 'android/android-launchericon-512-512.png', sizes: '512x512' },
-			// 			{ src: 'android/android-launchericon-192-192.png', sizes: '192x192' },
-			// 			{ src: 'ios/192.png', sizes: '192x192' },
-			// 			{ src: 'ios/512.png', sizes: '512x512' },
-			// 			{
-			// 				src: 'maskable_icon_x192.png',
-			// 				sizes: '192x192',
-			// 				type: 'image/png',
-			// 				purpose: 'any maskable',
-			// 			},
-			// 		],
-			// 	},
-			// }),
 		],
 		test: {
 			// jest like globals
