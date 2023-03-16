@@ -113,3 +113,14 @@
 		{@html data.html}
 	</section>
 </article>
+
+<style>
+	:global(.permalink) {
+		opacity: 0;
+		transition: all 0.3s ease-in-out;
+		margin-left: 0.5rem;
+	}
+	:global(h2:hover .permalink, h3:hover .permalink) {
+		opacity: 1;
+	}
+</style>

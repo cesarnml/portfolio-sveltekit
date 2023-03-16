@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { defineMDSveXConfig as defineConfig } from 'mdsvex'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeSlug from 'rehype-slug'
 import remarkAbbr from 'remark-abbr'
 import remarkCodeTitles from 'remark-code-titles'
@@ -25,15 +24,8 @@ const config = defineConfig({
 		[remarkExternalLinks, { target: '_blank', rel: 'noopener noreferrer' }],
 	],
 	rehypePlugins: [
-		// @ts-ignore
+		// @ts-expect-error
 		rehypeSlug,
-		[
-			// @ts-ignore
-			rehypeAutolinkHeadings,
-			{
-				behavior: 'wrap',
-			},
-		],
 	],
 })
 
