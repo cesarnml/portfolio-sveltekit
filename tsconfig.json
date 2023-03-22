@@ -15,8 +15,7 @@
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"sourceMap": true,
-		"strict": true,
-		"ignoreDeprecations": "5.0"
+		"strict": true
 	},
 	"include": [
 		".svelte-kit/ambient.d.ts",

@@ -9,17 +9,9 @@ import { defineConfig, devices } from '@playwright/test'
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
-
-const webServer = {
-	command: 'npm run build && npm run preview',
-	reuseExistingServer: !process.env.CI,
-	port: 4173,
-	timeout: 5 * 60 * 1000, // 5 min
-}
-
-const config = defineConfig({
+export default defineConfig({
 	testDir: 'tests',
-	timeout: 10 * 1000, // 5 secs
+	timeout: 30 * 1000, // 30 secs
 	fullyParallel: true,
 	forbidOnly: !!process.env.CI,
 	retries: process.env.CI ? 2 : 0,
@@ -87,7 +79,3 @@ const config = defineConfig({
 	/* Folder for test artifacts such as screenshots, videos, traces, etc. */
 	outputDir: 'test-results/',
 })
-
-if (!process.env.CI) {
-	config.webServer = webServer
-}
