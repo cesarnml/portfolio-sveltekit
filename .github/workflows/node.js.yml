@@ -19,12 +19,28 @@ jobs:
         with:
           node-version: 18.x
           cache: 'npm'
-      - name: Cache dependencies
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        id: pnpm-install
+        with:
+          version: 7
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+      - name: Setup pnpm cache
         uses: actions/cache@v3
         with:
-          path: ~/.npm
-          key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
-      - run: npm ci
-      - run: npm run format
-      - run: npm run lint
-      - run: npm run test:unit
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+      - name: Install dependencies
+        run: pnpm ci
+      - name: Format
+        run: npm run format
+      - name: Eslint
+        run: npm run lint
+      - name: Vitest
+        run: npm run test:unit
