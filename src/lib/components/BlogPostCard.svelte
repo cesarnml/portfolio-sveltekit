@@ -11,14 +11,14 @@
 	const DEFAULT_VIEW_COUNT = 1
 </script>
 
-<a class="card card-hover variant-glass-surface " href={Url.BlogDetail(post.slug)}>
+<a class="card card-hover variant-glass-surface" href={Url.BlogDetail(post.slug)}>
 	<header><Picture class="object-cover" src={post.image} alt="blog" /></header>
 	<div class="p-4">
 		<div class="mb-4">
 			<h3 class="mb-1 font-bold">{post.title}</h3>
 			<div>{post.description}</div>
 		</div>
-		<footer class="flex justify-between text-sm ">
+		<footer class="flex justify-between text-sm">
 			<span>{dayjs(post.date).format('D MMM YYYY')}</span>
 			<div>
 				<span>{post.readingTime.text}</span>

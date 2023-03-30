@@ -81,7 +81,7 @@
 	image={data.frontmatter.image}
 />
 
-<div class="absolute top-8 -right-[240px] hidden h-full w-[240px] xl:inline-block">
+<div class="absolute -right-[240px] top-8 hidden h-full w-[240px] xl:inline-block">
 	<TableOfContents
 		target="#toc-target"
 		class="card variant-soft-primary sticky top-8 p-4"

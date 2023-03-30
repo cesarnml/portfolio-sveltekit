@@ -50,6 +50,7 @@
 
 <svelte:head>
 	<!-- Config options -->
+	<!-- Config options -->
 	<script>
 		// Forward the necessary functions to the web worker layer
 		partytown = {
@@ -76,6 +77,7 @@
 	</script>
 
 	<!-- `partytownSnippet` is inserted here -->
+	<!-- `partytownSnippet` is inserted here -->
 	<script bind:this={scriptEle}></script>
 	<GoogleAnalytics />
 </svelte:head>
@@ -101,8 +103,8 @@
 </AppShell>
 
 <Drawer position="top" bgDrawer="backdrop-blur" height="h-screen" duration={250}>
-	<div class="flex flex-col items-center gap-2 py-6 px-4">
-		<div class="mb-8 flex w-full items-center justify-between ">
+	<div class="flex flex-col items-center gap-2 px-4 py-6">
+		<div class="mb-8 flex w-full items-center justify-between">
 			<div class="px-[11px]">
 				<LightSwitch class="outline-none" />
 			</div>
