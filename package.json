@@ -50,6 +50,7 @@
 		"@vercel/analytics": "^0.1.11",
 		"@vitest/coverage-c8": "^0.29.3",
 		"autoprefixer": "^10.4.14",
+		"cssnano": "^6.0.0",
 		"dayjs": "^1.11.7",
 		"eslint": "^8.36.0",
 		"eslint-config-airbnb-base": "^15.0.0",
