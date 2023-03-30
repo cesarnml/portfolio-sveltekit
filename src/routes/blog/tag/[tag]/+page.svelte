@@ -1,9 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores'
 	import { Url } from '$lib/url'
-	import type { PageData } from './$types'
 
-	export let data: PageData
+	export let data
 	const { posts } = data
 </script>
 

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import type { LayoutData } from './$types'
 	import { onMount } from 'svelte'
 	import { invalidate } from '$app/navigation'
 	import Footer from '$lib/components/Footer.svelte'
@@ -22,7 +21,7 @@
 	import '@skeletonlabs/skeleton/styles/all.css'
 	import '$lib/styles/app.css'
 
-	export let data: LayoutData
+	export let data
 
 	$: ({ supabase } = data)
 

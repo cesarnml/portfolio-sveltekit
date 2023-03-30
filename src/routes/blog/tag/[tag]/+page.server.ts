@@ -1,8 +1,7 @@
 import { error } from '@sveltejs/kit'
 import { fetchPosts } from '$lib/content'
-import type { PageServerLoad } from './$types'
 
-export const load: PageServerLoad = async ({ params: { tag } }) => {
+export const load = async ({ params: { tag } }) => {
 	const postByTag = await fetchPosts({ tag })
 
 	if (!postByTag.length) {

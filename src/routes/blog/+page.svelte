@@ -1,10 +1,9 @@
 <script lang="ts">
 	import { page } from '$app/stores'
-	import type { PageData } from './$types'
 	import { Paginator } from '@skeletonlabs/skeleton'
 	import BlogPostCard from '$lib/components/BlogPostCard.svelte'
 
-	export let data: PageData
+	export let data
 	const { posts, tags, views } = data
 
 	$: paginator = {

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import type { PageServerData } from './$types'
 	import { onMount } from 'svelte'
 	import PageHead from '$lib/components/PageHead.svelte'
 	import ArticleTitle from '$lib/components/ArticleTitle.svelte'
@@ -9,7 +8,7 @@
 
 	import '$lib/styles/shiki.css'
 
-	export let data: PageServerData
+	export let data
 
 	onMount(async () => {
 		// Get all <pre> elements

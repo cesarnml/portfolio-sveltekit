@@ -1,7 +1,5 @@
-import type { LayoutServerLoad } from './$types'
-
 export const prerender = true
 
-export const load: LayoutServerLoad = async ({ locals: { getSession } }) => ({
+export const load = async ({ locals: { getSession } }) => ({
 	session: getSession(),
 })

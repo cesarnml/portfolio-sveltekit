@@ -1,10 +1,9 @@
 import RSS from 'rss'
-import type { RequestHandler } from './$types'
 import { fetchPosts } from '$lib/content'
 
 const MAX_AGE = 3600 // 1 hour (3600 secs)
 
-export const GET: RequestHandler = async ({ setHeaders }) => {
+export const GET = async ({ setHeaders }) => {
 	const feed = new RSS({
 		title: "Cesar's RSS Feed",
 		site_url: 'https://cesar-mejia.com',

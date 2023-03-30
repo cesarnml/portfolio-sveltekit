@@ -1,8 +1,7 @@
 import { error } from '@sveltejs/kit'
 import { prisma } from '$lib/prismaClient'
-import type { PageServerLoad } from './$types'
 
-export const load = (async ({ params }) => {
+export const load = async ({ params }) => {
 	try {
 		const postModule = (await import(
 			`../../../lib/content/blog/${params.slug}/index.md`
@@ -37,4 +36,4 @@ export const load = (async ({ params }) => {
 	} catch (err) {
 		throw error(428, 'I am a teacup')
 	}
-}) satisfies PageServerLoad
+}
