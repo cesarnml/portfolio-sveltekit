@@ -49,8 +49,6 @@
 </script>
 
 <svelte:head>
-	<!-- Config options -->
-	<!-- Config options -->
 	<script>
 		// Forward the necessary functions to the web worker layer
 		partytown = {
@@ -76,8 +74,6 @@
 		}
 	</script>
 
-	<!-- `partytownSnippet` is inserted here -->
-	<!-- `partytownSnippet` is inserted here -->
 	<script bind:this={scriptEle}></script>
 	<GoogleAnalytics />
 </svelte:head>
