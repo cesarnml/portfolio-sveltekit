@@ -25,6 +25,18 @@ jobs:
           path: ~/.npm
           key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
       - run: npm ci
+  format:
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
       - run: npm run format
+  lint:
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
       - run: npm run lint
-      - run: npm run test:unit
+  test:
+    runs-on: ubuntu-latest
+    needs: [build]
+    steps:
+      - run: npm run test
