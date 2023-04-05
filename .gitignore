@@ -13,3 +13,4 @@ coverage
 .vercel
 supabase
 /.vite-inspect
+test-results

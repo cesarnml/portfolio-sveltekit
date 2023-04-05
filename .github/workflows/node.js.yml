@@ -46,3 +46,7 @@ jobs:
         run: pnpm lint
       - name: Vitest
         run: pnpm test:unit
+      - name: Coverage
+        run: pnpm coverage
+      - name: Upload coverage reports to Co;ldecov
+        uses: codecov/codecov-action@v3
