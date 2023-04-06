@@ -1,13 +1,13 @@
 import type { HandleServerError, Handle } from '@sveltejs/kit'
 import { createSupabaseServerClient } from '@supabase/auth-helpers-sveltekit'
-import crypto from 'crypto'
-import * as SentryNode from '@sentry/node'
+// import crypto from 'crypto'
+// import * as SentryNode from '@sentry/node'
 import {
-	PUBLIC_SENTRY_DSN,
+	// PUBLIC_SENTRY_DSN,
 	PUBLIC_SUPABASE_URL,
 	PUBLIC_SUPABASE_ANON_KEY,
 } from '$env/static/public'
-import '@sentry/tracing'
+// import '@sentry/tracing'
 
 export const handle: Handle = async ({ event, resolve }) => {
 	event.locals.supabase = createSupabaseServerClient({
@@ -38,20 +38,20 @@ export const handle: Handle = async ({ event, resolve }) => {
 	})
 }
 
-SentryNode.init({
-	dsn: PUBLIC_SENTRY_DSN,
-	// We recommend adjusting this value in production, or using tracesSampler
-	// for finer control
-	tracesSampleRate: 1.0,
-})
+// SentryNode.init({
+// 	dsn: PUBLIC_SENTRY_DSN,
+// 	// We recommend adjusting this value in production, or using tracesSampler
+// 	// for finer control
+// 	tracesSampleRate: 1.0,
+// })
 
-export const handleError: HandleServerError = ({ error, event }) => {
-	const errorId = crypto.randomUUID()
-	SentryNode.captureException(error, {
-		contexts: { sveltekit: { event, errorId } },
-	})
-	return {
-		message: "An unexpected error occurred. We're working on it.",
-		errorId,
-	}
-}
+// export const handleError: HandleServerError = ({ error, event }) => {
+// 	const errorId = crypto.randomUUID()
+// 	SentryNode.captureException(error, {
+// 		contexts: { sveltekit: { event, errorId } },
+// 	})
+// 	return {
+// 		message: "An unexpected error occurred. We're working on it.",
+// 		errorId,
+// 	}
+// }

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { page } from '$app/stores'
-	import ErrorTestButton from '$lib/components/ErrorTestButton.svelte'
 </script>
 
 <svelte:head>
@@ -14,5 +13,4 @@
 
 <div class="flex h-full w-full flex-col items-center justify-center">
 	<h2><span>🚧</span> site under construction <span>🚧</span></h2>
-	<ErrorTestButton />
 </div>
