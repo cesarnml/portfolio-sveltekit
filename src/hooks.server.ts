@@ -1,4 +1,4 @@
-import type { HandleServerError, Handle } from '@sveltejs/kit'
+import type { Handle } from '@sveltejs/kit'
 import { createSupabaseServerClient } from '@supabase/auth-helpers-sveltekit'
 // import crypto from 'crypto'
 // import * as SentryNode from '@sentry/node'
