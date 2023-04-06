@@ -2,12 +2,13 @@
 	import { media } from '$lib/stores/media'
 	import NavLinksContainer from '$lib/components/NavLinksContainer.svelte'
 	import NavHamburgerMenu from './NavHamburgerMenu.svelte'
-	import { LightSwitch, drawerStore } from '@skeletonlabs/skeleton'
+	import { drawerStore } from '@skeletonlabs/skeleton'
+	import DarkModeToggle from './DarkModeToggle.svelte'
 </script>
 
 {#if $media.sm}
 	<NavLinksContainer />
-	<LightSwitch />
+	<DarkModeToggle />
 {:else if !$drawerStore.open}
 	<NavHamburgerMenu />
 {/if}
