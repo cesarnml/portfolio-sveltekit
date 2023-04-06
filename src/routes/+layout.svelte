@@ -7,7 +7,7 @@
 	import NavLinks from '$lib/components/NavLinks.svelte'
 	import PageTransition from '$lib/components/PageTransition.svelte'
 	import GoogleAnalytics from '$lib/components/GoogleAnalytics.svelte'
-	import { AppShell, Drawer, drawerStore, LightSwitch, Toast } from '@skeletonlabs/skeleton'
+	import { AppShell, Drawer, drawerStore, Toast } from '@skeletonlabs/skeleton'
 	import { media } from '$lib/stores/media'
 	import { dev } from '$app/environment'
 	import { inject } from '@vercel/analytics'
@@ -15,11 +15,13 @@
 	import WavesSvg from '$lib/components/WavesSvg.svelte'
 	import { page } from '$app/stores'
 	import { Url } from '$lib/url'
+	import DarkModeToggle from '$lib/components/DarkModeToggle.svelte'
 
 	import 'iconify-icon'
-	import '$lib/styles/theme.css'
+
+	import '@skeletonlabs/skeleton/themes/theme-modern.css'
 	import '@skeletonlabs/skeleton/styles/all.css'
-	import '$lib/styles/app.css'
+	import '../app.css'
 
 	export let data
 
@@ -34,6 +36,7 @@
 		if (scriptEle) {
 			scriptEle.textContent = partytownSnippet()
 		}
+		// Supabase Auth Setup
 		const { data } = supabase.auth.onAuthStateChange(() => {
 			invalidate('supabase:auth')
 		})
@@ -101,7 +104,7 @@
 	<div class="flex flex-col items-center gap-2 px-4 py-6">
 		<div class="mb-8 flex w-full items-center justify-between">
 			<div class="px-[11px]">
-				<LightSwitch class="outline-none" />
+				<DarkModeToggle />
 			</div>
 			<NavHamburgerMenu />
 		</div>
