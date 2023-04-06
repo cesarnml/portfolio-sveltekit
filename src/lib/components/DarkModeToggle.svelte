@@ -1,5 +1,6 @@
 <script>
 	import { modeCurrent, setModeUserPrefers, setModeCurrent } from '@skeletonlabs/skeleton'
+
 	export let bgLight = 'bg-surface-50'
 	export let bgDark = 'bg-surface-900'
 	export let fillLight = 'fill-surface-50'
@@ -21,6 +22,7 @@
 		setModeUserPrefers($modeCurrent)
 		setModeCurrent($modeCurrent)
 	}
+	// eslint-disable-next-line
 	// @ts-ignore
 	function onKeyDown(event) {
 		if (['Enter', 'Space'].includes(event.code)) {

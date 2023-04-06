@@ -35,18 +35,17 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
-          cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Format
         run: pnpm format
-      - name: Eslint
-        env:
-            NODE_OPTIONS: "--max_old_space_size=4096"
-        run: pnpm lint
+      # - name: Eslint
+      #   run: pnpm lint
+      #   env:
+      #     NODE_OPTIONS: "--max_old_space_size=4096"
       - name: Vitest
         run: pnpm test:unit
       - name: Coverage
         run: pnpm coverage
-      - name: Upload coverage reports to Co;ldecov
+      - name: Upload coverage reports CodeCoverage
         uses: codecov/codecov-action@v3

@@ -1,14 +1,13 @@
-import { loadEnv, defineConfig } from 'vite'
+import { defineConfig } from 'vite'
 import { sveltekit } from '@sveltejs/kit/vite'
 import { configDefaults } from 'vitest/config'
 import { imagetools } from 'vite-imagetools'
 // import { sentryVitePlugin } from '@sentry/vite-plugin'
 import Inspect from 'vite-plugin-inspect'
 
-const config = defineConfig(({ mode }) => {
-	const env = loadEnv(mode, process.cwd(), '')
-
-	return {
+const config = defineConfig(() =>
+	// const env = loadEnv(mode, process.cwd(), '')
+	({
 		envPrefix: 'VITE_',
 		build: {
 			sourcemap: true,
@@ -41,7 +40,7 @@ const config = defineConfig(({ mode }) => {
 			// Exclude playwright tests folder
 			exclude: [...configDefaults.exclude, 'tests'],
 		},
-	}
-})
+	}),
+)
 
 export default config
