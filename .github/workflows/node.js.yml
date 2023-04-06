@@ -41,12 +41,10 @@ jobs:
       - name: Format
         run: pnpm format
       - name: Eslint
-        env:
-            NODE_OPTIONS: "--max_old_space_size=8192"
-        run: pnpm lint
+        run: npm run lint
       - name: Vitest
         run: pnpm test:unit
       - name: Coverage
         run: pnpm coverage
-      - name: Upload coverage reports to Co;ldecov
+      - name: Upload coverage reports CodeCoverage
         uses: codecov/codecov-action@v3
