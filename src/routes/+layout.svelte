@@ -22,7 +22,7 @@
 	import '@skeletonlabs/skeleton/themes/theme-modern.css'
 	import '@skeletonlabs/skeleton/styles/all.css'
 	import '../app.css'
-
+	// minor
 	export let data
 
 	$: ({ supabase } = data)
