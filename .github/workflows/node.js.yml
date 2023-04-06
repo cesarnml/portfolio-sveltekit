@@ -35,13 +35,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18.4.0
-          cache: 'pnpm'
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Format
         run: pnpm format
       - name: Eslint
-        run: pnpm run lint
+        run: pnpm lint
+        env:
+          NODE_OPTIONS: "--max_old_space_size=4096"
       - name: Vitest
         run: pnpm test:unit
       - name: Coverage
