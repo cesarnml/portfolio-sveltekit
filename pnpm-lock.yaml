@@ -23,7 +23,7 @@ devDependencies:
     specifier: 7.43.0
     version: 7.43.0
   '@sentry/vite-plugin':
-    specifier: ^0.4.0
+    specifier: 0.4.0
     version: 0.4.0
   '@skeletonlabs/skeleton':
     specifier: ^1.0.0
