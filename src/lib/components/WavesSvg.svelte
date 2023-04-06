@@ -7,7 +7,9 @@
 		viewBox="0 24 150 28"
 		preserveAspectRatio="none"
 		shape-rendering="auto"
+		role="img"
 	>
+		<title>animated waves</title>
 		<defs>
 			<path
 				id="gentle-wave"
