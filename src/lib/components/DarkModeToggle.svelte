@@ -28,7 +28,6 @@
 			event.currentTarget.click()
 		}
 	}
-	console.log('$modeCurrent:', $modeCurrent)
 	$: trackBg = $modeCurrent === true ? bgLight : bgDark
 	$: thumbBg = $modeCurrent === true ? bgDark : bgLight
 	$: thumbPosition = $modeCurrent === true ? 'translate-x-[100%]' : ''
