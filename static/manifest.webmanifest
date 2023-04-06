@@ -6,8 +6,8 @@
 	"start_url": "/",
 	"scope": "/",
 	"display": "standalone",
-	"background_color": "#ffeb3b",
-	"theme_color": "#ffeb3b",
+	"background_color": "#000000",
+	"theme_color": "#000000",
 	"prefer_related_applications": false,
 	"icons": [
 		{ "src": "android/android-launchericon-512-512.png", "sizes": "512x512" },
