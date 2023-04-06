@@ -34,7 +34,7 @@ const config = defineConfig(() =>
 			include: ['src/**/*.{test,spec}.{js,ts}'],
 			coverage: {
 				all: true,
-				reporter: ['text', 'html'],
+				reporter: ['json', 'html'],
 				src: ['./src'],
 			},
 			// Exclude playwright tests folder
