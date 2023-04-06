@@ -31,10 +31,10 @@ jobs:
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
-      - name: Use Node.js 18
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18.4.0
+      # - name: Use Node.js 18
+      #   uses: actions/setup-node@v3
+      #   with:
+      #     node-version: 18.4.0
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Format
