@@ -12,7 +12,7 @@
 </script>
 
 <a class="card card-hover variant-glass-surface" href={Url.BlogDetail(post.slug)}>
-	<header><Picture class="object-cover" src={post.image} alt="blog" /></header>
+	<header><Picture class="object-cover" src={post.image} alt="blog post" /></header>
 	<div class="p-4">
 		<div class="mb-4">
 			<h3 class="mb-1 font-bold">{post.title}</h3>
