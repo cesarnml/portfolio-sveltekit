@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
 	import PageHead from '$lib/components/PageHead.svelte'
-	import ArticleTitle from '$lib/components/ArticleTitle.svelte'
-	import ArticleMeta from '$lib/components/ArticleMeta.svelte'
+	import ArticleTitle from '$lib/components/blog/ArticleTitle.svelte'
+	import ArticleMeta from '$lib/components/blog/ArticleMeta.svelte'
 	import { TableOfContents } from '@skeletonlabs/skeleton'
 	import handleCopyClick from '$lib/handleCopyClick'
 

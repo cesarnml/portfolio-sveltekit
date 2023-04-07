@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
 	import { invalidate } from '$app/navigation'
-	import Footer from '$lib/components/Footer.svelte'
-	import Navbar from '$lib/components/Navbar.svelte'
-	import NavHamburgerMenu from '$lib/components/NavHamburgerMenu.svelte'
-	import NavLinks from '$lib/components/NavLinks.svelte'
+	import Footer from '$lib/components/footer/Footer.svelte'
+	import Navbar from '$lib/components/navbar/Navbar.svelte'
+	import NavHamburgerMenu from '$lib/components/navbar/NavHamburgerMenu.svelte'
+	import NavLinks from '$lib/components/navbar/NavLinks.svelte'
 	import PageTransition from '$lib/components/PageTransition.svelte'
 	import GoogleAnalytics from '$lib/components/GoogleAnalytics.svelte'
 	import { AppShell, Drawer, drawerStore, Toast } from '@skeletonlabs/skeleton'
@@ -15,7 +15,7 @@
 	import WavesSvg from '$lib/components/WavesSvg.svelte'
 	import { page } from '$app/stores'
 	import { Url } from '$lib/url'
-	import DarkModeToggle from '$lib/components/DarkModeToggle.svelte'
+	import DarkModeToggle from '$lib/components/navbar/DarkModeToggle.svelte'
 
 	import 'iconify-icon'
 

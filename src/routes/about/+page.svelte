@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores'
-	import AboutMe from '$lib/components/AboutMe.svelte'
-	import Skills from '$lib/components/Skills.svelte'
+	import AboutMe from '$lib/components/about/AboutMe.svelte'
+	import Skills from '$lib/components/about/Skills.svelte'
 	import { skills } from '$lib/config'
 </script>
 

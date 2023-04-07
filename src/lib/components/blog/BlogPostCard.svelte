@@ -2,7 +2,7 @@
 	import type { Post } from '$lib/typings'
 	import { Url } from '$lib/url'
 	import type { View } from '@prisma/client'
-	import Picture from './Picture.svelte'
+	import Picture from '../Picture.svelte'
 	import dayjs from 'dayjs'
 
 	export let post: Post
