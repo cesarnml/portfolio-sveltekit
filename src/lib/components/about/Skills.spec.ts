@@ -1,7 +1,7 @@
 import { render, screen, within } from '@testing-library/svelte'
 import Skills from './Skills.svelte'
 
-it('it render an svg element', async () => {
+it('renders an svg element', async () => {
 	const skills = ['Cooking', 'SvelteKit']
 
 	render(Skills, { props: { skills } })
