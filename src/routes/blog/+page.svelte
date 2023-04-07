@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores'
 	import { Paginator } from '@skeletonlabs/skeleton'
-	import BlogPostCard from '$lib/components/BlogPostCard.svelte'
+	import BlogPostCard from '$lib/components/blog/BlogPostCard.svelte'
 
 	export let data
 	const { posts, tags, views } = data
