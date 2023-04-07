@@ -47,6 +47,7 @@ it("doesn't display cover image when `image` prop omitted", async () => {
 		viewCount: 1,
 	}
 
+	// @ts-expect-error Svelte issue
 	render(ArticleMeta, { props: articleWithoutImage })
 
 	// It does NOT display article cover image when `image` prop omitted
