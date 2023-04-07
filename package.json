@@ -62,6 +62,7 @@
 		"jsdom": "^21.1.1",
 		"lottie-web-light": "^1.1.0",
 		"mdsvex": "^0.10.6",
+		"msw": "^1.2.1",
 		"party-js": "^2.2.0",
 		"postcss": "^8.4.21",
 		"prettier": "^2.8.7",

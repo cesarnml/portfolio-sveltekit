@@ -102,7 +102,7 @@
 					<div class="mb-2 font-semibold">What's on your mind?</div>
 					<textarea
 						class="textarea italic"
-						id="mesage"
+						id="message"
 						name="message"
 						bind:value={message}
 						{rows}
