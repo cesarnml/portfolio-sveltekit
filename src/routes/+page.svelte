@@ -12,4 +12,6 @@
 	<link rel="canonical" href={$page.url.href} />
 </svelte:head>
 
-<HomeHero />
+<div class="mt-4">
+	<HomeHero />
+</div>
