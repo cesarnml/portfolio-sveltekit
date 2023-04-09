@@ -4,7 +4,7 @@
 	import BlogPostCard from '$lib/components/blog/BlogPostCard.svelte'
 
 	export let data
-	const { posts, tags, views } = data
+	const { posts, views } = data
 
 	$: paginator = {
 		offset: 0,
@@ -27,12 +27,6 @@
 	/>
 	<link rel="canonical" href={$page.url.href} />
 </svelte:head>
-
-<div class="mb-4 space-x-4 overflow-x-auto">
-	{#each tags as tag (tag)}
-		<a href={`/blog/tag/${tag}`} class="btn-base btn variant-soft-primary">{`#${tag}`}</a>
-	{/each}
-</div>
 
 <div class="space-y-4">
 	<h2 class="font-bold">All Posts</h2>
