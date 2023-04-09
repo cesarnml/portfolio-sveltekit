@@ -8,7 +8,7 @@ import type { Post } from '$lib/typings/blog'
 it('renders a blog post card (plural views)', async () => {
 	const post = {
 		slug: 'test-title',
-		image: '/src/lib/assets/picture/construction.png',
+		image: '/src/lib/assets/picture/cesar.png',
 		title: 'Test title',
 		description: 'test description',
 		date: '2023-01-17',
@@ -51,7 +51,7 @@ it('renders a blog post card (plural views)', async () => {
 it('renders a blog post card (singular view)', async () => {
 	const post = {
 		slug: 'test-title',
-		image: '/src/lib/assets/picture/construction.png',
+		image: '/src/lib/assets/picture/cesar.png',
 		title: 'Test title',
 		description: 'test description',
 		date: '2023-01-17',
