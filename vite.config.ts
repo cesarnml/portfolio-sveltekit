@@ -41,12 +41,19 @@ const config = defineConfig(() =>
 				all: true,
 				reporter: ['json', 'html', 'text'],
 				src: ['./src'],
+				exclude: ['src/lib/external', 'src/lib/typings'],
 			},
 			deps: {
 				inline: [/msw/],
 			},
 			// Exclude playwright tests folder
-			exclude: [...configDefaults.exclude, 'tests', 'setupTest.ts', 'src/mocks'],
+			exclude: [
+				...configDefaults.exclude,
+				'tests',
+				'setupTest.ts',
+				'src/mocks',
+				'src/lib/external',
+			],
 		},
 	}),
 )

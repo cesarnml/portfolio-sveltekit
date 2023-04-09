@@ -2,8 +2,8 @@ import type { View } from '@prisma/client'
 import { render, screen } from '@testing-library/svelte'
 import dayjs from 'dayjs'
 import { Url } from '$lib/url'
-import type { Post } from '$lib/typings'
 import BlogPostCard from './BlogPostCard.svelte'
+import type { Post } from '$lib/typings/blog'
 
 it('renders a blog post card (plural views)', async () => {
 	const post = {

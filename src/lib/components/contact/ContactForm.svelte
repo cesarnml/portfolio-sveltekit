@@ -9,7 +9,7 @@
 	import party from 'party-js'
 	import { ProgressRadial, type ToastSettings } from '@skeletonlabs/skeleton'
 	import { toastStore } from '@skeletonlabs/skeleton'
-	import { Email } from '$lib/smtp'
+	import { Email } from '$lib/external/smtp'
 	import { browser } from '$app/environment'
 
 	const rows = 5
