@@ -30,5 +30,4 @@ it('render a header link that contains internal id if `slug` prop omitted', asyn
 		'href',
 		`#${getInternalId(props.title)}`,
 	)
-	screen.debug()
 })

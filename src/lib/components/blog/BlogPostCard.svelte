@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { Post } from '$lib/typings'
 	import { Url } from '$lib/url'
 	import type { View } from '@prisma/client'
 	import Picture from '../Picture.svelte'
 	import dayjs from 'dayjs'
+	import type { Post } from '$lib/typings/blog'
 
 	export let post: Post
 	export let view: View | undefined

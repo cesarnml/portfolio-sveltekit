@@ -1,7 +1,11 @@
 ﻿/* eslint-disable */
 // @ts-nocheck
+
+/**
+ * EXTERNAL CODE NOTE TESTED: TAKEN AS IS
+ */
 /* SmtpJS.com - v3.0.0 */
-var Email = {
+export const Email = {
 	send: function (a) {
 		return new Promise(function (n, e) {
 			;(a.nocache = Math.floor(1e6 * Math.random() + 1)), (a.Action = 'Send')

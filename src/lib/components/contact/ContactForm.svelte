@@ -6,10 +6,11 @@
 		PUBLIC_EMAIL_SUBJECT,
 	} from '$env/static/public'
 	import { error, type HttpError } from '@sveltejs/kit'
-	import { onMount } from 'svelte'
 	import party from 'party-js'
 	import { ProgressRadial, type ToastSettings } from '@skeletonlabs/skeleton'
 	import { toastStore } from '@skeletonlabs/skeleton'
+	import { Email } from '$lib/external/smtp'
+	import { browser } from '$app/environment'
 
 	const rows = 5
 	let sendEmail: (e: Event) => Promise<void | HttpError>
@@ -32,12 +33,12 @@
 		const t: ToastSettings = {
 			message: 'Message delivered 🎉',
 			autohide: true,
-			timeout: 4000,
+			timeout: 2000,
 		}
 		toastStore.trigger(t)
 	}
 
-	onMount(async () => {
+	if (browser) {
 		sendEmail = async () => {
 			showProgress = true
 			buttonDisabled = true
@@ -54,14 +55,13 @@
 					count: party.variation.range(90, 100),
 					size: party.variation.range(0.8, 1.4),
 				})
-
 				resetForm()
 				triggerToast()
 			} catch (err) {
 				error(400, 'Email failed 😬')
 			}
 		}
-	})
+	}
 </script>
 
 <div>
@@ -118,13 +118,11 @@
 					<div bind:this={partyRef}>Send</div>
 					{#if showProgress}
 						<div class="w-5">
-							<ProgressRadial stroke={300} track="stroke-tertiary-400" />
+							<ProgressRadial stroke={300} track="stroke-tertiary-400" width="w-" />
 						</div>
 					{/if}
 				</button>
 			</form>
 		</div>
 	</div>
-	<script src="/js/smtp.js">
-	</script>
 </div>

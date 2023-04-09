@@ -37,9 +37,6 @@ module.exports = {
 		es2017: true,
 		node: true,
 	},
-	globals: {
-		Email: 'readonly',
-	},
 	rules: {
 		'@typescript-eslint/no-shadow': 0,
 		'@typescript-eslint/no-var-requires': 0,
