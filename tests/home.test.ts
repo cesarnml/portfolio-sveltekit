@@ -5,7 +5,7 @@ test('homePage smoke test', async ({ page }) => {
 
 	const logo = page.getByRole('link', { name: /logo/i })
 	const home = page.getByRole('link', { name: /home/i })
-	const blog = page.getByRole('link', { name: /blog/i })
+	const blog = page.getByRole('link', { name: 'Blog', exact: true })
 	const about = page.getByRole('link', { name: /about/i })
 	const contact = page.getByRole('link', { name: /contact/i })
 
