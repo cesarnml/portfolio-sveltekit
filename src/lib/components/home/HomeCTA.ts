@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/svelte'
-import HomeHero from './HomeHero.svelte'
+import HomeCTA from './HomeCTA.svelte'
 import { Url } from '$lib/url'
 
-it('renders HomeHero', async () => {
-	render(HomeHero)
+it('renders HomeCTA', async () => {
+	render(HomeCTA)
 
 	expect(screen.getByRole('img', { name: /avatar/i })).toBeInTheDocument()
 	expect(screen.getByRole('heading', { name: /cesar/i, level: 1 })).toBeInTheDocument()

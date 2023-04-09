@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores'
-	import HomeHero from '$lib/components/home/HomeHero.svelte'
+	import HomeCTA from '$lib/components/home/HomeCTA.svelte'
 </script>
 
 <svelte:head>
@@ -13,5 +13,5 @@
 </svelte:head>
 
 <div class="mt-4">
-	<HomeHero />
+	<HomeCTA />
 </div>

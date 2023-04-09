@@ -32,8 +32,8 @@
 				<p>However, it doesn't exist.</p>
 				<p><a href={Url.Home}>Go Home</a></p>
 			{:else}
-				<h2>Whoops. We weren't expecting that</h2>
-				<p>We're investigating the issue.</p>
+				<h2>Whoops. We weren't expecting that!</h2>
+				<p>No worries! We're investigating the issue. 🕵️</p>
 			{/if}
 
 			{#if $page.error?.errorId}
