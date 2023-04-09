@@ -5,7 +5,7 @@
 	export let date: string
 	export let readingTime: string
 	export let wordCount: number
-	export let image: string | undefined
+	export let image: string | undefined = ''
 	export let viewCount = 1
 	const formattedDate = new Date(date).toDateString().split(' ').slice(1).join(' ')
 </script>

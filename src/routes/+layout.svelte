@@ -112,4 +112,4 @@
 	</div>
 </Drawer>
 
-<Toast />
+<Toast position="br" />

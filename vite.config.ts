@@ -12,6 +12,11 @@ const config = defineConfig(() =>
 		build: {
 			sourcemap: true,
 		},
+		define: {
+			// Eliminate in-source test code
+			'import.meta.vitest': 'undefined',
+		},
+
 		plugins: [
 			sveltekit(),
 			imagetools(),
@@ -30,15 +35,18 @@ const config = defineConfig(() =>
 		test: {
 			globals: true,
 			environment: 'jsdom',
-			setupFiles: ['./setupTest.ts'],
+			setupFiles: ['./setupTest.ts', 'src/mocks/setup.ts'],
 			include: ['src/**/*.{test,spec}.{js,ts}'],
 			coverage: {
 				all: true,
 				reporter: ['json', 'html', 'text'],
 				src: ['./src'],
 			},
+			deps: {
+				inline: [/msw/],
+			},
 			// Exclude playwright tests folder
-			exclude: [...configDefaults.exclude, 'tests'],
+			exclude: [...configDefaults.exclude, 'tests', 'setupTest.ts', 'src/mocks'],
 		},
 	}),
 )
