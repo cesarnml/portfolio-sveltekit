@@ -13,7 +13,7 @@ test('homePage smoke test', async ({ page }) => {
 	await expect(page).toHaveTitle(/cesar's web portfolio/i)
 
 	// Home page has a header
-	const homePageHeading = page.getByRole('heading', { name: /under construction/i })
+	const homePageHeading = page.getByRole('heading', { name: /cesar/i })
 	expect(homePageHeading).toBeVisible()
 
 	// Navigates to blog page when nav link is clicked
