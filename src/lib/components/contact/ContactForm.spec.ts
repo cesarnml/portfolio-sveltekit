@@ -40,7 +40,7 @@ it('renders a contact form ', async () => {
 it('renders a contact form ', async () => {
 	const user = userEvent.setup()
 
-	vi.mock('/src/lib/smtp.js', () => ({ Email: { send: async () => vi.fn(() => 'OK') } }))
+	vi.mock('/src/lib/smtp.js', () => ({ Email: { send: async () => vi.fn() } }))
 	vi.mock('party-js')
 
 	const contact = {
