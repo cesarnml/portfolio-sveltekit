@@ -4,6 +4,7 @@
 </script>
 
 <!-- HOME CTA CARD -->
+<div class="flex flex-col items-center gap-5 md:flex-row-reverse md:items-start">
 	<!-- CTA CARD IMAGE -->
 	<div class="w-40 overflow-hidden rounded-full md:w-96">
 		<Picture src="/src/lib/assets/picture/gordon.png" alt="avatar" loading="eager" />
