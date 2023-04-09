@@ -25,7 +25,7 @@
 
 	export let data
 
-	$: ({ supabase } = data)
+	$: ({ supabase, pathname } = data)
 
 	inject({ mode: dev ? 'development' : 'production' })
 
@@ -92,7 +92,7 @@
 	{/if} -->
 	<!-- Router Slot -->
 	<div class="container relative mx-auto max-w-screen-lg p-4 md:p-6 lg:p-8">
-		<PageTransition>
+		<PageTransition {pathname}>
 			<slot />
 		</PageTransition>
 	</div>

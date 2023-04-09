@@ -1,12 +1,13 @@
 <script lang="ts">
-	import { page } from '$app/stores'
-	import { blur } from 'svelte/transition'
+	import { fade } from 'svelte/transition'
 
-	const duration = 350 // in ms
+	export let pathname: string
+	const duration = 150 // in ms
 </script>
 
-{#key $page.url.pathname}
-	<div in:blur={{ duration }}>
+{#key pathname}
+	<!-- <div in:blur={{ duration }}> -->
+	<div in:fade={{ delay: duration }} out:fade={{ duration }}>
 		<slot />
 	</div>
 {/key}
