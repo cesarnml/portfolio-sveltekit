@@ -14,7 +14,7 @@
 	<!-- CTA CARD CONTENT -->
 	<div class="flex flex-col gap-4 md:gap-8">
 		<!-- HEADER -->
-		<h1 class="!text-2xl 3xs:!text-3xl md:!text-4xl">👋 Hi, I'm Cesar</h1>
+		<h1 class="!text-2xl 3xs:!text-3xl md:!text-4xl">Hello, I'm Cesar 👋</h1>
 		<!-- CONTENT -->
 		<div class="space-y-4">
 			<p class="!text-lg font-semibold 3xs:!text-xl">
