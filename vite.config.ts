@@ -41,7 +41,12 @@ const config = defineConfig(() =>
 				all: true,
 				reporter: ['json', 'html', 'text'],
 				src: ['./src'],
-				exclude: ['src/lib/external', 'src/lib/typings'],
+				exclude: [
+					'src/lib/external',
+					'src/lib/typings',
+					'src/routes/**/+page.svelte',
+					'src/routes/**/+layout.svelte',
+				],
 			},
 			deps: {
 				inline: [/msw/],
