@@ -21,7 +21,7 @@
 			</p>
 			<p class="!text-lg font-semibold 3xs:!text-2xl 2xs:text-left">Let's learn together!</p>
 		</div>
-		<!-- CTA BUTTONS -->
+		<!-- BUTTONS -->
 		<div class="flex flex-col justify-center gap-8 3xs:flex-row">
 			<a class="btn btn-lg variant-filled-primary md:w-full" href={Url.Blog}>My Writing</a>
 			<a class="btn btn-lg variant-ringed-primary md:w-full" href={Url.About}>About Me</a>
