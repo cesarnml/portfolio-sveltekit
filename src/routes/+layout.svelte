@@ -12,9 +12,9 @@
 	import { dev } from '$app/environment'
 	import { inject } from '@vercel/analytics'
 	import { partytownSnippet } from '@builder.io/partytown/integration'
-	import WavesSvg from '$lib/components/WavesSvg.svelte'
-	import { page } from '$app/stores'
-	import { Url } from '$lib/url'
+	// import WavesSvg from '$lib/components/WavesSvg.svelte'
+	// import { page } from '$app/stores'
+	// import { Url } from '$lib/url'
 	import DarkModeToggle from '$lib/components/navbar/DarkModeToggle.svelte'
 
 	import 'iconify-icon'
@@ -86,9 +86,10 @@
 	<svelte:fragment slot="sidebarRight" />
 	<svelte:fragment slot="pageHeader" />
 
-	{#if $page.url.pathname === Url.Home}
+	<!-- TODO: Incorporate waves -->
+	<!-- {#if $page.url.pathname === Url.Home}
 		<WavesSvg />
-	{/if}
+	{/if} -->
 	<!-- Router Slot -->
 	<div class="container relative mx-auto max-w-screen-lg p-4 md:p-6 lg:p-8">
 		<PageTransition>
