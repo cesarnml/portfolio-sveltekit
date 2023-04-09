@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores'
+	import HomeHero from '$lib/components/home/HomeHero.svelte'
 </script>
 
 <svelte:head>
@@ -11,6 +12,4 @@
 	<link rel="canonical" href={$page.url.href} />
 </svelte:head>
 
-<div class="flex h-full w-full flex-col items-center justify-center">
-	<h2><span>🚧</span> site under construction <span>🚧</span></h2>
-</div>
+<HomeHero />

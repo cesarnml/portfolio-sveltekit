@@ -45,7 +45,7 @@
 	$: picture = pictures[src] as Picture
 </script>
 
-<picture>
+<picture class="w-full">
 	{#each Object.entries(picture.sources) as [format, images]}
 		<source srcset={images.map((img) => `${img.src} ${img.w}w`).join(', ')} type="image/{format}" />
 	{/each}

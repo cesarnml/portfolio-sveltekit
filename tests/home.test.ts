@@ -5,7 +5,7 @@ test('homePage smoke test', async ({ page }) => {
 
 	const logo = page.getByRole('link', { name: /logo/i })
 	const home = page.getByRole('link', { name: /home/i })
-	const blog = page.getByRole('link', { name: /blog/i })
+	const blog = page.getByRole('link', { name: 'Blog', exact: true })
 	const about = page.getByRole('link', { name: /about/i })
 	const contact = page.getByRole('link', { name: /contact/i })
 
@@ -13,7 +13,7 @@ test('homePage smoke test', async ({ page }) => {
 	await expect(page).toHaveTitle(/cesar's web portfolio/i)
 
 	// Home page has a header
-	const homePageHeading = page.getByRole('heading', { name: /under construction/i })
+	const homePageHeading = page.getByRole('heading', { name: /cesar/i })
 	expect(homePageHeading).toBeVisible()
 
 	// Navigates to blog page when nav link is clicked
