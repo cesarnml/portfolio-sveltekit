@@ -14,14 +14,14 @@
 	<!-- CTA CARD CONTENT -->
 	<div class="flex flex-col gap-4 md:gap-8">
 		<!-- HEADER -->
-		<h1 class="!text-3xl md:!text-4xl">👋 Hi, I'm Cesar</h1>
+		<h1 class="!text-2xl 3xs:!text-3xl md:!text-4xl">👋 Hi, I'm Cesar</h1>
 		<!-- CONTENT -->
 		<div class="space-y-4">
-			<p class="font-semibold 3xs:!text-2xl">
+			<p class="!text-lg font-semibold 3xs:!text-xl">
 				I'm a developer, blogger and an educator. I like to build awesome, engaging, and accessible
 				web apps.
 			</p>
-			<p class="font-semibold 3xs:!text-2xl">Let's learn together!</p>
+			<p class="!text-lg font-semibold 3xs:!text-xl">Let's learn together!</p>
 		</div>
 		<!-- BUTTONS -->
 		<div class="flex flex-col gap-5 3xs:mt-1 3xs:flex-row">
