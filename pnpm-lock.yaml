@@ -19,6 +19,9 @@ devDependencies:
   '@sentry/svelte':
     specifier: 7.38.0
     version: 7.38.0(svelte@3.58.0)
+  '@sentry/tracing':
+    specifier: 7.38.0
+    version: 7.38.0
   '@sentry/vite-plugin':
     specifier: 0.4.0
     version: 0.4.0
@@ -785,7 +788,7 @@ packages:
     dependencies:
       '@sentry/cli': 2.17.0
       '@sentry/node': 7.47.0
-      '@sentry/tracing': 7.47.0
+      '@sentry/tracing': 7.38.0
       magic-string: 0.27.0
       unplugin: 1.0.1
     transitivePeerDependencies:
@@ -881,11 +884,14 @@ packages:
       tslib: 1.14.1
     dev: true
 
-  /@sentry/tracing@7.47.0:
-    resolution: {integrity: sha512-hJCpKdekwaFNbCVXxfCz5IxfSEJIKnkPmRSVHITOm5VhKwq2e5kmy4Rn6bzSETwJFSDE8LGbR/3eSfGTqw37XA==}
+  /@sentry/tracing@7.38.0:
+    resolution: {integrity: sha512-ejXJp8oOT64MVtBzqdECUUaNzKbpu25St8Klub1i4Sm7xO+ZjDQDI4TIHvWojZvtkwQ3F4jcsCclc8KuyJunyQ==}
     engines: {node: '>=8'}
     dependencies:
-      '@sentry-internal/tracing': 7.47.0
+      '@sentry/core': 7.38.0
+      '@sentry/types': 7.38.0
+      '@sentry/utils': 7.38.0
+      tslib: 1.14.1
     dev: true
 
   /@sentry/types@7.38.0:
