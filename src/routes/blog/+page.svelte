@@ -7,9 +7,9 @@
 
 	const limit = 1
 	export let data
-	const { posts, views } = data
+	const { views } = data
 
-	let list: Post[] = [...posts]
+	let list: Post[] = []
 
 	type Detail = {
 		loaded: () => void
@@ -21,7 +21,7 @@
 
 		try {
 			const response = await fetch(
-				`/api/blog/posts?offset=${Math.floor((posts.length ?? 0) / limit)}&limit=${limit}`,
+				`/api/blog/posts?offset=${Math.floor((list.length ?? 0) / limit)}&limit=${limit}`,
 				{
 					method: 'GET',
 					headers: {
@@ -30,12 +30,11 @@
 				},
 			)
 			const newPosts = await response.json()
-			console.log('newPosts:', newPosts)
 
-			if (!newPosts.length) {
-				complete()
-			} else {
+			if (newPosts.length) {
 				loaded()
+			} else {
+				complete()
 			}
 			// invalidate('posts:infinites')
 			list = [...list, ...newPosts]
@@ -57,12 +56,12 @@
 <div class="space-y-4">
 	<h2 class="font-bold">All Posts</h2>
 	<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-		{#each posts as post (post.slug)}
+		{#each list as post (post.slug)}
 			<BlogPostCard {post} view={views.find((view) => view.slug === post.slug)} />
 		{/each}
 		<InfiniteLoading on:infinite={onInfinite}>
-			<div slot="noMore">What No more</div>
-			<div slot="noResults">What No results</div>
+			<div slot="noMore">Wow! You really enjoy reading. Suggest a new topic!</div>
+			<div slot="noResults">Empty Placeholder</div>
 		</InfiniteLoading>
 	</div>
 	<hr />
