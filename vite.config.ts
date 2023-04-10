@@ -45,6 +45,11 @@ const config = defineConfig(({ mode }) => {
 					'src/lib/typings',
 					'src/routes/**/+page.svelte',
 					'src/routes/**/+layout.svelte',
+					'src/routes/**/+page*.ts',
+					'src/routes/**/+layout*.ts',
+					'src/routes/**/+error.svelte',
+					'src/hooks.client.ts',
+					'src/hooks.server.ts',
 				],
 			},
 			deps: {
