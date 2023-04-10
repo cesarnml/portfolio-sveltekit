@@ -1,12 +1,12 @@
 import type { HandleClientError } from '@sveltejs/kit'
 import * as Sentry from '@sentry/svelte'
-import { BrowserTracing } from '@sentry/tracing'
+// import { BrowserTracing } from '@sentry/tracing'
 import { PUBLIC_SENTRY_DSN } from '$env/static/public'
 
 Sentry.init({
 	dsn: PUBLIC_SENTRY_DSN,
 	integrations: [
-		new BrowserTracing(),
+		new Sentry.BrowserTracing(),
 		new Sentry.Replay({
 			maskAllInputs: false,
 			maskAllText: false,
