@@ -10,11 +10,11 @@ Sentry.init({
 			maskAllInputs: false,
 			maskAllText: false,
 			blockAllMedia: false,
-			errorSampleRate: 1.0,
-			sessionSampleRate: 1.0,
 		}),
 	],
 	tracesSampleRate: 1.0,
+	replaysSessionSampleRate: 1.0,
+	replaysOnErrorSampleRate: 1.0,
 })
 
 export const handleError: HandleClientError = ({ error, event }) => {

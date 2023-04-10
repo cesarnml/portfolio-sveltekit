@@ -10,7 +10,7 @@ export const config: Config = {
 export const load = async ({ params }) => {
 	try {
 		const postModule = (await import(
-			`../../../lib/content/blog/${params.slug}/index.md`
+			`../../../lib/content/blog/${params.slug}.md`
 		)) as App.MdsvexModule
 
 		if (!postModule || !postModule.metadata.published) {

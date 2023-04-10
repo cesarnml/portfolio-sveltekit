@@ -1,5 +1,5 @@
 import dayjs from 'dayjs'
-import { basename, dirname } from 'path'
+import { basename } from 'path'
 import adjustPostReadingTimeText from './blogHelpers'
 
 const ALL_POST_FLAG = -1
@@ -8,10 +8,10 @@ const ALL_POST_FLAG = -1
  * Returns a sorted an array of blog posts
  */
 export async function fetchPosts({ offset = 0, limit = ALL_POST_FLAG, tag = '' } = {}) {
-	const modules = import.meta.glob(`$lib/content/blog/**/*.md`)
+	const modules = import.meta.glob(`$lib/content/blog/*.md`)
 	const posts = await Promise.all(
 		Object.entries(modules).map(async ([path, resolver]) => {
-			const slug = basename(dirname(path))
+			const slug = basename(path, '.md')
 			const module = (await resolver()) as App.MdsvexModule
 			const { html } = module.default.render()
 			const { metadata } = module
