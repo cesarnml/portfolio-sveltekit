@@ -1,5 +1,24 @@
 <script lang="ts">
-	import { Avatar } from '@skeletonlabs/skeleton'
+	import { Avatar, popup } from '@skeletonlabs/skeleton'
+	import type { PopupSettings } from '@skeletonlabs/skeleton'
+
+	let popupLanguage: PopupSettings = {
+		event: 'click',
+		target: 'languagePopup',
+		placement: 'top',
+	}
+
+	let popupMuay: PopupSettings = {
+		event: 'click',
+		target: 'muayPopup',
+		placement: 'top',
+	}
+
+	let popupHbo: PopupSettings = {
+		event: 'click',
+		target: 'hboPopup',
+		placement: 'top',
+	}
 </script>
 
 <div class="card variant-glass-surface space-y-4 p-6">
@@ -12,11 +31,30 @@
 	</p>
 	<p class="!text-lg">
 		In my free time, I enjoy studying <button
-			><span class="border-b border-dotted">languages</span></button
+			><span class="border-b border-dotted" use:popup={popupLanguage}>languages</span>
+			<div
+				data-popup="languagePopup"
+				class="card variant-filled-tertiary rounded px-2 py-1 text-sm"
+			>
+				Studying Thai 🇹🇭 <br /> Sà-wàt-dii krap!
+				<div class="arrow variant-filled-tertiary" />
+			</div></button
 		>, improving my
-		<button><span class="border-b border-dotted">Muay Thai</span></button>
+		<button
+			><span class="border-b border-dotted" use:popup={popupMuay}>Muay Thai</span>
+			<div data-popup="muayPopup" class="card variant-filled-tertiary rounded px-2 py-1 text-sm">
+				It beats running on a treadmill 🥊
+				<div class="arrow variant-filled-tertiary" />
+			</div></button
+		>
 		skills, and watching the latest
-		<button><span class="border-b border-dotted">Netflix/HBO</span></button> series with my partner.
+		<button
+			><span class="border-b border-dotted" use:popup={popupHbo}>Netflix/HBO</span>
+			<div data-popup="hboPopup" class="card variant-filled-tertiary rounded px-2 py-1 text-sm">
+				🎬 The Last of Us and Westworld are our favorites. 🍿
+				<div class="arrow variant-filled-tertiary" />
+			</div></button
+		> series with my partner.
 	</p>
 	<hr />
 	<form method="get" action="pdfs/Resume-CesarMejia.pdf">
