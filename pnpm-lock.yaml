@@ -13,9 +13,6 @@ devDependencies:
   '@prisma/client':
     specifier: 4.12.0
     version: 4.12.0(prisma@4.12.0)
-  '@sentry/cli':
-    specifier: ^2.17.0
-    version: 2.17.0
   '@sentry/node':
     specifier: 7.47.0
     version: 7.47.0
@@ -23,8 +20,8 @@ devDependencies:
     specifier: 7.47.0
     version: 7.47.0(svelte@3.58.0)
   '@sentry/vite-plugin':
-    specifier: 0.5.1
-    version: 0.5.1
+    specifier: ^0.5.0
+    version: 0.5.0
   '@skeletonlabs/skeleton':
     specifier: ^1.1.0
     version: 1.1.0
@@ -981,8 +978,8 @@ packages:
       tslib: 1.14.1
     dev: true
 
-  /@sentry/bundler-plugin-core@0.5.1:
-    resolution: {integrity: sha512-cQQBtKUf3mpIXrxA+2+GBkqtiRdVjpH/ktALizu2I4Y5bg5T4RPvnxV8JlqZ3u9coPlWhKmZiYH5u5PRuRak+A==}
+  /@sentry/bundler-plugin-core@0.5.0:
+    resolution: {integrity: sha512-vj0UlbcdjoRUF3XNXQLKvwJzb8+kZ0TT/J7kknhak2ZyDy2zrHs83CUmCLRHthEQwKFI1n7J2JSLHRU1xN+XHQ==}
     engines: {node: '>= 10'}
     dependencies:
       '@sentry/cli': 2.17.0
@@ -1081,11 +1078,11 @@ packages:
       tslib: 1.14.1
     dev: true
 
-  /@sentry/vite-plugin@0.5.1:
-    resolution: {integrity: sha512-7yrHAroPDl9P/dOyTL9/1xt2+pUKhkUpxNFYCYPN5D4FvO90GdmFbjUbYQbfy7RtQ8kEEu9hHVOpdySI5LM3CA==}
+  /@sentry/vite-plugin@0.5.0:
+    resolution: {integrity: sha512-IYl3KopagmIv7pqwryZnHlZX0wdACp4LVxQJQNcmVSswRDRBHhZR4tHwmBsp2CMgnHD+tLK3ukBVsw512SxSQA==}
     engines: {node: '>= 10'}
     dependencies:
-      '@sentry/bundler-plugin-core': 0.5.1
+      '@sentry/bundler-plugin-core': 0.5.0
     transitivePeerDependencies:
       - encoding
       - supports-color
