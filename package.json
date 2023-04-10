@@ -20,6 +20,7 @@
 	},
 	"devDependencies": {
 		"@builder.io/partytown": "^0.7.6",
+		"@floating-ui/dom": "^1.2.6",
 		"@giscus/svelte": "^2.2.8",
 		"@lottiefiles/lottie-interactivity": "^1.6.2",
 		"@playwright/test": "^1.32.2",

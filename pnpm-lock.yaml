@@ -4,6 +4,9 @@ devDependencies:
   '@builder.io/partytown':
     specifier: ^0.7.6
     version: 0.7.6
+  '@floating-ui/dom':
+    specifier: ^1.2.6
+    version: 1.2.6
   '@giscus/svelte':
     specifier: ^2.2.8
     version: 2.2.8(svelte@3.58.0)
@@ -696,6 +699,16 @@ packages:
   /@eslint/js@8.38.0:
     resolution: {integrity: sha512-IoD2MfUnOV58ghIHCiil01PcohxjbYR/qCxsoC+xNgUwh1EY8jOOrYmu3d3a71+tJJ23uscEV4X2HJWMsPJu4g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dev: true
+
+  /@floating-ui/core@1.2.6:
+    resolution: {integrity: sha512-EvYTiXet5XqweYGClEmpu3BoxmsQ4hkj3QaYA6qEnigCWffTP3vNRwBReTdrwDwo7OoJ3wM8Uoe9Uk4n+d4hfg==}
+    dev: true
+
+  /@floating-ui/dom@1.2.6:
+    resolution: {integrity: sha512-02vxFDuvuVPs22iJICacezYJyf7zwwOCWkPNkWNBr1U0Qt1cKFYzWvxts0AmqcOQGwt/3KJWcWIgtbUU38keyw==}
+    dependencies:
+      '@floating-ui/core': 1.2.6
     dev: true
 
   /@formatjs/intl-unified-numberformat@3.3.7:
