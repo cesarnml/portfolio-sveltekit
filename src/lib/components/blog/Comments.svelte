@@ -27,8 +27,8 @@
 		category={PUBLIC_GITHUB_CATEGORY}
 		categoryId={PUBLIC_GITHUB_REPO_ID}
 		mapping="title"
+		term="Welcome"
 		reactionsEnabled="1"
-		emitMetadata="1"
 		inputPosition="top"
 		theme="dark"
 		lang="en"
