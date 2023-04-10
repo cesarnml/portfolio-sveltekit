@@ -7,6 +7,7 @@ import Inspect from 'vite-plugin-inspect'
 
 const config = defineConfig(({ mode }) => {
 	const env = loadEnv(mode, process.cwd(), '')
+	console.log('env:', env)
 
 	return {
 		build: {
@@ -29,6 +30,7 @@ const config = defineConfig(({ mode }) => {
 				project: env.PUBLIC_SENTRY_PROJECT,
 				include: './svelte-kit/output',
 				authToken: env.SENTRY_AUTH_TOKEN,
+				release: '42',
 			}),
 		],
 		test: {
