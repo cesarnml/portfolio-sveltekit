@@ -1,21 +1,20 @@
 <script lang="ts">
 	import { page } from '$app/stores'
 
-	export let title: string
+	const siteTitle = "Cesar Mejia's Web Portfolio"
+
+	export let title = siteTitle
 	export let description: string
 	export let image: string
-
-	const siteTitle = "Cesar Mejia's Web Portfolio"
-	const formattedTitle = title ? `${title} | ${siteTitle}` : siteTitle
 </script>
 
 <svelte:head>
-	<title>{formattedTitle}</title>
+	<title>{title || siteTitle}</title>
 	<meta name="description" content={description} />
 	<link rel="canonical" href={$page.url.href} />
 
 	<meta property="og:site_name" content={siteTitle} />
-	<meta property="og:title" content={formattedTitle} />
+	<meta property="og:title" content={title || siteTitle} />
 	<meta property="og:description" content={description} />
 	<meta property="og:image" content={image} />
 </svelte:head>

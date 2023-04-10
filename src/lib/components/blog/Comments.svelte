@@ -26,7 +26,7 @@
 		repoId={PUBLIC_GITHUB_REPO_ID}
 		category={PUBLIC_GITHUB_CATEGORY}
 		categoryId={PUBLIC_GITHUB_REPO_ID}
-		mapping="pathname"
+		mapping="title"
 		reactionsEnabled="1"
 		emitMetadata="1"
 		inputPosition="top"
