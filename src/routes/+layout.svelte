@@ -7,16 +7,16 @@
 	import NavLinks from '$lib/components/navbar/NavLinks.svelte'
 	import PageTransition from '$lib/components/PageTransition.svelte'
 	import GoogleAnalytics from '$lib/components/GoogleAnalytics.svelte'
-	import { AppShell, Drawer, drawerStore, Toast } from '@skeletonlabs/skeleton'
+	import { AppShell, Drawer, drawerStore, Toast, storePopup } from '@skeletonlabs/skeleton'
 	import { media } from '$lib/stores/media'
 	import { dev } from '$app/environment'
 	import { inject } from '@vercel/analytics'
 	import { partytownSnippet } from '@builder.io/partytown/integration'
+	import DarkModeToggle from '$lib/components/navbar/DarkModeToggle.svelte'
+	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom'
 	// import WavesSvg from '$lib/components/WavesSvg.svelte'
 	// import { page } from '$app/stores'
 	// import { Url } from '$lib/url'
-	import DarkModeToggle from '$lib/components/navbar/DarkModeToggle.svelte'
-
 	import 'iconify-icon'
 
 	import '@skeletonlabs/skeleton/themes/theme-modern.css'
@@ -24,6 +24,8 @@
 	import '../app.css'
 
 	export let data
+
+	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow })
 
 	$: ({ supabase, pathname } = data)
 
