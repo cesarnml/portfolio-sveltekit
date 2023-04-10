@@ -1,7 +1,11 @@
 <script lang="ts">
 	// @ts-expect-error Giscus is not a module
 	import Giscus from '@giscus/svelte'
-	import { PUBLIC_GITHUB_REPO } from '$env/static/public'
+	import {
+		PUBLIC_GITHUB_CATEGORY,
+		PUBLIC_GITHUB_REPO,
+		PUBLIC_GITHUB_REPO_ID,
+	} from '$env/static/public'
 	import { modeCurrent } from '@skeletonlabs/skeleton'
 	import { afterUpdate } from 'svelte'
 
@@ -18,11 +22,10 @@
 <Giscus
 	id="comments"
 	repo={PUBLIC_GITHUB_REPO}
-	repoId="R_kgDOIxi0Qg"
-	category="Blog"
-	categoryId="DIC_kwDOIxi0Qs4CVqdF"
+	repoId={PUBLIC_GITHUB_REPO_ID}
+	category={PUBLIC_GITHUB_CATEGORY}
+	categoryId={PUBLIC_GITHUB_REPO_ID}
 	mapping="pathname"
-	term="Welcome to Cesar's Blog Discussion"
 	reactionsEnabled="1"
 	emitMetadata="1"
 	inputPosition="top"
