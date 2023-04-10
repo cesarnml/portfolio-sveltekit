@@ -37,10 +37,12 @@ export const handle: Handle = async ({ event, resolve }) => {
 	})
 }
 
-Sentry.init({
-	dsn: PUBLIC_SENTRY_DSN,
-	tracesSampleRate: 1.0,
-})
+if (import.meta.env.PROD) {
+	Sentry.init({
+		dsn: PUBLIC_SENTRY_DSN,
+		tracesSampleRate: 1.0,
+	})
+}
 
 export const handleError: HandleServerError = ({ error, event }) => {
 	const errorId = crypto.randomUUID()

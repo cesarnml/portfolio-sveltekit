@@ -6,8 +6,8 @@ import { sentryVitePlugin } from '@sentry/vite-plugin'
 import Inspect from 'vite-plugin-inspect'
 
 const config = defineConfig(({ mode }) => {
+	const isProduction = mode === 'production'
 	const env = loadEnv(mode, process.cwd(), '')
-
 	return {
 		build: {
 			sourcemap: true,
@@ -23,13 +23,15 @@ const config = defineConfig(({ mode }) => {
 				build: true,
 				outputDir: '.vite-inspect',
 			}),
-			sentryVitePlugin({
-				telemetry: false,
-				org: env.PUBLIC_SENTRY_ORG,
-				project: env.PUBLIC_SENTRY_PROJECT,
-				include: './svelte-kit/output',
-				authToken: env.SENTRY_AUTH_TOKEN,
-			}),
+			isProduction
+				? sentryVitePlugin({
+						telemetry: false,
+						org: env.PUBLIC_SENTRY_ORG,
+						project: env.PUBLIC_SENTRY_PROJECT,
+						include: './svelte-kit/output',
+						authToken: env.SENTRY_AUTH_TOKEN,
+				  })
+				: '',
 		],
 		test: {
 			globals: true,
