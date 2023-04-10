@@ -19,18 +19,9 @@ export const load = async ({ params }) => {
 
 		const { html } = postModule.default.render()
 
-		const view = await prisma.view.upsert({
+		const view = await prisma.view.findUnique({
 			where: {
 				slug: params.slug,
-			},
-			update: {
-				count: {
-					increment: 1,
-				},
-			},
-			create: {
-				slug: params.slug,
-				count: 1,
 			},
 		})
 

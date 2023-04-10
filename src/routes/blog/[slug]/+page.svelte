@@ -72,7 +72,15 @@
 			}
 		})
 	})
+
+	const incrementView = () => {
+		fetch(`/api/blog/${data}/view`, {
+			method: 'POST',
+		})
+	}
 </script>
+
+<svelte:window on:scroll|once={incrementView} />
 
 <PageHead
 	title={data.frontmatter.title}
