@@ -29,7 +29,6 @@ const config = defineConfig(({ mode }) => {
 				project: env.PUBLIC_SENTRY_PROJECT,
 				include: './svelte-kit/output',
 				authToken: env.SENTRY_AUTH_TOKEN,
-				debug: true,
 			}),
 		],
 		test: {

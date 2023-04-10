@@ -14,11 +14,11 @@ devDependencies:
     specifier: 4.12.0
     version: 4.12.0(prisma@4.12.0)
   '@sentry/node':
-    specifier: 7.38.0
-    version: 7.38.0
+    specifier: 7.47.0
+    version: 7.47.0
   '@sentry/svelte':
-    specifier: 7.38.0
-    version: 7.38.0(svelte@3.58.0)
+    specifier: 7.47.0
+    version: 7.47.0(svelte@3.58.0)
   '@sentry/tracing':
     specifier: 7.38.0
     version: 7.38.0
@@ -771,14 +771,15 @@ packages:
       tslib: 1.14.1
     dev: true
 
-  /@sentry/browser@7.38.0:
-    resolution: {integrity: sha512-rPJr+2jRYL29PeMYA2JgzYKTZQx6bc3T9evbAdIh0n+popSjpVyOpOMV/3l6A7KZeeix3dpp6eUZUxTJukqriQ==}
+  /@sentry/browser@7.47.0:
+    resolution: {integrity: sha512-L0t07kS/G1UGVZ9fpD6HLuaX8vVBqAGWgu+1uweXthYozu/N7ZAsakjU/Ozu6FSXj1mO3NOJZhOn/goIZLSj5A==}
     engines: {node: '>=8'}
     dependencies:
-      '@sentry/core': 7.38.0
-      '@sentry/replay': 7.38.0
-      '@sentry/types': 7.38.0
-      '@sentry/utils': 7.38.0
+      '@sentry-internal/tracing': 7.47.0
+      '@sentry/core': 7.47.0
+      '@sentry/replay': 7.47.0
+      '@sentry/types': 7.47.0
+      '@sentry/utils': 7.47.0
       tslib: 1.14.1
     dev: true
 
@@ -787,7 +788,7 @@ packages:
     engines: {node: '>= 10'}
     dependencies:
       '@sentry/cli': 2.17.0
-      '@sentry/node': 7.47.0
+      '@sentry/node': 7.38.0
       '@sentry/tracing': 7.38.0
       magic-string: 0.27.0
       unplugin: 1.0.1
@@ -861,24 +862,24 @@ packages:
       - supports-color
     dev: true
 
-  /@sentry/replay@7.38.0:
-    resolution: {integrity: sha512-Ai78/OIYedny605x8uS0n/a5uj7qnuevogGD6agLat9lGc8DFvC07m2iS+EFyGOwtQzyDlRYJvYkHL8peR3crQ==}
+  /@sentry/replay@7.47.0:
+    resolution: {integrity: sha512-BFpVZVmwlezZ83y0L43TCTJY142Fxh+z+qZSwTag5HlhmIpBKw/WKg06ajOhrYJbCBkhHmeOvyKkxX0jnc39ZA==}
     engines: {node: '>=12'}
     dependencies:
-      '@sentry/core': 7.38.0
-      '@sentry/types': 7.38.0
-      '@sentry/utils': 7.38.0
+      '@sentry/core': 7.47.0
+      '@sentry/types': 7.47.0
+      '@sentry/utils': 7.47.0
     dev: true
 
-  /@sentry/svelte@7.38.0(svelte@3.58.0):
-    resolution: {integrity: sha512-9+4t7keeu0S22GMEZ0edscHgj46DRFqIfHTLpgNMModOb+H1F3M083OvcLIKVjZDY9saGBDbYdjolrcv0H507g==}
+  /@sentry/svelte@7.47.0(svelte@3.58.0):
+    resolution: {integrity: sha512-oxuefbpCs+aVAyLIDZM2jyayJzSnCo39/MI800442uS+sOR0MXq/OKcfbiqytwbjX4zvsj4m+E0/pL9rY1yOMw==}
     engines: {node: '>=8'}
     peerDependencies:
       svelte: 3.x
     dependencies:
-      '@sentry/browser': 7.38.0
-      '@sentry/types': 7.38.0
-      '@sentry/utils': 7.38.0
+      '@sentry/browser': 7.47.0
+      '@sentry/types': 7.47.0
+      '@sentry/utils': 7.47.0
       magic-string: 0.26.7
       svelte: 3.58.0
       tslib: 1.14.1
