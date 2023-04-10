@@ -26,8 +26,8 @@ const config = defineConfig(({ mode }) => {
 			sentryVitePlugin({
 				org: env.PUBLIC_SENTRY_ORG,
 				project: env.PUBLIC_SENTRY_PROJECT,
-				telemetry: false,
-				include: './svelte-kit/output',
+				// telemetry: false,
+				// include: './svelte-kit/output',
 				authToken: env.SENTRY_AUTH_TOKEN,
 			}),
 		],
