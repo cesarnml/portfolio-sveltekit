@@ -1,22 +1,48 @@
 <script lang="ts">
+	import { error } from '@sveltejs/kit'
 	import { page } from '$app/stores'
-	import { Paginator } from '@skeletonlabs/skeleton'
 	import BlogPostCard from '$lib/components/blog/BlogPostCard.svelte'
+	import InfiniteLoading from 'svelte-infinite-loading'
+	import type { Post } from '$lib/typings/blog.js'
 
+	const limit = 1
 	export let data
 	const { posts, views } = data
 
-	$: paginator = {
-		offset: 0,
-		limit: 4,
-		size: posts.length,
-		amounts: [4, 8, 20, 50],
+	let list: Post[] = [...posts]
+
+	type Detail = {
+		loaded: () => void
+		complete: () => void
 	}
 
-	$: paginatedData = posts.slice(
-		paginator.offset * paginator.limit,
-		paginator.offset * paginator.limit + paginator.limit,
-	)
+	const onInfinite = async (e: CustomEvent<Detail>) => {
+		const { complete, loaded } = e.detail
+
+		try {
+			const response = await fetch(
+				`/api/blog/posts?offset=${Math.floor((posts.length ?? 0) / limit)}&limit=${limit}`,
+				{
+					method: 'GET',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+				},
+			)
+			const newPosts = await response.json()
+			console.log('newPosts:', newPosts)
+
+			if (!newPosts.length) {
+				complete()
+			} else {
+				loaded()
+			}
+			// invalidate('posts:infinites')
+			list = [...list, ...newPosts]
+		} catch (err) {
+			throw error(428, 'HMM')
+		}
+	}
 </script>
 
 <svelte:head>
@@ -31,10 +57,13 @@
 <div class="space-y-4">
 	<h2 class="font-bold">All Posts</h2>
 	<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-		{#each paginatedData as post (post.slug)}
+		{#each posts as post (post.slug)}
 			<BlogPostCard {post} view={views.find((view) => view.slug === post.slug)} />
 		{/each}
+		<InfiniteLoading on:infinite={onInfinite}>
+			<div slot="noMore">What No more</div>
+			<div slot="noResults">What No results</div>
+		</InfiniteLoading>
 	</div>
 	<hr />
-	<Paginator bind:settings={paginator} />
 </div>
