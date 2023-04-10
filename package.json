@@ -23,10 +23,10 @@
 		"@lottiefiles/lottie-interactivity": "^1.6.2",
 		"@playwright/test": "^1.31.2",
 		"@prisma/client": "4.12.0",
-		"@sentry/node": "7.43.0",
-		"@sentry/svelte": "7.43.0",
-		"@sentry/tracing": "7.43.0",
-		"@sentry/vite-plugin": "0.4.0",
+		"@sentry/node": "7.47.0",
+		"@sentry/svelte": "7.47.0",
+		"@sentry/tracing": "7.47.0",
+		"@sentry/vite-plugin": "0.5.1",
 		"@skeletonlabs/skeleton": "^1.1.0",
 		"@supabase/auth-helpers-sveltekit": "0.9.0",
 		"@supabase/supabase-js": "2.10.0",
@@ -46,7 +46,7 @@
 		"@typescript-eslint/eslint-plugin": "^5.55.0",
 		"@typescript-eslint/parser": "^5.55.0",
 		"@vercel/analytics": "^0.1.11",
-		"@vitest/coverage-c8": "^0.29.8",
+		"@vitest/coverage-c8": "^0.30.0",
 		"autoprefixer": "^10.4.14",
 		"cssnano": "^6.0.0",
 		"dayjs": "^1.11.7",
@@ -90,7 +90,7 @@
 		"vite-imagetools": "^4.0.18",
 		"vite-plugin-inspect": "^0.7.17",
 		"vite-plugin-svelte-purgecss": "^0.0.3",
-		"vitest": "^0.29.3"
+		"vitest": "^0.30.0"
 	},
 	"type": "module"
 }
