@@ -13,6 +13,9 @@ devDependencies:
   '@prisma/client':
     specifier: 4.12.0
     version: 4.12.0(prisma@4.12.0)
+  '@sentry/cli':
+    specifier: ^2.17.0
+    version: 2.17.0
   '@sentry/node':
     specifier: 7.47.0
     version: 7.47.0
