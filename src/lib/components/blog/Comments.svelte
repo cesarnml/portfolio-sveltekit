@@ -19,18 +19,19 @@
 	})
 </script>
 
-<Giscus
-	id="comments"
-	repo={PUBLIC_GITHUB_REPO}
-	repoId={PUBLIC_GITHUB_REPO_ID}
-	category={PUBLIC_GITHUB_CATEGORY}
-	categoryId={PUBLIC_GITHUB_REPO_ID}
-	mapping="pathname"
-	reactionsEnabled="1"
-	emitMetadata="1"
-	inputPosition="top"
-	theme="dark"
-	lang="en"
-	loading="lazy"
-	label="Comments"
-/>
+<div data-testid="giscus">
+	<Giscus
+		id="comments"
+		repo={PUBLIC_GITHUB_REPO}
+		repoId={PUBLIC_GITHUB_REPO_ID}
+		category={PUBLIC_GITHUB_CATEGORY}
+		categoryId={PUBLIC_GITHUB_REPO_ID}
+		mapping="pathname"
+		reactionsEnabled="1"
+		emitMetadata="1"
+		inputPosition="top"
+		theme="dark"
+		lang="en"
+		loading="lazy"
+	/>
+</div>
