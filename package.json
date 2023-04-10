@@ -20,6 +20,7 @@
 	},
 	"devDependencies": {
 		"@builder.io/partytown": "^0.7.6",
+		"@giscus/svelte": "^2.2.8",
 		"@lottiefiles/lottie-interactivity": "^1.6.2",
 		"@playwright/test": "^1.32.2",
 		"@prisma/client": "4.12.0",

@@ -1,7 +1,7 @@
 ---
 published: true
 title: Second Svelte MDX post
-description: My first markdown content
+description: My second markdown content
 author: Cesar Mejia
 tags: ['cool', 'beans']
 image: '/src/lib/assets/picture/hero.jpg'

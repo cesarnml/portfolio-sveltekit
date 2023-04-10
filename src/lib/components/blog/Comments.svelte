@@ -1,50 +1,37 @@
 <script lang="ts">
-	import { afterUpdate, onMount } from 'svelte'
+	// @ts-expect-error Giscus is not a module
+	import Giscus from '@giscus/svelte'
+	import {
+		PUBLIC_GITHUB_CATEGORY,
+		PUBLIC_GITHUB_REPO,
+		PUBLIC_GITHUB_REPO_ID,
+	} from '$env/static/public'
 	import { modeCurrent } from '@skeletonlabs/skeleton'
+	import { afterUpdate } from 'svelte'
 
-	$: theme = $modeCurrent ? 'github-dark' : 'github-light'
-
-	$: options = {
-		src: 'https://utteranc.es/client.js',
-		repo: 'cesarnml/svelte-kit-tutorial',
-		label: 'comments',
-		crossorigin: 'anonymous',
-		theme,
-		async: '',
-		'issue-term': 'pathname',
-	}
-
-	const postMessage = (theme: string) => {
-		const iframe = document.querySelector('.utterances-frame') as HTMLIFrameElement
-		if (!iframe) {
-			setTimeout(() => postMessage(theme), 500)
-		} else {
-			if (iframe.contentWindow) {
-				iframe.contentWindow.postMessage({ type: 'set-theme', theme }, '*')
-			}
-		}
-	}
-
-	onMount(() => {
-		const utteranceScript = document.createElement('script')
-		const targetTag = document.getElementById('utterances-comments')
-
-		// Loop over the options & apply each property as an attribute
-		Object.keys(options).forEach((prop) => {
-			utteranceScript.setAttribute(prop, options[prop as keyof typeof options])
-		})
-
-		if (targetTag) {
-			targetTag.appendChild(utteranceScript)
-		}
-	})
+	$: theme = $modeCurrent ? 'light' : 'dark'
 
 	afterUpdate(() => {
-		postMessage(theme)
+		const giscus = document.querySelector('#comments')
+		if (giscus) {
+			giscus.setAttribute('theme', theme)
+		}
 	})
 </script>
 
-<div id="utterances-comments" />
-
-<!-- ref: https://svelte-utterances.vercel.app/dynamic  -->
-<!-- ref: https://joshcollinsworth.com/blog/add-blog-comments-static-site -->
+<div data-testid="giscus">
+	<Giscus
+		id="comments"
+		repo={PUBLIC_GITHUB_REPO}
+		repoId={PUBLIC_GITHUB_REPO_ID}
+		category={PUBLIC_GITHUB_CATEGORY}
+		categoryId={PUBLIC_GITHUB_REPO_ID}
+		mapping="pathname"
+		reactionsEnabled="1"
+		emitMetadata="1"
+		inputPosition="top"
+		theme="dark"
+		lang="en"
+		loading="lazy"
+	/>
+</div>
