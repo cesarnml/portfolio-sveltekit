@@ -4,9 +4,10 @@ import { prisma } from '$lib/prismaClient'
 
 export const config: Config = {
 	isr: {
-		expiration: 24 * 60 * 60, // 1 day
+		expiration: 5, // 5 seconds
 	},
 }
+
 export const load = async ({ params }) => {
 	try {
 		const postModule = (await import(

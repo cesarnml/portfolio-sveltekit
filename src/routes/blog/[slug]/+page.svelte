@@ -7,13 +7,31 @@
 	import handleCopyClick from '$lib/handleCopyClick'
 
 	import '$lib/styles/shiki.css'
+	import { page } from '$app/stores'
 
 	export let data
 
 	onMount(async () => {
 		// Get all <pre> elements
 		const preElements = document.querySelectorAll('pre')
+		const scrollPage = document.querySelector('#appShell #page')
 
+		const incrementView = async () => {
+			await fetch(`/api/blog/${$page.params.slug}/view`, {
+				method: 'POST',
+				headers: {
+					'content-type': 'application/json',
+				},
+			})
+		}
+
+		scrollPage?.addEventListener(
+			'scroll',
+			() => {
+				incrementView()
+			},
+			{ once: true },
+		)
 		// For each <pre> element
 		preElements.forEach((ele) => {
 			// Track if it's being hovered (needed for "focus" code styling)
@@ -72,15 +90,7 @@
 			}
 		})
 	})
-
-	const incrementView = () => {
-		fetch(`/api/blog/${data}/view`, {
-			method: 'POST',
-		})
-	}
 </script>
-
-<svelte:window on:scroll|once={incrementView} />
 
 <PageHead
 	title={data.frontmatter.title}
@@ -108,7 +118,7 @@
 			readingTime={data.frontmatter.readingTime.text}
 			wordCount={data.frontmatter.readingTime.words}
 			image={data.frontmatter.image}
-			viewCount={data.view.count}
+			viewCount={data.view?.count}
 		/>
 	</section>
 	<div class="mb-2 space-x-5">
