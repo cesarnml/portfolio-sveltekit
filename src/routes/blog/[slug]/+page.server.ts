@@ -1,6 +1,12 @@
+import type { Config } from '@sveltejs/adapter-vercel'
 import { error } from '@sveltejs/kit'
 import { prisma } from '$lib/prismaClient'
 
+export const config: Config = {
+	isr: {
+		expiration: 24 * 60 * 60, // 1 day
+	},
+}
 export const load = async ({ params }) => {
 	try {
 		const postModule = (await import(

@@ -1,14 +1,14 @@
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import { sveltekit } from '@sveltejs/kit/vite'
 import { configDefaults } from 'vitest/config'
 import { imagetools } from 'vite-imagetools'
-// import { sentryVitePlugin } from '@sentry/vite-plugin'
+import { sentryVitePlugin } from '@sentry/vite-plugin'
 import Inspect from 'vite-plugin-inspect'
 
-const config = defineConfig(() =>
-	// const env = loadEnv(mode, process.cwd(), '')
-	({
-		envPrefix: 'VITE_',
+const config = defineConfig(({ mode }) => {
+	const env = loadEnv(mode, process.cwd(), '')
+
+	return {
 		build: {
 			sourcemap: true,
 		},
@@ -16,7 +16,6 @@ const config = defineConfig(() =>
 			// Eliminate in-source test code
 			'import.meta.vitest': 'undefined',
 		},
-
 		plugins: [
 			sveltekit(),
 			imagetools(),
@@ -24,13 +23,13 @@ const config = defineConfig(() =>
 				build: true,
 				outputDir: '.vite-inspect',
 			}),
-			// sentryVitePlugin({
-			// 	telemetry: false,
-			// 	org: env.PUBLIC_SENTRY_ORG,
-			// 	project: env.PUBLIC_SENTRY_PROJECT,
-			// 	include: './svelte-kit/output',
-			// 	authToken: env.SENTRY_AUTH_TOKEN,
-			// }),
+			sentryVitePlugin({
+				telemetry: false,
+				org: env.PUBLIC_SENTRY_ORG,
+				project: env.PUBLIC_SENTRY_PROJECT,
+				include: './svelte-kit/output',
+				authToken: env.SENTRY_AUTH_TOKEN,
+			}),
 		],
 		test: {
 			globals: true,
@@ -46,6 +45,11 @@ const config = defineConfig(() =>
 					'src/lib/typings',
 					'src/routes/**/+page.svelte',
 					'src/routes/**/+layout.svelte',
+					'src/routes/**/+page*.ts',
+					'src/routes/**/+layout*.ts',
+					'src/routes/**/+error.svelte',
+					'src/hooks.client.ts',
+					'src/hooks.server.ts',
 				],
 			},
 			deps: {
@@ -60,7 +64,7 @@ const config = defineConfig(() =>
 				'src/lib/external',
 			],
 		},
-	}),
-)
+	}
+})
 
 export default config
