@@ -19,7 +19,7 @@
 	// import { Url } from '$lib/url'
 	import 'iconify-icon'
 
-	import '@skeletonlabs/skeleton/themes/theme-modern.css'
+	import '$lib/styles/theme-modern.css'
 	import '@skeletonlabs/skeleton/styles/all.css'
 	import '../app.css'
 

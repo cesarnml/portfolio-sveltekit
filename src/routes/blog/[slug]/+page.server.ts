@@ -4,9 +4,10 @@ import { prisma } from '$lib/prismaClient'
 
 export const config: Config = {
 	isr: {
-		expiration: 24 * 60 * 60, // 1 day
+		expiration: 5, // 5 seconds
 	},
 }
+
 export const load = async ({ params }) => {
 	try {
 		const postModule = (await import(
@@ -19,18 +20,9 @@ export const load = async ({ params }) => {
 
 		const { html } = postModule.default.render()
 
-		const view = await prisma.view.upsert({
+		const view = await prisma.view.findUnique({
 			where: {
 				slug: params.slug,
-			},
-			update: {
-				count: {
-					increment: 1,
-				},
-			},
-			create: {
-				slug: params.slug,
-				count: 1,
 			},
 		})
 
