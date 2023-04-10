@@ -24,9 +24,10 @@ const config = defineConfig(({ mode }) => {
 				outputDir: '.vite-inspect',
 			}),
 			sentryVitePlugin({
+				telemetry: false,
 				org: env.PUBLIC_SENTRY_ORG,
 				project: env.PUBLIC_SENTRY_PROJECT,
-				include: './dist',
+				include: './svelte-kit/output',
 				authToken: env.SENTRY_AUTH_TOKEN,
 			}),
 		],

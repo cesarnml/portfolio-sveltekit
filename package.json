@@ -85,7 +85,7 @@
 		"tailwindcss": "^3.3.0",
 		"tslib": "^2.5.0",
 		"typescript": "5.0.3",
-		"vite": "^4.2.1",
+		"vite": "4.1.4",
 		"vite-imagetools": "^4.0.18",
 		"vite-plugin-inspect": "^0.7.17",
 		"vite-plugin-svelte-purgecss": "^0.0.3",
