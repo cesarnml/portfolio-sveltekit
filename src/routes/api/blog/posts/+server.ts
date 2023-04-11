@@ -1,4 +1,4 @@
-import { json } from '@sveltejs/kit'
+import { json, error } from '@sveltejs/kit'
 import { fetchPosts } from '$lib/content'
 
 // TODO: Improve type safety
@@ -7,7 +7,10 @@ export const GET = async ({ url }) => {
 	const limit = (url.searchParams.get('limit') ?? 1) as number
 	const tag = url.searchParams.get('tag') ?? ''
 
-	const posts = await fetchPosts({ offset, limit, tag })
-
-	return json(posts)
+	try {
+		const posts = await fetchPosts({ offset, limit, tag })
+		return json(posts)
+	} catch (err) {
+		error(500, 'Failed to fetch posts.')
+	}
 }

@@ -1,15 +1,15 @@
 <script lang="ts">
-	import { error } from '@sveltejs/kit'
 	import { page } from '$app/stores'
 	import BlogPostCard from '$lib/components/blog/BlogPostCard.svelte'
 	import InfiniteLoading from 'svelte-infinite-loading'
-	import type { Post } from '$lib/typings/blog.js'
 
 	const limit = 1
 	export let data
-	const { views } = data
+	const { views, posts } = data
 
-	let list: Post[] = []
+	let sliceStep = 3
+
+	$: list = posts.slice(0, sliceStep)
 
 	type Detail = {
 		loaded: () => void
@@ -18,28 +18,11 @@
 
 	const onInfinite = async (e: CustomEvent<Detail>) => {
 		const { complete, loaded } = e.detail
-
-		try {
-			const response = await fetch(
-				`/api/blog/posts?offset=${Math.floor((list.length ?? 0) / limit)}&limit=${limit}`,
-				{
-					method: 'GET',
-					headers: {
-						'Content-Type': 'application/json',
-					},
-				},
-			)
-			const newPosts = await response.json()
-
-			if (newPosts.length) {
-				loaded()
-			} else {
-				complete()
-			}
-			// invalidate('posts:infinites')
-			list = [...list, ...newPosts]
-		} catch (err) {
-			throw error(428, 'HMM')
+		if (sliceStep <= posts.length) {
+			sliceStep += limit
+			loaded()
+		} else {
+			complete()
 		}
 	}
 </script>
@@ -59,9 +42,13 @@
 		{#each list as post (post.slug)}
 			<BlogPostCard {post} view={views.find((view) => view.slug === post.slug)} />
 		{/each}
-		<InfiniteLoading on:infinite={onInfinite}>
-			<div slot="noMore">Wow! You really enjoy reading. Suggest a new topic!</div>
-			<div slot="noResults">Empty Placeholder</div>
+		<InfiniteLoading on:infinite={onInfinite} distance={0}>
+			<aside slot="noMore" class="alert variant-ghost">
+				<div class="alert-message">
+					<p>Wow! You really enjoy reading. Suggest a new topic!</p>
+				</div>
+			</aside>
+			<aside slot="noResults" class="alert variant-ghost">Empty Placeholder</aside>
 		</InfiniteLoading>
 	</div>
 	<hr />

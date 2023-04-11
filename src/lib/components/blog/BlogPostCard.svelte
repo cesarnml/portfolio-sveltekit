@@ -2,6 +2,8 @@
 	import { Url } from '$lib/url'
 	import type { View } from '@prisma/client'
 	import Picture from '../Picture.svelte'
+	import { fade } from 'svelte/transition'
+
 	import dayjs from 'dayjs'
 	import type { Post } from '$lib/typings/blog'
 
@@ -11,7 +13,7 @@
 	const DEFAULT_VIEW_COUNT = 1
 </script>
 
-<a class="card card-hover variant-glass-surface" href={Url.BlogDetail(post.slug)}>
+<a class="card card-hover variant-glass-surface" href={Url.BlogDetail(post.slug)} transition:fade>
 	<header><Picture class="object-cover" src={post.image} alt="blog post" /></header>
 	<div class="p-4">
 		<div class="mb-4">
