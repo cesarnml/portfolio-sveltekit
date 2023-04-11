@@ -13,14 +13,16 @@
 	const DEFAULT_VIEW_COUNT = 1
 </script>
 
-<a class="blog-card !hover:translate-y-4 w-full" href={Url.BlogDetail(post.slug)} transition:fade>
+<a
+	class="blog-card flex w-full flex-col justify-between overflow-hidden"
+	href={Url.BlogDetail(post.slug)}
+	transition:fade
+>
 	<header><Picture class="object-cover" src={post.image} alt="post cover image" /></header>
-	<div class="w-full p-4">
-		<div class="mb-4">
-			<h3 class="mb-1 no-underline hover:text-secondary-300-600-token">{post.title}</h3>
-			<div class="font-normal">{post.description}</div>
-		</div>
-		<footer class="flex w-full items-center justify-between text-sm">
+	<div class="flex h-full flex-col justify-between gap-4 p-4">
+		<h4 class="no-underline hover:underline">{post.title}</h4>
+		<div class="flex-grow font-normal">{post.description}</div>
+		<footer class="flex w-full items-baseline justify-between text-sm">
 			<div class="inline-flex gap-2">
 				{#each post.tags as tag, idx}
 					<span
@@ -47,13 +49,5 @@
 		box-shadow: var(--card-shadow);
 		color: var(--color--text) !important;
 		border-radius: var(--theme-rounded-container);
-		transition: all 0.4s ease;
-		position: relative;
-		overflow: hidden;
-		width: 100%;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		text-decoration: none;
 	}
 </style>
