@@ -190,12 +190,18 @@ devDependencies:
   svelte-fragment-component:
     specifier: ^1.2.0
     version: 1.2.0(svelte@3.58.0)
+  svelte-infinite-loading:
+    specifier: ^1.3.8
+    version: 1.3.8
   svelte-media:
     specifier: ^0.1.5
     version: 0.1.5(svelte@3.58.0)
   svelte-sitemap:
     specifier: ^2.6.0
     version: 2.6.0
+  svelte-tiny-virtual-list:
+    specifier: ^2.0.5
+    version: 2.0.5
   tailwindcss:
     specifier: ^3.3.1
     version: 3.3.1(postcss@8.4.21)
@@ -6209,6 +6215,10 @@ packages:
       svelte: 3.58.0
     dev: true
 
+  /svelte-infinite-loading@1.3.8:
+    resolution: {integrity: sha512-hn4o848LKd2Q+M11hiMWnfFxM1GHKVDi92HPZ1FYvfed4bEeRZL+QvFAQzhy1SACq6Si0CAJcQFUZpIYmAEnpQ==}
+    dev: true
+
   /svelte-media@0.1.5(svelte@3.58.0):
     resolution: {integrity: sha512-qWo35IxY13S57BcLWK9eQPef9i80Od5XFcyTznIJy8km/i/Bmx0g22+MCPuyZeipG4Kz2cUSmsnwwEq0rTybKA==}
     engines: {node: '>= 11.15.0'}
@@ -6281,6 +6291,10 @@ packages:
       fast-glob: 3.2.12
       minimist: 1.2.8
       xmlbuilder2: 3.0.2
+    dev: true
+
+  /svelte-tiny-virtual-list@2.0.5:
+    resolution: {integrity: sha512-xg9ckb8UeeIme4/5qlwCrl2QNmUZ8SCQYZn3Ji83cUsoASqRNy3KWjpmNmzYvPDqCHSZjruBBsoB7t5hwuzw5g==}
     dev: true
 
   /svelte@3.58.0:

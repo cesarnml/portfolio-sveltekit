@@ -1,22 +1,30 @@
 <script lang="ts">
 	import { page } from '$app/stores'
-	import { Paginator } from '@skeletonlabs/skeleton'
 	import BlogPostCard from '$lib/components/blog/BlogPostCard.svelte'
+	import InfiniteLoading from 'svelte-infinite-loading'
 
+	const limit = 1
 	export let data
-	const { posts, views } = data
+	const { views, posts } = data
 
-	$: paginator = {
-		offset: 0,
-		limit: 4,
-		size: posts.length,
-		amounts: [4, 8, 20, 50],
+	let sliceStep = 4
+
+	$: list = posts.slice(0, sliceStep)
+
+	type Detail = {
+		loaded: () => void
+		complete: () => void
 	}
 
-	$: paginatedData = posts.slice(
-		paginator.offset * paginator.limit,
-		paginator.offset * paginator.limit + paginator.limit,
-	)
+	const onInfinite = async (e: CustomEvent<Detail>) => {
+		const { complete, loaded } = e.detail
+		if (sliceStep <= posts.length) {
+			sliceStep += limit
+			loaded()
+		} else {
+			complete()
+		}
+	}
 </script>
 
 <svelte:head>
@@ -31,10 +39,17 @@
 <div class="space-y-4">
 	<h2 class="font-bold">All Posts</h2>
 	<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
-		{#each paginatedData as post (post.slug)}
+		{#each list as post (post.slug)}
 			<BlogPostCard {post} view={views.find((view) => view.slug === post.slug)} />
 		{/each}
+		<InfiniteLoading on:infinite={onInfinite} distance={0}>
+			<aside slot="noMore" class="alert variant-ghost">
+				<div class="alert-message">
+					<p>Wow! You really enjoy reading. Suggest a new topic!</p>
+				</div>
+			</aside>
+			<aside slot="noResults" class="alert variant-ghost">Empty Placeholder</aside>
+		</InfiniteLoading>
 	</div>
 	<hr />
-	<Paginator bind:settings={paginator} />
 </div>

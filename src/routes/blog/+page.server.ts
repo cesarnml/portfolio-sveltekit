@@ -4,7 +4,7 @@ import { fetchPosts } from '$lib/content'
 
 export const config: Config = {
 	isr: {
-		expiration: 24 * 60 * 60, // 1 day
+		expiration: 5,
 	},
 }
 
