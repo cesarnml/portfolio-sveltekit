@@ -7,7 +7,7 @@
 	export let data
 	const { views, posts } = data
 
-	let sliceStep = 3
+	let sliceStep = 4
 
 	$: list = posts.slice(0, sliceStep)
 
