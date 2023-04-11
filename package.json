@@ -23,7 +23,7 @@
 		"@floating-ui/dom": "^1.2.6",
 		"@giscus/svelte": "^2.2.8",
 		"@lottiefiles/lottie-interactivity": "^1.6.2",
-		"@playwright/test": "^1.32.2",
+		"@playwright/test": "^1.32.3",
 		"@prisma/client": "4.12.0",
 		"@sentry/node": "7.47.0",
 		"@sentry/svelte": "7.47.0",
