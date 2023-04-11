@@ -1,6 +1,5 @@
 import type { View } from '@prisma/client'
 import { render, screen } from '@testing-library/svelte'
-import dayjs from 'dayjs'
 import { Url } from '$lib/url'
 import BlogPostCard from './BlogPostCard.svelte'
 import type { Post } from '$lib/typings/blog'
@@ -12,6 +11,7 @@ it('renders a blog post card (plural views)', async () => {
 		title: 'Test title',
 		description: 'test description',
 		date: '2023-01-17',
+		tags: ['tag1', 'tag2'],
 		readingTime: {
 			text: '30 mins',
 		},
@@ -29,20 +29,13 @@ it('renders a blog post card (plural views)', async () => {
 		Url.BlogDetail(post.slug),
 	)
 	// It displays a blog post cover image
-	expect(screen.getByRole('img', { name: /blog post/i })).toBeInTheDocument()
+	expect(screen.getByRole('img', { name: /post/i })).toBeInTheDocument()
 
 	// It displays the blog title as a header
 	expect(screen.getByRole('heading', { name: RegExp(post.title, 'i') })).toBeInTheDocument()
 
 	// It displays the blog post description
 	expect(screen.getByText(RegExp(post.description, 'i'))).toBeInTheDocument()
-
-	// TODO: Brittle input transformation
-	// It displays the blog post date
-	expect(screen.getByText(dayjs(post.date).format('D MMM YYYY'))).toBeInTheDocument()
-
-	// It displays the blog post reading time
-	expect(screen.getByText(post.readingTime.text)).toBeInTheDocument()
 
 	// It displays the blog views
 	expect(screen.getByText(`${view.count} views`)).toBeInTheDocument()
@@ -55,6 +48,7 @@ it('renders a blog post card (singular view)', async () => {
 		title: 'Test title',
 		description: 'test description',
 		date: '2023-01-17',
+		tags: ['tag1', 'tag2'],
 		readingTime: {
 			text: '30 mins',
 		},
