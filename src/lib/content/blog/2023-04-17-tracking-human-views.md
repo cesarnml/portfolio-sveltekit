@@ -5,7 +5,7 @@ description: "Are you tired of inaccurate page view data due to bots and crawler
 excerpt: "Are bots and crawlers skewing your website's page view data? Don't worry, there's a solution. With user scroll tracking, you can accurately track page views by real humans, so you can make data-driven decisions that actually reflect your users' behavior. In this guide, we'll walk you through the process of implementing user scroll tracking in your SvelteKit app, so you can get accurate data on your website's traffic. Get ready to scroll to the top and get the data you need!"
 author: Cesar Mejia
 tags: ['svelte', 'supabase']
-image: '/src/lib/assets/picture/giscus.png'
+image: '/src/lib/assets/picture/tracking.png'
 date: 2023-04-17
 updatedAt: false
 ---
