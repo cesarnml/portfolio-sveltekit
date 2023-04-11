@@ -1,12 +1,13 @@
 ---
 published: true
-title: "Code Like a Pro: How to Create Awesome Markdown Code Blogs with Svelte and MDsveX"
-description: "Ready to take your coding blogs to the next level? With Svelte and MDsveX, you can create stunning, interactive code snippets that will wow your readers. In this guide, we'll show you how to create cool markdown code blogs with Svelte and MDsveX, so you can share your knowledge like a pro."
-excerpt: "Are you tired of boring code snippets in your blog posts? Spice things up with Svelte and MDsveX! With their powers combined, you can create eye-catching, interactive code blocks that will engage your readers like never before. In this guide, we'll walk you through the process of creating cool markdown code blogs with Svelte and MDsveX, so you can showcase your coding skills and knowledge in style. Get ready to take your blogs to the next level!"
+title: 'Unleash Your Inner Debugger: Sentry.io Setup for SvelteKit'
+description: Debugging shouldn't be a nightmare! In this guide, I'll show you how to set up Sentry.io for error and exception handling in your SvelteKit application, empowering you to identify and resolve issues like a pro.
+excerpt: Are you ready to take your debugging skills to the next level? Sentry.io is the ultimate tool for monitoring errors and exceptions in your SvelteKit application. Say goodbye to sleepless nights and hello to a smoother user experience. Our guide will walk you through the process of configuring Sentry.io, so you can unleash your inner debugger and tackle bugs like a boss. Let's get started!
 author: Cesar Mejia
-tags: ['markdown', 'svelte']
-image: '/src/lib/assets/picture/code-blocks.png'
-date: 2023-04-12
+tags: ['sentry', 'svelte', 'devops']
+image: '/src/lib/assets/picture/sentry.png'
+date: 2023-04-11
+updatedAt: false
 ---
 
 ## Markdown Examples

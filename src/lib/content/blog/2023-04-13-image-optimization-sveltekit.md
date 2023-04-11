@@ -1,12 +1,13 @@
 ---
 published: true
-title: "One Modal to Rule Them All: A Guide to Creating a Reusable, Unified Modal in SvelteKit"
-description: "Are you tired of creating the same modal over and over again for each component in your SvelteKit app? With a unified modal, you can simplify your codebase and create a consistent user experience across your app. In this guide, we'll show you how to create a reusable, unified modal that will rule all modals in your SvelteKit app, just like the One Ring in Lord of the Rings."
-excerpt: "Are you ready to simplify your SvelteKit app and create a consistent user experience? Look no further than a unified modal! With this powerful component, you can eliminate the need to create individual modals for each component in your app. In this guide, we'll show you how to create a reusable, unified modal that will rule all modals in your SvelteKit app, just like the One Ring in Lord of the Rings. Get ready to streamline your codebase and create a unified user experience that will keep your users engaged."
+title: "Pixel Perfect: A Guide to Automatic Image Optimization with SvelteKit"
+description: "Tired of slow-loading images ruining your website's performance? With SvelteKit's automatic image optimization, you can have your cake and eat it too. In this guide, we'll show you how to optimize images on the fly, ensuring a fast and seamless user experience."
+excerpt: "Are you tired of waiting for images to load on your website? We hear you. Slow-loading images can be a pain, but thankfully, SvelteKit has got you covered. With automatic image optimization, you can have the best of both worlds: high-quality images that load lightning fast. In this guide, we'll walk you through the process of setting up automatic image optimization in your SvelteKit app, so you can focus on creating stunning visuals without sacrificing speed. Get ready for pixel perfection!"
 author: Cesar Mejia
-tags: ['svelte', 'patterns']
-image: '/src/lib/assets/picture/modal.png'
-date: 2023-04-14
+tags: ['svelte', 'performance']
+image: '/src/lib/assets/picture/image-compression.png'
+date: 2023-04-13
+updatedAt: false
 ---
 
 ## Markdown Examples

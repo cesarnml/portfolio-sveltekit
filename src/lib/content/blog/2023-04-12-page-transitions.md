@@ -4,9 +4,10 @@ title: "Animate Your Way to Better UX: A Guide to Page Transition Animations in 
 description: "Ready to take your SvelteKit app to the next level? With page transition animations, you can create a seamless user experience that will keep your users engaged and coming back for more. In this guide, we'll show you how to implement page transition animations in SvelteKit, so you can wow your users and stand out from the crowd."
 excerpt: "Are you looking for a way to make your SvelteKit app stand out? Page transition animations are the way to go! With these animations, you can create a smooth and seamless user experience that will keep your users engaged and coming back for more. In this guide, we'll walk you through the process of implementing page transition animations in your SvelteKit app, so you can create a user experience that is both visually stunning and functional. Get ready to wow your users!"
 author: Cesar Mejia
-tags: ['cool', 'beans']
+tags: ['ux', 'svelte']
 image: '/src/lib/assets/picture/page-transitions.png'
-date: 2023-04-14
+date: 2023-04-12
+updatedAt: false
 ---
 
 ## Markdown Examples

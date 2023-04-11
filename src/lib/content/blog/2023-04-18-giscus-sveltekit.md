@@ -1,12 +1,13 @@
 ---
 published: true
-title: "Pixel Perfect: A Guide to Automatic Image Optimization with SvelteKit"
-description: "Tired of slow-loading images ruining your website's performance? With SvelteKit's automatic image optimization, you can have your cake and eat it too. In this guide, we'll show you how to optimize images on the fly, ensuring a fast and seamless user experience."
-excerpt: "Are you tired of waiting for images to load on your website? We hear you. Slow-loading images can be a pain, but thankfully, SvelteKit has got you covered. With automatic image optimization, you can have the best of both worlds: high-quality images that load lightning fast. In this guide, we'll walk you through the process of setting up automatic image optimization in your SvelteKit app, so you can focus on creating stunning visuals without sacrificing speed. Get ready for pixel perfection!"
+title: "Giscus: The Missing Piece to Your SvelteKit Blog's Puzzle"
+description: "Want to build a community around your SvelteKit blog? Look no further than Giscus! In this guide, we'll show you how to use Giscus to add a comment system to your markdown-based SvelteKit blog, so you can engage with your readers and build a loyal following."
+excerpt: "Are you ready to take your SvelteKit blog to the next level? With Giscus, you can add a comment system to your markdown-based blog and start building a community around your content. In this guide, we'll walk you through the process of using Giscus to add a comment system to your SvelteKit blog, so you can engage with your readers and build a loyal following. Get ready to complete the puzzle and take your SvelteKit blog to new heights with Giscus!"
 author: Cesar Mejia
-tags: ['svelte', 'performance']
-image: '/src/lib/assets/picture/image-compression.png'
-date: 2023-04-12
+tags: ['giscus', 'svelte']
+image: '/src/lib/assets/picture/giscus.png'
+date: 2023-04-18
+updatedAt: false
 ---
 
 ## Markdown Examples
