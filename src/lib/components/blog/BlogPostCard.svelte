@@ -1,11 +1,9 @@
 <script lang="ts">
+	import type { Post } from '$lib/typings/blog'
 	import { Url } from '$lib/url'
 	import type { View } from '@prisma/client'
-	import Picture from '../Picture.svelte'
 	import { fade } from 'svelte/transition'
-
-	import dayjs from 'dayjs'
-	import type { Post } from '$lib/typings/blog'
+	import Picture from '../Picture.svelte'
 
 	export let post: Post
 	export let view: View | undefined
@@ -14,7 +12,7 @@
 </script>
 
 <a
-	class="blog-card flex w-full flex-col justify-between overflow-hidden"
+	class="blog-card relative flex w-full flex-col justify-between overflow-hidden"
 	href={Url.BlogDetail(post.slug)}
 	transition:fade
 >
