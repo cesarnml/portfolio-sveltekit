@@ -13,20 +13,47 @@
 	const DEFAULT_VIEW_COUNT = 1
 </script>
 
-<a class="card card-hover variant-glass-surface" href={Url.BlogDetail(post.slug)} transition:fade>
-	<header><Picture class="object-cover" src={post.image} alt="blog post" /></header>
-	<div class="p-4">
+<a class="blog-card !hover:translate-y-4 w-full" href={Url.BlogDetail(post.slug)} transition:fade>
+	<header><Picture class="object-cover" src={post.image} alt="post cover image" /></header>
+	<div class="w-full p-4">
 		<div class="mb-4">
-			<h3 class="mb-1 font-bold">{post.title}</h3>
-			<div>{post.description}</div>
+			<h3 class="mb-1 no-underline hover:text-secondary-300-600-token">{post.title}</h3>
+			<div class="font-normal">{post.description}</div>
 		</div>
-		<footer class="flex justify-between text-sm">
-			<span>{dayjs(post.date).format('D MMM YYYY')}</span>
-			<div>
-				<span>{post.readingTime.text}</span>
-				<span>&middot;</span>
-				<span>{view?.count ?? DEFAULT_VIEW_COUNT} {`view${view?.count === 1 ? '' : 's'}`}</span>
+		<footer class="flex w-full items-center justify-between text-sm">
+			<div class="inline-flex gap-2">
+				{#each post.tags as tag, idx}
+					<span
+						class={`badge badge-glass text-sm font-normal ${
+							idx === 0 ? '!bg-cyan-400/30' : '!bg-rose-400/30'
+						}`}
+						>{tag}
+					</span>
+				{/each}
+			</div>
+			<div class="text-right">
+				<span class=" text-sm font-normal"
+					>{view?.count ?? DEFAULT_VIEW_COUNT}
+					{`view${view?.count === 1 || view?.count === undefined ? '' : 's'}`}</span
+				>
 			</div>
 		</footer>
 	</div>
 </a>
+
+<style lang="postcss">
+	.blog-card {
+		background-color: rgba(var(--color-surface-600) / 0.3);
+		box-shadow: var(--card-shadow);
+		color: var(--color--text) !important;
+		border-radius: var(--theme-rounded-container);
+		transition: all 0.4s ease;
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		text-decoration: none;
+	}
+</style>

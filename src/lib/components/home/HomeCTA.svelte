@@ -17,11 +17,11 @@
 		<h1 class="!text-2xl 3xs:!text-3xl md:!text-4xl">Hello, I'm Cesar 👋</h1>
 		<!-- CONTENT -->
 		<div class="space-y-4">
-			<p class="!text-lg font-semibold 3xs:!text-xl">
+			<p class="!text-lg 3xs:!text-xl">
 				I'm a developer, blogger and an educator. I like to build awesome, engaging, and accessible
 				web apps.
 			</p>
-			<p class="!text-lg font-semibold 3xs:!text-xl">Let's learn together!</p>
+			<p class="!text-lg 3xs:!text-xl">Let's learn together!</p>
 		</div>
 		<!-- BUTTONS -->
 		<div class="flex flex-col gap-5 3xs:flex-row">
