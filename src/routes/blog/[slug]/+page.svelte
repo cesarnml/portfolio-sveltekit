@@ -140,4 +140,7 @@
 	:global(h2:hover .permalink, h3:hover .permalink) {
 		opacity: 1;
 	}
+	:global(.toc-list-item) {
+		@apply text-sm font-normal;
+	}
 </style>
