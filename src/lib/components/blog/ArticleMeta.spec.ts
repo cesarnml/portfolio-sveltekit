@@ -2,12 +2,9 @@ import { render, screen } from '@testing-library/svelte'
 import ArticleMeta from './ArticleMeta.svelte'
 
 it('renders article meta data and cover image', async () => {
-	// FIXME: Brittle transformation of props
-	const formatDate = (date: string) => new Date(date).toDateString().split(' ').slice(1).join(' ')
-
 	const articleWithImage = {
 		author: 'Cesar Mejia',
-		date: '2023-01-17',
+		date: '17 January 2023',
 		readingTime: '2 mins',
 		wordCount: 90,
 		image: '/src/lib/assets/picture/hero.jpg',
@@ -23,7 +20,7 @@ it('renders article meta data and cover image', async () => {
 	expect(screen.getByText(articleWithImage.author)).toBeInTheDocument()
 
 	// It displays article date
-	expect(screen.getByText(formatDate(articleWithImage.date))).toBeInTheDocument()
+	expect(screen.getByText(articleWithImage.date)).toBeInTheDocument()
 
 	// It displays article reading time
 	expect(screen.getByText(articleWithImage.readingTime)).toBeInTheDocument()
@@ -41,7 +38,7 @@ it('renders article meta data and cover image', async () => {
 it("doesn't display cover image when `image` prop omitted", async () => {
 	const articleWithoutImage = {
 		author: 'Cesar Mejia',
-		date: '2023-01-17',
+		date: '17 January 2023',
 		readingTime: '2 mins',
 		wordCount: 1,
 		viewCount: 1,

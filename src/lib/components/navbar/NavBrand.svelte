@@ -11,9 +11,10 @@
 			version="1.1"
 			viewBox="0 0 669 373"
 			class="transition hover:scale-105"
-			aria-label="site logo"
+			aria-label="site brand"
+			role="img"
 		>
-			<title>Site logo</title>
+			<title>Site brand</title>
 			<image
 				width="669"
 				height="373"

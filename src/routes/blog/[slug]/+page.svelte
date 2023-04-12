@@ -111,7 +111,7 @@
 	class="prose max-w-screen-2md dark:prose-invert prose-a:no-underline hover:prose-a:text-secondary-800 dark:hover:prose-a:text-primary-500"
 >
 	<section class="mb-4">
-		<ArticleTitle title={data.frontmatter.title} />
+		<ArticleTitle title={data.frontmatter.title} slug={$page.params.slug} />
 		<ArticleMeta
 			author={data.frontmatter.author}
 			date={data.frontmatter.date}
