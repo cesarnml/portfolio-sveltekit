@@ -38,7 +38,7 @@
 
 <div class="space-y-4">
 	<h2 class="font-bold">All Posts</h2>
-	<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+	<div class="blog-list grid grid-cols-1 gap-5 md:grid-cols-6">
 		{#each list as post (post.slug)}
 			<BlogPostCard {post} view={views.find((view) => view.slug === post.slug)} />
 		{/each}
@@ -51,5 +51,40 @@
 			<aside slot="noResults" class="alert variant-ghost">Empty Placeholder</aside>
 		</InfiniteLoading>
 	</div>
-	<hr />
 </div>
+
+<style lang="postcss">
+	@media (min-width: 768px) {
+		:global(.blog-list > :nth-child(6n + 1)) {
+			grid-column: span 3;
+		}
+
+		:global(.blog-list > :nth-child(6n + 2)) {
+			grid-column: span 3;
+		}
+
+		:global(.blog-list > :nth-child(6n + 3)) {
+			grid-column: span 4;
+		}
+
+		:global(.blog-list > :nth-child(6n + 4)) {
+			grid-column: span 2;
+		}
+
+		:global(.blog-list > :nth-child(6n + 5)) {
+			grid-column: span 3;
+		}
+
+		:global(.blog-list > :nth-child(6n + 6)) {
+			grid-column: span 3;
+		}
+
+		:global(.blog-list > :nth-child(6n + 5)) {
+			grid-column: span 2;
+		}
+
+		:global(.blog-list > :nth-child(6n + 6)) {
+			grid-column: span 4;
+		}
+	}
+</style>
