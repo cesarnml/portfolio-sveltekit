@@ -1,11 +1,11 @@
 <script lang="ts">
-	export let slug = ''
+	export let slug: string
 	export let title: string
 	const id = title
 		.toLowerCase()
 		.replace(/[^a-zA-Z ]/g, '')
 		.replace(/\s/g, '-')
-	const href = slug ? `/blog/${slug}` : `#${id}`
+	const href = `/blog/${slug}`
 </script>
 
 <h1 class="mt-0 text-3xl" {id}>

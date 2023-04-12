@@ -9,7 +9,7 @@
 			on:keypress={drawerStore.close}
 			class="flex text-3xl"
 			icon="material-symbols:close-rounded"
-			alt="close-sidebar-icon"
+			alt="close drawer"
 		/>
 	{:else}
 		<iconify-icon
@@ -17,7 +17,7 @@
 			on:keypress={drawerStore.open}
 			class="flex text-3xl"
 			icon="material-symbols:menu-rounded"
-			alt="open-sidebar-icon"
+			alt="open drawer"
 		/>
 	{/if}
 </button>

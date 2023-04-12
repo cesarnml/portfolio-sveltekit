@@ -12,6 +12,7 @@
 			viewBox="0 0 669 373"
 			class="transition hover:scale-105"
 			aria-label="site logo"
+			role="img"
 		>
 			<title>Site logo</title>
 			<image

@@ -52,6 +52,7 @@ const config = defineConfig(({ mode }) => {
 					'src/routes/**/+error.svelte',
 					'src/hooks.client.ts',
 					'src/hooks.server.ts',
+					'src/**/*.{test,spec}.{js,ts}',
 				],
 			},
 			deps: {
