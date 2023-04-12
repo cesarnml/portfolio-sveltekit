@@ -12,6 +12,7 @@ const htmlEscapes = {
 }
 
 const langToLabel = {
+	zsh: 'zsh',
 	js: 'JavaScript',
 	ts: 'TypeScript',
 	svelte: 'Svelte',

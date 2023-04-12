@@ -28,8 +28,8 @@ const config = defineConfig(({ mode }) => {
 						telemetry: false,
 						org: env.PUBLIC_SENTRY_ORG,
 						project: env.PUBLIC_SENTRY_PROJECT,
-						include: './svelte-kit/output',
 						authToken: env.SENTRY_AUTH_TOKEN,
+						include: './svelte-kit/output',
 				  })
 				: '',
 		],
