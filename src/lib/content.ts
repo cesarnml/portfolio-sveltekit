@@ -19,6 +19,10 @@ export async function fetchPosts({ offset = 0, limit = ALL_POST_FLAG, tag = '' }
 		}),
 	)
 
+	console.log(
+		'posts:',
+		posts.map((p) => p.title),
+	)
 	let sortedPosts = posts
 		.filter((post) => post.published)
 		.sort((a, b) => (dayjs(a.date).isBefore(b.date) ? 1 : -1))
@@ -39,7 +43,10 @@ export async function fetchPosts({ offset = 0, limit = ALL_POST_FLAG, tag = '' }
 	// NOTE: `time` and `minutes` will NOT be adjusted
 	// This is okay since we don't make use of them in the blog)
 	sortedPosts = sortedPosts.map(adjustPostReadingTimeText)
-
+	console.log(
+		'sortedPosts:',
+		sortedPosts.map((p) => p.title),
+	)
 	return sortedPosts
 }
 

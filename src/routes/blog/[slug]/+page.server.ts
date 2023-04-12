@@ -21,6 +21,8 @@ export const load = async ({ params }) => {
 
 		const { html } = postModule.default.render()
 
+		console.log('html:', postModule.metadata)
+
 		const view = await prisma.view.findUnique({
 			where: {
 				slug: params.slug,

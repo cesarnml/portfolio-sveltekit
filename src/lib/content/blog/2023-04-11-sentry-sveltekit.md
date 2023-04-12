@@ -1,11 +1,11 @@
 ---
 published: true
-title: 'How to Setup Sentry Error Monitoring with SvelteKit'
-description: "Debugging shouldn't be a nightmare! In this guide, I'll show you how to set up Sentry.io for error and exception handling in your SvelteKit application, empowering you to identify and resolve issues like a pro."
-excerpt: "Are you ready to take your debugging skills to the next level? Sentry.io is the ultimate tool for monitoring errors and exceptions in your SvelteKit application. Say goodbye to sleepless nights and hello to a smoother user experience. Our guide will walk you through the process of configuring Sentry.io, so you can unleash your inner debugger and tackle bugs like a boss. Let's get started!"
+title: How to Setup Sentry Error Monitoring with SvelteKit
+description: Debugging shouldn't be a nightmare! In this guide, I'll show you how to set up Sentry.io for error and exception handling in your SvelteKit application, empowering you to identify and resolve issues like a pro.
+excerpt: Are you ready to take your debugging skills to the next level? Sentry.io is the ultimate tool for monitoring errors and exceptions in your SvelteKit application. Say goodbye to sleepless nights and hello to a smoother user experience. Our guide will walk you through the process of configuring Sentry.io, so you can unleash your inner debugger and tackle bugs like a boss. Let's get started!
 author: Cesar Mejia
 tags: ['sentry', 'svelte', 'devops']
-image: '/src/lib/assets/picture/sentry.png'
+image: /src/lib/assets/picture/sentry.png
 date: 2023-04-11
 updatedAt: false
 ---
