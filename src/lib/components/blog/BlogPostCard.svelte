@@ -4,6 +4,7 @@
 	import type { View } from '@prisma/client'
 	import { fade } from 'svelte/transition'
 	import Picture from '../Picture.svelte'
+	import { modeCurrent } from '@skeletonlabs/skeleton'
 
 	export let post: Post
 	export let view: View | undefined
@@ -17,14 +18,18 @@
 	transition:fade
 >
 	<header class="relative">
-		<Picture class="object-cover" src={post.image} alt="post cover image" />
+		<Picture class="bg-gray-300 object-cover" src={post.image} alt="post cover image" />
 		<div
-			class="badge badge-glass absolute right-2 top-2 border border-indigo-300 !bg-indigo-900/70 text-sm backdrop-blur-sm"
+			class={`badge badge-glass absolute right-2 top-2 border border-indigo-300 ${
+				$modeCurrent ? '!bg-indigo-200/70' : '!bg-indigo-700/70'
+			} text-sm backdrop-blur-sm`}
 		>
 			{post.readingTime.text}
 		</div>
 		<div
-			class="badge badge-glass absolute left-2 top-2 border border-zinc-300 !bg-zinc-900/70 text-sm backdrop-blur-sm"
+			class={`badge badge-glass absolute left-2 top-2 border border-zinc-300  ${
+				$modeCurrent ? '!bg-indigo-200/70' : '!bg-indigo-700/70'
+			} text-sm backdrop-blur-sm`}
 		>
 			{post.date}
 		</div>
