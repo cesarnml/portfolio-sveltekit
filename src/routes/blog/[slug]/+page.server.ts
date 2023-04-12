@@ -1,10 +1,11 @@
 import type { Config } from '@sveltejs/adapter-vercel'
 import { error } from '@sveltejs/kit'
+import dayjs from 'dayjs'
 import { prisma } from '$lib/prismaClient'
 
 export const config: Config = {
 	isr: {
-		expiration: 5, // 5 seconds
+		expiration: 1, // 1 second
 	},
 }
 
@@ -28,7 +29,10 @@ export const load = async ({ params }) => {
 
 		return {
 			html,
-			frontmatter: postModule.metadata,
+			frontmatter: {
+				...postModule.metadata,
+				date: dayjs(postModule.metadata.date).format('DD MMM YYYY'),
+			},
 			view,
 		}
 	} catch (err) {

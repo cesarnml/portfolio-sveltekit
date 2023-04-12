@@ -25,8 +25,8 @@
 		</div>
 		<!-- BUTTONS -->
 		<div class="flex flex-col gap-5 3xs:flex-row">
-			<a class="btn btn-lg variant-filled-primary w-full" href={Url.Blog}>My Writing</a>
 			<a class="btn btn-lg variant-ringed-primary w-full" href={Url.About}>About Me</a>
+			<a class="btn btn-lg variant-filled-primary w-full" href={Url.Blog}>My Blog</a>
 		</div>
 	</div>
 </div>

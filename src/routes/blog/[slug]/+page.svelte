@@ -118,7 +118,7 @@
 			readingTime={data.frontmatter.readingTime.text}
 			wordCount={data.frontmatter.readingTime.words}
 			image={data.frontmatter.image}
-			viewCount={data.view?.count}
+			viewCount={data.view?.count ?? 1}
 		/>
 	</section>
 	<div class="mb-2 space-x-5">
@@ -131,7 +131,7 @@
 	</section>
 </article>
 
-<style>
+<style lang="postcss">
 	:global(.permalink) {
 		opacity: 0;
 		transition: all 0.3s ease-in-out;

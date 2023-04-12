@@ -7,7 +7,6 @@
 	export let wordCount: number
 	export let image: string | undefined = ''
 	export let viewCount = 1
-	const formattedDate = new Date(date).toDateString().split(' ').slice(1).join(' ')
 </script>
 
 <div class="flex items-center gap-4">
@@ -24,7 +23,7 @@
 		<div class="space-x-1">
 			<span class="text-lg font-semibold">{author}</span>
 			<span>&middot;</span>
-			<span>{formattedDate}</span>
+			<span>{date}</span>
 		</div>
 		<div class="flex items-center space-x-2">
 			<div class="flex items-center gap-2">
@@ -33,7 +32,7 @@
 					alt="book-outline"
 					class="text-lg"
 				/>
-				<span> {readingTime}</span>
+				<span>{readingTime}</span>
 			</div>
 			<span>&middot;</span>
 			<span>{wordCount} {`word${wordCount === 1 ? '' : 's'}`}</span>

@@ -15,7 +15,7 @@ export async function fetchPosts({ offset = 0, limit = ALL_POST_FLAG, tag = '' }
 			const module = (await resolver()) as App.MdsvexModule
 			const { html } = module.default.render()
 			const { metadata } = module
-			return { slug, html, ...metadata }
+			return { slug, html, ...metadata, date: dayjs(metadata.date).format('DD MMM YYYY') }
 		}),
 	)
 
