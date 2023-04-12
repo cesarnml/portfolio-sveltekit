@@ -1,11 +1,11 @@
 ---
-published: false
-title: "Giscus: The Missing Piece to Your SvelteKit Blog's Puzzle"
-description: "Want to build a community around your SvelteKit blog? Look no further than Giscus! In this guide, we'll show you how to use Giscus to add a comment system to your markdown-based SvelteKit blog, so you can engage with your readers and build a loyal following."
-excerpt: "Are you ready to take your SvelteKit blog to the next level? With Giscus, you can add a comment system to your markdown-based blog and start building a community around your content. In this guide, we'll walk you through the process of using Giscus to add a comment system to your SvelteKit blog, so you can engage with your readers and build a loyal following. Get ready to complete the puzzle and take your SvelteKit blog to new heights with Giscus!"
+published: true
+title: Add a Comment System to Your SvelteKit Blog with Giscus
+description: Want to build a community around your SvelteKit blog? Look no further than Giscus! In this guide, we'll show you how to use Giscus to add a comment system to your markdown-based SvelteKit blog, so you can engage with your readers and build a loyal following.
+excerpt: Are you ready to take your SvelteKit blog to the next level? With Giscus, you can add a comment system to your markdown-based blog and start building a community around your content. In this guide, we'll walk you through the process of using Giscus to add a comment system to your SvelteKit blog, so you can engage with your readers and build a loyal following. Get ready to complete the puzzle and take your SvelteKit blog to new heights with Giscus!
 author: Cesar Mejia
 tags: ['giscus', 'svelte']
-image: '/src/lib/assets/picture/giscus.png'
+image: /src/lib/assets/picture/giscus.png
 date: 2023-04-18
 updatedAt: false
 ---
