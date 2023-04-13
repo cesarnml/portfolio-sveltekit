@@ -2,20 +2,24 @@
 	import type { Post } from '$lib/typings/blog'
 	import { Url } from '$lib/url'
 	import type { View } from '@prisma/client'
-	import { fade } from 'svelte/transition'
+	import { fly } from 'svelte/transition'
 	import Picture from '../Picture.svelte'
 	import { modeCurrent } from '@skeletonlabs/skeleton'
+	import { goto } from '$app/navigation'
 
 	export let post: Post
 	export let view: View | undefined
 
 	const DEFAULT_VIEW_COUNT = 1
+
+	const handlePostClick = () => goto(`/blog/${post.slug}`, { noScroll: false })
+
+	const handleTagClick = (tag: string) => goto(`/blog/tag/${tag}`, { noScroll: false })
 </script>
 
-<a
+<div
 	class="blog-card card-hover relative flex w-full flex-col justify-between overflow-hidden"
-	href={Url.BlogDetail(post.slug)}
-	transition:fade
+	transition:fly
 >
 	<header class="relative">
 		<Picture
@@ -39,17 +43,23 @@
 		</div>
 	</header>
 	<div class="flex h-full flex-col justify-between gap-4 p-4">
-		<h4 class="no-underline hover:underline">{post.title}</h4>
-		<div class="flex-grow font-normal">{post.description}</div>
+		<a href={Url.BlogDetail(post.slug)}>
+			<h4 class="no-underline">{post.title}</h4>
+		</a>
+		<div class="line-clamp-3 flex-grow font-normal">{post.description}</div>
+		<button class="btn variant-filled-primary self-end" on:click={handlePostClick}>Read more</button
+		>
+		<hr />
 		<footer class="flex w-full items-baseline justify-between text-sm">
 			<div class="inline-flex gap-2">
 				{#each post.tags as tag, idx}
-					<span
-						class={`badge badge-glass text-sm font-normal ${
+					<button
+						class={`badge badge-glass text-sm font-normal hover:scale-110 ${
 							idx === 0 ? '!bg-cyan-400/30' : '!bg-rose-400/30'
 						}`}
+						on:click={() => handleTagClick(tag)}
 						>{tag}
-					</span>
+					</button>
 				{/each}
 			</div>
 			<div class="text-right">
@@ -60,7 +70,7 @@
 			</div>
 		</footer>
 	</div>
-</a>
+</div>
 
 <style lang="postcss">
 	.blog-card {

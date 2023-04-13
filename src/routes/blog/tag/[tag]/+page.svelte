@@ -7,7 +7,7 @@
 </script>
 
 <svelte:head>
-	<title>Blog Posts on {$page.params.tag.toUpperCase()}</title>
+	<title>Blog Posts on {$page.params.tag?.toUpperCase()}</title>
 	<meta name="description" content={`All blog post with tag ${$page.params.tag}`} />
 	<link rel="canonical" href={$page.url.href} />
 </svelte:head>

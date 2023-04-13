@@ -10,85 +10,66 @@ date: 2023-04-12
 updatedAt: false
 ---
 
-# Setting up a Page Transition Animation with SvelteKit
-Page transition animations can significantly improve the user experience on your website by providing a seamless visual transition between different pages. With SvelteKit, it's easy to set up page transition animations using the built-in animate function.
 
-In this blog post, we will go through the steps of setting up a page transition animation using SvelteKit.
-
-## Step 1: Install SvelteKit
-If you haven't already, you'll need to install SvelteKit. You can do this using npm by running the following command:
-
-```:perl
-npm init svelte@next my-app
-cd my-app
-npm install
+```ts:src/routes/+layout.ts
+export const load = async ({ url }) => {
+	return { pathname: url.pathname };
+};
 ```
 
-## Step 2: Create a new Svelte component
-Create a new Svelte component that will contain your page transition animation. For example, you could create a file called Transition.svelte. Inside this file, you can define the transition animation using CSS transitions or animations.
-
-Here's an example of a simple page transition animation using CSS transitions:
-
-```html
-<style>
-  .page {
-    transition: opacity 0.3s ease-in-out;
-    opacity: 0;
-  }
-  .page.visible {
-    opacity: 1;
-  }
-</style>
-
-<div>
-  <slot></slot>
-</div>
-```
-
-This code defines a page transition animation that fades in the new page over 0.3 seconds using CSS transitions.
-
-## Step 3: Update your SvelteKit layout
-Update your SvelteKit layout to use the animate function and your new Transition component.
-
-```html
+```svelte:src/routes/+layout.svelte
 <script>
-  import { animate } from '$$app/env';
-  import Transition from './Transition.svelte';
+	import PageTransition from '../lib/components/PageTransition.svelte';
+	export let data;
 
-  export let component;
-  export let props;
+	$: ({ pathname } = data);
 </script>
 
-<svelte:head>
-  <title>{title}</title>
-</svelte:head>
-
-<Transition bind:visible animate:fade>
-  <svelte:component this={component} {...props} />
-</Transition>
+<nav>
+	<a href="/" class:active={pathname === '/'}>Home</a>
+	<a href="/host/homes" class:active={pathname === '/host/homes'}>Airbnb your home</a>
+</nav>
+<PageTransition {pathname}>
+	<slot />
+</PageTransition>
 
 <style>
-  .page {
-    height: 100%;
-  }
+	nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1rem;
+		background-color: #fff;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	}
+	a {
+		color: rgb(15, 134, 134);
+		text-decoration: none;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+	.active {
+		color: rgb(9, 90, 90);
+		font-weight: bold;
+	}
 </style>
 ```
 
-This code uses the animate function to apply the fade animation to the Transition component. It also passes the current page component and props to the Transition component using the svelte:component special element.
+```svelte:src/routes/host/homes/+page.svelte
+<div>
+	<h1>Airbnb your home</h1>
+</div>
 
-## Step 4: Add some styles
-Finally, add some styles to make sure the Transition component fills the entire viewport:
-
-```html
 <style>
-  :global(html),
-  :global(body),
-  :global(#svelte) {
-    height: 100%;
-  }
+	div {
+		display: grid;
+		place-items: center;
+		height: 100vh;
+	}
+	h1 {
+		font-size: 2rem;
+		font-weight: 500;
+	}
 </style>
 ```
-
-This code sets the height of the html, body, and #svelte elements to 100%, which ensures that the Transition component fills the entire viewport.
-
-And that's it! You've now set up a simple page transition animation using SvelteKit. Of course, you can customize the animation to fit your specific needs by changing the CSS transitions or animations used in the Transition component.
