@@ -12,7 +12,6 @@ const htmlEscapes = {
 }
 
 const langToLabel = {
-	zsh: 'zsh',
 	js: 'JavaScript',
 	ts: 'TypeScript',
 	svelte: 'Svelte',
@@ -22,6 +21,12 @@ const langToLabel = {
 	tsx: 'TSX',
 }
 
+const getLabel = (lang) => {
+	if (Object.keys(langToLabel).includes(lang)) {
+		return langToLabel[lang]
+	}
+	return lang
+}
 /**
  * Returns code with curly braces and backticks replaced by HTML entity equivalents
  * @param {string} html - highlighted HTML
@@ -83,7 +88,7 @@ async function highlighter(code, lang, meta) {
 
 	const codeToolbarHtml = `
 	<div class="flex items-center justify-between p-4">
-		<div style="color: rgb(249 115 22);">${langToLabel[lang]}</div>
+		<div style="color: rgb(249 115 22);">${getLabel(lang)}</div>
 		<div class="flex gap-4">
 			<button class="hidden btn btn-sm variant-filled-primary code-wrap-btn" type="button">Wrap</button>
 			<button class="btn btn-sm variant-filled-primary code-copy-btn" type="button">Copy</button>
@@ -97,7 +102,9 @@ async function highlighter(code, lang, meta) {
 		bg: getBackgroundColor(synthWave84Theme),
 		elements: {
 			pre({ className, style, children }) {
-				return `<pre class="${className}" style="${style}" data-code-label="${langToLabel[lang]}">${codeToolbarHtml}<div class="overflow-x-auto code-wrapper" tabindex="0" role="scrollbar" aria-controls="code-block" aria-valuenow="0">${children}</div></pre>`
+				return `<pre class="${className}" style="${style}" data-code-label="${getLabel(
+					lang,
+				)}">${codeToolbarHtml}<div class="overflow-x-auto code-wrapper" tabindex="0" role="scrollbar" aria-controls="code-block" aria-valuenow="0">${children}</div></pre>`
 			},
 			code({ children }) {
 				return `<code id="code-block">${children}</code>`

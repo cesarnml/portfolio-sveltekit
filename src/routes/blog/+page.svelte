@@ -42,13 +42,9 @@
 		{#each list as post (post.slug)}
 			<BlogPostCard {post} view={views.find((view) => view.slug === post.slug)} />
 		{/each}
-		<InfiniteLoading on:infinite={onInfinite} distance={0}>
-			<aside slot="noMore" class="alert variant-ghost">
-				<div class="alert-message">
-					<p>Wow! You really enjoy reading. Suggest a new topic!</p>
-				</div>
-			</aside>
-			<aside slot="noResults" class="alert variant-ghost">Empty Placeholder</aside>
+		<InfiniteLoading on:infinite={onInfinite}>
+			<aside slot="noMore" />
+			<aside slot="noResults" />
 		</InfiniteLoading>
 	</div>
 </div>

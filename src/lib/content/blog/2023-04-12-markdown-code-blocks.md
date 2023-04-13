@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 title: How to Create Awesome Markdown Code Blocks with Svelte and MDsveX
 description: Ready to take your coding blogs to the next level? With Svelte and MDsveX, you can create stunning, interactive code snippets that will wow your readers. In this guide, we'll show you how to create cool markdown code blogs with Svelte and MDsveX, so you can share your knowledge like a pro.
 excerpt: Are you tired of boring code snippets in your blog posts? Spice things up with Svelte and MDsveX! With their powers combined, you can create eye-catching, interactive code blocks that will engage your readers like never before. In this guide, we'll walk you through the process of creating cool markdown code blogs with Svelte and MDsveX, so you can showcase your coding skills and knowledge in style. Get ready to take your blogs to the next level!
@@ -10,104 +10,86 @@ date: 2023-04-12
 updatedAt: false
 ---
 
-## Markdown Examples
+# Setting up a Page Transition Animation with SvelteKit
+Page transition animations can significantly improve the user experience on your website by providing a seamless visual transition between different pages. With SvelteKit, it's easy to set up page transition animations using the built-in animate function.
 
-This is the first line.  
-And this is the second line.
+In this blog post, we will go through the steps of setting up a page transition animation using SvelteKit.
 
-I just love **bold text**.
-Italicized text is the _cat's meow_.
+## Step 1: Install SvelteKit
+If you haven't already, you'll need to install SvelteKit. You can do this using npm by running the following command:
 
-> Dorothy followed her through many of the beautiful rooms in her castle.
+```:perl
+Copy code
+npm init svelte@next my-app
+cd my-app
+npm install
+```
 
-1. First item
-2. Second item
-3. Third item
-   1. Indented item
-   2. Indented item
-4. Fourth item
+##Step 2: Create a new Svelte component
+Create a new Svelte component that will contain your page transition animation. For example, you could create a file called Transition.svelte. Inside this file, you can define the transition animation using CSS transitions or animations.
 
-- unordered
-  - indented list
+Here's an example of a simple page transition animation using CSS transitions:
 
-## Code Examples
-
-### Inline Code
-
-Here is some inline code `console.log('Hey I'm inline-code')`
-### No Highlighting
-
-```svelte
-<script lang="ts">
-	import { page } from '$app/stores'
-	import { Url } from '$lib/url'
-	export let data
-
-	const { posts } = data
-</script>
-
-<svelte:head>
-	<title>Cesar Mejia's Web Portfolio</title>
-	<link rel="canonical" href={$page.url.href} />
-</svelte:head>
+```html
+<style>
+  .page {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+  }
+  .page.visible {
+    opacity: 1;
+  }
+</style>
 
 <div>
-	<ul>
-		{#each posts as post (post.slug)}
-			<li class="mb-4"><a class="unstyled" href={Url.BlogDetail(post.slug)}>{post.title}</a></li>
-		{/each}
-	</ul>
+  <slot></slot>
 </div>
 ```
 
-### With Highlighting
+This code defines a page transition animation that fades in the new page over 0.3 seconds using CSS transitions.
 
-```js {5-7a,3a,4a, 2r, 10n, 12n}
-export async function load({ fetch }) {
-	const variable = "this is a super long variable declaration come on"
-	const res = await fetch(`/posts.json`)
-	if (res.ok) {
-		const { posts } = await res.json()
-		return { posts }
-	}
-}
+## Step 3: Update your SvelteKit layout
+Update your SvelteKit layout to use the animate function and your new Transition component.
 
-const code = 'yay!'
+```html
+<script>
+  import { animate } from '$$app/env';
+  import Transition from './Transition.svelte';
 
-const code = 'yay!'
+  export let component;
+  export let props;
+</script>
+
+<svelte:head>
+  <title>{title}</title>
+</svelte:head>
+
+<Transition bind:visible animate:fade>
+  <svelte:component this={component} {...props} />
+</Transition>
+
+<style>
+  .page {
+    height: 100%;
+  }
+</style>
 ```
 
-### With Focus
-```ts {4-6f}
-export async function load({ fetch }) {
-	const variable = "this is a super long variable declaration come on"
-	const res = await fetch(`/posts.json`)
-	if (res.ok) {
-		const { posts } = await res.json()
-		return { posts }
-	}
-}
+This code uses the animate function to apply the fade animation to the Transition component. It also passes the current page component and props to the Transition component using the svelte:component special element.
 
-const code = 'yay!'
+## Step 4: Add some styles
+Finally, add some styles to make sure the Transition component fills the entire viewport:
 
-const code = 'yay!'
+```html
+<style>
+  :global(html),
+  :global(body),
+  :global(#svelte) {
+    height: 100%;
+  }
+</style>
 ```
-## Remark Abbreviations Examples
 
-This plugin works on MDAST, a Markdown AST
-implemented by [remark](https://github.com/remarkjs/remark)
+This code sets the height of the html, body, and #svelte elements to 100%, which ensures that the Transition component fills the entire viewport.
 
-*[MDAST]: Markdown Abstract Syntax Tree
-*[AST]: Abstract Syntax Tree
-
-## Remark-Github Examples
-
-- ref: https://github.com/remarkjs/remark-github
-- Commit: 63cf895ba37b7bca05bdbfcb8fafe1aae3bde839
-- Discussion: #1
-- Issue: #2
-- Mention: @cesarnml
-
-## A11y Emojis
-
-test 🙂 inline
+And that's it! You've now set up a simple page transition animation using SvelteKit. Of course, you can customize the animation to fit your specific needs by changing the CSS transitions or animations used in the Transition component.

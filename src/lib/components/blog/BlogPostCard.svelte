@@ -18,7 +18,11 @@
 	transition:fade
 >
 	<header class="relative">
-		<Picture class="bg-gray-300 object-cover" src={post.image} alt="post cover image" />
+		<Picture
+			class="!aspect-[1.61/1] bg-gray-300 object-cover"
+			src={post.image}
+			alt="post cover image"
+		/>
 		<div
 			class={`badge badge-glass absolute right-2 top-2 border border-indigo-300 ${
 				$modeCurrent ? '!bg-indigo-200/70' : '!bg-indigo-700/70'
