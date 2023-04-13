@@ -10,12 +10,9 @@ date: 2023-04-12
 updatedAt: false
 ---
 
+# Create Root Layout
 
-```ts:src/routes/+layout.ts
-export const load = async ({ url }) => {
-	return { pathname: url.pathname };
-};
-```
+First, we need to create a root layout file (`layout.svelte`) in our `src/routes` directory. This file will contain the navigation bar and the `PageTransition` component that will wrap our routes.
 
 ```svelte:src/routes/+layout.svelte
 <script>
@@ -56,6 +53,37 @@ export const load = async ({ url }) => {
 </style>
 ```
 
+We need to export a `load` method in the corresponding `+layout.ts` file in order to make available the `pathname` binding available on the root page `data` prop. This binding will change whenever a page transition takes place and thus triggers our page transition animation.
+
+```ts:+layout.ts
+export const load = async ({ url }) => {
+	return { pathname: url.pathname };
+};
+```
+
+Finally we create the `PageTransition` component in `src/lib/components`.
+
+```svelte:src/lib/components/PageTransition.svelte
+<script lang="ts">
+	import { fade } from 'svelte/transition';
+	import { cubicInOut } from 'svelte/easing';
+
+	export let pathname: string;
+	const duration = 150;
+</script>
+
+{#key pathname}
+	<div
+		in:fade={{ delay: duration, easing: cubicInOut }}
+		out:fade={{ duration, easing: cubicInOut }}
+	>
+		<slot />
+	</div>
+{/key}
+```
+
+Create the dummy page that we will transition to from the home page in `src/routes/host/homes` directory.
+
 ```svelte:src/routes/host/homes/+page.svelte
 <div>
 	<h1>Airbnb your home</h1>
@@ -73,3 +101,7 @@ export const load = async ({ url }) => {
 	}
 </style>
 ```
+
+That's it. Now we have a fancy page transition.
+
+Check out the [sample repo](https://github.com/cesarnml/sentry-sveltekit) and the [deployed site](https://sentry-sveltekit.vercel.app/). Ask questions in the comment section!
