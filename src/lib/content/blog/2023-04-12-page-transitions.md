@@ -10,104 +10,98 @@ date: 2023-04-12
 updatedAt: false
 ---
 
-## Markdown Examples
+# Create Root Layout
 
-This is the first line.  
-And this is the second line.
+First, we need to create a root layout file (`layout.svelte`) in our `src/routes` directory. This file will contain the navigation bar and the `PageTransition` component that will wrap our routes.
 
-I just love **bold text**.
-Italicized text is the _cat's meow_.
+```svelte:src/routes/+layout.svelte
+<script>
+	import PageTransition from '../lib/components/PageTransition.svelte';
+	export let data;
 
-> Dorothy followed her through many of the beautiful rooms in her castle.
-
-1. First item
-2. Second item
-3. Third item
-   1. Indented item
-   2. Indented item
-4. Fourth item
-
-- unordered
-  - indented list
-
-## Code Examples
-
-### Inline Code
-
-Here is some inline code `console.log('Hey I'm inline-code')`
-### No Highlighting
-
-```svelte
-<script lang="ts">
-	import { page } from '$app/stores'
-	import { Url } from '$lib/url'
-	export let data
-
-	const { posts } = data
+	$: ({ pathname } = data);
 </script>
 
-<svelte:head>
-	<title>Cesar Mejia's Web Portfolio</title>
-	<link rel="canonical" href={$page.url.href} />
-</svelte:head>
+<nav>
+	<a href="/" class:active={pathname === '/'}>Home</a>
+	<a href="/host/homes" class:active={pathname === '/host/homes'}>Airbnb your home</a>
+</nav>
+<PageTransition {pathname}>
+	<slot />
+</PageTransition>
 
+<style>
+	nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1rem;
+		background-color: #fff;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	}
+	a {
+		color: rgb(15, 134, 134);
+		text-decoration: none;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+	.active {
+		color: rgb(9, 90, 90);
+		font-weight: bold;
+	}
+</style>
+```
+
+We need to export a `load` method in the corresponding `+layout.ts` file in order to make available the `pathname` binding available on the root page `data` prop. This binding will change whenever a page transition takes place and thus triggers our page transition animation.
+
+```ts:+layout.ts
+export const load = async ({ url }) => {
+	return { pathname: url.pathname };
+};
+```
+
+Finally we create the `PageTransition` component in `src/lib/components`.
+
+```svelte:src/lib/components/PageTransition.svelte
+<script lang="ts">
+	import { fade } from 'svelte/transition';
+	import { cubicInOut } from 'svelte/easing';
+
+	export let pathname: string;
+	const duration = 150;
+</script>
+
+{#key pathname}
+	<div
+		in:fade={{ delay: duration, easing: cubicInOut }}
+		out:fade={{ duration, easing: cubicInOut }}
+	>
+		<slot />
+	</div>
+{/key}
+```
+
+Create the dummy page that we will transition to from the home page in `src/routes/host/homes` directory.
+
+```svelte:src/routes/host/homes/+page.svelte
 <div>
-	<ul>
-		{#each posts as post (post.slug)}
-			<li class="mb-4"><a class="unstyled" href={Url.BlogDetail(post.slug)}>{post.title}</a></li>
-		{/each}
-	</ul>
+	<h1>Airbnb your home</h1>
 </div>
-```
 
-### With Highlighting
-
-```js {5-7a,3a,4a, 2r, 10n, 12n}
-export async function load({ fetch }) {
-	const variable = "this is a super long variable declaration come on"
-	const res = await fetch(`/posts.json`)
-	if (res.ok) {
-		const { posts } = await res.json()
-		return { posts }
+<style>
+	div {
+		display: grid;
+		place-items: center;
+		height: 100vh;
 	}
-}
-
-const code = 'yay!'
-
-const code = 'yay!'
-```
-
-### With Focus
-```ts {4-6f}
-export async function load({ fetch }) {
-	const variable = "this is a super long variable declaration come on"
-	const res = await fetch(`/posts.json`)
-	if (res.ok) {
-		const { posts } = await res.json()
-		return { posts }
+	h1 {
+		font-size: 2rem;
+		font-weight: 500;
 	}
-}
-
-const code = 'yay!'
-
-const code = 'yay!'
+</style>
 ```
-## Remark Abbreviations Examples
 
-This plugin works on MDAST, a Markdown AST
-implemented by [remark](https://github.com/remarkjs/remark)
+That's it. Now we have a fancy page transition.
 
-*[MDAST]: Markdown Abstract Syntax Tree
-*[AST]: Abstract Syntax Tree
-
-## Remark-Github Examples
-
-- ref: https://github.com/remarkjs/remark-github
-- Commit: 63cf895ba37b7bca05bdbfcb8fafe1aae3bde839
-- Discussion: #1
-- Issue: #2
-- Mention: @cesarnml
-
-## A11y Emojis
-
-test 🙂 inline
+Check out the [sample repo](https://github.com/cesarnml/sentry-sveltekit) and the [deployed site](https://sentry-sveltekit.vercel.app/). Ask questions in the comment section!

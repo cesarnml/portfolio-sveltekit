@@ -44,6 +44,12 @@
 
 {#if image}
 	<div>
-		<Picture src={image} alt="article hero" class="mb-4" loading="eager" decoding="sync" />
+		<Picture
+			src={image}
+			alt="article hero"
+			class="mb-4 !aspect-[1.61/1] object-cover"
+			loading="eager"
+			decoding="sync"
+		/>
 	</div>
 {/if}

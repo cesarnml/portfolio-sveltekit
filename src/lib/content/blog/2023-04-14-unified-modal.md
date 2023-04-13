@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 title: A Guide to Creating a Reusable, Unified Modal in SvelteKit
 description: Are you tired of creating the same modal over and over again for each component in your SvelteKit app? With a unified modal, you can simplify your codebase and create a consistent user experience across your app. In this guide, we'll show you how to create a reusable, unified modal that will rule all modals in your SvelteKit app, just like the One Ring in Lord of the Rings.
 excerpt: Are you ready to simplify your SvelteKit app and create a consistent user experience? Look no further than a unified modal! With this powerful component, you can eliminate the need to create individual modals for each component in your app. In this guide, we'll show you how to create a reusable, unified modal that will rule all modals in your SvelteKit app, just like the One Ring in Lord of the Rings. Get ready to streamline your codebase and create a unified user experience that will keep your users engaged.

@@ -27,7 +27,7 @@ So grab your sword and shield, and let's get started.
 - Monitor production server/client errors
 - Upload source maps to Sentry on build
 - Enable Error Replay Tracking
-  
+
 ## Setup
 
 ### Create SvelteKit App
