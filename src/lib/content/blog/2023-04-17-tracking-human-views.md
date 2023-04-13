@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: How to Track Human Page Views in SvelteKit
 description: Are you tired of inaccurate page view data due to bots and crawlers? With user scroll tracking, you can ensure that you're only tracking page views by real humans. In this guide, we'll show you how to implement user scroll tracking in SvelteKit, so you can get accurate data on your website's traffic.
 excerpt: Are bots and crawlers skewing your website's page view data? Don't worry, there's a solution. With user scroll tracking, you can accurately track page views by real humans, so you can make data-driven decisions that actually reflect your users' behavior. In this guide, we'll walk you through the process of implementing user scroll tracking in your SvelteKit app, so you can get accurate data on your website's traffic. Get ready to scroll to the top and get the data you need!

@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 title: A Guide to Automatic Image Optimization with SvelteKit
 description: Tired of slow-loading images ruining your website's performance? With SvelteKit's automatic image optimization, you can have your cake and eat it too. In this guide, we'll show you how to optimize images on the fly, ensuring a fast and seamless user experience.
 excerpt: Are you tired of waiting for images to load on your website? We hear you. Slow-loading images can be a pain, but thankfully, SvelteKit has got you covered. With automatic image optimization, you can have the best of both worlds - high-quality images that load lightning fast. In this guide, we'll walk you through the process of setting up automatic image optimization in your SvelteKit app, so you can focus on creating stunning visuals without sacrificing speed. Get ready for pixel perfection!
