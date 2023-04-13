@@ -2,7 +2,6 @@
 published: true
 title: A Guide to Page Transition Animations in SvelteKit
 description: Ready to take your SvelteKit app to the next level? With page transition animations, you can create a seamless user experience that will keep your users engaged and coming back for more. In this guide, we'll show you how to implement page transition animations in SvelteKit, so you can wow your users and stand out from the crowd.
-excerpt: Are you looking for a way to make your SvelteKit app stand out? Page transition animations are the way to go! With these animations, you can create a smooth and seamless user experience that will keep your users engaged and coming back for more. In this guide, we'll walk you through the process of implementing page transition animations in your SvelteKit app, so you can create a user experience that is both visually stunning and functional. Get ready to wow your users!
 author: Cesar Mejia
 tags: ['ux', 'svelte']
 image: /src/lib/assets/picture/page-transitions.png
@@ -10,7 +9,7 @@ date: 2023-04-12
 updatedAt: false
 ---
 
-# Create Root Layout
+## Create Root Layout
 
 First, we need to create a root layout file (`layout.svelte`) in our `src/routes` directory. This file will contain the navigation bar and the `PageTransition` component that will wrap our routes.
 
@@ -53,6 +52,7 @@ First, we need to create a root layout file (`layout.svelte`) in our `src/routes
 </style>
 ```
 
+## Export load method for root layout
 We need to export a `load` method in the corresponding `+layout.ts` file in order to make available the `pathname` binding available on the root page `data` prop. This binding will change whenever a page transition takes place and thus triggers our page transition animation.
 
 ```ts:+layout.ts
@@ -61,6 +61,7 @@ export const load = async ({ url }) => {
 };
 ```
 
+## Create PageTransition component
 Finally we create the `PageTransition` component in `src/lib/components`.
 
 ```svelte:src/lib/components/PageTransition.svelte
@@ -82,6 +83,8 @@ Finally we create the `PageTransition` component in `src/lib/components`.
 {/key}
 ```
 
+## Add other page route
+
 Create the dummy page that we will transition to from the home page in `src/routes/host/homes` directory.
 
 ```svelte:src/routes/host/homes/+page.svelte
@@ -101,6 +104,8 @@ Create the dummy page that we will transition to from the home page in `src/rout
 	}
 </style>
 ```
+
+## Wrap Up
 
 That's it. Now we have a fancy page transition.
 

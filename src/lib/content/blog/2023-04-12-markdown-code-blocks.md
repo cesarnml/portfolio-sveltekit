@@ -10,7 +10,7 @@ date: 2023-04-12
 updatedAt: false
 ---
 
-# Setting up a Page Transition Animation with SvelteKit
+## Setting up a Page Transition Animation with SvelteKit
 Page transition animations can significantly improve the user experience on your website by providing a seamless visual transition between different pages. With SvelteKit, it's easy to set up page transition animations using the built-in animate function.
 
 In this blog post, we will go through the steps of setting up a page transition animation using SvelteKit.
