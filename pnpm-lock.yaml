@@ -29,8 +29,8 @@ devDependencies:
     specifier: 0.6.0
     version: 0.6.0
   '@skeletonlabs/skeleton':
-    specifier: 1.2.0
-    version: 1.2.0
+    specifier: 1.1.0
+    version: 1.1.0
   '@supabase/auth-helpers-sveltekit':
     specifier: 0.9.3
     version: 0.9.3(@supabase/supabase-js@2.20.0)(@sveltejs/kit@1.15.5)
@@ -1159,8 +1159,8 @@ packages:
     resolution: {integrity: sha512-XJfwUVUKDHF5ugKwIcxEgc9k8b7HbznCp6eUfWgu710hMPNIO4aw4/zB5RogDQz8nd6gyCDpU9O/m6qYEWY6yQ==}
     dev: true
 
-  /@skeletonlabs/skeleton@1.2.0:
-    resolution: {integrity: sha512-WM+vPS3kf2b9bnN4Gr8YpMjRj7Z6gNNgGLeRlmcS50lotpH5oGpbiGh8oxf/j2j0cJeHv2bIwtXkqISuypZs+Q==}
+  /@skeletonlabs/skeleton@1.1.0:
+    resolution: {integrity: sha512-dkogVhYYQUzt1nXBMeal39suelaY7zejGPBc/5mjtfzvWjDF3KridZQwtSZrb81XlAFYGttHlcYCqSojywFGUQ==}
     dependencies:
       svelte: 3.58.0
     dev: true

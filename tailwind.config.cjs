@@ -94,6 +94,7 @@ module.exports = {
 	plugins: [
 		require('@tailwindcss/forms'),
 		require('@tailwindcss/typography'),
+		// @ts-expect-error random import error but not really
 		...require('@skeletonlabs/skeleton/tailwind/skeleton.cjs')(),
 	],
 }
