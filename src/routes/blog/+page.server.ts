@@ -1,12 +1,5 @@
-import type { Config } from '@sveltejs/adapter-vercel'
 import { prisma } from '$lib/prismaClient'
 import { fetchPosts } from '$lib/content'
-
-export const config: Config = {
-	isr: {
-		expiration: 1,
-	},
-}
 
 export const load = async () => {
 	const views = await prisma.view.findMany()
