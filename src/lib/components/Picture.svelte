@@ -3,8 +3,8 @@
 		'/src/lib/assets/picture/*.{heic,heif,avif,jpg,jpeg,png,tiff,webp,gif}',
 		{
 			query: {
-				format: 'webp;avif;jpg',
-				width: '400;800;1200',
+				format: 'webp;jpg',
+				width: '400;800',
 				picture: '',
 			},
 			import: 'default',
