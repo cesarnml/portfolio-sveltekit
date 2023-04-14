@@ -10,6 +10,12 @@ date: 2023-04-17
 updatedAt: false
 ---
 
+<script>
+  import Alert from '$lib/components/Alert.svelte';
+</script>
+
+<Alert/>
+
 ## Markdown Examples
 
 This is the first line.  

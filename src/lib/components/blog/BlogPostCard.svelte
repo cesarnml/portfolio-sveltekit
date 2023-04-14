@@ -22,11 +22,13 @@
 	transition:fly
 >
 	<header class="relative">
-		<Picture
-			class="!aspect-[1.61/1] bg-gray-300 object-cover"
-			src={post.image}
-			alt="post cover image"
-		/>
+		<a href={Url.BlogDetail(post.slug)} aria-label={post.title}>
+			<Picture
+				class="!aspect-[1.61/1] bg-gray-300 object-cover"
+				src={post.image}
+				alt="post cover image"
+			/>
+		</a>
 		<div
 			class={`badge badge-glass absolute right-2 top-2 border border-indigo-300 ${
 				$modeCurrent ? '!bg-indigo-200/70' : '!bg-indigo-700/70'
