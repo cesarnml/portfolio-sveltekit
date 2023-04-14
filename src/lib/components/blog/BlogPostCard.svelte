@@ -12,9 +12,9 @@
 
 	const DEFAULT_VIEW_COUNT = 1
 
-	const handlePostClick = () => goto(`/blog/${post.slug}`, { noScroll: false })
+	const handlePostClick = () => goto(`/blog/${post.slug}`)
 
-	const handleTagClick = (tag: string) => goto(`/blog/tag/${tag}`, { noScroll: false })
+	const handleTagClick = (tag: string) => goto(`/blog/tag/${tag}`)
 </script>
 
 <div
