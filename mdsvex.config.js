@@ -10,7 +10,7 @@ import highlighter from './src/lib/codeHighlighter.js'
 import { repository } from './src/lib/config.js'
 
 const config = defineConfig({
-	extensions: ['.svelte.md', '.md', '.svx'],
+	extensions: ['.md'],
 	smartypants: {
 		dashes: 'oldschool',
 	},
