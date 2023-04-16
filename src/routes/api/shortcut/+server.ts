@@ -4,11 +4,11 @@ export const POST: RequestHandler = async ({ request }) => {
 	const payload = await request.json()
 	console.log('payload:', payload)
 
-	return json({ message: 'ok' })
+	return json({ message: 'ok', payload })
 }
 
 export const GET: RequestHandler = async ({ request }) => {
 	const payload = await request.json()
 	console.log('payload:', payload)
-	return json({ message: 'ok' })
+	return json({ message: 'ok', payload })
 }
