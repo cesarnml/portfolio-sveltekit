@@ -173,6 +173,23 @@ export const handleError: HandleServerError = ({ error, event }) => {
 };
 ```
 
+Now let's add the `errorId` as an optional property on the `Error` object.
+
+```ts:src/app.d.ts
+declare global {
+	namespace App {
+		interface Error {
+			errorId?: string
+		}
+		// interface Locals {}
+		// interface PageData {}
+		// interface Platform {}
+	}
+}
+
+export {}
+```
+
 ## Wrap Up
 
 There you have it, fellow warriors of the web. With Sentry.io and SvelteKit, you now have the tools to handle errors and exceptions with the grace and elegance of a seasoned warrior. No longer will you be caught off guard by unexpected errors or left in the dark about what your users were doing when an issue occurred.
