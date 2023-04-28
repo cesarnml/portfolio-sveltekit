@@ -4,9 +4,9 @@
 </script>
 
 <a class="flex items-center justify-center gap-2" href={Url.Home}>
-	<div class="aspect-square">
+	<div class="h-10 w-10">
 		<Picture
-			class="h-10 w-10 object-cover"
+			class="object-cover"
 			src="/src/lib/assets/picture/logo.png"
 			alt="logo"
 			loading="eager"
