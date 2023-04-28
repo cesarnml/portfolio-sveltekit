@@ -25,8 +25,14 @@
 		</div>
 		<!-- BUTTONS -->
 		<div class="flex flex-col gap-5 3xs:flex-row">
-			<a class="btn btn-lg variant-ringed-primary w-full" href={Url.About}>About Me</a>
-			<a class="btn btn-lg variant-filled-primary w-full" href={Url.Blog}>My Blog</a>
+			<a class="btn btn-lg variant-filled-primary w-full" href={Url.Blog}
+				>Blog &nbsp;<iconify-icon
+					class="text-2xl"
+					icon="material-symbols:arrow-right-alt-rounded"
+					alt="right arrow"
+				/>
+			</a>
+			<a class="btn btn-lg variant-ringed-primary w-full" href={Url.About}>About</a>
 		</div>
 	</div>
 </div>
