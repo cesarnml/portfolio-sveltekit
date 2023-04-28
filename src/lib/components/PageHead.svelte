@@ -10,9 +10,8 @@
 
 <svelte:head>
 	<title>{title || siteTitle}</title>
-	<meta name="description" content={description} />
 	<link rel="canonical" href={$page.url.href} />
-
+	<meta name="description" content={description} />
 	<meta property="og:site_name" content={siteTitle} />
 	<meta property="og:title" content={title || siteTitle} />
 	<meta property="og:description" content={description} />
