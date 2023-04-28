@@ -3,11 +3,12 @@ import { expect, test } from '@playwright/test'
 test('homePage smoke test', async ({ page }) => {
 	await page.goto('/')
 
-	const logo = page.getByRole('link', { name: /logo/i })
-	const home = page.getByRole('link', { name: /home/i })
-	const blog = page.getByRole('link', { name: 'Blog', exact: true })
-	const about = page.getByRole('link', { name: 'About', exact: true })
-	const contact = page.getByRole('link', { name: /contact/i })
+	const header = page.getByRole('banner')
+	const logo = header.getByRole('link', { name: /logo/i })
+	const home = header.getByRole('link', { name: /home/i })
+	const blog = header.getByRole('link', { name: /blog/i })
+	const about = header.getByRole('link', { name: /about/i })
+	const contact = header.getByRole('link', { name: /contact/i })
 
 	// Home page has correct title
 	await expect(page).toHaveTitle(/cesar's web portfolio/i)
