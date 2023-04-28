@@ -53,6 +53,7 @@ const config = defineConfig(({ mode }) => {
 					'src/hooks.client.ts',
 					'src/hooks.server.ts',
 					'src/**/*.{test,spec}.{js,ts}',
+					'src/**/*.d.ts',
 				],
 			},
 			deps: {

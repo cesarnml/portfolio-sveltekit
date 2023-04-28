@@ -23,11 +23,12 @@ it('renders a blog post card (plural views)', async () => {
 
 	render(BlogPostCard, { props: { post, view } })
 
-	// It render a link to the blog post
-	expect(screen.getByRole('link', { name: RegExp(post.title, 'i') })).toHaveAttribute(
-		'href',
-		Url.BlogDetail(post.slug),
-	)
+	// It render a links to the blog post
+	const blogLinks = screen.getAllByRole('link', { name: RegExp(post.title, 'i') })
+
+	blogLinks.forEach((link) => {
+		expect(link).toHaveAttribute('href', Url.BlogDetail(post.slug))
+	})
 	// It displays a blog post cover image
 	expect(screen.getByRole('img', { name: /post/i })).toBeInTheDocument()
 

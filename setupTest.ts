@@ -51,7 +51,7 @@ vi.mock('$app/stores', (): typeof stores => {
 	const getStores: typeof stores.getStores = () => {
 		const navigating = readable<Navigation | null>(null)
 		const page = readable<Page>({
-			url: new URL('http://localhost'),
+			url: new URL('http://localhost/test'),
 			params: {},
 			route: {
 				id: null,
