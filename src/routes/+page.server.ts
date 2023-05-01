@@ -12,7 +12,6 @@ export const config: Config = {
 export const load = async () => {
 	const posts = await fetchPosts()
 	const views = await prisma.view.findMany()
-	console.log('views:', views)
 
 	const latestPosts = posts.slice(0, 2)
 	const popularPosts = orderBy(
@@ -21,9 +20,5 @@ export const load = async () => {
 		'desc',
 	).slice(0, 2)
 
-	console.log(
-		'popularPosts:',
-		popularPosts.map((p) => p.title),
-	)
 	return { latestPosts, popularPosts, views }
 }
