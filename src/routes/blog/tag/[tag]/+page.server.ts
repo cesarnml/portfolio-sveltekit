@@ -1,6 +1,7 @@
 import type { Config } from '@sveltejs/adapter-vercel'
 import { error } from '@sveltejs/kit'
 import { fetchPosts } from '$lib/content'
+import type { PageServerLoad } from './$types'
 
 export const config: Config = {
 	isr: {
@@ -8,7 +9,7 @@ export const config: Config = {
 	},
 }
 
-export const load = async ({ params: { tag } }) => {
+export const load: PageServerLoad = async ({ params: { tag } }) => {
 	const postByTag = await fetchPosts({ tag })
 
 	if (!postByTag.length) {
