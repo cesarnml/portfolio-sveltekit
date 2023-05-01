@@ -48,8 +48,4 @@ export async function fetchAllTags() {
 	return tags
 }
 
-export async function fetchAbout() {
-	// const aboutModule =  import(`../content/about/index.md`)
-}
-
 // ref: https://github.com/cesarnml/sveltekit-blog-starter/blob/62bed7db2d872206b86cefa74d01ac7290ade301/src/lib/assets/js/fetchPosts.js#L9
