@@ -13,7 +13,7 @@
 </svelte:head>
 
 <div class="space-y-8">
-	<h2>{$page.params.tag?.toUpperCase()}</h2>
+	<h2>{$page.params.tag?.toUpperCase() ?? ' '}</h2>
 	<ul class="grid grid-cols-1 gap-8 md:grid-cols-2">
 		{#each posts as post (post.slug)}
 			<div class="card card-hover">
