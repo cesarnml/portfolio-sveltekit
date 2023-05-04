@@ -36,10 +36,12 @@ const config = defineConfig(({ mode }) => {
 		test: {
 			globals: true,
 			environment: 'jsdom',
+			reporters: ['default', 'html'],
 			setupFiles: ['./setupTest.ts', 'src/mocks/setup.ts'],
 			include: ['src/**/*.{test,spec}.{js,ts}'],
 			coverage: {
 				all: true,
+				enabled: true,
 				reporter: ['json', 'html', 'text'],
 				src: ['./src'],
 				exclude: [
