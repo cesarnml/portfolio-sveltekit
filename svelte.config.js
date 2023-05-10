@@ -10,6 +10,11 @@ import mdsvexConfig from './mdsvex.config.js'
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	extensions: ['.svelte', ...mdsvexConfig.extensions],
+	vitePlugin: {
+		experimental: {
+			inspector: true,
+		},
+	},
 	preprocess: [vitePreprocess({ postcss: true, preserve: ['partytown'] }), mdsvex(mdsvexConfig)],
 
 	kit: {

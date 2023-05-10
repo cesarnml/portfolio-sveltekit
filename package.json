@@ -7,7 +7,7 @@
 	],
 	"scripts": {
 		"dev": "vite dev",
-		"build": "NEXT_SHARP_PATH=/tmp/node_modules/sharp vite build",
+		"build": "vite build",
 		"preview": "vite preview",
 		"debug": "NODE_OPTIONS=--inspect ./node_modules/.bin/vite dev",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
