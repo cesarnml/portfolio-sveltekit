@@ -92,7 +92,7 @@ devDependencies:
     specifier: 0.31.0
     version: 0.31.0(vitest@0.31.0)
   '@vitest/ui':
-    specifier: ^0.31.0
+    specifier: 0.31.0
     version: 0.31.0(vitest@0.31.0)
   autoprefixer:
     specifier: 10.4.14
@@ -149,7 +149,7 @@ devDependencies:
     specifier: 2.2.0
     version: 2.2.0
   path-scurry:
-    specifier: ^1.8.0
+    specifier: 1.8.0
     version: 1.8.0
   postcss:
     specifier: 8.4.23
@@ -1607,7 +1607,7 @@ packages:
       flatted: 3.2.7
       pathe: 1.1.0
       picocolors: 1.0.0
-      sirv: 2.0.2
+      sirv: 2.0.3
       vitest: 0.31.0(@vitest/ui@0.31.0)(jsdom@22.0.0)
     dev: true
 
@@ -5754,15 +5754,6 @@ packages:
     resolution: {integrity: sha512-JA//kQgZtbuY83m+xT+tXJkmJncGMTFT+C+g2h2R9uxkYIrE2yy9sgmcLhCnw57/WSD+Eh3J97FPEDFnbXnDUg==}
     dependencies:
       is-arrayish: 0.3.2
-    dev: true
-
-  /sirv@2.0.2:
-    resolution: {integrity: sha512-4Qog6aE29nIjAOKe/wowFTxOdmbEZKb+3tsLljaBRzJwtqto0BChD2zzH0LhgCSXiI+V7X+Y45v14wBZQ1TK3w==}
-    engines: {node: '>= 10'}
-    dependencies:
-      '@polka/url': 1.0.0-next.21
-      mrmime: 1.0.1
-      totalist: 3.0.1
     dev: true
 
   /sirv@2.0.3:
