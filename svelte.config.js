@@ -11,10 +11,10 @@ import mdsvexConfig from './mdsvex.config.js'
 const config = {
 	extensions: ['.svelte', ...mdsvexConfig.extensions],
 	vitePlugin: {
-		experimental: {
-			inspector: true,
-		},
+		inspector: true,
+		toggleButtonPos: 'bottom-right',
 	},
+
 	preprocess: [vitePreprocess({ postcss: true, preserve: ['partytown'] }), mdsvex(mdsvexConfig)],
 
 	kit: {
