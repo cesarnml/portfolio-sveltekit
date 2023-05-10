@@ -94,6 +94,7 @@ module.exports = {
 	plugins: [
 		require('@tailwindcss/forms'),
 		require('@tailwindcss/typography'),
+		// @ts-ignore
 		...require('@skeletonlabs/skeleton/tailwind/skeleton.cjs')(),
 	],
 }
