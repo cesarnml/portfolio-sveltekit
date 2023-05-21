@@ -57,7 +57,7 @@
 		> series with my partner.
 	</p>
 	<hr />
-	<form method="get" action="pdfs/Resume-CesarMejia.pdf">
+	<form method="get" action="pdfs/Resume-CesarMejia-15May2023.pdf">
 		<button class="btn variant-filled-primary w-full">
 			<span class="!text-lg">Download Resume</span>
 			<iconify-icon class="text-2xl" icon="material-symbols:downloading" alt="download resume" />
