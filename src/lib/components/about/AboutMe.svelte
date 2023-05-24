@@ -62,5 +62,6 @@
 			<span class="!text-lg">Download Resume</span>
 			<iconify-icon class="text-2xl" icon="material-symbols:downloading" alt="download resume" />
 		</button>
+		<a href="pdfs/Resume-CesarMejia-15May2023.pdf" download style="display: none;" />
 	</form>
 </div>
