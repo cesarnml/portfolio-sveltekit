@@ -22,7 +22,7 @@ export default defineConfig({
 	/* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
 	use: {
 		/* Base URL to use in actions like `await page.goto('/')`. */
-		baseURL: process.env.PLAYWRIGHT_TEST_BASE_URL || 'http://localhost:4173',
+		baseURL: process.env.PLAYWRIGHT_TEST_BASE_URL || 'http://localhost:5173',
 		permissions: ['clipboard-read', 'clipboard-write'],
 		/* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */
 		actionTimeout: 0,
