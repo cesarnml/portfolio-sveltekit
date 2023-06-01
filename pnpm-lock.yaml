@@ -30,8 +30,8 @@ devDependencies:
     specifier: 7.51.2
     version: 7.51.2(svelte@3.59.1)
   '@sentry/vite-plugin':
-    specifier: 2.2.0
-    version: 2.2.0
+    specifier: 0.7.2
+    version: 0.7.2
   '@skeletonlabs/skeleton':
     specifier: 1.6.2
     version: 1.6.2
@@ -874,16 +874,18 @@ packages:
       tslib: 1.14.1
     dev: true
 
-  /@sentry/bundler-plugin-core@2.2.0:
-    resolution: {integrity: sha512-yiN1xsn82npb+4pZCQjJOIts5Ffi+rNLW9GB/kjZDtCkTCIfby5F1WPX9Ofk2MCruMguXSoc/3fi3x4tuXbFkA==}
+  /@sentry/bundler-plugin-core@0.7.2:
+    resolution: {integrity: sha512-9d1MxEgRkPCTewQ26Bs+J/GxvnNVIRuQPZrHs70qRLotMiedH4KlHauh2MhbgH5rdgm0DUeOcafhxoBSK7ji3w==}
     engines: {node: '>= 10'}
     dependencies:
       '@sentry/cli': 2.17.5
-      '@sentry/node': 7.53.1
+      '@sentry/node': 7.51.2
+      '@sentry/tracing': 7.53.1
       find-up: 5.0.0
       glob: 9.3.2
       magic-string: 0.27.0
       unplugin: 1.0.1
+      webpack-sources: 3.2.3
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -939,22 +941,6 @@ packages:
       - supports-color
     dev: true
 
-  /@sentry/node@7.53.1:
-    resolution: {integrity: sha512-B4ax8sRd54xj4ad+4eY2EOKNt0Mh1NjuLW1zUKS8HW3h0bmuaDFzGuhEVvEY5H4SaV6tZKj1c0dvnMnyUbYkhA==}
-    engines: {node: '>=8'}
-    dependencies:
-      '@sentry-internal/tracing': 7.53.1
-      '@sentry/core': 7.53.1
-      '@sentry/types': 7.53.1
-      '@sentry/utils': 7.53.1
-      cookie: 0.4.2
-      https-proxy-agent: 5.0.1
-      lru_map: 0.3.3
-      tslib: 1.14.1
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /@sentry/replay@7.51.2:
     resolution: {integrity: sha512-W8YnSxkK9LTUXDaYciM7Hn87u57AX9qvH8jGcxZZnvpKqHlDXOpSV8LRtBkARsTwgLgswROImSifY0ic0lyCWg==}
     engines: {node: '>=12'}
@@ -976,6 +962,13 @@ packages:
       magic-string: 0.26.7
       svelte: 3.59.1
       tslib: 1.14.1
+    dev: true
+
+  /@sentry/tracing@7.53.1:
+    resolution: {integrity: sha512-1lpys/e19ee2gDTkcgIXyFNJySEqxdIxlu3Q1Oj+V0ORXVBfA9kFap2fHPWASaDJvmy1zpgGKlbzCpr+IEyfYQ==}
+    engines: {node: '>=8'}
+    dependencies:
+      '@sentry-internal/tracing': 7.53.1
     dev: true
 
   /@sentry/types@7.51.2:
@@ -1004,12 +997,11 @@ packages:
       tslib: 1.14.1
     dev: true
 
-  /@sentry/vite-plugin@2.2.0:
-    resolution: {integrity: sha512-4J7MHLZ10o8jf2SM7ug2XfgoSgUrF32mobmEIA10d4jk8JTk4hvWvkxC+2HUF4ecHCMrtViwRTUZLbIzarVkmA==}
+  /@sentry/vite-plugin@0.7.2:
+    resolution: {integrity: sha512-gprT6wyc1JEtjZcWjv1jQSjT2QV62ZCLmXsjK4oKosb0uaaUMR4UgKxorZyNPGSY08YangjumeJZ7UX0/zakkw==}
     engines: {node: '>= 10'}
     dependencies:
-      '@sentry/bundler-plugin-core': 2.2.0
-      unplugin: 1.0.1
+      '@sentry/bundler-plugin-core': 0.7.2
     transitivePeerDependencies:
       - encoding
       - supports-color
