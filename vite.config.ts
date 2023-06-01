@@ -29,7 +29,6 @@ const config = defineConfig(({ mode }) => {
 						org: env.PUBLIC_SENTRY_ORG,
 						project: env.PUBLIC_SENTRY_PROJECT,
 						authToken: env.SENTRY_AUTH_TOKEN,
-						include: './svelte-kit/output',
 				  })
 				: '',
 		],
