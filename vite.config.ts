@@ -2,7 +2,7 @@ import { defineConfig, loadEnv } from 'vite'
 import { sveltekit } from '@sveltejs/kit/vite'
 import { configDefaults } from 'vitest/config'
 import { imagetools } from 'vite-imagetools'
-import { sentryVitePlugin } from '@sentry/vite-plugin'
+// import { sentryVitePlugin } from '@sentry/vite-plugin'
 import Inspect from 'vite-plugin-inspect'
 
 const config = defineConfig(({ mode }) => {
@@ -23,14 +23,14 @@ const config = defineConfig(({ mode }) => {
 				build: true,
 				outputDir: '.vite-inspect',
 			}),
-			isProduction
-				? sentryVitePlugin({
-						telemetry: false,
-						org: env.PUBLIC_SENTRY_ORG,
-						project: env.PUBLIC_SENTRY_PROJECT,
-						authToken: env.SENTRY_AUTH_TOKEN,
-				  })
-				: '',
+			// isProduction
+			// 	? sentryVitePlugin({
+			// 			telemetry: false,
+			// 			org: env.PUBLIC_SENTRY_ORG,
+			// 			project: env.PUBLIC_SENTRY_PROJECT,
+			// 			authToken: env.SENTRY_AUTH_TOKEN,
+			// 	  })
+			// 	: '',
 		],
 		test: {
 			globals: true,
