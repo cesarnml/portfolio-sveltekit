@@ -37,7 +37,7 @@
 </svelte:head>
 
 <div class="space-y-4">
-	<h2 class="font-bold">All Posts</h2>
+	<h1 class="text-2xl">All Posts</h1>
 	<div class="blog-list grid grid-cols-1 gap-5 md:grid-cols-6">
 		{#each list as post (post.slug)}
 			<BlogPostCard {post} view={views.find((view) => view.slug === post.slug)} />

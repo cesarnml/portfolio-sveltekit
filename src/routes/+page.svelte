@@ -18,16 +18,16 @@
 </svelte:head>
 
 <div class="space-y-8">
-	<div class="py-8">
+	<div class="py-2">
 		<HomeCTA />
 	</div>
-	<h3>Recently Published</h3>
+	<h2 class="text-xl">Recently Published</h2>
 	<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
 		{#each latestPosts as post (post.slug)}
 			<BlogPostCard {post} view={views.find((view) => view.slug === post.slug)} />
 		{/each}
 	</div>
-	<h3>Popular Articles</h3>
+	<h2 class="text-xl">Popular Articles</h2>
 	<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
 		{#each popularPosts as post (post.slug)}
 			<BlogPostCard {post} view={views.find((view) => view.slug === post.slug)} />

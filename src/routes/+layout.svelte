@@ -20,7 +20,7 @@
 	import 'iconify-icon'
 
 	import '$lib/styles/theme-modern.css'
-	import '@skeletonlabs/skeleton/styles/all.css'
+	import '@skeletonlabs/skeleton/styles/skeleton.css'
 	import '../app.postcss'
 
 	export let data

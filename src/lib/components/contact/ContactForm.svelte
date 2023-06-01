@@ -67,11 +67,12 @@
 <div>
 	<div class="flex flex-col items-center">
 		<div class="w-full max-w-screen-xs">
-			<h2 class="mb-8">Contact Me</h2>
+			<h1 class="mb-8 text-2xl">Contact Me</h1>
 			<form class="flex flex-col items-stretch gap-6" on:submit|preventDefault={sendEmail}>
 				<p class="!text-lg">
-					You can contact me via this contact form or through my <a href="mailto:cmejia@gmail.com"
-						>personal email</a
+					You can contact me via this contact form or through my <a
+						class="text-primary-400-500-token"
+						href="mailto:cmejia@gmail.com">personal email</a
 					> and I will get back to you as soon as I can.
 				</p>
 				<label class="input-label" for="name">
@@ -111,7 +112,7 @@
 					/>
 				</label>
 				<button
-					class="btn btn-lg variant-filled-primary w-full"
+					class="btn-lg btn variant-filled-primary w-full"
 					type="submit"
 					disabled={buttonDisabled}
 				>

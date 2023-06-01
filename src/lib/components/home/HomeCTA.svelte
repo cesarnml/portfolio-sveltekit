@@ -14,10 +14,10 @@
 	<!-- CTA CARD CONTENT -->
 	<div class="flex flex-col justify-between gap-4">
 		<!-- HEADER -->
-		<h1>Hello, I'm Cesar 👋</h1>
+		<h1 class="text-2xl md:text-4xl">Hello, I'm Cesar 👋</h1>
 		<!-- CONTENT -->
 		<div class="space-y-4">
-			<p class="!text-lg 3xs:!text-xl">
+			<p class="break-words !text-lg 3xs:!text-xl">
 				I'm a developer, blogger and an educator. I like to build awesome, engaging, and accessible
 				web apps.
 			</p>
@@ -25,14 +25,14 @@
 		</div>
 		<!-- BUTTONS -->
 		<div class="flex flex-col gap-5 3xs:flex-row">
-			<a class="btn btn-lg variant-filled-primary w-full" href={Url.Blog}
+			<a class="btn-lg btn variant-filled-primary w-full" href={Url.Blog}
 				>Blog &nbsp;<iconify-icon
 					class="text-2xl"
 					icon="material-symbols:arrow-right-alt-rounded"
 					alt="right arrow"
 				/>
 			</a>
-			<a class="btn btn-lg variant-ringed-primary w-full" href={Url.About}>About</a>
+			<a class="btn-lg variant-ringed-primary btn w-full" href={Url.About}>About</a>
 		</div>
 	</div>
 </div>

@@ -1,3 +1,4 @@
+// @ts-nocheck
 /**
  * Default tailwind breakpoints (sm, md, lg, xl, 2xl)
  * Additional smaller breakpoints: 2xs, xs,

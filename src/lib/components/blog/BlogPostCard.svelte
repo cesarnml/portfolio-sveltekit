@@ -30,14 +30,14 @@
 			/>
 		</a>
 		<div
-			class={`badge badge-glass absolute right-2 top-2 border border-indigo-300 ${
+			class={`badge-glass badge absolute right-2 top-2 border border-indigo-300 ${
 				$modeCurrent ? '!bg-indigo-200/70' : '!bg-indigo-700/70'
 			} text-sm backdrop-blur-sm`}
 		>
 			{post.readingTime.text}
 		</div>
 		<div
-			class={`badge badge-glass absolute left-2 top-2 border border-zinc-300  ${
+			class={`badge-glass badge absolute left-2 top-2 border border-zinc-300  ${
 				$modeCurrent ? '!bg-indigo-200/70' : '!bg-indigo-700/70'
 			} text-sm backdrop-blur-sm`}
 		>
@@ -46,7 +46,7 @@
 	</header>
 	<div class="flex h-full flex-col justify-between gap-4 p-4">
 		<a href={Url.BlogDetail(post.slug)}>
-			<h4 class="no-underline">{post.title}</h4>
+			<h3 class="text-lg no-underline">{post.title}</h3>
 		</a>
 		<div class="line-clamp-3 flex-grow font-normal">{post.description}</div>
 		<button class="btn variant-filled-primary self-end" on:click={handlePostClick}>Read more</button
@@ -56,7 +56,7 @@
 			<div class="inline-flex gap-2">
 				{#each post.tags as tag, idx}
 					<button
-						class={`badge badge-glass text-sm font-normal hover:scale-110 ${
+						class={`badge-glass badge text-sm font-normal hover:scale-110 ${
 							idx === 0 ? '!bg-cyan-400/30' : '!bg-rose-400/30'
 						}`}
 						on:click={() => handleTagClick(tag)}

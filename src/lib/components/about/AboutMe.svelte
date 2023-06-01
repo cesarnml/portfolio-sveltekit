@@ -23,7 +23,7 @@
 
 <div class="card variant-glass-surface space-y-4 p-6">
 	<Avatar src="favicon.ico" width="w-16 md:20 lg:w-24" alt="avatar" />
-	<h2>Hello, I'm Cesar! 👋</h2>
+	<h2 class="text-xl">Hello, I'm Cesar! 👋</h2>
 	<p class="!text-lg">
 		I am a full-stack web developer who specializes in building high-performance, engaging, and
 		accessible web applications. When I'm not coding, I like write about my experiences in web

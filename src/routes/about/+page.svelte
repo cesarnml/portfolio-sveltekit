@@ -11,7 +11,7 @@
 	<link rel="canonical" href={$page.url.href} />
 </svelte:head>
 
-<h2 class="mb-4">About</h2>
+<h1 class="mb-4 text-2xl">About</h1>
 <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
 	<AboutMe />
 	<Skills {skills} />
