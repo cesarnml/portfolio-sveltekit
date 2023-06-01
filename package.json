@@ -106,8 +106,8 @@
 		"vitest": "0.31.3"
 	},
 	"engines": {
-		"node": "^18",
-		"npm": "^9"
+		"node": "^18.x",
+		"npm": "^9.x"
 	},
 	"type": "module"
 }
