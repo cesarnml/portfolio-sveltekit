@@ -54,8 +54,11 @@ export const handleError: HandleServerError = ({ error, event }) => {
 		})
 	}
 
-	return {
-		message: "An unexpected error occurred. We're working on it.",
-		errorId,
+	if (error instanceof Error) {
+		return {
+			message: "An unexpected error occurred. We're working on it.",
+			error: error.message,
+			errorId,
+		}
 	}
 }

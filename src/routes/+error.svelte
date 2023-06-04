@@ -1,6 +1,10 @@
 <script lang="ts">
 	import { page } from '$app/stores'
 	import { Url } from '$lib/url'
+
+	$: {
+		console.log($page.error)
+	}
 </script>
 
 <svelte:head>

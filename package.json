@@ -22,7 +22,11 @@
 		"fix": "npm run format && npm run lint -- --fix",
 		"partytown": "partytown copylib static/~partytown",
 		"postbuild": "svelte-sitemap --out-dir .vercel/output/static --domain https://cesar-mejia.com",
-		"sb:dump": "supabase db dump --data-only -f supabase/seed.sql"
+		"sb:start": "supabase start && pnpm sb:dump && pnpm sb:reset && pnpm sb:seed && pnpm sb:types",
+		"sb:dump": "supabase db dump --data-only -f supabase/seed.sql",
+		"sb:types": "supabase gen types typescript --local > src/lib/database.types.ts",
+		"sb:reset": "psql postgresql://postgres:postgres@localhost:54322/postgres < supabase/reset.sql",
+		"sb:seed": "psql postgresql://postgres:postgres@localhost:54322/postgres < supabase/seed.sql"
 	},
 	"devDependencies": {
 		"@builder.io/partytown": "0.8.0",
