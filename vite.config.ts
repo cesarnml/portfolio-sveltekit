@@ -19,7 +19,6 @@ const config = defineConfig(({ mode }) => {
 			'import.meta.vitest': 'undefined',
 		},
 		plugins: [
-			sveltekit(),
 			imagetools(),
 			Inspect({
 				build: true,
@@ -28,13 +27,19 @@ const config = defineConfig(({ mode }) => {
 			isProduction
 				? sentrySvelteKit({
 						adapter: 'vercel',
-						telemetry: false,
-						autoUploadSourceMaps: true,
-						org: env.PUBLIC_SENTRY_ORG,
-						project: env.PUBLIC_SENTRY_PROJECT,
-						authToken: env.SENTRY_AUTH_TOKEN,
+						sourceMapsUploadOptions: {
+							org: env.PUBLIC_SENTRY_ORG,
+							project: env.PUBLIC_SENTRY_PROJECT,
+							authToken: env.SENTRY_AUTH_TOKEN,
+							telemetry: false,
+							cleanArtifacts: true,
+							setCommits: {
+								auto: true,
+							},
+						},
 				  })
 				: '',
+			sveltekit(),
 		],
 		test: {
 			globals: true,
