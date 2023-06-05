@@ -1,10 +1,14 @@
-import type { HandleClientError } from '@sveltejs/kit'
-import * as Sentry from '@sentry/svelte'
+import type { HandleClientError, NavigationEvent } from '@sveltejs/kit'
+import * as Sentry from '@sentry/sveltekit'
+import { handleErrorWithSentry } from '@sentry/sveltekit'
 import { PUBLIC_SENTRY_DSN } from '$env/static/public'
 
 if (import.meta.env.PROD) {
 	Sentry.init({
 		dsn: PUBLIC_SENTRY_DSN,
+		tracesSampleRate: 1.0,
+		replaysSessionSampleRate: 1.0,
+		replaysOnErrorSampleRate: 1.0,
 		integrations: [
 			new Sentry.BrowserTracing(),
 			new Sentry.Replay({
@@ -13,24 +17,18 @@ if (import.meta.env.PROD) {
 				blockAllMedia: false,
 			}),
 		],
-		tracesSampleRate: 1.0,
-		replaysSessionSampleRate: 1.0,
-		replaysOnErrorSampleRate: 1.0,
 	})
 }
 
-export const handleError: HandleClientError = ({ error, event }) => {
-	const errorId = crypto.randomUUID()
-
-	// Only emit errors in production
+export const handleError: HandleClientError = (input) => {
 	if (import.meta.env.PROD) {
-		Sentry.captureException(error, {
-			contexts: { sveltekit: { event, errorId } },
-		})
+		handleErrorWithSentry()
+	}
+	if (import.meta.env.DEV) {
+		console.error(input.error)
 	}
 
 	return {
-		message: "An unexpected error occurred. We're working on it!",
-		errorId,
+		message: 'A client error has occurred. I have spoken.',
 	}
 }

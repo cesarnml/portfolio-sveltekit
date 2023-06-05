@@ -4,7 +4,6 @@ import adapter from '@sveltejs/adapter-vercel'
 import { mdsvex } from 'mdsvex'
 import { resolve } from 'path'
 import { vitePreprocess } from '@sveltejs/kit/vite'
-import { withSentryConfig } from '@sentry/svelte'
 import mdsvexConfig from './mdsvex.config.js'
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -26,4 +25,4 @@ const config = {
 	},
 }
 
-export default withSentryConfig(config)
+export default config

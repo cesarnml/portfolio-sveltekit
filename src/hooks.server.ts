@@ -1,7 +1,8 @@
 import type { Handle, HandleServerError } from '@sveltejs/kit'
 import { createSupabaseServerClient } from '@supabase/auth-helpers-sveltekit'
 import crypto from 'crypto'
-import * as Sentry from '@sentry/node'
+import { handleErrorWithSentry } from '@sentry/sveltekit'
+import * as Sentry from '@sentry/sveltekit'
 import {
 	PUBLIC_SENTRY_DSN,
 	PUBLIC_SUPABASE_URL,
@@ -44,21 +45,15 @@ if (import.meta.env.PROD) {
 	})
 }
 
-export const handleError: HandleServerError = ({ error, event }) => {
-	const errorId = crypto.randomUUID()
-
-	// Only emit errors in production
+export const handleError: HandleServerError = (input) => {
 	if (import.meta.env.PROD) {
-		Sentry.captureException(error, {
-			contexts: { sveltekit: { event, errorId } },
-		})
+		handleErrorWithSentry()
+	}
+	if (import.meta.env.DEV) {
+		console.error(input.error)
 	}
 
-	if (error instanceof Error) {
-		return {
-			message: "An unexpected error occurred. We're working on it.",
-			error: error.message,
-			errorId,
-		}
+	return {
+		message: 'A client error has occurred. I have spoken.',
 	}
 }
