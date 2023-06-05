@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import { sveltekit } from '@sveltejs/kit/vite'
 import { configDefaults } from 'vitest/config'
 import { imagetools } from 'vite-imagetools'
@@ -8,6 +8,8 @@ import Inspect from 'vite-plugin-inspect'
 // @ts-expect-error tough type
 const config = defineConfig(({ mode }) => {
 	const isProduction = mode === 'production'
+	const env = loadEnv(mode, process.cwd(), '')
+
 	return {
 		build: {
 			sourcemap: true,
@@ -23,7 +25,16 @@ const config = defineConfig(({ mode }) => {
 				build: true,
 				outputDir: '.vite-inspect',
 			}),
-			isProduction ? sentrySvelteKit({ adapter: 'vercel' }) : '',
+			isProduction
+				? sentrySvelteKit({
+						adapter: 'vercel',
+						telemetry: false,
+						autoUploadSourceMaps: true,
+						org: env.PUBLIC_SENTRY_ORG,
+						project: env.PUBLIC_SENTRY_PROJECT,
+						authToken: env.SENTRY_AUTH_TOKEN,
+				  })
+				: '',
 		],
 		test: {
 			globals: true,
