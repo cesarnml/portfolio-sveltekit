@@ -1,6 +1,5 @@
 import type { Handle, HandleServerError } from '@sveltejs/kit'
 import { createSupabaseServerClient } from '@supabase/auth-helpers-sveltekit'
-import crypto from 'crypto'
 import { handleErrorWithSentry } from '@sentry/sveltekit'
 import * as Sentry from '@sentry/sveltekit'
 import {

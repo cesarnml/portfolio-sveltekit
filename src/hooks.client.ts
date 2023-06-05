@@ -1,4 +1,4 @@
-import type { HandleClientError, NavigationEvent } from '@sveltejs/kit'
+import type { HandleClientError } from '@sveltejs/kit'
 import * as Sentry from '@sentry/sveltekit'
 import { handleErrorWithSentry } from '@sentry/sveltekit'
 import { PUBLIC_SENTRY_DSN } from '$env/static/public'
