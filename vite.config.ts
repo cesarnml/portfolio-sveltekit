@@ -4,6 +4,7 @@ import { configDefaults } from 'vitest/config'
 import { imagetools } from 'vite-imagetools'
 import { sentrySvelteKit } from '@sentry/sveltekit'
 import Inspect from 'vite-plugin-inspect'
+import tsconfigPaths from 'vite-tsconfig-paths'
 
 // @ts-expect-error tough type
 const config = defineConfig(({ mode }) => {
@@ -19,6 +20,7 @@ const config = defineConfig(({ mode }) => {
 			'import.meta.vitest': 'undefined',
 		},
 		plugins: [
+			tsconfigPaths(),
 			imagetools(),
 			Inspect({
 				build: true,
@@ -50,6 +52,7 @@ const config = defineConfig(({ mode }) => {
 			coverage: {
 				all: true,
 				enabled: true,
+				provider: 'istanbul', // or 'v8',
 				reporter: ['json', 'html', 'text'],
 				src: ['./src'],
 				exclude: [

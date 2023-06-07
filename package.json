@@ -55,8 +55,10 @@
 		"@typescript-eslint/eslint-plugin": "5.59.9",
 		"@typescript-eslint/parser": "5.59.9",
 		"@vercel/analytics": "1.0.1",
+		"@vitest/coverage-c8": "0.31.4",
+		"@vitest/coverage-istanbul": "^0.32.0",
 		"@vitest/coverage-v8": "^0.32.0",
-		"@vitest/ui": "0.32.0",
+		"@vitest/ui": "0.31.4",
 		"autoprefixer": "10.4.14",
 		"cssnano": "6.0.1",
 		"dayjs": "1.11.8",
@@ -104,7 +106,8 @@
 		"vite-imagetools": "4.0.19",
 		"vite-plugin-inspect": "0.7.28",
 		"vite-plugin-svelte-purgecss": "0.0.3",
-		"vitest": "0.32.0"
+		"vite-tsconfig-paths": "^4.2.0",
+		"vitest": "0.31.4"
 	},
 	"engines": {
 		"node": "^18.x",
