@@ -92,8 +92,8 @@ devDependencies:
     specifier: 0.31.4
     version: 0.31.4(vitest@0.31.4)
   '@vitest/coverage-istanbul':
-    specifier: ^0.32.0
-    version: 0.32.0(vitest@0.31.4)
+    specifier: ^0.31.4
+    version: 0.31.4(vitest@0.31.4)
   '@vitest/coverage-v8':
     specifier: ^0.32.0
     version: 0.32.0(vitest@0.31.4)
@@ -1730,10 +1730,10 @@ packages:
       vitest: 0.31.4(@vitest/ui@0.31.4)(jsdom@22.1.0)
     dev: true
 
-  /@vitest/coverage-istanbul@0.32.0(vitest@0.31.4):
-    resolution: {integrity: sha512-itX7qym7g9SxUpE/VoJWUQ6KR2k1poSbpJCou3R8wmNZ0i5K4HT0o33Sc8tKT4XJ0SluHrS7voORpu5w6y/hGg==}
+  /@vitest/coverage-istanbul@0.31.4(vitest@0.31.4):
+    resolution: {integrity: sha512-nQsWQzatd4NXyM7uiIimInOiCopn7gwhFaA8kbBY7u5eYbKyHkMYVgAyqr1gvyPWe4wINdKonqdyQIc110RJkw==}
     peerDependencies:
-      vitest: '>=0.32.0 <1'
+      vitest: '>=0.30.0 <1'
     dependencies:
       istanbul-lib-coverage: 3.2.0
       istanbul-lib-instrument: 5.2.1
