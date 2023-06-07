@@ -20,7 +20,6 @@ const config = defineConfig(({ mode }) => {
 			'import.meta.vitest': 'undefined',
 		},
 		plugins: [
-			tsconfigPaths(),
 			imagetools(),
 			Inspect({
 				build: true,
@@ -42,6 +41,7 @@ const config = defineConfig(({ mode }) => {
 				  })
 				: '',
 			sveltekit(),
+			tsconfigPaths(),
 		],
 		test: {
 			globals: true,
