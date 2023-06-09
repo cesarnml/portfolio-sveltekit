@@ -33,7 +33,7 @@
 
 	let scriptEle: HTMLScriptElement
 
-	onMount(async () => {
+	onMount(() => {
 		// Initiate partytown script
 		if (scriptEle) {
 			scriptEle.textContent = partytownSnippet()
