@@ -30,15 +30,15 @@
 		"sb:seed": "psql postgresql://postgres:postgres@localhost:54322/postgres < supabase/seed.sql"
 	},
 	"devDependencies": {
-		"@builder.io/partytown": "0.8.0",
+		"@builder.io/partytown": "0.10.0",
 		"@floating-ui/dom": "1.2.9",
 		"@giscus/svelte": "2.2.8",
 		"@lottiefiles/lottie-interactivity": "1.6.2",
 		"@playwright/test": "1.34.3",
-		"@prisma/client": "4.15.0",
+		"@prisma/client": "5.10.2",
 		"@skeletonlabs/skeleton": "1.7.1",
-		"@supabase/auth-helpers-sveltekit": "0.10.1",
-		"@supabase/supabase-js": "2.24.0",
+		"@supabase/auth-helpers-sveltekit": "0.12.0",
+		"@supabase/supabase-js": "2.39.7",
 		"@sveltejs/adapter-vercel": "3.0.1",
 		"@sveltejs/kit": "1.20.2",
 		"@sveltejs/vite-plugin-svelte": "2.4.1",
@@ -116,6 +116,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@sentry/sveltekit": "^7.54.0"
+		"@sentry/sveltekit": "^7.105.0"
 	}
 }
