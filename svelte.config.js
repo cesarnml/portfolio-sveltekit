@@ -3,7 +3,7 @@
 import adapter from '@sveltejs/adapter-vercel'
 import { mdsvex } from 'mdsvex'
 import { resolve } from 'path'
-import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
+import { vitePreprocess } from '@sveltejs/kit/vite'
 import mdsvexConfig from './mdsvex.config.js'
 
 /** @type {import('@sveltejs/kit').Config} */
