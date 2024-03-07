@@ -6,8 +6,8 @@ const MAX_AGE = 3600 // 1 hour (3600 secs)
 export const GET = async ({ setHeaders }) => {
 	const feed = new RSS({
 		title: "Cesar's RSS Feed",
-		site_url: 'https://cesar-mejia.com',
-		feed_url: 'https://cesar-mejia.com/rss.xml',
+		site_url: 'https://cesarmejia.com',
+		feed_url: 'https://cesarmejia.com/rss.xml',
 	})
 
 	const posts = await fetchPosts()
@@ -15,7 +15,7 @@ export const GET = async ({ setHeaders }) => {
 	posts.forEach((post) => {
 		feed.item({
 			title: post.title,
-			url: `https://cesar-mejia.com/blog/${post.slug}`,
+			url: `https://cesarmejia.com/blog/${post.slug}`,
 			date: post.date,
 			description: post.description,
 		})

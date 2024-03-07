@@ -21,7 +21,7 @@
 		"format": "prettier --plugin-search-dir . --write .",
 		"fix": "npm run format && npm run lint -- --fix",
 		"partytown": "partytown copylib static/~partytown",
-		"postbuild": "svelte-sitemap --out-dir .vercel/output/static --domain https://cesar-mejia.com",
+		"postbuild": "svelte-sitemap --out-dir .vercel/output/static --domain https://cesarmejia.com",
 		"sb:start": "supabase start && pnpm sb:dump && pnpm sb:reset && pnpm sb:seed && pnpm sb:types",
 		"sb:dump": "supabase db dump --data-only -f supabase/seed.sql",
 		"sb:types": "supabase gen types typescript --local > src/lib/database.types.ts",
