@@ -7,8 +7,8 @@
 	} from '$env/static/public'
 	import { error, type HttpError } from '@sveltejs/kit'
 	import party from 'party-js'
-	import { ProgressRadial, type ToastSettings } from '@skeletonlabs/skeleton'
-	import { toastStore } from '@skeletonlabs/skeleton'
+	import { ProgressRadial } from '@skeletonlabs/skeleton'
+	// import { toastStore } from '@skeletonlabs/skeleton'
 	import { Email } from '$lib/external/smtp'
 	import { browser } from '$app/environment'
 
@@ -29,14 +29,14 @@
 		showProgress = false
 	}
 
-	function triggerToast(): void {
-		const t: ToastSettings = {
-			message: 'Message delivered 🎉',
-			autohide: true,
-			timeout: 2000,
-		}
-		toastStore.trigger(t)
-	}
+	// function triggerToast(): void {
+	// 	const t: ToastSettings = {
+	// 		message: 'Message delivered 🎉',
+	// 		autohide: true,
+	// 		timeout: 2000,
+	// 	}
+	// 	toastStore.trigger(t)
+	// }
 
 	if (browser) {
 		sendEmail = async () => {
@@ -56,7 +56,7 @@
 					size: party.variation.range(0.8, 1.4),
 				})
 				resetForm()
-				triggerToast()
+				// triggerToast()
 			} catch (err) {
 				error(400, 'Email failed 😬')
 			}

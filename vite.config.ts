@@ -5,7 +5,7 @@ import { imagetools } from 'vite-imagetools'
 import { sentrySvelteKit } from '@sentry/sveltekit'
 import Inspect from 'vite-plugin-inspect'
 import tsconfigPaths from 'vite-tsconfig-paths'
-
+import { purgeCss } from 'vite-plugin-tailwind-purgecss';
 // @ts-expect-error tough type
 const config = defineConfig(({ mode }) => {
 	const isProduction = mode === 'production'
@@ -42,6 +42,7 @@ const config = defineConfig(({ mode }) => {
 				: '',
 			sveltekit(),
 			tsconfigPaths(),
+			purgeCss()
 		],
 		test: {
 			globals: true,

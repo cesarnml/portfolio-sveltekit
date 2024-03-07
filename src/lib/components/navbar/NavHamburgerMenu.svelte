@@ -1,5 +1,7 @@
 <script lang="ts">
-	import { drawerStore } from '@skeletonlabs/skeleton'
+	// import { getDrawerStore } from '@skeletonlabs/skeleton'
+
+	// const drawerStore = getDrawerStore()
 </script>
 
 <button aria-label="nav menu">
@@ -10,6 +12,8 @@
 			class="flex text-3xl"
 			icon="material-symbols:close-rounded"
 			alt="close drawer"
+			role="button"
+			tabindex="0"
 		/>
 	{:else}
 		<iconify-icon
@@ -18,6 +22,8 @@
 			class="flex text-3xl"
 			icon="material-symbols:menu-rounded"
 			alt="open drawer"
+			role="button"
+			tabindex="0"
 		/>
 	{/if}
 </button>
