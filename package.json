@@ -110,7 +110,7 @@
 		"vitest": "0.31.4"
 	},
 	"engines": {
-		"node": "^20.x",
+		"node": "^18.x",
 		"npm": "^9.x"
 	},
 	"type": "module",
