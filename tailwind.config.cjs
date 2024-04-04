@@ -4,12 +4,13 @@
  * Additional smaller breakpoints: 2xs, xs,
  * Additional Tablet breakpoint: 2md for more flexibility
  */
-import { join } from 'path';
-import { skeleton } from '@skeletonlabs/tw-plugin';
+import { join } from 'path'
+import { skeleton } from '@skeletonlabs/tw-plugin'
 
 const screens = {
-	'3xs': '375px', // iPhone SE
-	'2xs': '430px',
+	'4xs': '320px', // iPhoneSE
+	'3xs': '375px', // iPhoneMini
+	'2xs': '430px', // iPhonePro Max
 	xs: '576px',
 	sm: '640px',
 	md: '768px', // iPad
@@ -24,10 +25,7 @@ module.exports = {
 	darkMode: 'class',
 	content: [
 		'./src/**/*.{html,js,svelte,ts}',
-		join(require.resolve(
-			'@skeletonlabs/skeleton'),
-			'../**/*.{html,js,svelte,ts}'
-		)
+		join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}'),
 	],
 	theme: {
 		screens,
@@ -102,8 +100,10 @@ module.exports = {
 		require('@tailwindcss/forms'),
 		require('@tailwindcss/typography'),
 		// @ts-ignore
-		skeleton({themes: {
-			preset: ['modern']
-		}})
+		skeleton({
+			themes: {
+				preset: ['modern'],
+			},
+		}),
 	],
 }

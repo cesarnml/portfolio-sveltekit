@@ -1,34 +1,34 @@
 <script lang="ts">
-	import { onMount } from 'svelte'
+	import { dev } from '$app/environment'
 	import { invalidate } from '$app/navigation'
-	import Footer from '$lib/components/footer/Footer.svelte'
-	import Navbar from '$lib/components/navbar/Navbar.svelte'
-	// import NavHamburgerMenu from '$lib/components/navbar/NavHamburgerMenu.svelte'
-	// import NavLinks from '$lib/components/navbar/NavLinks.svelte'
-	import PageTransition from '$lib/components/PageTransition.svelte'
 	import GoogleAnalytics from '$lib/components/GoogleAnalytics.svelte'
+	import PageTransition from '$lib/components/PageTransition.svelte'
+	import Footer from '$lib/components/footer/Footer.svelte'
+	import NavHamburgerMenu from '$lib/components/navbar/NavHamburgerMenu.svelte'
+	import NavLinks from '$lib/components/navbar/NavLinks.svelte'
+	import Navbar from '$lib/components/navbar/Navbar.svelte'
+	import { media } from '$lib/stores/media'
+	import { partytownSnippet } from '@builder.io/partytown/integration'
 	import {
 		AppShell,
-		// Drawer,
+		Drawer,
 		getDrawerStore,
+		initializeStores,
 		// Toast,
 		storePopup,
-		initializeStores,
 	} from '@skeletonlabs/skeleton'
-	import { media } from '$lib/stores/media'
-	import { dev } from '$app/environment'
 	import { inject } from '@vercel/analytics'
-	import { partytownSnippet } from '@builder.io/partytown/integration'
+	import { onMount } from 'svelte'
 	// import DarkModeToggle from '$lib/components/navbar/DarkModeToggle.svelte'
-	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom'
+	import { arrow, autoUpdate, computePosition, flip, offset, shift } from '@floating-ui/dom'
 	// import WavesSvg from '$lib/components/WavesSvg.svelte'
 	// import { page } from '$app/stores'
 	// import { Url } from '$lib/url'
 	import 'iconify-icon'
-
 	import '../app.postcss'
 
 	export let data
+
 	initializeStores()
 	const drawerStore = getDrawerStore()
 	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow })
@@ -55,6 +55,11 @@
 	// Close drawer if screen > media.sm and drawer is currently open
 	$: if ($media.sm && $drawerStore.open) {
 		drawerStore.close()
+	}
+	$: if ($drawerStore.open) {
+		console.log('open:')
+	} else {
+		console.log('closed:')
 	}
 </script>
 
@@ -88,17 +93,17 @@
 	<GoogleAnalytics />
 </svelte:head>
 
-<!-- <Drawer position="top" bgDrawer="backdrop-blur" height="h-screen" duration={250}>
-	<div class="flex flex-col items-center gap-2 px-4 py-6">
+<Drawer position="top" bgDrawer="backdrop-blur" height="h-screen" duration={250}>
+	<div class="flex flex-col items-center gap-2 p-4">
 		<div class="mb-8 flex w-full items-center justify-between">
 			<div class="px-[11px]">
-				<DarkModeToggle />
+				<!-- <DarkModeToggle /> -->
 			</div>
 			<NavHamburgerMenu />
 		</div>
 		<NavLinks className="text-xl font-semibold list-nav py-6" />
 	</div>
-</Drawer> -->
+</Drawer>
 
 <AppShell>
 	<svelte:fragment slot="header"><Navbar /></svelte:fragment>
