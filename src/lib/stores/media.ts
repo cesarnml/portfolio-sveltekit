@@ -5,6 +5,7 @@ import watchMedia from 'svelte-media'
  * `media` store *must* remain in sync with `screens` declared in `tailwind.config.cjs`
  */
 const mediaQueries = {
+	'4xs': '(min-width: 320px)',
 	'3xs': '(min-width: 375px)',
 	'2xs': '(min-width: 480px)',
 	xs: '(min-width: 576px)',

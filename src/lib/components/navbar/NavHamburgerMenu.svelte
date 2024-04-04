@@ -1,7 +1,7 @@
 <script lang="ts">
-	// import { getDrawerStore } from '@skeletonlabs/skeleton'
+	import { getDrawerStore } from '@skeletonlabs/skeleton'
 
-	// const drawerStore = getDrawerStore()
+	const drawerStore = getDrawerStore()
 </script>
 
 <button aria-label="nav menu">
