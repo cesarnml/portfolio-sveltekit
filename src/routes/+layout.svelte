@@ -16,6 +16,7 @@
 		initializeStores,
 		// Toast,
 		storePopup,
+		LightSwitch,
 	} from '@skeletonlabs/skeleton'
 	import { inject } from '@vercel/analytics'
 	import { onMount } from 'svelte'
@@ -97,7 +98,7 @@
 	<div class="flex flex-col items-center gap-2 p-4">
 		<div class="mb-8 flex w-full items-center justify-between">
 			<div class="px-[11px]">
-				<!-- <DarkModeToggle /> -->
+				<LightSwitch />
 			</div>
 			<NavHamburgerMenu />
 		</div>
