@@ -20,7 +20,6 @@
 	} from '@skeletonlabs/skeleton'
 	import { inject } from '@vercel/analytics'
 	import { onMount } from 'svelte'
-	// import DarkModeToggle from '$lib/components/navbar/DarkModeToggle.svelte'
 	import { arrow, autoUpdate, computePosition, flip, offset, shift } from '@floating-ui/dom'
 	// import WavesSvg from '$lib/components/WavesSvg.svelte'
 	// import { page } from '$app/stores'
@@ -56,11 +55,6 @@
 	// Close drawer if screen > media.sm and drawer is currently open
 	$: if ($media.sm && $drawerStore.open) {
 		drawerStore.close()
-	}
-	$: if ($drawerStore.open) {
-		console.log('open:')
-	} else {
-		console.log('closed:')
 	}
 </script>
 
