@@ -5,7 +5,7 @@ import { imagetools } from 'vite-imagetools'
 import { sentrySvelteKit } from '@sentry/sveltekit'
 import Inspect from 'vite-plugin-inspect'
 import tsconfigPaths from 'vite-tsconfig-paths'
-import { purgeCss } from 'vite-plugin-tailwind-purgecss';
+import { purgeCss } from 'vite-plugin-tailwind-purgecss'
 // @ts-expect-error tough type
 const config = defineConfig(({ mode }) => {
 	const isProduction = mode === 'production'
@@ -38,11 +38,11 @@ const config = defineConfig(({ mode }) => {
 								auto: true,
 							},
 						},
-				  })
+					})
 				: '',
 			sveltekit(),
 			tsconfigPaths(),
-			purgeCss()
+			purgeCss(),
 		],
 		test: {
 			globals: true,
@@ -53,7 +53,7 @@ const config = defineConfig(({ mode }) => {
 			coverage: {
 				all: true,
 				enabled: true,
-				provider: 'istanbul', // or 'v8',
+				provider: 'istanbul', // or v8
 				reporter: ['json', 'html', 'text'],
 				src: ['./src'],
 				exclude: [
@@ -69,9 +69,6 @@ const config = defineConfig(({ mode }) => {
 					'src/**/*.{test,spec}.{js,ts}',
 					'src/**/*.d.ts',
 				],
-			},
-			deps: {
-				inline: [/msw/],
 			},
 			// Exclude playwright tests folder
 			exclude: [
