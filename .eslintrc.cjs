@@ -19,12 +19,6 @@ module.exports = {
 			parserOptions: {
 				parser: '@typescript-eslint/parser',
 			},
-			rules: {
-				'import/first': 0,
-				'import/order': 0,
-				'import/no-mutable-exports': 0,
-				'@typescript-eslint/no-use-before-define': 0,
-			},
 		},
 	],
 	settings: {
@@ -54,5 +48,9 @@ module.exports = {
 		'import/no-extraneous-dependencies': 0,
 		'import/prefer-default-export': 0,
 		'import/no-unresolved': 0,
+		'svelte/no-at-html-tags': 0,
+		'import/order': 0,
+		'import/no-mutable-exports': 0,
+		'no-inner-declarations': 0,
 	},
 }
