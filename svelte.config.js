@@ -3,7 +3,7 @@
 import adapter from '@sveltejs/adapter-vercel'
 import { mdsvex } from 'mdsvex'
 import { resolve } from 'path'
-import { vitePreprocess } from '@sveltejs/kit/vite'
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 import mdsvexConfig from './mdsvex.config.js'
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -15,12 +15,15 @@ const config = {
 		},
 	},
 
-	preprocess: [vitePreprocess({ postcss: true, preserve: ['partytown'] }), mdsvex(mdsvexConfig)],
+	preprocess: [mdsvex(mdsvexConfig), vitePreprocess({ postcss: true, preserve: ['partytown'] })],
 
 	kit: {
 		adapter: adapter(),
 		alias: {
-			$lib: resolve('./src/lib'),
+			$lib: './src/lib',
+			'$lib/*': './src/lib/*',
+			$app: './node_modules/@sveltejs/kit/types',
+			'$app/*': './node_modules/@sveltejs/kit/types/ambient.d.ts',
 		},
 	},
 }
