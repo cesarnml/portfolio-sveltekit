@@ -5,16 +5,20 @@ module.exports = {
 	extends: [
 		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended',
+		'plugin:svelte/recommended',
 		'airbnb-base',
 		'airbnb-typescript/base',
 		'prettier',
 	],
-	plugins: ['svelte3', '@typescript-eslint'],
+	plugins: ['@typescript-eslint'],
 	ignorePatterns: ['*.cjs', '*.mjs'],
 	overrides: [
 		{
 			files: ['*.svelte'],
-			processor: 'svelte3/svelte3',
+			parser: 'svelte-eslint-parser',
+			parserOptions: {
+				parser: '@typescript-eslint/parser',
+			},
 			rules: {
 				'import/first': 0,
 				'import/order': 0,
