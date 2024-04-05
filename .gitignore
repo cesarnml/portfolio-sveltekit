@@ -17,3 +17,6 @@ html
 config.toml
 # Sentry Config File
 .sentryclirc
+
+# Sentry Config File
+.sentryclirc
