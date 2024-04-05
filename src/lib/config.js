@@ -50,6 +50,6 @@ export const skills = [
 	'Playwright',
 	'SCSS',
 	'Tailwind',
-	'GH Actions',
+	'GitHub Actions',
 	'Agile',
 ]
