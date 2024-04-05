@@ -60,7 +60,7 @@
 	<a
 		class="btn variant-filled-primary w-full"
 		type="submit"
-		href="/pdfs/Resume-CesarMejia-15May2023.pdf"
+		href="/pdfs/Resume-CesarNapoleonMejiaLeiva-April2024.pdf"
 		download
 	>
 		<span class="!text-lg">Download Resume</span>
