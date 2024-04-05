@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { page } from '$app/stores'
 	import BlogPostCard from '$lib/components/blog/BlogPostCard.svelte'
 	import InfiniteLoading from 'svelte-infinite-loading'
 
@@ -33,7 +32,6 @@
 		name="description"
 		content="All of Cesar's blog posts on tech and web development live here."
 	/>
-	<link rel="canonical" href={$page.url.href} />
 </svelte:head>
 
 <div class="space-y-4">
