@@ -1,30 +1,13 @@
 // setupTests.ts
 /* eslint-disable @typescript-eslint/no-empty-function */
-import '@testing-library/jest-dom'
-import { within } from '@testing-library/svelte'
-import { vi, expect } from 'vitest'
-import type { Navigation, Page } from '@sveltejs/kit'
-import { readable } from 'svelte/store'
 import type * as environment from '$app/environment'
 import type * as navigation from '$app/navigation'
 import type * as stores from '$app/stores'
+import type { Navigation, Page } from '@sveltejs/kit'
+import '@testing-library/jest-dom'
+import { readable } from 'svelte/store'
+import { vi } from 'vitest'
 
-function toContainRole(container: HTMLElement, role: string, quantity = 1) {
-	const elements = within(container).queryAllByRole(role)
-	if (elements.length === quantity) {
-		return {
-			pass: true,
-		}
-	}
-
-	return {
-		pass: false,
-		message: () =>
-			`Expected to find ${quantity} ${role} elements. Found ${elements.length} instead`,
-	}
-}
-
-expect.extend({ toContainRole })
 // Mock SvelteKit runtime module $app/environment
 vi.mock('$app/environment', (): typeof environment => ({
 	browser: true,
@@ -41,6 +24,7 @@ vi.mock('$app/navigation', (): typeof navigation => ({
 	goto: () => Promise.resolve(),
 	invalidate: () => Promise.resolve(),
 	invalidateAll: () => Promise.resolve(),
+	// @ts-expect-error FIX ME
 	preloadData: () => Promise.resolve(),
 	preloadCode: () => Promise.resolve(),
 }))
@@ -55,6 +39,7 @@ vi.mock('$app/stores', (): typeof stores => {
 			route: {
 				id: null,
 			},
+			state: {},
 			status: 200,
 			error: null,
 			data: {

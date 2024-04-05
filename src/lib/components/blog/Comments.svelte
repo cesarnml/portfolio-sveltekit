@@ -1,5 +1,4 @@
 <script lang="ts">
-	// @ts-expect-error Giscus is not a module
 	import Giscus from '@giscus/svelte'
 	import {
 		PUBLIC_GITHUB_CATEGORY,
@@ -22,7 +21,7 @@
 <div data-testid="giscus">
 	<Giscus
 		id="comments"
-		repo={PUBLIC_GITHUB_REPO}
+		repo={`${PUBLIC_GITHUB_REPO.split('/')[0]}/${PUBLIC_GITHUB_REPO.split('/')[1]}`}
 		repoId={PUBLIC_GITHUB_REPO_ID}
 		category={PUBLIC_GITHUB_CATEGORY}
 		categoryId={PUBLIC_GITHUB_REPO_ID}

@@ -1,9 +1,8 @@
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-nocheck
 import adapter from '@sveltejs/adapter-vercel'
-import { mdsvex } from 'mdsvex'
-import { resolve } from 'path'
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
+import { mdsvex } from 'mdsvex'
 import mdsvexConfig from './mdsvex.config.js'
 
 /** @type {import('@sveltejs/kit').Config} */
