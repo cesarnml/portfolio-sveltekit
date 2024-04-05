@@ -3,11 +3,7 @@ import { PrismaClient } from '@prisma/client'
 /**
  * Prisma client - load from cache if defined
  */
-export const prisma =
-	globalThis.prisma ??
-	new PrismaClient({
-		log: ['query'],
-	})
+export const prisma = globalThis.prisma ?? new PrismaClient({})
 
 if (process.env.NODE_ENV !== 'production') globalThis.prisma = prisma
 
