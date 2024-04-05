@@ -9,7 +9,7 @@
 	export let viewCount = 1
 </script>
 
-<div class="flex items-center gap-4">
+<div class="flex items-center gap-4 mb-4">
 	<div class="h-12 w-12 md:h-14 md:w-14">
 		<Picture
 			class="m-0"

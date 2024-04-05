@@ -3,7 +3,6 @@
 	import PageHead from '$lib/components/PageHead.svelte'
 	import ArticleTitle from '$lib/components/blog/ArticleTitle.svelte'
 	import ArticleMeta from '$lib/components/blog/ArticleMeta.svelte'
-	import { TableOfContents } from '@skeletonlabs/skeleton'
 	import handleCopyClick from '$lib/handleCopyClick'
 
 	import '$lib/styles/shiki.css'
@@ -98,18 +97,16 @@
 	image={data.frontmatter.image}
 />
 
-<div class="absolute -right-[240px] top-8 hidden h-full w-[240px] xl:inline-block">
+<!-- <div class="absolute -right-[240px] top-8 hidden h-full w-[240px] xl:inline-block">
 	<TableOfContents
 		target="#toc-target"
 		class="card variant-soft-primary sticky top-8 p-4"
 		width="w-fit"
 		regionList="list-none font-semibold"
 	/>
-</div>
+</div> -->
 
-<article
-	class="prose max-w-screen-2md dark:prose-invert prose-a:no-underline hover:prose-a:text-secondary-800 dark:hover:prose-a:text-primary-500"
->
+<article class="prose max-w-screen-2md dark:prose-invert prose-a:no-underline">
 	<section class="mb-4">
 		<ArticleTitle title={data.frontmatter.title} slug={$page.params.slug} />
 		<ArticleMeta

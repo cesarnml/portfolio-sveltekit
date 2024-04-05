@@ -8,7 +8,7 @@
 	const href = `/blog/${slug}`
 </script>
 
-<h1 class="mt-0 text-3xl" {id}>
+<h1 {id}>
 	<a {href}>
 		{title}
 	</a>
