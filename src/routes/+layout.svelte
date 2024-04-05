@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { dev } from '$app/environment'
+	import { dev, browser } from '$app/environment'
 	import { invalidate } from '$app/navigation'
 	import GoogleAnalytics from '$lib/components/GoogleAnalytics.svelte'
 	import PageTransition from '$lib/components/PageTransition.svelte'
@@ -88,17 +88,19 @@
 	<GoogleAnalytics />
 </svelte:head>
 
-<Drawer position="top" bgDrawer="backdrop-blur" height="h-screen" duration={250}>
-	<div class="flex flex-col items-center gap-2 p-4">
-		<div class="mb-8 flex w-full items-center justify-between">
-			<div class="px-[11px]">
-				<LightSwitch />
+{#if browser}
+	<Drawer position="top" bgDrawer="backdrop-blur" height="h-screen" duration={250}>
+		<div class="flex flex-col items-center gap-2 p-4">
+			<div class="mb-8 flex w-full items-center justify-between">
+				<div class="px-[11px]">
+					<LightSwitch />
+				</div>
+				<NavHamburgerMenu />
 			</div>
-			<NavHamburgerMenu />
+			<NavLinks className="text-xl font-semibold list-nav py-6" />
 		</div>
-		<NavLinks className="text-xl font-semibold list-nav py-6" />
-	</div>
-</Drawer>
+	</Drawer>
+{/if}
 
 <AppShell>
 	<svelte:fragment slot="header"><Navbar /></svelte:fragment>
