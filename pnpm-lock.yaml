@@ -9,8 +9,8 @@ dependencies:
     specifier: 5.12.1
     version: 5.12.1(prisma@5.12.1)
   '@sentry/sveltekit':
-    specifier: 7.109.0
-    version: 7.109.0(@sveltejs/kit@2.5.5)(svelte@4.2.12)
+    specifier: 7.54.0
+    version: 7.54.0(@sveltejs/kit@2.5.5)(svelte@4.2.12)
   tailwind-merge:
     specifier: ^2.2.2
     version: 2.2.2
@@ -39,10 +39,10 @@ devDependencies:
     version: 0.3.1(tailwindcss@3.4.3)
   '@supabase/auth-helpers-sveltekit':
     specifier: 0.12.0
-    version: 0.12.0(@supabase/supabase-js@2.42.0)(@sveltejs/kit@2.5.5)
+    version: 0.12.0(@supabase/supabase-js@2.39.7)(@sveltejs/kit@2.5.5)
   '@supabase/supabase-js':
-    specifier: 2.42.0
-    version: 2.42.0
+    specifier: 2.39.7
+    version: 2.39.7
   '@sveltejs/adapter-vercel':
     specifier: 5.2.0
     version: 5.2.0(@sveltejs/kit@2.5.5)
@@ -1379,25 +1379,6 @@ packages:
     requiresBuild: true
     optional: true
 
-  /@sentry-internal/feedback@7.109.0:
-    resolution: {integrity: sha512-EL7N++poxvJP9rYvh6vSu24tsKkOveNCcCj4IM7+irWPjsuD2GLYYlhp/A/Mtt9l7iqO4plvtiQU5HGk7smcTQ==}
-    engines: {node: '>=12'}
-    dependencies:
-      '@sentry/core': 7.109.0
-      '@sentry/types': 7.109.0
-      '@sentry/utils': 7.109.0
-    dev: false
-
-  /@sentry-internal/replay-canvas@7.109.0:
-    resolution: {integrity: sha512-Lh/K60kmloR6lkPUcQP0iamw7B/MdEUEx/ImAx4tUSMrLj+IoUEcq/ECgnnVyQkJq59+8nPEKrVLt7x6PUPEjw==}
-    engines: {node: '>=12'}
-    dependencies:
-      '@sentry/core': 7.109.0
-      '@sentry/replay': 7.109.0
-      '@sentry/types': 7.109.0
-      '@sentry/utils': 7.109.0
-    dev: false
-
   /@sentry-internal/tracing@7.109.0:
     resolution: {integrity: sha512-PzK/joC5tCuh2R/PRh+7dp+uuZl7pTsBIjPhVZHMTtb9+ls65WkdZJ1/uKXPouyz8NOo9Xok7aEvEo9seongyw==}
     engines: {node: '>=8'}
@@ -1417,17 +1398,16 @@ packages:
       tslib: 1.14.1
     dev: false
 
-  /@sentry/browser@7.109.0:
-    resolution: {integrity: sha512-yx+OFG+Ab9qUDDgV9ZDv8M9O9Mqr0fjKta/LMlWALYLjzkMvxsPlRPFj7oMBlHqOTVLDeg7lFYmsA8wyWQ8Z8g==}
+  /@sentry/browser@7.54.0:
+    resolution: {integrity: sha512-EvLAw03N9WE2m1CMl2/1YMeIs1icw9IEOVJhWmf3uJEysNJOFWXu6ZzdtHEz1E6DiJYhc1HzDya0ExZeJxNARA==}
     engines: {node: '>=8'}
     dependencies:
-      '@sentry-internal/feedback': 7.109.0
-      '@sentry-internal/replay-canvas': 7.109.0
-      '@sentry-internal/tracing': 7.109.0
-      '@sentry/core': 7.109.0
-      '@sentry/replay': 7.109.0
-      '@sentry/types': 7.109.0
-      '@sentry/utils': 7.109.0
+      '@sentry-internal/tracing': 7.54.0
+      '@sentry/core': 7.54.0
+      '@sentry/replay': 7.54.0
+      '@sentry/types': 7.54.0
+      '@sentry/utils': 7.54.0
+      tslib: 1.14.1
     dev: false
 
   /@sentry/bundler-plugin-core@0.6.1:
@@ -1480,14 +1460,14 @@ packages:
       tslib: 1.14.1
     dev: false
 
-  /@sentry/integrations@7.109.0:
-    resolution: {integrity: sha512-8GwPFlUu4rB1Dx3e9tc3gCMmzC5Bd5lzThhg3tMBmzCCEp7UeA4u7eUuKJ5g49vjdznPDRG2p3PcRsApFZNPSg==}
+  /@sentry/integrations@7.54.0:
+    resolution: {integrity: sha512-RolGsQzJChJzjHTJcCKSZ1HanmY33floc5o13WgU9NoDqJbLGLNcOIrAu+WynqPe8P5VTVrVb8NiwhLqWrKp4g==}
     engines: {node: '>=8'}
     dependencies:
-      '@sentry/core': 7.109.0
-      '@sentry/types': 7.109.0
-      '@sentry/utils': 7.109.0
+      '@sentry/types': 7.54.0
+      '@sentry/utils': 7.54.0
       localforage: 1.10.0
+      tslib: 1.14.1
     dev: false
 
   /@sentry/node@7.109.0:
@@ -1500,43 +1480,58 @@ packages:
       '@sentry/utils': 7.109.0
     dev: false
 
-  /@sentry/replay@7.109.0:
-    resolution: {integrity: sha512-hCDjbTNO7ErW/XsaBXlyHFsUhneyBUdTec1Swf98TFEfVqNsTs6q338aUcaR8dGRLbLrJ9YU9D1qKq++v5h2CA==}
+  /@sentry/node@7.54.0:
+    resolution: {integrity: sha512-k8P7WD6lra3JF3H/y9GO+twBV8qQilj3X3d8PpaVPBHHwOA9AfdBVF18qgrdlZKghKtgALapZzrQQVnTOm34rw==}
+    engines: {node: '>=8'}
+    dependencies:
+      '@sentry-internal/tracing': 7.54.0
+      '@sentry/core': 7.54.0
+      '@sentry/types': 7.54.0
+      '@sentry/utils': 7.54.0
+      cookie: 0.4.2
+      https-proxy-agent: 5.0.1
+      lru_map: 0.3.3
+      tslib: 1.14.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@sentry/replay@7.54.0:
+    resolution: {integrity: sha512-C0F0568ybphzGmKGe23duB6n5wJcgM7WLYhoeqW3o2bHeqpj1dGPSka/K3s9KzGaAgzn1zeOUYXJsOs+T/XdsA==}
     engines: {node: '>=12'}
     dependencies:
-      '@sentry-internal/tracing': 7.109.0
-      '@sentry/core': 7.109.0
-      '@sentry/types': 7.109.0
-      '@sentry/utils': 7.109.0
+      '@sentry/core': 7.54.0
+      '@sentry/types': 7.54.0
+      '@sentry/utils': 7.54.0
     dev: false
 
-  /@sentry/svelte@7.109.0(svelte@4.2.12):
-    resolution: {integrity: sha512-ydABPL6XbkWgdAT5YSGnqHh/ftkITWpXY84RSKu7UcO7lCXLRmDgUySPwuR5jhEJgJ4JgWF39vRWAVcZr191PQ==}
+  /@sentry/svelte@7.54.0(svelte@4.2.12):
+    resolution: {integrity: sha512-KGfR4+y0TSBv8tDBHRqT1l1boowgk4351Edlw6KV48930c324rXJFzH097raisWSGVZ1IGKiJ9hgSQpoEP3/4A==}
     engines: {node: '>=8'}
     peerDependencies:
-      svelte: 3.x || 4.x
+      svelte: 3.x
     dependencies:
-      '@sentry/browser': 7.109.0
-      '@sentry/core': 7.109.0
-      '@sentry/types': 7.109.0
-      '@sentry/utils': 7.109.0
+      '@sentry/browser': 7.54.0
+      '@sentry/types': 7.54.0
+      '@sentry/utils': 7.54.0
       magic-string: 0.30.8
       svelte: 4.2.12
+      tslib: 1.14.1
     dev: false
 
-  /@sentry/sveltekit@7.109.0(@sveltejs/kit@2.5.5)(svelte@4.2.12):
-    resolution: {integrity: sha512-VI9j1meu9RICrwXX5BkL/T8wk7/Fmt/MOaVpGPs59wUwnddf+V645+8i8CDrxMqZQiJkoTjD0MaFWU1zc2aecw==}
+  /@sentry/sveltekit@7.54.0(@sveltejs/kit@2.5.5)(svelte@4.2.12):
+    resolution: {integrity: sha512-eiilTZvl5y+wZNqvnAbhUyM8xZtcezNuBrB+TL5lhvqvYOxKH9ljZpFiWr05WSPoMsXaOKu/Ku8jRsd/HfO2vQ==}
     engines: {node: '>=16'}
     peerDependencies:
-      '@sveltejs/kit': 1.x || 2.x
+      '@sveltejs/kit': 1.x
     dependencies:
-      '@sentry-internal/tracing': 7.109.0
-      '@sentry/core': 7.109.0
-      '@sentry/integrations': 7.109.0
-      '@sentry/node': 7.109.0
-      '@sentry/svelte': 7.109.0(svelte@4.2.12)
-      '@sentry/types': 7.109.0
-      '@sentry/utils': 7.109.0
+      '@sentry-internal/tracing': 7.54.0
+      '@sentry/core': 7.54.0
+      '@sentry/integrations': 7.54.0
+      '@sentry/node': 7.54.0
+      '@sentry/svelte': 7.54.0(svelte@4.2.12)
+      '@sentry/types': 7.54.0
+      '@sentry/utils': 7.54.0
       '@sentry/vite-plugin': 0.6.1
       '@sveltejs/kit': 2.5.5(@sveltejs/vite-plugin-svelte@3.0.2)(svelte@4.2.12)(vite@5.2.8)
       magicast: 0.2.8
@@ -1614,34 +1609,34 @@ packages:
       tailwindcss: 3.4.3
     dev: true
 
-  /@supabase/auth-helpers-shared@0.6.3(@supabase/supabase-js@2.42.0):
+  /@supabase/auth-helpers-shared@0.6.3(@supabase/supabase-js@2.39.7):
     resolution: {integrity: sha512-xYQRLFeFkL4ZfwC7p9VKcarshj3FB2QJMgJPydvOY7J5czJe6xSG5/wM1z63RmAzGbCkKg+dzpq61oeSyWiGBQ==}
     peerDependencies:
       '@supabase/supabase-js': ^2.19.0
     dependencies:
-      '@supabase/supabase-js': 2.42.0
+      '@supabase/supabase-js': 2.39.7
       jose: 4.14.4
     dev: true
 
-  /@supabase/auth-helpers-sveltekit@0.12.0(@supabase/supabase-js@2.42.0)(@sveltejs/kit@2.5.5):
+  /@supabase/auth-helpers-sveltekit@0.12.0(@supabase/supabase-js@2.39.7)(@sveltejs/kit@2.5.5):
     resolution: {integrity: sha512-/gSjhtIInGriH66tWfen/3ne8TXpqCzE3nGvAWAshrm8a1JYg4MunY8PvU8YltF8M4dDYxpKf1f8IlC0oEbUkw==}
     peerDependencies:
       '@supabase/supabase-js': ^2.19.0
       '@sveltejs/kit': ^1.30.3 || ^2.0.0
     dependencies:
-      '@supabase/auth-helpers-shared': 0.6.3(@supabase/supabase-js@2.42.0)
-      '@supabase/supabase-js': 2.42.0
+      '@supabase/auth-helpers-shared': 0.6.3(@supabase/supabase-js@2.39.7)
+      '@supabase/supabase-js': 2.39.7
       '@sveltejs/kit': 2.5.5(@sveltejs/vite-plugin-svelte@3.0.2)(svelte@4.2.12)(vite@5.2.8)
     dev: true
 
-  /@supabase/auth-js@2.63.0:
-    resolution: {integrity: sha512-yIgcHnlgv24GxHtVGUhwGqAFDyJkPIC/xjx7HostN08A8yCy8HIfl4JEkTKyBqD1v1L05jNEJOUke4Lf4O1+Qg==}
+  /@supabase/functions-js@2.1.5:
+    resolution: {integrity: sha512-BNzC5XhCzzCaggJ8s53DP+WeHHGT/NfTsx2wUSSGKR2/ikLFQTBCDzMvGz/PxYMqRko/LwncQtKXGOYp1PkPaw==}
     dependencies:
       '@supabase/node-fetch': 2.6.15
     dev: true
 
-  /@supabase/functions-js@2.2.2:
-    resolution: {integrity: sha512-sJGq1nludmi7pY/fdtCpyY/pYonx7MfHdN408bqb736guWcVI1AChYVbI4kUM978EuOE4Ci6l7bUudfGg07QRw==}
+  /@supabase/gotrue-js@2.62.2:
+    resolution: {integrity: sha512-AP6e6W9rQXFTEJ7sTTNYQrNf0LCcnt1hUW+RIgUK+Uh3jbWvcIST7wAlYyNZiMlS9+PYyymWQ+Ykz/rOYSO0+A==}
     dependencies:
       '@supabase/node-fetch': 2.6.15
     dev: true
@@ -1653,8 +1648,8 @@ packages:
       whatwg-url: 5.0.0
     dev: true
 
-  /@supabase/postgrest-js@1.15.0:
-    resolution: {integrity: sha512-U4bwBOrhsXWqDjZiYNbVqMBtRGgIIYE0kE5ZNSwsIbeBWfr/UxOMrnkIQUBGIZRhpYW/tw1WnTdRl1AGNyaxcw==}
+  /@supabase/postgrest-js@1.9.2:
+    resolution: {integrity: sha512-I6yHo8CC9cxhOo6DouDMy9uOfW7hjdsnCxZiaJuIVZm1dBGTFiQPgfMa9zXCamEWzNyWRjZvupAUuX+tqcl5Sw==}
     dependencies:
       '@supabase/node-fetch': 2.6.15
     dev: true
@@ -1677,13 +1672,13 @@ packages:
       '@supabase/node-fetch': 2.6.15
     dev: true
 
-  /@supabase/supabase-js@2.42.0:
-    resolution: {integrity: sha512-1PDqJiA4iG45w3AAu6xkccJ3wPqlGJUoz9CPhScRLLTStxhewYhz0mjryTpXz1kgtNHdUAsirALreezn8UZMjA==}
+  /@supabase/supabase-js@2.39.7:
+    resolution: {integrity: sha512-1vxsX10Uhc2b+Dv9pRjBjHfqmw2N2h1PyTg9LEfICR3x2xwE24By1MGCjDZuzDKH5OeHCsf4it6K8KRluAAEXA==}
     dependencies:
-      '@supabase/auth-js': 2.63.0
-      '@supabase/functions-js': 2.2.2
+      '@supabase/functions-js': 2.1.5
+      '@supabase/gotrue-js': 2.62.2
       '@supabase/node-fetch': 2.6.15
-      '@supabase/postgrest-js': 1.15.0
+      '@supabase/postgrest-js': 1.9.2
       '@supabase/realtime-js': 2.9.3
       '@supabase/storage-js': 2.5.5
     transitivePeerDependencies:
@@ -2933,7 +2928,6 @@ packages:
   /cookie@0.4.2:
     resolution: {integrity: sha512-aSWTXFzaKWkvHO1Ny/s+ePFpvKsPnjc551iI41v3ny/ow6tBG5Vd+FuqGNhh1LxOmVzOlGUriIlOaokOvhaStA==}
     engines: {node: '>= 0.6'}
-    dev: true
 
   /cookie@0.6.0:
     resolution: {integrity: sha512-U71cyTamuh1CRNCfpGY6to28lxvNwPG4Guz/EVjgf3Jmzv0vlDp1atT9eS5dDjMYHucpHbWns6Lwf3BKz6svdw==}
@@ -5217,6 +5211,10 @@ packages:
     dependencies:
       yallist: 4.0.0
     dev: true
+
+  /lru_map@0.3.3:
+    resolution: {integrity: sha512-Pn9cox5CsMYngeDbmChANltQl+5pi6XmTrraMSzhPmMBbmgcxmqWry0U3PGapCU1yB4/LqCcom7qhHZiF/jGfQ==}
+    dev: false
 
   /lz-string@1.5.0:
     resolution: {integrity: sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ==}
