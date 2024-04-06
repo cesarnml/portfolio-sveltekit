@@ -89,8 +89,6 @@
 	})
 </script>
 
-/** eslint-disable @typescript-eslint/no-unsafe-member-access */ /** eslint-disable
-@typescript-eslint/no-unsafe-member-access */
 <PageHead
 	title={data.frontmatter.title}
 	description={data.frontmatter.description}
