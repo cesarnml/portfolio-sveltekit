@@ -20,9 +20,9 @@ if (import.meta.env.PROD) {
 	})
 }
 
-export const handleError: HandleClientError = (input) => {
+export const handleError: HandleClientError = async (input) => {
 	if (import.meta.env.PROD) {
-		handleErrorWithSentry()
+		await handleErrorWithSentry()
 	}
 	if (import.meta.env.DEV) {
 		console.error(input.error)

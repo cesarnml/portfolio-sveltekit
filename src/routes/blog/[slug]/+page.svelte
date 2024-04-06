@@ -16,21 +16,19 @@
 		const scrollPage = document.querySelector('#appShell #page')
 
 		const incrementView = async () => {
-			await fetch(`/api/blog/${$page.params.slug}/view`, {
-				method: 'POST',
-				headers: {
-					'content-type': 'application/json',
-				},
-			})
+			try {
+				await fetch(`/api/blog/${$page.params.slug}/view`, {
+					method: 'POST',
+					headers: {
+						'content-type': 'application/json',
+					},
+				})
+			} catch (error) {
+				console.error('Failed to increment view count', error)
+			}
 		}
 
-		scrollPage?.addEventListener(
-			'scroll',
-			() => {
-				incrementView()
-			},
-			{ once: true },
-		)
+		scrollPage?.addEventListener('scroll', () => incrementView, { once: true })
 		// For each <pre> element
 		preElements.forEach((ele) => {
 			// Track if it's being hovered (needed for "focus" code styling)
@@ -85,12 +83,14 @@
 
 			// Enable copy button behavior click
 			if (buttonCopy) {
-				buttonCopy.addEventListener('click', handleCopyClick)
+				buttonCopy.addEventListener('click', () => handleCopyClick)
 			}
 		})
 	})
 </script>
 
+/** eslint-disable @typescript-eslint/no-unsafe-member-access */ /** eslint-disable
+@typescript-eslint/no-unsafe-member-access */
 <PageHead
 	title={data.frontmatter.title}
 	description={data.frontmatter.description}

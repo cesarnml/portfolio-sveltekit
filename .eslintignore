@@ -20,3 +20,4 @@ service-worker.js
 coverage
 html
 supabase
+mdsvex.config.js

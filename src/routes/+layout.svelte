@@ -46,9 +46,11 @@
 		}
 		// Supabase Auth Setup
 		const { data } = supabase.auth.onAuthStateChange(() => {
+			// eslint-disable-next-line @typescript-eslint/no-floating-promises
 			invalidate('supabase:auth')
 		})
 
+		// eslint-disable-next-line @typescript-eslint/no-unsafe-return
 		return () => data.subscription.unsubscribe()
 	})
 

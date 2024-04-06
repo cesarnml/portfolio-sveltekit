@@ -3,6 +3,7 @@
 	import { Url } from '$lib/url'
 
 	export let data
+	// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 	$: ({ posts } = data)
 </script>
 
