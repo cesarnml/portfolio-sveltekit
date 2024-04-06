@@ -21,6 +21,7 @@ export const GET = async ({ setHeaders }) => {
 		})
 	})
 
+	// eslint-disable-next-line @typescript-eslint/no-unsafe-call
 	setHeaders({
 		'Content-Type': 'application/rss+xml',
 		'Cache-Control': `max-age=0, s-maxage=${MAX_AGE}`,

@@ -1,7 +1,7 @@
+import { prisma } from '$lib/prismaClient'
 import type { Config } from '@sveltejs/adapter-vercel'
 import { error } from '@sveltejs/kit'
 import dayjs from 'dayjs'
-import { prisma } from '$lib/prismaClient'
 
 export const config: Config = {
 	isr: {

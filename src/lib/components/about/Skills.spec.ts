@@ -9,6 +9,7 @@ it('renders an svg element', async () => {
 	// It displays a heading
 	expect(screen.getByRole('heading', { name: /skills/i })).toBeInTheDocument()
 	screen.getAllByRole('listitem').forEach((ele, idx) => {
+		// eslint-disable-next-line @typescript-eslint/unbound-method
 		const { getByText } = within(ele)
 		expect(getByText(skills[idx])).toBeInTheDocument()
 	})
