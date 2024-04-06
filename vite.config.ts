@@ -54,7 +54,7 @@ const config = defineConfig(({ mode }) => {
 			coverage: {
 				all: true,
 				enabled: true,
-				provider: 'istanbul', // or v8
+				provider: 'v8', // or istanbul
 				reporter: ['json', 'html', 'text'],
 				src: ['./src'],
 				exclude: [
